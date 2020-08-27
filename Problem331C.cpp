@@ -28,6 +28,14 @@
 using namespace std;
 
 int main() {
+    unsigned long long n;
+    cin >> n;
+    string a = to_string(n);
+    int b = a.length() / 3;
+    for(int i = b; i > 0; i--) {
+        string m = a.substr(i*3, (i+1)*3);
+        cout << m;
+    }
     return 0;
 }
 
