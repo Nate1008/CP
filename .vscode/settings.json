@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "utility": "cpp",
+        "iosfwd": "cpp",
+        "string": "cpp",
+        "algorithm": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "ratio": "cpp",
+        "iterator": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp"
+    }
+}
