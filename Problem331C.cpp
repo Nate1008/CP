@@ -27,14 +27,24 @@
 
 using namespace std;
 
+char find_max(string a) {
+    char max_char = a[0];
+    for(int i = 1; i < a.length(); i++) {
+        max_char = max(max_char, a[i]);
+    }
+    return max_char;
+}
+
+
+
 int main() {
     unsigned long long n;
     cin >> n;
     string a = to_string(n);
     int b = a.length() / 3;
-    for(int i = b; i > 0; i--) {
-        string m = a.substr(i*3);
-        cout << m;
+    for(int i = 0; i < b; i++) {
+        string m = a.substr(i*3, 3);
+        //int a = (int) m;
     }
     return 0;
 }
