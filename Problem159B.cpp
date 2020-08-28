@@ -51,6 +51,7 @@ int main() {
             b++;
         }
         a += min(caps[t.s], markers[t.s]);
+        cout<<a<<"\t"<<t.s;
     }
     cout<<a<<" "<<b;
     return 0;
