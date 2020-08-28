@@ -42,7 +42,7 @@ int main() {
     string sm= l[0];
     bool pass = true;
     for(int i = 0; i < n; i++) {
-        cout<<l[i].find(a);
+        cout<<l[i].find(a)<<"\n";
         if(l[i].find(a) == 0) {
             pass = true;
             if(sm.length() > l[i].length()) {
