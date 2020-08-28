@@ -56,6 +56,7 @@ int main() {
     for(int i = 0; i < past.size(); i++) {
         pi t = past[i];
         a += min(caps[t.s], markers[t.s]);
+        cout<<a<<"\t"<<t.s<<"\n";
     }
     cout<<a<<" "<<b;
     return 0;
