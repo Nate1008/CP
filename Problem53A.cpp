@@ -28,6 +28,26 @@
 using namespace std;
 
 int main() {
+    string a;
+    cin >> a;
+    int n;
+    cin >> n;
+    vt<string> l;
+    for(int i = 0; i < n; i++) {
+        string t;
+        cin >> t;
+        l.push_back(t);
+    }
+
+    string sm = l[0];
+    for(int i = 1; i < n; i++) {
+        if(a.find(l[i]) != -1) {
+            if(sm.length() > l[i].length()) {
+                sm = l[i];
+            }
+        }
+    }
+    cout<<sm;
     return 0;
 }
 
