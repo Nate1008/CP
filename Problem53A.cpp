@@ -39,11 +39,11 @@ int main() {
         l.push_back(t);
     }
 
-    string sm= l[0];
+    string sm = l[0];
     bool pass = true;
     for(int i = 0; i < n; i++) {
         cout<<l[i].find(a)<<"\n";
-        if(l[i].find(a) == 0) {
+        if(l[i].find(a) > l[i].length()) {
             pass = true;
             if(sm.length() > l[i].length()) {
                 sm = l[i];
