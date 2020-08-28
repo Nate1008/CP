@@ -43,7 +43,7 @@ int main() {
     bool pass = false;
     for(int i = 0; i < n; i++) {
         if(l[i].find(a) == 0) {
-            if(sm.length() > l[i].length()) {
+            if(sm.length() >= l[i].length()) {
                 pass = true;
                 sm = l[i];
             }
