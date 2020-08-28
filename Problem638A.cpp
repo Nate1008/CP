@@ -28,6 +28,15 @@
 using namespace std;
 
 int main() {
+    int n, a;
+    cin >> n >> a;
+    int ans = 0;
+    if(a % 2 == 0){
+        ans=((n-a)/2)+1;
+    } else {
+        ans=(a+1)/2;
+    }
+    cout<<ans;
     return 0;
 }
 
