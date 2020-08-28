@@ -47,9 +47,6 @@ int main() {
         pi t;
         cin >> t.f >> t.s;
         caps[t.s]++;
-        if(same[t] == 1) {
-            b++;
-        }
         if(caps[t.s] == 1) {
             past.push_back(t);
         }
@@ -57,6 +54,10 @@ int main() {
     for(int i = 0; i < past.size(); i++) {
         pi t = past[i];
         a += min(caps[t.s], markers[t.s]);
+        if(same[t] > 0) {
+            b++;
+            same[t]--;
+        }
     }
     cout<<a<<" "<<b;
     return 0;
