@@ -55,6 +55,7 @@ int main() {
         pi t = past[i];
         a += min(caps[t.s], markers[t.s]);
         if(same[t] > 0) {
+            cout<<same[t] <<"\n";
             b++;
             same[t]--;
         }
