@@ -48,7 +48,6 @@ int main() {
         cin >> t.f >> t.s;
         caps[t.s]++;
         if(same[t] == 1) {
-            same[t]++;
             b++;
         }
         if(caps[t.s] == 1) {
