@@ -41,7 +41,7 @@ int main() {
 
     string sm = l[0];
     for(int i = 1; i < n; i++) {
-        if(a.find(l[i]) != -1) {
+        if(l[i].find(a) != -1) {
             if(sm.length() > l[i].length()) {
                 sm = l[i];
             }
