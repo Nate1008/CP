@@ -38,7 +38,6 @@ int main() {
         cin >> t;
         l.push_back(t);
     }
-    int len = 999999999999999999999;
     string sm = "iiioioioioioioioioioioioioioioioioioioooioioioioiioioioioioioioioioioioioioioioioioioio";
     bool pass = false;
     for(int i = 0; i < n; i++) {
