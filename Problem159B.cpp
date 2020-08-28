@@ -33,6 +33,7 @@ int main() {
     map<int, int> caps;
     map<int, int> markers;
     map<pi, int> same;
+    vt<pi> past; 
     int a = 0;
     int b = 0;
     for(int i = 0; i < n; i++) {
@@ -50,8 +51,11 @@ int main() {
             same[t]++;
             b++;
         }
+        past.push_back(t);
+    }
+    for(int i = 0; i < past.size(); i++) {
+        pi t = past[i];
         a += min(caps[t.s], markers[t.s]);
-        cout<<a<<"\t"<<t.s<<"\n";
     }
     cout<<a<<" "<<b;
     return 0;
