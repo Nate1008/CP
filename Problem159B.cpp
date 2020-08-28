@@ -51,7 +51,9 @@ int main() {
             same[t]++;
             b++;
         }
-        past.push_back(t);
+        if(caps[t.s] == 1) {
+            past.push_back(t);
+        }
     }
     for(int i = 0; i < past.size(); i++) {
         pi t = past[i];
