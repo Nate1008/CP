@@ -40,9 +40,8 @@ int main() {
     }
 
     string sm = l[0];
-    bool pass = true;
+    bool pass = false;
     for(int i = 0; i < n; i++) {
-        
         if(l[i].find(a) == 0) {
             cout<<"true";
             pass = true;
