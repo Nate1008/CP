@@ -38,16 +38,14 @@ int main() {
         cin >> t;
         l.push_back(t);
     }
-    string sm = l[0];
+    string sm = " ";
     bool pass = false;
     for(int i = 0; i < n; i++) {
         if(l[i].find(a) == 0) {
-            if(sm > l[i]) {
+            if(sm > l[i] || sm == " ") {
                 pass = true;
                 sm = l[i];
             }
-        }else{
-            sm = l[i+1];
         }
     }
     if(pass) {
