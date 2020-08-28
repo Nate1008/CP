@@ -39,15 +39,21 @@ int main() {
         l.push_back(t);
     }
 
-    string sm = l[0];
-    for(int i = 1; i < n; i++) {
+    string sm= l[0];
+    bool pass = true;
+    for(int i = 0; i < n; i++) {
         if(l[i].find(a) != -1) {
+            pass = true;
             if(sm.length() > l[i].length()) {
                 sm = l[i];
             }
         }
     }
-    cout<<sm;
+    if(pass) {
+        cout<<sm;
+    } else {
+        cout<<a;
+    }
     return 0;
 }
 
