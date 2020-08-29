@@ -31,16 +31,11 @@ using namespace std;
 int main() {
     string a, b;
     cin >> a >> b;
+    sort(b.begin(), b.end());
     for(int i = 0; i < a.length(); i++) {
-        if(a[i] == 9) {
-            continue;
-        }
-        for(int k = 0; k < b.length(); k++) {
-            if(a[i] < b[k]){
-                a[i] = b[k];
-                b[k] = '0';
-            }
-            
+        if(a[i] < b[i]){
+                a[i] = b[i];
+                b[i] = '0';
         }
     }
     cout<<a;
