@@ -51,11 +51,13 @@ int main() {
 
     for(int i = 0; i < vtx.size(); i++) {
         if(x[i] >= k) {
+            cout<<"X";
             ans++;
         }
     }
     for(int i = 0; i < vty.size(); i++) {
         if(y[i] >= k) {
+            cout<<"Y";
             ans++;
         }
     }
