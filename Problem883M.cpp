@@ -38,9 +38,9 @@ int main() {
     }
 
     if(y > b) {
-        b++;
-    } else {
         b--;
+    } else {
+        b++;
     }
 
     int len = abs(x - a);
