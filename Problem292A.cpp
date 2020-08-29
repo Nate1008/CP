@@ -44,7 +44,6 @@ int main() {
             q = 0;
         }
         q += m;
-        cout<<q;
         maxq = max(maxq, q);
         pm = m;
     }
