@@ -52,7 +52,7 @@ int main() {
                             pin++;
                         }
                     }
-                    cout<<pin;
+                    //cout<<pin;
                     if(pin >= k) {
                         ans++;
                     }
