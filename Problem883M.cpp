@@ -31,13 +31,6 @@ using namespace std;
 int main() {
     int x, y, a, b;
     cin >> x >> y >> a >> b;
-    if(x == a) {
-        cout<<abs(y - b)*8;
-        return 0;
-    } else if (y == b) {
-        cout<<abs(x - a)*8;
-        return 0;
-    }
     if(x < a) {
         a++;
     } else if (x > a) {
@@ -53,10 +46,10 @@ int main() {
     int len = abs(x - a);
     int wid = abs(y - b);
     if(wid == 0) {
-        wid = 1;
+        wid = 2;
     }
     if(len == 0) {
-        len = 1;
+        len = 2;
     }  
     
     int peri = wid * 2 + len * 2;
