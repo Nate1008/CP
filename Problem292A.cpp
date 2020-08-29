@@ -39,6 +39,7 @@ int main() {
         int k, m;
         cin >> k >> m;
         q = pm - (t - k);
+        cout<<p<<"\n";
         t = k;
         if(q < 0) {
             q = 0;
