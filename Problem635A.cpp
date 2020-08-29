@@ -29,39 +29,33 @@
 using namespace std;
 int main() {
     int r, c, n, k;
-    int ans = 1;
+    int ans = 0;
     cin >> r >> c >> n >> k;
-    vt<int> vtx;
-    vt<int> vty;
-    mi x;
-    mi y;
+    vt<pi> vio;
     for(int i = 0; i < n; i++) {
         pi t;
         cin >> t.f >> t.s;
-        x[t.f]++;
-        y[t.s]++;
-        if(x[t.f] == 1) {
-            vtx.push_back(t.f);
-        }
-        if(y[t.s] == 1) {
-            vty.push_back(t.s);
-        }
+        vio.push_back(t);
     }
 
-    for(int i = 0; i < vtx.size(); i++) {
-        if(x[vtx[i]] >= k) {
-            ans++;
+    for(int i = 1; i <= r; i++) {
+        for(int j = 1; i <= c; i++) {
+            for(int y = 1; y <= r; y++) {
+                for(int x = 1; x <= c; x++) {
+                    for(int v = 0; v < vio.size(); v++) {
+                        pi t = pi(j, i);
+                        pi e = pi(x, y);
+                        pi p = vio[v];
+                        if(p.f >= t.f && p.s >= t.s && p.f <= e.f && p.s <= e.s) {
+                            ans++;
+                        }
+                    }
+                }
+            }
         }
     }
-    for(int i = 0; i < vty.size(); i++) {
-        if(y[vty[i]] >= k) {
-            ans++;
-        }
-    }
-    if(ceil(n/k) > 1) {
-        ans += ceil(n/k);
-    }
-    cout<<ans;
+    
+    cout << ans;
     return 0;
 }
 
