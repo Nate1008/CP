@@ -32,7 +32,8 @@ int main() {
     string a, b;
     cin >> a >> b;
     sort(b.begin(), b.end());
-    for(int i = 0; i < a.length(); i++) {
+    int len = max(a.length(), b.length());
+    for(int i = 0; i < len; i++) {
         if(a[i] < b[i]){
                 a[i] = b[i];
                 b[i] = '0';
