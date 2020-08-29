@@ -27,10 +27,6 @@
 #define vt vector
 
 using namespace std;
-int factorial(int a) {
-    
-}
-
 int main() {
     int r, c, n, k;
     int ans = 1;
