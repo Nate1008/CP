@@ -39,11 +39,11 @@ int main() {
         int k, m;
         cin >> k >> m;
         t = k;
-        q += m;
         q = pm - t;
         if(q < 0) {
             q = 0;
         }
+        q += m;
         cout<<q;
         maxq = max(maxq, q);
         pm = m;
