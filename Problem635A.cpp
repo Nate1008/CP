@@ -43,13 +43,14 @@ int main() {
             for(int y = 1; y <= r; y++) {
                 for(int x = 1; x <= c; x++) {
                     int pin = 0;
-                    std::cout<<j<<i<<"\n";
-                    std::cout<<x<<y<<"\n";
+                    std::cout<<"START: "<<j<<" "<<i<<"\n";
+                    std::cout<<"END: "<<x<<" "<<y<<"\n";
                     for(int v = 0; v < vio.size(); v++) {
                         pi t = pi(j, i);
                         pi e = pi(x, y);
                         pi p = vio[v];
-                        std::cout<<p.f<<p.s<<"\n";
+                        
+                        std::cout<<"POINT: "<<p.f<<" "<<p.s<<"\n";
                         if((p.f >= t.f && p.s >= t.s) && (p.f <= e.f && p.s <= e.s)) {
                             pin++;
                         }
