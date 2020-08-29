@@ -37,7 +37,7 @@ int main() {
         a--;
     }
 
-    if(y < b) {
+    if(y > b) {
         b++;
     } else {
         b--;
