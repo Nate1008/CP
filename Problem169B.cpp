@@ -35,7 +35,7 @@ int main() {
         if(a[i] == 9) {
             continue;
         }
-        cout<<"NOT 9"<<"/n";
+        cout<<"NOT 9"<<"\n";
         for(int k = 0; k < b.length(); k++) {
             if(a[i] < b[k]){
                 a[i] = b[k];
