@@ -29,6 +29,25 @@
 using namespace std;
 
 int main() {
+    cout<<-2%3;
+    /*vt<string> sizes = {"S", "M", "L", "XL", "XXL"};
+    vt<string>::iterator it;
+    vt<int> range = {1, -1, 2, -2};
+    map<string, int> si;
+    cin >> si["S"] >> si["M"] >> si["L"] >> si["XL"] >> si["XXL"];
+    int n;
+    cin >> n;
+    for(int i = 0; i < n; i++) {
+        string a;
+        cin >> a;
+        int j = -1;
+        it = find(sizes.begin(), sizes.end(), a);
+        int k = distance(sizes.begin(), it);
+        while(si[a] == 0) {
+            j++;
+            a = sizes[(k + range[j]) % 5];
+        }
+    }*/
     return 0;
 }
 
