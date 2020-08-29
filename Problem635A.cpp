@@ -34,7 +34,7 @@ int main() {
     vt<pi> vio;
     for(int i = 0; i < n; i++) {
         pi t;
-        cin >> t.f >> t.s;
+        cin >> t.s >> t.f;
         vio.push_back(t);
     }
 
