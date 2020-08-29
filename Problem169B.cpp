@@ -29,6 +29,14 @@
 using namespace std;
 
 int main() {
+    string a, b;
+    cin >> a >> b;
+    for(int i = 0; i < a.length(); i++) {
+        for(int k = 0; k < b.length(); k++) {
+            a[i] = max(a[i], b[k]);
+        }
+    }
+    cout<<a;
     return 0;
 }
 
