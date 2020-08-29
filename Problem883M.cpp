@@ -40,20 +40,26 @@ int main() {
     }
     if(x < a) {
         a++;
-    } else {
+    } else if (x > a) {
         a--;
     }
 
     if(y < b) {
         b++;
-    } else {
+    } else if (y > b) {
         b--;
     }
 
     int len = abs(x - a);
     int wid = abs(y - b);
+    if(wid == 0) {
+        wid = 1;
+    }
+    if(len == 0) {
+        len = 1;
+    }  
+    
     int peri = wid * 2 + len * 2;
-
     cout<<peri;
     return 0;
 }
