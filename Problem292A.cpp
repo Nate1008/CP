@@ -31,17 +31,21 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    int q = 1;
+    int q = 0;
     int maxq = 0;
     int t = 0;
+    int pm = 0;
     for(int i = 0; i < n; i++) {
         int k, m;
         cin >> k >> m;
         t = k;
-        cout<<k<<"\n";
-        q--;
         q += m;
+        q = pm - t;
+        if(q < 0) {
+            q = 0;
+        }
         maxq = max(maxq, q);
+        pm = m+1;
     }
     int lastm = t + q;
     cout<<lastm<<" "<<maxq;
