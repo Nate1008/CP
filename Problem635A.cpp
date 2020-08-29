@@ -47,8 +47,8 @@ int main() {
                         pi t = pi(j, i);
                         pi e = pi(x, y);
                         pi p = vio[v];
-                        cout<<p.f<<p.s;
                         if((p.f >= t.f && p.s >= t.s) && (p.f <= e.f && p.s <= e.s)) {
+                            cout<<p.f<<p.s<<"\n";
                             pin++;
                         }
                     }
