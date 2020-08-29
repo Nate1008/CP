@@ -30,12 +30,15 @@ using namespace std;
 
 int main() {
     int r, c, n, k;
+    int ans = 1;
     cin >> r >> c >> n >> k;
+    if(n == 1) {
+        ans++;
+    }
     vt<int> vtx;
     vt<int> vty;
     mi x;
     mi y;
-    int ans = 1;
     for(int i = 0; i < n; i++) {
         pi t;
         cin >> t.f >> t.s;
@@ -50,14 +53,12 @@ int main() {
     }
 
     for(int i = 0; i < vtx.size(); i++) {
-        cout<<"X";
-        if(x[i] >= k) {
+        if(x[vtx[i]] >= k) {
             ans++;
         }
     }
     for(int i = 0; i < vty.size(); i++) {
-        cout<<"Y";
-        if(y[i] >= k) {
+        if(y[vty[i]] >= k) {
             ans++;
         }
     }
