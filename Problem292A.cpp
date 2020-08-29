@@ -40,6 +40,7 @@ int main() {
         cin >> k >> m;
         cout<< k <<"\t"<< t<<"\n";
         q = pm - (k - t);
+        cout<<q<<"\n";
         t = k;
         if(q < 0) {
             q = 0;
