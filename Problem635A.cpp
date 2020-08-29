@@ -52,6 +52,7 @@ int main() {
                         }
                     }
                     if(pin >= k) {
+                        cout<<"PIN";
                         ans++;
                     }
                 }
