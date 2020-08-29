@@ -32,11 +32,13 @@ int main() {
     string a, b;
     cin >> a >> b;
     sort(b.begin(), b.end());
+    cout<<b<<"\n";
     int k = 0;
     for(int i = 0; i < a.length(); i++) {
         if(a[i] < b[k]){
-            a[i] = b[++k];
-            b[i] = '0';
+            a[i] = b[k];
+            b[k] = '0';
+            k++;
         }
     }
     cout<<a;
