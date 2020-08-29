@@ -47,8 +47,7 @@ int main() {
                         pi t = pi(j, i);
                         pi e = pi(x, y);
                         pi p = vio[v];
-                        if((p.first >= t.first && p.second >= t.second) && (p.first <= e.first && p.second <= e.second)) {
-                            cout<<p.f<<p.s<<"\n";
+                        if((p.f >= t.f && p.s >= t.s) && (p.f <= e.f && p.s <= e.s)) {
                             pin++;
                         }
                     }
@@ -61,7 +60,7 @@ int main() {
         }
     }
     
-    cout << ans;
+    std::cout << ans;
     return 0;
 }
 
