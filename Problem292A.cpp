@@ -48,6 +48,7 @@ int main() {
         q += m;
         cout<<q<<"\n";
         maxq = max(maxq, q);
+        cout<<m;
         pm = m;
     }
     int lastm = t + q;
