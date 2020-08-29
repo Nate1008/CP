@@ -39,7 +39,7 @@ int main() {
         int k, m;
         cin >> k >> m;
         cout<< k <<"\t"<< t<<"\n";
-        q = pm - (k - t);
+        q -= k - t;
         cout<<q<<"\n";
         t = k;
         if(q < 0) {
@@ -48,7 +48,6 @@ int main() {
         q += m;
         cout<<q<<"\n";
         maxq = max(maxq, q);
-        cout<<m;
         pm = m;
     }
     int lastm = t + q;
