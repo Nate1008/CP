@@ -44,10 +44,10 @@ int main() {
         a--;
     }
 
-    if(y > b) {
-        b--;
-    } else {
+    if(y < b) {
         b++;
+    } else {
+        b--;
     }
 
     int len = abs(x - a);
