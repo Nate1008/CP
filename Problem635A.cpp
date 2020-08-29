@@ -45,7 +45,7 @@ int main() {
                     int pin = 0;
                     std::cout<<"START: "<<j<<" "<<i<<"\n";
                     std::cout<<"END: "<<x<<" "<<y<<"\n";
-                    for(int v = 0; v < vio.size(); v++) {
+                    for(int v = 0; v <= vio.size(); v++) {
                         pi t = pi(j, i);
                         pi e = pi(x, y);
                         pi p = vio[v];
