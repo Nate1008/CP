@@ -50,14 +50,14 @@ int main() {
     }
 
     for(int i = 0; i < vtx.size(); i++) {
+        cout<<"X";
         if(x[i] >= k) {
-            cout<<"X";
             ans++;
         }
     }
     for(int i = 0; i < vty.size(); i++) {
+        cout<<"Y";
         if(y[i] >= k) {
-            cout<<"Y";
             ans++;
         }
     }
