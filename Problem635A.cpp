@@ -31,9 +31,6 @@ int main() {
     int r, c, n, k;
     int ans = 1;
     cin >> r >> c >> n >> k;
-    if(n == 1) {
-        ans++;
-    }
     vt<int> vtx;
     vt<int> vty;
     mi x;
@@ -61,8 +58,8 @@ int main() {
             ans++;
         }
     }
-    if(n/k > 1) {
-        ans += n/k;
+    if(ceil(n/k) > 1) {
+        ans += ceil(n/k);
     }
     cout<<ans;
     return 0;
