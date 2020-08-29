@@ -32,6 +32,10 @@ int main() {
     string a, b;
     cin >> a >> b;
     for(int i = 0; i < a.length(); i++) {
+        if(a[i] == 9) {
+            continue;
+        }
+        cout<<"9";
         for(int k = 0; k < b.length(); k++) {
             if(a[i] < b[k]){
                 a[i] = b[k];
