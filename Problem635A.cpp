@@ -46,7 +46,7 @@ int main() {
                     std::cout<<"START: "<<j<<" "<<i<<"\n";
                     std::cout<<"END: "<<x<<" "<<y<<"\n";
                     for(int v = 0; v < vio.size(); v++) {
-                        pi t = pi(j, i);
+                        pi t = pi(i, j);
                         pi e = pi(x, y);
                         pi p = vio[v];
                         if((p.f >= t.f && p.s >= t.s) && (p.f <= e.f && p.s <= e.s)) {
