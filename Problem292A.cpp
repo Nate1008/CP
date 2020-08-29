@@ -38,15 +38,12 @@ int main() {
     for(int i = 0; i < n; i++) {
         int k, m;
         cin >> k >> m;
-        cout<< k <<"\t"<< t<<"\n";
         q -= k - t;
-        cout<<q<<"\n";
         t = k;
         if(q < 0) {
             q = 0;
         }
         q += m;
-        cout<<q<<"\n";
         maxq = max(maxq, q);
         pm = m;
     }
