@@ -27,6 +27,9 @@
 #define vt vector
 
 using namespace std;
+int factorial(int a) {
+    
+}
 
 int main() {
     int r, c, n, k;
@@ -62,7 +65,9 @@ int main() {
             ans++;
         }
     }
-
+    if(n/k > 1) {
+        ans += n/k;
+    }
     cout<<ans;
     return 0;
 }
