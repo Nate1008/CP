@@ -33,8 +33,10 @@ int main() {
     cin >> x >> y >> a >> b;
     if(x == a) {
         cout<<abs(y - b)*8;
+        return 0;
     } else if (y == b) {
         cout<<abs(x - a)*8;
+        return 0;
     }
     if(x < a) {
         a++;
