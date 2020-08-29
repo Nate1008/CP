@@ -38,8 +38,8 @@ int main() {
     for(int i = 0; i < n; i++) {
         int k, m;
         cin >> k >> m;
+        q = pm - (t - k);
         t = k;
-        q = pm - t;
         if(q < 0) {
             q = 0;
         }
