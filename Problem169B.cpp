@@ -32,11 +32,11 @@ int main() {
     string a, b;
     cin >> a >> b;
     sort(b.begin(), b.end());
-    int len = max(a.length(), b.length());
-    for(int i = 0; i < len; i++) {
-        if(a[i] < b[i]){
-                a[i] = b[i];
-                b[i] = '0';
+    int k = b.length();
+    for(int i = 0; i < a.length(); i++) {
+        if(a[i] < b[k]){
+            a[i] = b[k--];
+            b[i] = '0';
         }
     }
     cout<<a;
