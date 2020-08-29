@@ -29,6 +29,21 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    int q = 1;
+    int maxq = 0;
+    int t = 0;
+    for(int i = 0; i < n; i++) {
+        int k, m;
+        cin >> k >> m;
+        k = t;
+        q--;
+        q += m;
+        maxq = max(maxq, q);
+    }
+    int lastm = t + q;
+    cout<<lastm<<" "<<maxq;
     return 0;
 }
 
