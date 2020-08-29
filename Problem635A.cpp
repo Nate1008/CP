@@ -31,10 +31,6 @@ using namespace std;
 int main() {
     int r, c, n, k;
     cin >> r >> c >> n >> k;
-    if(n == 1){
-        cout<<4;
-        return 0;
-    }
     vt<int> vtx;
     vt<int> vty;
     mi x;
