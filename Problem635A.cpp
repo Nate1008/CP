@@ -51,8 +51,8 @@ int main() {
                             pin++;
                         }
                     }
+                    cout<<pin;
                     if(pin >= k) {
-                        cout<<pin;
                         ans++;
                     }
                 }
