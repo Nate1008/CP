@@ -31,7 +31,7 @@ using namespace std;
 int main() {
     int x, y, a, b;
     cin >> x >> y >> a >> b;
-    if(x > a) {
+    if(x < a) {
         a++;
     } else {
         a--;
