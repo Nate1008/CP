@@ -33,7 +33,11 @@ int main() {
     cin >> a >> b;
     for(int i = 0; i < a.length(); i++) {
         for(int k = 0; k < b.length(); k++) {
-            a[i] = max(a[i], b[k]);
+            if(a[i], b[k]){
+                a[i] = b[k];
+                b[k] = '0';
+            }
+            
         }
     }
     cout<<a;
