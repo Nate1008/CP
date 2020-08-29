@@ -9,6 +9,7 @@
         "ratio": "cpp",
         "iterator": "cpp",
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "map": "cpp"
     }
 }

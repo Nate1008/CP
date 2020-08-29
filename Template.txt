@@ -21,6 +21,7 @@
 
 #define ll long long
 #define pi pair<int, int>
+#define mi map<int, int>
 #define f first
 #define s second
 #define vt vector

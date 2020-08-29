@@ -21,6 +21,7 @@
 
 #define ll long long
 #define pi pair<int, int>
+#define mi map<int, int>
 #define f first
 #define s second
 #define vt vector
@@ -28,6 +29,40 @@
 using namespace std;
 
 int main() {
+    int r, c, n, k;
+    cin >> r >> c >> n >> k;
+    if(n == 1){
+        cout<<4;
+        return 0;
+    }
+    vt<int> vtx;
+    vt<int> vty;
+    mi x;
+    mi y;
+    int ans = 1;
+    for(int i = 0; i < n; i++) {
+        pi t;
+        cin >> t.f >> t.s;
+        x[t.f]++;
+        y[t.s]++;
+        if(x[t.f] == 1) {
+            vtx.push_back(t.f);
+        }
+        if(y[t.s] == 1) {
+            vty.push_back(t.s);
+        }
+    }
+
+    for(int i = 0; i < vtx.size(); i++) {
+        if(x[i] >= k) {
+            ans++;
+        }
+    }
+    for(int i = 0; i < vty.size(); i++) {
+        if(y[i] >= k) {
+            ans++;
+        }
+    }
     return 0;
 }
 
