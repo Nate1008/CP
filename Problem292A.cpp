@@ -38,7 +38,7 @@ int main() {
         int k, m;
         cin >> k >> m;
         k = t;
-        cout<<k<<"\n";
+        cout<<m<<"\n";
         q--;
         q += m;
         maxq = max(maxq, q);
