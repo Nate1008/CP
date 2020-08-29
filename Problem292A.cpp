@@ -38,7 +38,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         int k, m;
         cin >> k >> m;
-        q = pm - (t - k);
+        q = pm - (k - t);
         cout<<q<<"\n";
         t = k;
         if(q < 0) {
