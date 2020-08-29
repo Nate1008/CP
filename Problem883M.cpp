@@ -31,20 +31,20 @@ using namespace std;
 int main() {
     int x, y, a, b;
     cin >> x >> y >> a >> b;
-    if(x < a) {
-        a++;
-    } else {
-        a--;
-    }
-
-    if(y > b) {
-        b--;
-    } else {
-        b++;
-    }
 
     int len = abs(x - a);
     int wid = abs(y - b);
+    if(x < a) {
+        len++;
+    } else {
+        len--;
+    }
+
+    if(y > b) {
+        wid--;
+    } else {
+        wid++;
+    }
     int peri = wid * 2 + len * 2;
 
     cout<<peri;
