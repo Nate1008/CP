@@ -29,6 +29,26 @@
 using namespace std;
 
 int main() {
+    int x, y, a, b;
+    cin >> x >> y >> a >> b;
+    if(x > a) {
+        a++;
+    } else {
+        a--;
+    }
+
+    if(x > b) {
+        b--;
+    } else {
+        b++;
+    }
+
+    int len = x - a;
+    int wid = y - b;
+
+    int peri = wid * 2 + len * 2;
+
+    cout<<peri;
     return 0;
 }
 
