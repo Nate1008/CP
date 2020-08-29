@@ -44,8 +44,9 @@ int main() {
         if(q < 0) {
             q = 0;
         }
+        cout<<q;
         maxq = max(maxq, q);
-        pm = m+1;
+        pm = m;
     }
     int lastm = t + q;
     cout<<lastm<<" "<<maxq;
