@@ -43,8 +43,8 @@ int main() {
         if(q < 0) {
             q = 0;
         }
-        cout<<q<<"\n";
         q += m;
+        cout<<q<<"\n";
         maxq = max(maxq, q);
         pm = m;
     }
