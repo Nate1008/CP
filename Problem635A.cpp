@@ -47,7 +47,7 @@ int main() {
                         pi t = pi(j, i);
                         pi e = pi(x, y);
                         pi p = vio[v];
-                        if(p.f >= t.f && p.s >= t.s && p.f <= e.f && p.s <= e.s) {
+                        if(p.f >= t.f || p.s >= t.s && p.f <= e.f || p.s <= e.s) {
                             pin++;
                         }
                     }
