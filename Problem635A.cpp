@@ -34,7 +34,7 @@ int main() {
     vt<pi> vio;
     for(int i = 0; i < n; i++) {
         pi t;
-        cin >> t.s >> t.f;
+        cin >> t.f >> t.s;
         vio.push_back(t);
     }
 
@@ -46,7 +46,7 @@ int main() {
                     std::cout<<"START: "<<j<<" "<<i<<"\n";
                     std::cout<<"END: "<<x<<" "<<y<<"\n";
                     for(int v = 0; v <= vio.size(); v++) {
-                        pi t = pi(i, j);
+                        pi t = pi(j, i);
                         pi e = pi(y, x);
                         pi p = vio[v];
                         if((p.f >= t.f && p.s <= t.s) && (p.f <= e.f && p.s <= e.s)) {
