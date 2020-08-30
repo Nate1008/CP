@@ -32,7 +32,7 @@
 using namespace std;
 
 int main() {
-    int n, m, s;
+    int n, m, sum;
     cin >> n >> m;
     vt<vi > mat(n, vi(m));
     for(int i = 0; i < n; i++) {
@@ -43,7 +43,17 @@ int main() {
 
     for(int i = 0; i < n; i++) {
         for(int k = 0; k < m; k++) {
+            if(mat[i][k] == 0) {
+                mat[i][k] = min(mat[i+1][k]-1, mat[i][k+1]-1);
+            }
 
+            int diffv = mat[i+1][k] - mat[i-1][k];
+            int diffh = mat[i][k+1] - mat[i][k-1];
+            if(diffv <= 1 || diffh <= 1) {
+                cout<<-1;
+                return 0;
+            }
+            sum += mat[i][k];
         }
     }
     return 0;
