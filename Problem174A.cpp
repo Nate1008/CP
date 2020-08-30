@@ -46,14 +46,11 @@ int main() {
         k = max(k, t);
         vol[i] = t;
     }
-    cout<<"K: "<<k<<"\n";
     for(int i = 0; i < n; i++) {
         float diff = k - vol[i];
-        cout<<"DIFF: "<< diff<<"\n";
         b -= diff;
         ans[i] = diff;
     }
-    cout<<"B: "<<b<<"\n";
     if(b <= 0) {
         cout<<-1;
         return 0;
