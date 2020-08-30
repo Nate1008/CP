@@ -36,7 +36,7 @@ int main() {
     int n, b;
     cin >> n >> b;
     vi vol(n);
-    vector<double> ans(n);
+    vector<float> ans(n);
     vi::iterator it;
     for(int i = 0; i < n; i++) {
         cin >> vol[i];
@@ -44,7 +44,7 @@ int main() {
     it = max(vol.begin(), vol.end());
     int k = distance(vol.begin(), it);
     for(int i = 0; i < n; i++) {
-        double diff = vol[k] - vol[i];
+        float diff = vol[k] - vol[i];
         b -= diff;
         ans[i] = diff;
     }
@@ -52,7 +52,7 @@ int main() {
         cout<<-1;
         return 0;
     }
-    double div = b/n;
+    float div = b/n;
     for(int i = 0; i < n; i++) {
         cout<<ans[i]+div<<"\n";
     }
