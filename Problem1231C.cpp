@@ -34,7 +34,7 @@ using namespace std;
 int main() {
     int n, m, sum;
     cin >> n >> m;
-    vt<vi > mat(n, vi(m));
+    int mat[n][m];
     for(int i = 0; i < n; i++) {
         for(int k = 0; k < m; k++) {
             cin >> mat[i][k];
