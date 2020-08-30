@@ -29,15 +29,16 @@
 #define vt vector
 #define vi vector<int>
 #define vd vector<double>
+#define vf vector<float>
 
 using namespace std;
 
 int main() {
     double n, b;
     cin >> n >> b;
-    vd vol(n);
-    vd ans(n);
-    vd::iterator it;
+    vf vol(n);
+    vf ans(n);
+    vf::iterator it;
     for(int i = 0; i < n; i++) {
         cin >> vol[i];
     }

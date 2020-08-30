@@ -29,6 +29,7 @@
 #define vt vector
 #define vi vector<int>
 #define vd vector<double>
+#define vf vector<float>
 
 using namespace std;
 
