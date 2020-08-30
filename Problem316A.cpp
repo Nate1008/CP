@@ -22,6 +22,8 @@
 #define ll long long
 #define pi pair<int, int>
 #define mi map<int, int>
+#define ms map<string, int>
+#define mc map<char, int>
 #define f first
 #define s second
 #define vt vector
@@ -29,6 +31,17 @@
 using namespace std;
 
 int main() {
+    string a;
+    cin >> a;
+    ll perm = 1;
+    mc letters;
+    if((a[0] >= 'a'&& a[0] <= 'z')||(a[0] >= 'A'&& a[0] <= 'Z')) {
+        perm = 9;
+
+    }
+    for(int i = 1; i <a.length(); i++) {
+        
+    }
     return 0;
 }
 
