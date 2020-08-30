@@ -54,9 +54,8 @@ int main() {
         return 0;
     }
     float div = b/n;
-    cout<<div<<"\n";
     for(int i = 0; i < n; i++) {
-        cout<<ans[i]+div<<"\n";
+        printf("%.6f", ans[i]+div);
     }
     return 0;
 }
