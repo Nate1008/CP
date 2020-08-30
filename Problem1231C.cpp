@@ -56,7 +56,6 @@ int main() {
             }
             if(i-1>=0){
                 int vert = mat[i][k] - mat[i-1][k];
-                cout<<mat[i][k]<<"\t"<<mat[i][k-1]<<"\t"<<mat[i-1][k]<<"\n";
                 if(vert < 0) {
                     cout<<-1;
                     return 0;
