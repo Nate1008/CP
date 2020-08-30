@@ -49,12 +49,11 @@ int main() {
         int k = distance(sizes.begin(), it);
         vt<int> dist;
         for(int b = 0; b < 5; b++) {
-            if(si[b] == 0) {
-                continue;
+            if(si[b] != 0) {
+                int d = b - k;
+                cout<<d<<"\n";
+                dist.push_back(d);
             }
-            int d = b - k;
-            cout<<d<<"\n";
-            dist.push_back(d);
         }
         int mini = 0;
         for(int b = 0; b < dist.size(); b++) {
