@@ -28,6 +28,7 @@
 #define s second
 #define vt vector
 #define vi vector<int>
+#define vd vector<double>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ int main() {
     int n, b;
     cin >> n >> b;
     vi vol(n);
-    vi ans(n);
+    vector<double> ans(n);
     vi::iterator it;
     for(int i = 0; i < n; i++) {
         cin >> vol[i];

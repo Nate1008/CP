@@ -28,6 +28,7 @@
 #define s second
 #define vt vector
 #define vi vector<int>
+#define vd vector<double>
 
 using namespace std;
 
