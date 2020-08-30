@@ -30,7 +30,7 @@ using namespace std;
 
 int main() {
     vt<string> sizes;
-    sizes = {"S", "M", "L", "XL", "XXL"} ;
+    sizes = { "S", "M", "L", "XL", "XXL" };
     vt<string>::iterator it;
     map<int, int> si;
     for(int i = 0; i < 5; i++) {
