@@ -35,12 +35,20 @@ int main() {
     int n, m, sum;
     cin >> n >> m;
     int mat[n][m];
+    bool pass = false;
     for(int i = 0; i < n; i++) {
         for(int k = 0; k < m; k++) {
             cin >> mat[i][k];
+            if(mat[i][k] == 0) {
+                pass = true;
+            }
         }
     }
-
+    if(!pass){
+        cout<<-1;
+        return 0;
+    }    
+    
     for(int i = n-1; i > 0; i--) {
         for(int k = m-1; k > 0; k--) {
             //cout<<mat[i][k]<<"\n";
