@@ -28,7 +28,7 @@
 #define s second
 #define vt vector
 #define vi vector<int>
-#define vd vector<double>
+#define vd vector<int>
 
 using namespace std;
 
@@ -36,7 +36,7 @@ int main() {
     int n, b;
     cin >> n >> b;
     vi vol(n);
-    vector<float> ans(n);
+    vd ans(n);
     vi::iterator it;
     for(int i = 0; i < n; i++) {
         cin >> vol[i];
@@ -44,7 +44,7 @@ int main() {
     it = max(vol.begin(), vol.end());
     int k = distance(vol.begin(), it);
     for(int i = 0; i < n; i++) {
-        float diff = vol[k] - vol[i];
+        double diff = vol[k] - vol[i];
         b -= diff;
         ans[i] = diff;
     }
@@ -52,7 +52,7 @@ int main() {
         cout<<-1;
         return 0;
     }
-    float div = b/n;
+    double div = b/n;
     for(int i = 0; i < n; i++) {
         cout<<ans[i]+div<<"\n";
     }
