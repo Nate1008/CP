@@ -53,12 +53,12 @@ int main() {
                 continue;
             }
             int d = b - k;
+            cout<<b<<"\n";
             dist.push_back(d);
         }
-
         int mini = 0;
         for(int b = 0; b < dist.size(); b++) {
-            cout<<b<<"\t"<<dist[b]<<"\n";
+            //cout<<b<<"\t"<<dist[b]<<"\n";
             if(abs(dist[b]) < abs(dist[mini])) {
                 mini = b;
             }
