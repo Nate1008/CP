@@ -49,8 +49,8 @@ int main() {
         return 0;
     }    
 
-    for(int i = n-1; i > 0; i--) {
-        for(int k = m-1; k > 0; k--) {
+    for(int i = n-1; i >= 0; i--) {
+        for(int k = m-1; k >= 0; k--) {
             cout<<i<<"\t"<<k<<"\n";
             //cout<<;
             if(mat[i][k] == 0) {
