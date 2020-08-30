@@ -48,6 +48,7 @@ int main() {
     cout<<"K: "<<k<<"\n";
     for(int i = 0; i < n; i++) {
         float diff = k - vol[i];
+        cout<<"DIFF: "<< diff<<"\n";
         b -= diff;
         ans[i] = diff;
     }
