@@ -56,11 +56,12 @@ int main() {
         int maxi = 0;
         for(int b = 0; b < dist.size(); b++) {
             cout<<b<<"\t"<<dist[b]<<"\n";
-            if(dist[b] > dist[maxi]) {
+            if(abs(dist[b]) > abs(dist[maxi])) {
                 maxi = b;
             }
         }
         si[maxi]--;
+        cout<<si[maxi]<<"\t";
         cout<<sizes[maxi]<<"\n";
     }
     return 0;
