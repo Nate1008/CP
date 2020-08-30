@@ -49,6 +49,9 @@ int main() {
         int k = distance(sizes.begin(), it);
         vt<int> dist;
         for(int b = 0; b < 5; b++) {
+            if(sizes[b] == 0) {
+                continue;
+            }
             int d = b - k;
             dist.push_back(d);
         }
