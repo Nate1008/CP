@@ -39,16 +39,8 @@ int main() {
     for(int i = 0; i < n; i++) {
         for(int k = 0; k < m; k++) {
             cin >> mat[i][k];
-            if(mat[i][k] == 0) {
-                pass = true;
-            }
         }
     }
-    if(!pass){
-        cout<<-1;
-        return 0;
-    }    
-
     for(int i = n-1; i >= 0; i--) {
         for(int k = m-1; k >= 0; k--) {
             //cout<<i<<"\t"<<k<<"\n";
@@ -62,6 +54,12 @@ int main() {
                     return 0;
                 }
             }
+            int hori = mat[i][k+1] - mat[i][k]; 
+            int vert = mat[i+1][k] - mat[i][k];
+            if(hori < 0 || vert < 0) {
+                cout<<-1;
+                return 0;
+            }          
             sum += mat[i][k];
             //cout<<mat[i][k]<<"\t"<<sum<<"\n";
         }
