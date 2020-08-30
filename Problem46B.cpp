@@ -59,7 +59,7 @@ int main() {
                 }
             }
         }
-        //si[mini]--;
+        si[mini]--;
         //cout<<mini.s<<"\n";
         cout<<sizes[mini.s]<<"\n";
     }
