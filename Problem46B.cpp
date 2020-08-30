@@ -59,6 +59,7 @@ int main() {
         int maxi = 0;
         for(int b = 0; b < dist.size(); b++) {
             if(abs(dist[b]) > abs(dist[maxi])) {
+                cout<<b<<"\n";
                 maxi = b;
             }
         }
