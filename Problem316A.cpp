@@ -42,6 +42,7 @@ int main() {
         n++;
     }
     for(int i = 1; i < a.length(); i++) {
+        cout<<perm;
         if((a[i] >= 'a'&& a[i] <= 'z')||(a[i] >= 'A'&& a[i] <= 'Z')) {
             if(letters[a[i]] == 0) {
                 perm *= 10 - n;
