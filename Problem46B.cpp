@@ -49,25 +49,20 @@ int main() {
         it = find(sizes.begin(), sizes.end(), a);
         int k = distance(sizes.begin(), it);
         vt<int> dist;
+        pi mini;
         for(int b = 0; b < 5; b++) {
             if(si[b] != 0) {
                 int d = b - k;
                 cout<<d<<"\n";
-                dist.push_back(d);
-            }
-        }
-        int mini = 0;
-        for(int b = 0; b < dist.size(); b++) {
-            //cout<<b<<"\t"<<dist[b]<<"\n";
-            ite = find(dist.begin(), dist.end(), dist[b]);
-            int d = distance(dist.begin(), ite);
-            if(abs(dist[d]) < abs(dist[mini])) {
-                mini = d;
+                if(d < mini.f) {
+                    mini.f = d;
+                    mini.s = b;
+                }
             }
         }
         //si[mini]--;
-        cout<<si[mini]<<"\n";
-        cout<<sizes[mini]<<"\n";
+        cout<<si[mini.s]<<"\n";
+        cout<<sizes[mini.s]<<"\n";
     }
     return 0;
 }
