@@ -41,8 +41,8 @@ int main() {
         }
     }
 
-    for(int i = 0; i < n; i++) {
-        for(int k = 0; k < m; k++) {
+    for(int i = n-1; i > 0; i++) {
+        for(int k = m-1; k > 0; k++) {
             if(mat[i][k] == 0) {
                 mat[i][k] = min(mat[i+1][k]-1, mat[i][k+1]-1);
                 int diffv = mat[i+1][k] - mat[i-1][k];
