@@ -64,7 +64,7 @@ int main() {
             }
         }
         si[mini]--;
-        cout<<mini<<"\n";
+        cout<<si[mini]<<"\n";
         cout<<sizes[mini]<<"\n";
     }
     return 0;
