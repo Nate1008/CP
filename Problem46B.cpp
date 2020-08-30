@@ -61,7 +61,7 @@ int main() {
             }
         }
         si[maxi]--;
-        cout<<si[maxi]<<"\t";
+        cout<<si[maxi]<<"\n";
         cout<<sizes[maxi]<<"\n";
     }
     return 0;
