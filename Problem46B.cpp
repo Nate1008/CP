@@ -56,16 +56,16 @@ int main() {
             dist.push_back(d);
         }
 
-        int maxi = 0;
+        int mini = 0;
         for(int b = 0; b < dist.size(); b++) {
             cout<<b<<"\t"<<dist[b]<<"\n";
-            if(abs(dist[b]) > abs(dist[maxi])) {
-                maxi = b;
+            if(abs(dist[b]) < abs(dist[mini])) {
+                mini = b;
             }
         }
-        si[maxi]--;
-        cout<<maxi<<"\n";
-        cout<<sizes[maxi]<<"\n";
+        si[mini]--;
+        cout<<mini<<"\n";
+        cout<<sizes[mini]<<"\n";
     }
     return 0;
 }
