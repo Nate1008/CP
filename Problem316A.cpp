@@ -43,9 +43,7 @@ int main() {
     }
     for(int i = 1; i < a.length(); i++) {
         if((a[i] >= 'a'&& a[i] <= 'z')||(a[i] >= 'A'&& a[i] <= 'Z')) {
-            if(letters[a[i]] != 0) {
-                perm *= letters[a[i]];
-            } else {
+            if(letters[a[i]] == 0) {
                 perm *= 10 - n;
                 letters[a[i]] = 10 - n;
                 n++;
