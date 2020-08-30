@@ -49,11 +49,10 @@ int main() {
         it = find(sizes.begin(), sizes.end(), a);
         int k = distance(sizes.begin(), it);
         pi mini = pi(12345, 0);
-        cout << mini.f <<"\t"<<mini.s<<"\n";
         for(int b = 0; b < 5; b++) {
             if(si[b] != 0) {
                 int d = b - k;
-                cout<<d<<"\t"<<"\n";
+                cout<<d<<"\t"<<b<<"\n";
                 if(abs(d) < mini.f && b > mini.s) {
                     mini.f = abs(d);
                     mini.s = b;
