@@ -61,7 +61,7 @@ int main() {
                 return 0;
             }          
             sum += mat[i][k];
-            //cout<<mat[i][k]<<"\t"<<sum<<"\n";
+            cout<<mat[i][k]<<"\t"<<sum<<"\n";
         }
     }
     cout<<sum;
