@@ -20,13 +20,14 @@
 #include <cmath>
 
 #define ll long long
-#define pi pair<int, int>
 #define mi map<int, int>
 #define ms map<string, int>
 #define mc map<char, int>
+#define pi pair<int, int>
 #define f first
 #define s second
 #define vt vector
+#define vi vector<int>
 
 using namespace std;
 
