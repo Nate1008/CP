@@ -53,7 +53,7 @@ int main() {
                 continue;
             }
             int d = b - k;
-            cout<<b<<"\n";
+            cout<<d<<"\n";
             dist.push_back(d);
         }
         int mini = 0;
