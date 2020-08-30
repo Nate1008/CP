@@ -44,7 +44,7 @@ int main() {
         float t;
         cin >> t;
         k = max(k, t);
-        cout<<k;
+        vol[i] = t;
     }
     cout<<"K: "<<k<<"\n";
     for(int i = 0; i < n; i++) {
