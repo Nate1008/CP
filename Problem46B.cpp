@@ -60,7 +60,7 @@ int main() {
         for(int b = 0; b < dist.size(); b++) {
             //cout<<b<<"\t"<<dist[b]<<"\n";
             ite = find(dist.begin(), dist.end(), dist[b]);
-            int d = distance(sizes.begin(), ite);
+            int d = distance(dist.begin(), ite);
             if(abs(dist[d]) < abs(dist[d])) {
                 mini = b;
             }
