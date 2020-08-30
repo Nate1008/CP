@@ -36,6 +36,7 @@ int main() {
     sizes.push_back("XL");
     sizes.push_back("XXL");
     vt<string>::iterator it;
+    vt<int>::iterator ite;
     map<int, int> si;
     for(int i = 0; i < 5; i++) {
         cin >> si[i];
@@ -58,8 +59,8 @@ int main() {
         int mini = 0;
         for(int b = 0; b < dist.size(); b++) {
             //cout<<b<<"\t"<<dist[b]<<"\n";
-            it = find(sizes.begin(), sizes.end(), dist[b]);
-            int d = distance(sizes.begin(), it);
+            ite = find(dist.begin(), dist.end(), dist[b]);
+            int d = distance(sizes.begin(), ite);
             if(abs(dist[d]) < abs(dist[d])) {
                 mini = b;
             }
