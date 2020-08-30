@@ -48,7 +48,7 @@ int main() {
         cin >> a;
         it = find(sizes.begin(), sizes.end(), a);
         int k = distance(sizes.begin(), it);
-        pi mini = pi(12345, 0);
+        pi mini = pi(10, 0);
         for(int b = 0; b < 5; b++) {
             if(si[b] != 0) {
                 int d = b - k;
@@ -59,7 +59,6 @@ int main() {
             }
         }
         si[mini.s]--;
-        //cout<<mini.s<<"\n";
         cout<<sizes[mini.s]<<"\n";
     }
     return 0;
