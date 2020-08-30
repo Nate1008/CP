@@ -53,7 +53,7 @@ int main() {
             if(si[b] != 0) {
                 int d = b - k;
                 cout<<d<<"\t"<<b<<"\n";
-                if(abs(d) < mini.f && b > mini.s) {
+                if(abs(d) <= mini.f && b > mini.s) {
                     mini.f = abs(d);
                     mini.s = b;
                 }
