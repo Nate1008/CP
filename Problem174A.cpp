@@ -50,7 +50,6 @@ int main() {
         b -= diff;
         ans[i] = diff;
     }
-    cout<<"B: "<<b<<"\n";
     if(b <= 0) {
         cout<<-1;
         return 0;
