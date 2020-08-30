@@ -60,6 +60,7 @@ int main() {
                 maxi = b;
             }
         }
+        si[maxi]--;
         cout<<sizes[maxi]<<"\n";
     }
     return 0;
