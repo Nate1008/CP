@@ -54,7 +54,7 @@ int main() {
             if(si[b] != 0) {
                 int d = b - k;
                 cout<<d<<"\n";
-                if(d < mini.f) {
+                if(d > mini.f) {
                     mini.f = d;
                     mini.s = b;
                 }
