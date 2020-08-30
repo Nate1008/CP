@@ -18,7 +18,6 @@
 #include <cstring>
 #include <ctime>
 #include <cmath>
-#include <ctype>
 
 #define ll long long
 #define pi pair<int, int>
