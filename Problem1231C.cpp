@@ -49,9 +49,9 @@ int main() {
         return 0;
     }    
 
-    for(int i = n; i > 0; i--) {
-        for(int k = m; k > 0; k--) {
-            //cout<<mat[i][k]<<"\n";
+    for(int i = n-1; i > 0; i--) {
+        for(int k = m-1; k > 0; k--) {
+            //cout<<;
             if(mat[i][k] == 0) {
                 mat[i][k] = min(mat[i+1][k]-1, mat[i][k+1]-1);
                 int diffv = mat[i+1][k] - mat[i-1][k];
@@ -63,7 +63,7 @@ int main() {
                 }
             }
             sum += mat[i][k];
-            cout<<sum<<"\n";
+            cout<<mat[i][k]<<"\t"<<sum<<"\n";
         }
     }
     cout<<sum;
