@@ -49,7 +49,7 @@ int main() {
 
             int diffv = mat[i+1][k] - mat[i-1][k];
             int diffh = mat[i][k+1] - mat[i][k-1];
-            cout<<diffh<<"\t"<<diffv;
+            cout<<diffh<<"\t"<<diffv<<"\n";
             if(diffv <= 1 || diffh <= 1) {
                 cout<<-1;
                 return 0;
