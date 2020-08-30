@@ -48,7 +48,7 @@ int main() {
         cout<<-1;
         return 0;
     }    
-    
+
     for(int i = n-1; i > 0; i--) {
         for(int k = m-1; k > 0; k--) {
             //cout<<mat[i][k]<<"\n";
@@ -63,6 +63,7 @@ int main() {
                 }
             }
             sum += mat[i][k];
+            cout<<sum<<"\n";
         }
     }
     cout<<sum;
