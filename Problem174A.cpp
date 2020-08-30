@@ -39,14 +39,14 @@ int main() {
     vf vol(n);
     vf ans(n);
     vf::iterator it;
+    float k = 0; 
     for(int i = 0; i < n; i++) {
-        cin >> vol[i];
+        float t;
+        cin >> t;
+        k = max(k, t);
     }
-    it = max(vol.begin(), vol.end());
-    int k = distance(vol.begin(), it);
-    cout<<"K: "<<k<<"\n";
     for(int i = 0; i < n; i++) {
-        float diff = vol[k-1] - vol[i];
+        float diff = k - vol[i];
         b -= diff;
         ans[i] = diff;
     }
