@@ -44,6 +44,7 @@ int main() {
     }
     it = max(vol.begin(), vol.end());
     int k = distance(vol.begin(), it);
+    cout<<"K: "<<k<<"\n";
     for(int i = 0; i < n; i++) {
         float diff = vol[k-1] - vol[i];
         b -= diff;
