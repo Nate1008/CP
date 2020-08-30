@@ -40,7 +40,7 @@ int main() {
         cin >> b[i];
     }
     int same;
-    for(int i = 0; i < a.size(); i++) {
+    for(int i = 0; i < 3; i++) {
         if(a[i] == b[i]) {
             same++;        
         }
