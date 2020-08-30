@@ -61,7 +61,7 @@ int main() {
             //cout<<b<<"\t"<<dist[b]<<"\n";
             ite = find(dist.begin(), dist.end(), dist[b]);
             int d = distance(dist.begin(), ite);
-            if(abs(dist[d]) < abs(dist[d])) {
+            if(abs(dist[d]) < abs(dist[mini])) {
                 mini = b;
             }
         }
