@@ -36,10 +36,12 @@ int main() {
     ll perm = 1;
     int n = 0;
     mc letters;
-    if((a[0] >= 'a'&& a[0] <= 'z')||(a[0] >= 'A'&& a[0] <= 'Z') || a[0] == '?') {
+    if((a[0] >= 'a'&& a[0] <= 'z')||(a[0] >= 'A'&& a[0] <= 'Z')) {
         perm = 9;
         letters[a[0]] = 9;
         n++;
+    } else if (a[0] == '?'){
+        perm = 9;
     }
     for(int i = 1; i < a.length(); i++) {
         cout<<perm<<"\n";
