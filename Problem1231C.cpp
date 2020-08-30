@@ -56,14 +56,14 @@ int main() {
             }
             if(i-1>=0){
                 int vert = mat[i][k] - mat[i-1][k];
-                if(vert < 0) {
+                if(vert <= 0) {
                     cout<<-1;
                     return 0;
                 }
             } 
             if(k-1>=0) {
                 int hori = mat[i][k] - mat[i][k-1]; 
-                if(hori < 0) {
+                if(hori <= 0) {
                     cout<<-1;
                     return 0;
                 }
