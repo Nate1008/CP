@@ -36,12 +36,14 @@ int main() {
     cin >> n >> b;
     vi vol(n);
     vi ans(n);
+    vi::iterator it;
     for(int i = 0; i < n; i++) {
         cin >> vol[i];
     }
-    sort(vol.rbegin(), vol.rend());
+    it = max(vol.begin(), vol.end());
+    int k = distance(vol.begin(), it);
     for(int i = 0; i < n; i++) {
-        double diff = vol[0] - vol[i];
+        double diff = vol[k] - vol[i];
         b -= diff;
         ans[i] = diff;
     }
