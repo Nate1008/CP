@@ -31,6 +31,10 @@
 using namespace std;
 
 int main() {
+    ll k;
+    cin >> k;
+    int ans = (k-1)/2 + 1;
+    cout<<ans;
     return 0;
 }
 
