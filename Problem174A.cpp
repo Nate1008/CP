@@ -35,9 +35,9 @@ using namespace std;
 int main() {
     int n, b;
     cin >> n >> b;
-    vi vol(n);
+    vd vol(n);
     vd ans(n);
-    vi::iterator it;
+    vd::iterator it;
     for(int i = 0; i < n; i++) {
         cin >> vol[i];
     }
