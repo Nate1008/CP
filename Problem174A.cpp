@@ -34,7 +34,7 @@
 using namespace std;
 
 int main() {
-    double n, b;
+    float n, b;
     cin >> n >> b;
     vf vol(n);
     vf ans(n);
