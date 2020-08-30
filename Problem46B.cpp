@@ -48,13 +48,12 @@ int main() {
         cin >> a;
         it = find(sizes.begin(), sizes.end(), a);
         int k = distance(sizes.begin(), it);
-        vt<int> dist;
         pi mini;
         for(int b = 0; b < 5; b++) {
             if(si[b] != 0) {
                 int d = b - k;
                 cout<<d<<"\n";
-                if(abs(d) < mini.f) {
+                if(abs(d) < mini.f && b > mini.s) {
                     mini.f = d;
                     mini.s = b;
                 }
