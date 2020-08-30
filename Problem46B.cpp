@@ -54,7 +54,7 @@ int main() {
                 int d = b - k;
                 cout<<d<<"\n";
                 if(abs(d) < mini.f && b > mini.s) {
-                    mini.f = d;
+                    mini.f = abs(d);
                     mini.s = b;
                 }
             }
