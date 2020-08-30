@@ -48,7 +48,7 @@ int main() {
         cin >> a;
         it = find(sizes.begin(), sizes.end(), a);
         int k = distance(sizes.begin(), it);
-        pi mini = pi(0, 5);
+        pi mini;
         for(int b = 0; b < 5; b++) {
             if(si[b] != 0) {
                 int d = b - k;
