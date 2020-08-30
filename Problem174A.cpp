@@ -55,7 +55,7 @@ int main() {
     }
     float div = b/n;
     for(int i = 0; i < n; i++) {
-        printf("%.6f \n", ans[i]+div);
+        printf("%.6f\n", ans[i]+div);
     }
     return 0;
 }
