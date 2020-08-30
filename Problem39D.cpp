@@ -31,6 +31,25 @@
 using namespace std;
 
 int main() {
+    vt<int> a;
+    vt<int> b;
+    for(int i = 0; i < 3; i++) {
+        cin >> a[i];
+    }
+    for(int i = 0; i < 3; i++) {
+        cin >> b[i];
+    }
+    int same;
+    for(int i = 0; i < a.size(); i++) {
+        if(a[i] == b[i]) {
+            same++;        
+        }
+    } 
+    if(same >= 2) {
+        cout<<"YES";
+    } else {
+        cout<<"NO";
+    }
     return 0;
 }
 
