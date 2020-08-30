@@ -55,7 +55,7 @@ int main() {
                 }
             }
             int hori = mat[i][k+1] - mat[i][k]; 
-            int vert = mat[i+1][k] - mat[i][k];
+            int vert = mat[i-1][k] - mat[i][k];
             if(hori < 0 || vert < 0) {
                 cout<<-1;
                 return 0;
