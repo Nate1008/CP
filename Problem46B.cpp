@@ -58,7 +58,7 @@ int main() {
 
         int maxi = 0;
         for(int b = 0; b < dist.size(); b++) {
-            if(abs(dist[b]) >= abs(dist[maxi])) {
+            if(abs(dist[b]) > abs(dist[maxi])) {
                 maxi = b;
             }
         }
