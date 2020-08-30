@@ -46,7 +46,7 @@ int main() {
             same++;        
         }
     } 
-    if(same >= 2) {
+    if(same >= 1) {
         cout<<"YES";
     } else {
         cout<<"NO";
