@@ -51,7 +51,7 @@ int main() {
         b -= diff;
         ans[i] = diff;
     }
-    if(b <= 0) {
+    if(b < 0) {
         cout<<-1;
         return 0;
     }
