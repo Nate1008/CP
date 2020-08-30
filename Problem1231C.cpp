@@ -54,13 +54,21 @@ int main() {
                     return 0;
                 }
             }
-            int hori = mat[i][k] - mat[i][k-1]; 
-            int vert = mat[i][k] - mat[i-1][k];
-            cout<<mat[i][k]<<"\t"<<mat[i][k-1]<<"\t"<<mat[i-1][k]<<"\n";
-            if(hori < 0 || vert < 0) {
-                cout<<-1;
-                return 0;
-            }          
+            if(i-1>=0){
+                int vert = mat[i][k] - mat[i-1][k];
+                cout<<mat[i][k]<<"\t"<<mat[i][k-1]<<"\t"<<mat[i-1][k]<<"\n";
+                if(vert < 0) {
+                    cout<<-1;
+                    return 0;
+                }
+            } 
+            if(k-1>=0) {
+                int hori = mat[i][k] - mat[i][k-1]; 
+                if(hori < 0) {
+                    cout<<-1;
+                    return 0;
+                }
+            }      
             sum += mat[i][k];
             //cout<<mat[i][k]<<"\t"<<sum<<"\n";
         }
