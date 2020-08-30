@@ -46,8 +46,8 @@ int main() {
             if(letters[a[i]] != 0) {
                 perm *= letters[a[i]];
             } else {
-                perm *= n - 10;
-                letters[a[i]] = n - 10;
+                perm *= 10 - n;
+                letters[a[i]] = 10 - n;
                 n++;
             }
         } else if (a[i] == '?') {
