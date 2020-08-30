@@ -52,7 +52,7 @@ int main() {
         for(int b = 0; b < 5; b++) {
             if(si[b] != 0) {
                 int d = b - k;
-                if(abs(d) <= mini.f && b > mini.s) {
+                if(abs(d) <= mini.f && b >= mini.s) {
                     cout<<d<<"\t"<<b<<"\n";
                     mini.f = abs(d);
                     mini.s = b;
