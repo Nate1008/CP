@@ -39,6 +39,7 @@ int main() {
     for(int i = 0; i < 3; i++) {
         cin >> b[i];
     }
+    /*
     int same = 0;
     for(int i = 0; i < 3; i++) {
         if(a[i] == b[i]) {
@@ -49,7 +50,7 @@ int main() {
         cout<<"YES";
     } else {
         cout<<"NO";
-    }
+    }*/
     return 0;
 }
 
