@@ -31,8 +31,8 @@
 using namespace std;
 
 int main() {
-    vt<int> a;
-    vt<int> b;
+    vt<int> a(3);
+    vt<int> b(3);
     for(int i = 0; i < 3; i++) {
         cin >> a[i];
     }
