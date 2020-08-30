@@ -33,7 +33,7 @@
 using namespace std;
 
 int main() {
-    int n, b;
+    double n, b;
     cin >> n >> b;
     vd vol(n);
     vd ans(n);
@@ -44,7 +44,7 @@ int main() {
     it = max(vol.begin(), vol.end());
     int k = distance(vol.begin(), it);
     for(int i = 0; i < n; i++) {
-        double diff = vol[k-1] - vol[i];
+        float diff = vol[k-1] - vol[i];
         b -= diff;
         ans[i] = diff;
     }
@@ -52,7 +52,8 @@ int main() {
         cout<<-1;
         return 0;
     }
-    double div = b/n;
+    float div = b/n;
+    cout<<div;
     for(int i = 0; i < n; i++) {
         cout<<ans[i]+div<<"\n";
     }
