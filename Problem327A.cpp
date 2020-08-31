@@ -47,12 +47,14 @@ int main() {
         for(int k = i+1; k < n; k++) {
             int ones = 0;
             for(int m = 0; m < k; m++) {
+                cout<<b[m]<<"\t";
                 b[m] = 1-b[m];
                 if(b[m]) {
                     ones++;
                 }
             }
             mo = max(mo, ones);
+            cout<<"\n";
         }
     }
     cout<<mo;
