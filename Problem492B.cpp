@@ -47,7 +47,6 @@ int main() {
     sort(lamps.rbegin(), lamps.rend());
     float md = 0;
     for(int i = 0; i < lamps.size()-1; i++) {
-        cout<<lamps[i]<<" - "<<lamps[i+1]<<"\n";
         float dif = lamps[i]-lamps[i+1];
         if(i == 0 || i == n) {
             md = max(md, dif);
