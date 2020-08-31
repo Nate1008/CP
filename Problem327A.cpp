@@ -59,12 +59,6 @@ int main() {
                     ones++;
                 }
             }
-            for(int m = 0; m < n; m++) {
-                cout<<b[m]<<"\t";
-                if(b[m] == 1) {
-                    ones++;
-                }
-            }
             mo = max(mo, ones);
             cout<<"\n";
         }
