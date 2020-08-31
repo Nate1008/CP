@@ -39,7 +39,7 @@ int main() {
     int n;
     cin >> n;
     cout<<n;
-    vi b(n);
+    vi b;
     int first = n+1;
     int last = -1;
     for(int i = 0; i < n; i++) {
@@ -52,7 +52,6 @@ int main() {
             last = i;
         }
         b.push_back(t);
-        cout<<first<<" "<<last<<"\n";
     }
     cout<<"INPUT";
     vi::iterator k = b.begin() - first;
