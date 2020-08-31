@@ -39,27 +39,21 @@ int main() {
     int n;
     cin >> n;
     vi b(n);
-    int first = n+1;
-    int last = -1;
     for(int i = 0; i < n; i++) {
         cin >> b[i];
-        int t = b[i];
-        b.push_back(t);
-        if(t==0 && i < first) {
-            first = i;
-        }
-        if(t==0 && i > last) {
-            last = i;
+    }
+    int mo = 0;
+    for(int i = 0; i < n; i++) {
+        for(int k = i; k < n; k++) {
+            int ones = 0;
+            for(int m = i; m < k; m++) {
+                if(!b[m]) {
+                    ones++;
+                }
+            }
+            mo = max(mo, ones);
         }
     }
-    cout<<"INPUT";
-    vi::iterator k = b.begin() - first;
-    vi::iterator l = b.begin() - last;
-    int z = count(k, l, 0);
-    int o = count(k, l, 1);    
-    int ans = z - o;
-    if(ans < 0) ans = 0;  
-    cout<<ans;
     return 0;
 }
 
