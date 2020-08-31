@@ -47,10 +47,10 @@ int main() {
         price += min(m * a, b);
         n -= m;
     }
-    cout<<n<<"\n";
     
     while(n != 0) {
-        int mini = min(a, b/m);
+        int mini = min(a, b);
+        cout<<mini;
         n--;
         price += mini;
     }
