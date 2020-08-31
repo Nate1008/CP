@@ -50,6 +50,7 @@ int main() {
                 b[m] = 1-b[m];
             }
             for(int m = 0; m < n; m++) {
+                cout<<b[m]<<"\t";
                 if(b[m] == 1) {
                     ones++;
                 }
