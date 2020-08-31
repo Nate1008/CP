@@ -54,7 +54,6 @@ int main() {
     while(k < g && !boys.empty()) {
         for(int i = 0; i < boys.size(); i++) {
             int dif = boys[i] - girls[k];
-            cout<<dif<<"\n";
             if(abs(dif) <= 1) {
                 match++;
                 vi::iterator it = boys.begin() + i;
