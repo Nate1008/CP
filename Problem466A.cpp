@@ -48,12 +48,14 @@ int main() {
         n -= m;
     }
     
-    while(n != 0) {
+    while(n > 0) {
         int mini = min(a, b);
         if(mini == b) {
             cout<<"B"<<"\n";
+            n = n-m;
+        } else {
+            n--;
         }
-        n--;
         price += mini;
     }
     cout<<price;
