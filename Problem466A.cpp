@@ -46,13 +46,22 @@ int main() {
         return 0;
     }
     while(n >= m) {
+        cout<<"SMALLER";
+
         price += min(m * a, b);
         n -= m;
     }
     while(n != 0) {
-        price += min(a, b);
-        n--;
+        cout<<"SMALLEST";
+        int mini = min(a, b);
+        if(mini == b) {
+            n -= m;
+        } else {
+            n--;
+        }
+        price += mini;
     }
+    
     cout<<price;
     return 0;
 }
