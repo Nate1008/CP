@@ -38,7 +38,6 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    cout<<n;
     vi b;
     int first = n+1;
     int last = -1;
