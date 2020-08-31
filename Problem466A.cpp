@@ -41,7 +41,7 @@ int main() {
     int price = 0;
     while(n >= m) {
         if(m > n) {
-            price == min(n * a, b);
+            price += min(n * a, b);
             n = 0;
             break;
         }
