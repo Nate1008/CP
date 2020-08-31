@@ -48,10 +48,11 @@ int main() {
     float md = 0;
     int ind = 0;
     for(int i = 0; i < lamps.size()-1; i++) {
-        cout<<lamps[i]<<" - "<<lamps[i+1]<<"\n";
         float dif = lamps[i]-lamps[i+1];
         float bd = lamps[ind]-lamps[ind+1];
         md = max(bd, dif);
+        cout<<lamps[i]<<" - "<<lamps[i+1]<<"\n";
+        cout<<lamps[ind]<<" - "<<lamps[ind+1]<<"\n";
         if(md == dif) {
             ind = i;
         }
