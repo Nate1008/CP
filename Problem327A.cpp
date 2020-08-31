@@ -51,7 +51,7 @@ int main() {
     int z = 0;
     int o = 0;
     for(int i = k; i <= a; i++) {
-        if(b[i]) {
+        if(b[i] == 1) {
             o++;
         } else {
             z++;
