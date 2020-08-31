@@ -43,11 +43,9 @@ int main() {
         cin >> b[i];
     }
 
-    vi::iterator w = find(b.begin(), b.end(), 0);
-    vi::reverse_iterator v = find(b.rbegin(), b.rend(), 0) - b.rend();
-    int k = b.begin() -  w;
-    int a = b.rbegin() - v;
-    a -= b.begin();
+    int a = find(b.begin(), b.end(), 0) - b.begin();
+    int a = find(b.rbegin(), b.rend(), 0) - b.rend();
+    cout<<k<<a;
     int z = 0;
     int o = 0;
     for(int i = k; i <= a; i++) {
