@@ -53,7 +53,11 @@ int main() {
             z = max(z, c);
         }
     }
-    cout<<o+z;
+    if(z > 0) {
+        cout<<o+z;
+    } else {
+        cout<<z;
+    }
     return 0;
 }
 
