@@ -44,12 +44,12 @@ int main() {
     }
 
     vi::iterator w = find(b.begin(), b.end(), 0);
-    vi::reverse_iterator v = find(b.rbegin(), b.rend(), 0);
-    int k = distance(b.begin(), w);
-    int a = distance(b.rbegin(), v);
+    vi::reverse_iterator v = find(b.rbegin(), b.rend(), 0) - b.rend();
+    int k = b.begin() -  w;
+    int a = b.rbegin() - v;
+    a -= b.begin();
     int z = 0;
     int o = 0;
-    cout<<k<<a;
     for(int i = k; i <= a; i++) {
         if(b[i]) {
             o++;
