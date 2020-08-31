@@ -44,7 +44,7 @@ int main() {
     }
 
     int k = find(b.begin(), b.end(), 0) - b.begin();
-    int a = find(b.rbegin(), b.rend(), 0) - b.rend();
+    int a = find(b.rbegin(), b.rend(), 0) - b.rbegin();
     cout<<k<<a;
     int z = 0;
     int o = 0;
