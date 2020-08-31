@@ -52,7 +52,7 @@ int main() {
         if(i == 0 || i == n) {
             md = max(md, dif);
         } else {
-            md = max(md, dif/2)
+            md = max(md, dif/2);
         }
     }
 
