@@ -44,7 +44,7 @@ int main() {
     for(int i = 1; i < n; i++) {
         cin >> lamps[i];
     }
-    
+    sort(lamps.begin(), lamps.end());
     float md = 0;
     for(int i = 0; i < lamps.size()-1; i++) {
         float dif = lamps[i]-lamps[i+1];
