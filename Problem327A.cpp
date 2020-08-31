@@ -38,28 +38,30 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    int o = 0;
-    int z = 0;
-    int c = 0;
+    vi b(n);
     for(int i = 0; i < n; i++) {
-        bool t;
-        cin >> t;
-        if(n == 1 && t) {
-            cout<<0;
-            return 0;
-        }
-        if(t) {
+        cin >> b[i];
+    }
+
+    vi::iterator w = find(b.begin(), b.end(), 0);
+    vi::reverse_iterator v = find(b.rbegin(), b.rend(), 0);
+    int k = distance(b.begin(), w);
+    int a = distance(b.rbegin(), v);
+    int z = 0;
+    int o = 0;
+    for(int i = k; i <= a; i++) {
+        if(b[i]) {
             o++;
-            z = max(z, c);
-            c = 0;
         } else {
-            c++;
-            z = max(z, c);
+            z++;
         }
+        
     }
-    if(z > 0) {
-        cout<<o+z;
+    int ans = z - o;
+    if(ans < 0) {
+        ans = 0;
     }
+    cout<<ans;
     return 0;
 }
 
