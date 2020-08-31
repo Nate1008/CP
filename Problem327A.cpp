@@ -38,20 +38,23 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
+    cout<<n;
     vi b(n);
-    int first;
-    int last;
+    int first = n+1;
+    int last = -1;
     for(int i = 0; i < n; i++) {
         int t;
         cin >> t;
         if(t==0 && i < first) {
-            i = first;
+            first = i;
         }
         if(t==0 && i > last) {
-            i = last;
+            last = i;
         }
         b.push_back(t);
+        cout<<first<<" "<<last<<"\n";
     }
+    cout<<"INPUT";
     vi::iterator k = b.begin() - first;
     vi::iterator l = b.begin() - last;
     int z = count(k, l, 0);
