@@ -42,7 +42,7 @@ int main() {
     if (m > n) {
         price += min(n * a, b);
         cout<<price;
-        return;
+        return 0;
     }
     while(n >= m) {
         price += min(m * a, b);
