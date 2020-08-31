@@ -49,6 +49,7 @@ int main() {
         cin >> girls[i];
     }
     sort(boys.begin(), boys.end());
+    sort(girls.begin(), girls.end());
     int k = 0;
     int match = 0;
     while(k < g && !boys.empty()) {
