@@ -43,7 +43,7 @@ int main() {
         cin >> b[i];
     }
 
-    int a = find(b.begin(), b.end(), 0) - b.begin();
+    int k = find(b.begin(), b.end(), 0) - b.begin();
     int a = find(b.rbegin(), b.rend(), 0) - b.rend();
     cout<<k<<a;
     int z = 0;
