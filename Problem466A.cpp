@@ -51,7 +51,7 @@ int main() {
     
     while(n != 0) {
         int mini = min(a, b);
-        
+        n--;
         price += mini;
     }
     
