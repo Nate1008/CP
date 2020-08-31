@@ -48,6 +48,7 @@ int main() {
             cout<<i<<" "<<k<<"\n";
             int ones = 0;
             for(int m = i; m <= k; m++) {
+                cout<<m;
                 b[m] = !b[m];
             }
             for(int m = 0; m < n; m++) {
