@@ -55,6 +55,7 @@ int main() {
     while(k > 0 && n < boys.size()) {
         for(int i = n; i < boys.size(); i++) {
             int dif = boys[i] - girls[k];
+            cout<<dif<<"\n";
             if(abs(dif) <= 1) {
                 match++;
                 n++;
