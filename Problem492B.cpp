@@ -51,8 +51,11 @@ int main() {
         float dif = lamps[i]-lamps[i+1];
         md = max(md, dif);
     }
-
-    cout<<md/2;
+    if(lamps[1] == md || lamps[n] == md){
+        cout<<md;
+    } else {
+        cout<<md/2;
+    }
     return 0;
 }
 
