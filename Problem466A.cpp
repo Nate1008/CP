@@ -40,6 +40,7 @@ int main() {
     cin >> n >> m >> a >> b;
     int price = 0;
     if (m > n) {
+        cout<<"BIGGER";
         price += min(n * a, b);
         cout<<price;
         return 0;
