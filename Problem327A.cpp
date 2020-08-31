@@ -48,8 +48,11 @@ int main() {
             cout<<i<<" "<<k<<"\n";
             int ones = 0;
             for(int m = i; m <= k; m++) {
-                cout<<m<<"\n";
-                b[m] = !b[m];
+                if(b[m] == 0) {
+                    b[m] = 1; 
+                } else {
+                    b[m] = 0;
+                }
             }
             for(int m = 0; m < n; m++) {
                 cout<<b[m]<<"\t";
