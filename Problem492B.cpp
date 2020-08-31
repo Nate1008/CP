@@ -39,7 +39,7 @@ int main() {
     int n, l;
     cin >> n >> l;
     vi lamps(n+2);
-    lamps[0] = 1;
+    lamps[0] = 0;
     lamps[n+1] = l;
     for(int i = 1; i < n; i++) {
         cin >> lamps[i];
