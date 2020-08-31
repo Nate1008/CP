@@ -39,27 +39,25 @@ int main() {
     int n;
     cin >> n;
     vi b(n);
+    int first;
+    int last;
     for(int i = 0; i < n; i++) {
-        cin >> b[i];
-    }
-
-    int k = find(b.begin(), b.end(), 0) - b.begin();
-    int a = find(b.rbegin(), b.rend(), 0) - b.rbegin();
-    cout<<k<<a;
-    int z = 0;
-    int o = 0;
-    for(int i = k; i <= a; i++) {
-        if(b[i]) {
-            o++;
-        } else {
-            z++;
+        int t;
+        cin >> t;
+        if(t==0 && i < first) {
+            i = first;
         }
-        
+        if(t==0 && i > last) {
+            i = last;
+        }
+        b.push_back(t);
     }
+    vi::iterator k = b.begin() - first;
+    vi::iterator l = b.begin() - last;
+    int z = count(k, l, 0);
+    int o = count(k, l, 1);    
     int ans = z - o;
-    if(ans < 0) {
-        ans = 0;
-    }
+    if(ans < 0) ans = 0;  
     cout<<ans;
     return 0;
 }
