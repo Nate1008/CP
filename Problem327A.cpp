@@ -54,6 +54,7 @@ int main() {
             mo = max(mo, ones);
         }
     }
+    cout<<mo;
     return 0;
 }
 
