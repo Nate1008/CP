@@ -36,14 +36,22 @@
 using namespace std;
 
 int main() {
-    ll n, l;
+    int n, l;
     cin >> n >> l;
     vi lamps(n+2);
     lamps[0] = 1;
-    ma
-    for(int i = 0; i < n; i++) {
-        
+    lamps[n+1] = l;
+    for(int i = 1; i < n; i++) {
+        cin >> lamps[i];
     }
+    
+    float md = 0;
+    for(int i = 0; i < lamps.size()-1; i++) {
+        float dif = lamps[i]-lamps[i+1];
+        md = max(md, dif);
+    }
+
+    cout<<md/2;
     return 0;
 }
 
