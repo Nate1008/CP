@@ -45,7 +45,7 @@ int main() {
     int mo = 0;
     for(int i = 0; i < n; i++) {
         for(int k = i; k < n; k++) {
-            cout<<k;
+            cout<<k<<"\n";
             int ones = 0;
             for(int m = i; m < k; m++) {
                 if(!b[m]) {
