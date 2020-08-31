@@ -44,13 +44,13 @@ int main() {
     for(int i = 0; i < n; i++) {
         int t;
         cin >> t;
+        b.push_back(t);
         if(t==0 && i < first) {
             first = i;
         }
         if(t==0 && i > last) {
             last = i;
         }
-        b.push_back(t);
     }
     cout<<"INPUT";
     vi::iterator k = b.begin() - first;
