@@ -48,7 +48,7 @@ int main() {
             int ones = 0;
             for(int m = 0; m < k; m++) {
                 cout<<b[m]<<"\t";
-                b[m] -= 1;
+                b[m] = 1-b[m];
                 if(b[m]) {
                     ones++;
                 }
