@@ -55,7 +55,7 @@ int main() {
         }
     }
 
-    printf("%.6",md);
+    printf("%.6f",md);
     return 0;
 }
 
