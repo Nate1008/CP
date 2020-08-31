@@ -54,7 +54,7 @@ int main() {
         n--;
         price += mini;
     }
-    
+    cout<<price;
     return 0;
 }
 
