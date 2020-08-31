@@ -41,6 +41,7 @@ int main() {
     int price = 0;
     if (m > n) {
         price += min(n * a, b);
+        cout<<price;
         return 0;
     }
     while(n >= m) {
@@ -57,7 +58,7 @@ int main() {
         }
         price += mini;
     }
-    
+
     cout<<price;
     return 0;
 }
