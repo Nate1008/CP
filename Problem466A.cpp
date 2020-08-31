@@ -51,13 +51,13 @@ int main() {
     while(n > 0) {
         int mini = min(a, b);
         if(mini == b) {
-            cout<<"B"<<"\n";
             n = n-m;
         } else {
             n--;
         }
         price += mini;
     }
+    
     cout<<price;
     return 0;
 }
