@@ -44,6 +44,10 @@ int main() {
     for(int i = 0; i < n; i++) {
         bool t;
         cin >> t;
+        if(n == 1 && t) {
+            cout<<0;
+            return 0;
+        }
         if(t) {
             o++;
             z = max(z, c);
@@ -55,8 +59,6 @@ int main() {
     }
     if(z > 0) {
         cout<<o+z;
-    } else {
-        cout<<z;
     }
     return 0;
 }
