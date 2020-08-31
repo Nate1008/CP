@@ -46,12 +46,18 @@ int main() {
     }
     sort(lamps.rbegin(), lamps.rend());
     float md = 0;
+    int ind = 0;
     for(int i = 0; i < lamps.size()-1; i++) {
         cout<<lamps[i]<<" - "<<lamps[i+1]<<"\n";
         float dif = lamps[i]-lamps[i+1];
-        md = max(md, dif);
+        float bd = lamps[ind]-lamps[ind+1];
+        md = max(bd, dif);
+        if(md == dif) {
+            ind = i;
+        }
+
     }
-    if(lamps[1] == md || lamps[n] == md){
+    if(ind == 1 || ind == n){
         cout<<md;
     } else {
         cout<<md/2;
