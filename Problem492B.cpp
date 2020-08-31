@@ -41,12 +41,12 @@ int main() {
     vi lamps(n+2);
     lamps[0] = 0;
     lamps[n+1] = l;
-    for(int i = 1; i < n; i++) {
+    for(int i = 1; i < n+1; i++) {
         cin >> lamps[i];
     }
     sort(lamps.rbegin(), lamps.rend());
     float md = 0;
-    for(int i = 0; i < lamps.size()-2; i++) {
+    for(int i = 0; i < lamps.size()-; i++) {
         cout<<lamps[i]<<" - "<<lamps[i+1]<<"\n";
         float dif = lamps[i]-lamps[i+1];
         md = max(md, dif);
