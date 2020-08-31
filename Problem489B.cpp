@@ -50,15 +50,15 @@ int main() {
     }
     sort(boys.begin(), boys.end());
     int k = 0;
-    int n = 0;
     int match = 0;
-    while(k < g && n < b) {
-        for(int i = n; i < b; i++) {
+    while(k < g && !boys.empty()) {
+        for(int i = 0; i < boys.size(); i++) {
             int dif = boys[i] - girls[k];
             cout<<dif<<"\n";
             if(abs(dif) <= 1) {
                 match++;
-                n++;
+                vi::iterator it = boys.begin() + i;
+                boys.erase(it);
                 break;
             }
         }
