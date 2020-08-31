@@ -47,7 +47,7 @@ int main() {
         for(int k = i; k < n; k++) {
             cout<<i<<" "<<k<<"\n";
             int ones = 0;
-            for(int m = i; m <= k; m++) {
+            for(int m = i; m < k; m++) {
                 b[m] = 1-b[m];
             }
             for(int m = 0; m < n; m++) {
