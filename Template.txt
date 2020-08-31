@@ -30,6 +30,8 @@
 #define vi vector<int>
 #define vd vector<double>
 #define vf vector<float>
+#define vl vector<long long>
+
 
 using namespace std;
 

@@ -30,10 +30,20 @@
 #define vi vector<int>
 #define vd vector<double>
 #define vf vector<float>
+#define vl vector<long long>
+
 
 using namespace std;
 
 int main() {
+    ll n, l;
+    cin >> n >> l;
+    vi lamps(n+2);
+    lamps[0] = 1;
+    ma
+    for(int i = 0; i < n; i++) {
+        
+    }
     return 0;
 }
 
