@@ -49,6 +49,7 @@ int main() {
     int a = distance(b.rbegin(), v);
     int z = 0;
     int o = 0;
+    cout<<k<<a;
     for(int i = k; i <= a; i++) {
         if(b[i]) {
             o++;
