@@ -41,6 +41,7 @@ int main() {
     int price = 0;
     while(n >= m) {
         if(m > n) {
+            cout<<"BIGGER";
             price += min(n * a, b);
             n = 0;
             break;
