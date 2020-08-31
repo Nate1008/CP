@@ -48,6 +48,7 @@ int main() {
             cout<<i<<" "<<k<<"\n";
             int ones = 0;
             for(int m = i; m <= k; m++) {
+                cout<<b[m]<<"\n";
                 if(b[m] == 0) {
                     b[m] = 1; 
                 } else {
