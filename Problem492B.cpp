@@ -36,9 +36,9 @@
 using namespace std;
 
 int main() {
-    int n, l;
+    ll n, l;
     cin >> n >> l;
-    vi lamps(n+2);
+    vl lamps(n+2);
     lamps[0] = 0;
     lamps[n+1] = l;
     for(int i = 1; i < n+1; i++) {
@@ -55,7 +55,7 @@ int main() {
         }
     }
 
-    cout<<md;
+    printf("%.6",md);
     return 0;
 }
 
