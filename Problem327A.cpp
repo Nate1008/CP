@@ -45,7 +45,6 @@ int main() {
     int mo = 0;
     for(int i = 0; i < n; i++) {
         for(int k = 0; k < n; k++) {
-            cout<<i<<" "<<k<<"\n";
             int ones = 0;
             for(int m = 0; m < n; m++) {
                 bool c;
@@ -60,7 +59,6 @@ int main() {
                 }
             }
             mo = max(mo, ones);
-            cout<<"\n";
         }
     }
     cout<<mo;
