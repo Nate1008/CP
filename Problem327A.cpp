@@ -48,8 +48,8 @@ int main() {
             int ones = 0;
             for(int m = 0; m < k; m++) {
                 cout<<b[m]<<"\t";
-                b[m]
-                if() {
+                b[m] -= 1;
+                if(b[m]) {
                     ones++;
                 }
             }
