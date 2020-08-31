@@ -50,7 +50,9 @@ int main() {
     
     while(n != 0) {
         int mini = min(a, b);
-        cout<<mini;
+        if(mini == b) {
+            cout<<"B"<<"/n";
+        }
         n--;
         price += mini;
     }
