@@ -45,14 +45,15 @@ int main() {
     int mo = 0;
     for(int i = 0; i < n; i++) {
         for(int k = i+1; k < n; k++) {
-            cout<<k<<"\n";
             int ones = 0;
             for(int m = i; m < k; m++) {
+                cout<<b[m]<<"\t";
                 if(b[m] == 0) {
                     ones++;
                 }
             }
             mo = max(mo, ones);
+            cout<<"\n";
         }
     }
     cout<<mo;
