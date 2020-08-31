@@ -36,6 +36,18 @@
 using namespace std;
 
 int main() {
+    int n, m, a, b;
+    cin >> n >> m >> a >> b;
+    int price;
+    while(n >= m) {
+        price += min(m * a, b);
+        n -= m;
+    }
+    while(n != 0) {
+        price += min(a, b);
+        n--;
+    }
+    cout<<price;
     return 0;
 }
 
