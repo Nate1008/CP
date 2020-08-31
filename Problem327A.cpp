@@ -47,12 +47,16 @@ int main() {
         for(int k = 0; k < n; k++) {
             cout<<i<<" "<<k<<"\n";
             int ones = 0;
-            for(int m = i; m <= k; m++) {
-                cout<<b[m]<<"\n";
-                if(b[m] == 0) {
-                    b[m] = 1; 
+            for(int m = 0; m < n; m++) {
+                bool c;
+                if(m >= i && m <= k) {
+                    c = !b[m];
                 } else {
-                    b[m] = 0;
+                    c = b[m];
+                }
+
+                if(c){
+                    ones++;
                 }
             }
             for(int m = 0; m < n; m++) {
