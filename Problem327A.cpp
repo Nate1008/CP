@@ -44,7 +44,7 @@ int main() {
     }
     int mo = 0;
     for(int i = 0; i < n; i++) {
-        for(int k = i+1; k < n+1; k++) {
+        for(int k = i+1; k < n; k++) {
             int ones = 0;
             for(int m = 0; m < k; m++) {
                 cout<<b[m]<<"\t";
