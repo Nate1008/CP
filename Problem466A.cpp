@@ -39,16 +39,14 @@ int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
     int price = 0;
+    if (m > n) {
+        price += min(n * a, b);
+        cout<<price;
+        return;
+    }
     while(n >= m) {
-        if(m > n) {
-            cout<<"BIGGER";
-            price += min(n * a, b);
-            n = 0;
-            break;
-        } else {
-            price += min(m * a, b);
-            n -= m;
-        }
+        price += min(m * a, b);
+        n -= m;
     }
     while(n != 0) {
         price += min(a, b);
