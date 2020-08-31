@@ -38,8 +38,13 @@ using namespace std;
 int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
-    int price;
+    int price = 0;
     while(n >= m) {
+        if(m > n) {
+            price == min(n * a, b);
+            n = 0;
+            break;
+        }
         price += min(m * a, b);
         n -= m;
     }
