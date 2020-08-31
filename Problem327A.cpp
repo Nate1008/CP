@@ -38,12 +38,12 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vi b;
+    vi b(n);
     int first = n+1;
     int last = -1;
     for(int i = 0; i < n; i++) {
-        int t;
-        cin >> t;
+        cin >> b[i];
+        int t = b[i];
         b.push_back(t);
         if(t==0 && i < first) {
             first = i;
