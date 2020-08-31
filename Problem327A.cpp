@@ -48,7 +48,7 @@ int main() {
             cout<<k<<"\n";
             int ones = 0;
             for(int m = i; m < k; m++) {
-                if(!b[m]) {
+                if(b[m] == 0) {
                     ones++;
                 }
             }
