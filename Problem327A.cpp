@@ -47,6 +47,7 @@ int main() {
     vi::reverse_iterator v = find(b.rbegin(), b.rend(), 0);
     int k = distance(b.begin(), w);
     int a = distance(b.rbegin(), v);
+    cout<<k<<a;
     int z = 0;
     int o = 0;
     for(int i = k; i <= a; i++) {
