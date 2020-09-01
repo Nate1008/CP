@@ -45,8 +45,9 @@ int main() {
         ll a, b;
         cin >> a >> b;
         ll x = b/a;
-        ll y = b % a;        
-        cout<<b+x+y<<"\n";
+        ll y = b % a;
+        cout<<"X: "<<x<<"\t"<<"Y: "<<y<<"\n";     
+        cout<<"ANS: "<<b+x+y<<"\n";
     }
     return 0;
 }
