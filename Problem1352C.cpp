@@ -46,7 +46,7 @@ int main() {
         cin >> a >> b;
         ll x = b/a;
         ll y = b % a;        
-        cout<<x<<" "<<y;
+        cout<<x<<" "<<y<<"\n";
         cout<<a+x+y<<"\n";
     }
     return 0;
