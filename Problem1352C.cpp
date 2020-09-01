@@ -39,6 +39,14 @@
 using namespace std;
 
 int main() {
+    int n; 
+    for(int i = 0; i < n; i++) {
+        ll a, b;
+        cin >> a >> b;
+        ll x = b/a;
+        ll y = b % a;
+        cout<<a+x+y<<"\n";
+    }
     return 0;
 }
 
