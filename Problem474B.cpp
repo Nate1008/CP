@@ -11,6 +11,8 @@
 
 #include <algorithm>
 #include <numeric>
+#include <iterator>
+#include <functional>
 
 #include <cstdio>
 #include <cassert>
@@ -18,6 +20,7 @@
 #include <cstring>
 #include <ctime>
 #include <cmath>
+#include <climits>
 
 #define ll long long
 #define mi map<int, int>
