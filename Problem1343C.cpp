@@ -44,11 +44,11 @@ int main() {
     for(int q = 0; q < n; q++) {
         int k;
         cin >> k;
-        vi maxs;
+        vl maxs;
         maxs.push_back(0);
         int m = 0;
         for(int i = 1; i < k+1; i++) {
-            int t;
+            ll t;
             cin >> t;
             if((t > 0 && maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
                 maxs[m] = max(maxs[m], t);
@@ -57,7 +57,7 @@ int main() {
                 m++;
             }
         }
-        int sum = 0;
+        ll sum = 0;
         for(int i = 1; i < maxs.size(); i++) {
             sum += maxs[i];
         }
