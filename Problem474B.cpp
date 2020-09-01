@@ -51,6 +51,7 @@ int main() {
     for(int i = 0; i < k; i++) {
         cin >> best[i];
     }
+    cout<<piles[-1];
 
     for(int i = 0; i < n; i++) {
         piles[i] += piles[i-1];
