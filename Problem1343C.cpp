@@ -60,7 +60,8 @@ int main() {
         int sum = 0;
         for(int i = 1; i < maxs.size(); i++) {
             sum += maxs[i];
-        } 
+        }
+        cout<<sum<<'\n';
     }
     return 0;
 }
