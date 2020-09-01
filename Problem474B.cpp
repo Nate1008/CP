@@ -42,6 +42,7 @@ int main() {
     int n;
     cin >> n;
     vi piles(n);
+    piles.clear();
     for(int i = 0; i < n; i++) {
         cin >> piles[i];
     }
