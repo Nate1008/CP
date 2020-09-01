@@ -55,14 +55,10 @@ int main() {
     for(int i = 0; i < k; i++) {
         cin >> best[i];
     }
-
-    for(int i = 1; i < n+1; i++) {
-        piles[i] += piles[i-1];
-    }
     for(int i = 0; i < k; i++) {
         for(int x = 1; x < n+1; x++) {
             if(best[i] <= piles[x] && best[i] > piles[x-1]) {
-                cout<<x+1<<"\n";
+                cout<<x<<"\n";
             }
         }
     }
