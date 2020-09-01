@@ -54,14 +54,9 @@ int main() {
     vi best(k);
     for(int i = 0; i < k; i++) {
         cin >> best[i];
-    }
-    sort(best.begin(), best.end());
-    int prev = 1; 
-    for(int i = 0; i < k; i++) {
-        for(int x = prev; x < n+1; x++) {
+        for(int x = 0; x < n+1; x++) {
             if(best[i] <= piles[x] && best[i] > piles[x-1]) {
                 cout<<x<<"\n";
-                prev = x;
                 break;
             }
         }
