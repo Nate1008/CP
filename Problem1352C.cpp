@@ -47,7 +47,7 @@ int main() {
         ll x = b/a;
         ll y = b % a;        
         cout<<x<<" "<<y<<"\n";
-        cout<<a+x+y<<"\n";
+        cout<<b+x+y<<"\n";
     }
     return 0;
 }
