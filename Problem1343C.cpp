@@ -41,7 +41,7 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    for(int q = 0; q < n; q++) {
+    for(int q = 0; q < 2*n; q++) {
         int k;
         cin >> k;
         vi maxs(1);
