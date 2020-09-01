@@ -41,13 +41,13 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vi piles;
+    vi piles(n);
     for(int i = 0; i < n; i++) {
         cin >> piles[i];
     }
     int k;
     cin >> k;
-    vi best;
+    vi best(k);
     for(int i = 0; i < k; i++) {
         cin >> best[i];
     }
