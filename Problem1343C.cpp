@@ -57,7 +57,7 @@ int main() {
             } else {
                 cout<<m<<"\t";
                 maxs.push_back(t);
-                m = i;
+                m++;
                 cout<<i<<"\t";
                 cout<<maxs[m]<<"\n";
             }
