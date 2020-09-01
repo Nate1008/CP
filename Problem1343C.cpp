@@ -56,9 +56,9 @@ int main() {
                 maxs[m] = max(maxs[m], t);
                 cout<<maxs[m]<<"\n";
             } else {
-                cout<<maxs[m]<<"\n";
                 maxs.push_back(t);
                 m = i;
+                cout<<i<<"\n";s
                 cout<<maxs[m]<<"\n";
             }
         }
