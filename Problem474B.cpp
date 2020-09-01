@@ -51,11 +51,11 @@ int main() {
     }
     int k;
     cin >> k;
+    vi best(k);
     for(int i = 0; i < k; i++) {
-        int t;
-        cin >> t;
+        cin >> best[i];
         for(int x = 0; x < n+1; x++) {
-            if(t <= piles[x] && t > piles[x-1]) {
+            if(best[i] <= piles[x] && best[i] > piles[x-1]) {
                 cout<<x<<"\n";
                 break;
             }
