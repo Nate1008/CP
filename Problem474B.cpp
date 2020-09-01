@@ -54,7 +54,6 @@ int main() {
     }
 
     for(int i = 1; i < n+1; i++) {
-        cout<<piles[i-1]<<"\n";
         piles[i] += piles[i-1];
     }
     for(int i = 0; i < k; i++) {
