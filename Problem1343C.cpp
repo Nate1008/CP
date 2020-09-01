@@ -50,18 +50,16 @@ int main() {
         for(int i = 1; i < k; i++) {
             int t;
             cin >> t;
-            cout<<t<<"\t"<<maxs[m]<<"\n";
             if((t > 0 && maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
                 maxs[m] = max(maxs[m], t);
             } else {
-                cout<<i<<'\n';
                 maxs.push_back(t);
                 m = i;
             }
         }
-
+        int sum = 0;
         for(int i = 1; i < maxs.size(); i++) {
-            cout<<maxs[i];
+            sum += maxs[i];
         } 
     }
     return 0;
