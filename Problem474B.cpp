@@ -57,7 +57,7 @@ int main() {
     }
 
     for(int i = 0; i < k; i++) {
-        int ans = lower_bound(piles.begin(), piles.end(), best[i])-piles.begin();
+        int ans = upper_bound(piles.begin(), piles.end(), best[i])-piles.begin();
         cout<<ans<<'\n';
     }
     return 0;
