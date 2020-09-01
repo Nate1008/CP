@@ -53,12 +53,13 @@ int main() {
     }
 
     for(int i = 0; i < n; i++) {
+        cout<<piles[i-1]<<"\n";
         piles[i] += piles[i-1];
     }
     for(int i = 0; i < k; i++) {
         for(int x = 0; x < n; x++) {
             //cout<<piles[-1]<<"\n";
-            cout<<piles[x-1]<<"\t"<<piles[x]<<"\n";
+            //cout<<piles[x-1]<<"\t"<<piles[x]<<"\n";
             if(best[i] <= piles[x] && best[i] >= piles[x-1]) {
                 cout<<x<<"\n";
             }
