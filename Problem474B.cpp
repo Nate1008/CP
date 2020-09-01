@@ -34,16 +34,11 @@
 #define vd vector<double>
 #define vf vector<float>
 #define vl vector<long long>
-#define FOR(k) for(int i = 0; i < k; i++)
 
 
 using namespace std;
 
 int main() {
-    int k = 8;
-    FOR(k) {
-        cout<<i;
-    }
     return 0;
 }
 
