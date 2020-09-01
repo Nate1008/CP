@@ -59,8 +59,6 @@ int main() {
     }
     for(int i = 0; i < k; i++) {
         for(int x = 1; x < n+1; x++) {
-            //cout<<piles[-1]<<"\n";
-            //cout<<piles[x-1]<<"\t"<<piles[x]<<"\n";
             if(best[i] <= piles[x] && best[i] >= piles[x-1]) {
                 cout<<x<<"\n";
             }
