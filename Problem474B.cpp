@@ -57,7 +57,7 @@ int main() {
     }
 
     for(int i = 0; i < k; i++) {
-        for(int x = 0; x < n; i++) {
+        for(int x = 0; x < n; x++) {
             if(best[i] <= piles[x] && best[i] >= piles[i-1]) {
                 cout<<x<<"\n";
             }
