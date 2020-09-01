@@ -44,8 +44,8 @@ int main() {
     for(int q = 0; q < n; q++) {
         int k;
         cin >> k;
-        vi maxs(1);
-        maxs[0] = 0;
+        vi maxs;
+        maxs.push_back(0);
         int m = 0;
         for(int i = 1; i < k+1; i++) {
             int t;
