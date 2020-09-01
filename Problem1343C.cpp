@@ -50,6 +50,7 @@ int main() {
         for(int i = 1; i < k+1; i++) {
             int t;
             cin >> t;
+            cout<<t<<"\t"<<maxs[m]<<"\n";
             if((t > 0 && maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
                 maxs[m] = max(maxs[m], t);
             } else {
