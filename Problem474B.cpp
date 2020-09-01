@@ -54,12 +54,11 @@ int main() {
     vi best(k);
     for(int i = 0; i < k; i++) {
         cin >> best[i];
-        for(int x = 0; x < n+1; x++) {
-            if(best[i] <= piles[x] && best[i] > piles[x-1]) {
-                cout<<x<<"\n";
-                break;
-            }
-        }
+    }
+
+    for(int i = 0; i < k; i++) {
+        int ans = lower_bound(piles.begin(), piles.end(), best[i])-piles.begin();
+        cout<<ans<<'\n';
     }
     return 0;
 }
