@@ -51,14 +51,14 @@ int main() {
             int t;
             cin >> t;
             if((t > 0 && maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
-                cout<<maxs[m]<<"\n";
+                cout<<maxs[m]<<"\t";
                 maxs[m] = max(maxs[m], t);
                 cout<<maxs[m]<<"\n";
             } else {
-                cout<<m<<"\n";
+                cout<<m<<"\t";
                 maxs.push_back(t);
                 m = i;
-                cout<<i<<"\n";
+                cout<<i<<"\t";
                 cout<<maxs[m]<<"\n";
             }
         }
