@@ -44,7 +44,10 @@ int main() {
     vi piles(n+1);
     piles[0] = 0;
     for(int i = 1; i < n+1; i++) {
-        cin >> piles[i];
+        int t;
+        cin >> t;
+        t += piles[i-1];
+        piles[i] = t;
     }
     int k;
     cin >> k;
