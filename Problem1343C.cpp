@@ -39,6 +39,28 @@
 using namespace std;
 
 int main() {
+    int n;
+    for(int q = 0; q < n; q++) {
+        int k;
+        cin >> k;
+        vi maxs;
+        int m = 0;
+        for(int i = 0; i < k; i++) {
+            int t;
+            cin >> t;
+            if((t > 0 &&  maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
+                maxs[m] = max(maxs[m], t);
+            } else {
+                maxs.push_back(t);
+                m = i;
+            }
+        }
+
+        for(int i = 0; i < maxs.size(); i++) {
+            cout<<maxs[i];
+        }
+
+    }
     return 0;
 }
 
