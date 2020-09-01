@@ -40,7 +40,7 @@
 using namespace std;
 
 int main() {
-    int k = 1;
+    int k = 8;
     FOR(k) {
         cout<<i;
     }
