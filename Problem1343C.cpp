@@ -47,7 +47,7 @@ int main() {
         vi maxs(1);
         maxs[0] = 0;
         int m = 0;
-        for(int i = 1; i < k+1; i++) {
+        for(int i = 1; i < k; i++) {
             int t;
             cin >> t;
             cout<<t<<"\t"<<maxs[m]<<"\n";
