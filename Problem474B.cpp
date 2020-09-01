@@ -41,9 +41,9 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vi piles(n);
-    piles.clear();
-    for(int i = 0; i < n; i++) {
+    vi piles(n+1);
+    piles[0] = 0;
+    for(int i = 1; i < n+1; i++) {
         cin >> piles[i];
     }
     int k;
@@ -53,12 +53,12 @@ int main() {
         cin >> best[i];
     }
 
-    for(int i = 0; i < n; i++) {
+    for(int i = 1; i < n+1; i++) {
         cout<<piles[i-1]<<"\n";
         piles[i] += piles[i-1];
     }
     for(int i = 0; i < k; i++) {
-        for(int x = 0; x < n; x++) {
+        for(int x = 1; x < n+1; x++) {
             //cout<<piles[-1]<<"\n";
             //cout<<piles[x-1]<<"\t"<<piles[x]<<"\n";
             if(best[i] <= piles[x] && best[i] >= piles[x-1]) {
