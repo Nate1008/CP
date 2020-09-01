@@ -40,15 +40,17 @@ using namespace std;
 
 int main() {
     int n;
+    cin >> n;
     for(int q = 0; q < n; q++) {
         int k;
         cin >> k;
-        vi maxs;
+        vi maxs(1);
+        maxs[0] = 0;
         int m = 0;
-        for(int i = 0; i < k; i++) {
+        for(int i = 1; i < k+1; i++) {
             int t;
             cin >> t;
-            if((t > 0 &&  maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
+            if((t > 0 && maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
                 maxs[m] = max(maxs[m], t);
             } else {
                 maxs.push_back(t);
@@ -56,10 +58,9 @@ int main() {
             }
         }
 
-        for(int i = 0; i < maxs.size(); i++) {
+        for(int i = 1; i < maxs.size(); i++) {
             cout<<maxs[i];
-        }
-
+        } 
     }
     return 0;
 }
