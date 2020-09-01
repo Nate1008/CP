@@ -54,7 +54,7 @@ int main() {
             if((t > 0 && maxs[m] > 0) || (t < 0 && maxs[m] < 0)) {
                 maxs[m] = max(maxs[m], t);
             } else {
-                cout<<t;
+                cout<<t<<'\n';
                 maxs.push_back(t);
                 m = i;
             }
