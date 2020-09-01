@@ -39,7 +39,30 @@
 using namespace std;
 
 int main() {
-    
+    int n;
+    cin >> n;
+    vi piles;
+    for(int i = 0; i < n; i++) {
+        cin >> piles[i];
+    }
+    int k;
+    cin >> k;
+    vi best;
+    for(int i = 0; i < k; i++) {
+        cin >> best[i];
+    }
+
+    for(int i = 0; i < n; i++) {
+        piles[i] += piles[i-1];
+    }
+
+    for(int i = 0; i < k; i++) {
+        for(int x = 0; x < n; i++) {
+            if(best[i] <= piles[x] && best[i] >= piles[i-1]) {
+                cout<<x<<"\n";
+            }
+        }
+    }
     return 0;
 }
 
