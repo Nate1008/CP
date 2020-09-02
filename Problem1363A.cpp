@@ -64,7 +64,7 @@ int main() {
         odd--;
         
         int common = min(even, odd); 
-        if(common % 2 == 0 && common*2 >= k) {
+        if(common % 2 == 1 && common*2 >= k) {
             cout<<"YES"<<"\n";
             continue;
         }
