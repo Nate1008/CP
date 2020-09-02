@@ -63,7 +63,7 @@ int main() {
         k--;
         odd--;
         
-        if(odd % 2 == 0 && k >= k) {
+        if(odd % 2 == 0) {
             cout<<"YES"<<"\n";
             continue;
         }
