@@ -60,10 +60,10 @@ int main() {
             continue;
         }
 
-        k--;
+        k -= even + 1;
         odd--;
         
-        if(odd % 2 == k % 2) {
+        if() {
             cout<<"YES"<<"\n";
             continue;
         }
