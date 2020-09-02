@@ -39,52 +39,6 @@
 using namespace std;
 
 int main() {
-    int t;
-    cin >> t;
-    for(int q = 0; q < t; q++) {
-        int n, k;
-        cin >> n >> k;
-        int odd = 0;
-        int even = 0;
-        int ans = 0;
-        for(int i = 0; i < n; i++) {
-            int x;
-            cin >> x;
-            ans += x;
-            if(x % 2 == 0) {
-                even++;
-            } else {
-                odd++;
-            }
-        }
-        if(ans % 2 == 1) {
-            cout<<"YES"<<"\n";
-            continue;
-        }
-        cout<<"NO"<<"\n";
-        continue;
-        if(odd == 0) {
-            cout<<"NO"<<"\n";
-            continue;
-        }
-
-        k -= even+1;
-        odd--;
-        
-        if(k < 0 || (odd >= k && k >= 0)){// && odd % 2 == 0)) {
-            cout<<"YES"<<"\n";
-            continue;
-        }
-        /*if((k % 2 == 0) && (even >= k || odd >= k)) {
-            cout<<"YES"<<"\n";
-            continue;
-        } else if (even >= k) {
-            cout<<"YES"<<"\n";
-            continue;
-        }*/
-        cout<<"NO"<<"\n";
-
-    }
     return 0;
 }
 
