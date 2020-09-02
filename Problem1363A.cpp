@@ -46,15 +46,23 @@ int main() {
         cin >> n >> k;
         int odd = 0;
         int even = 0;
+        int ans = 0;
         for(int i = 0; i < n; i++) {
             int x;
             cin >> x;
+            ans += x;
             if(x % 2 == 0) {
                 even++;
             } else {
                 odd++;
             }
         }
+        if(ans % 2 == 1) {
+            cout<<"YES"<<"\n";
+            continue;
+        }
+        cout<<"NO"<<"\n";
+        continue;
         if(odd == 0) {
             cout<<"NO"<<"\n";
             continue;
