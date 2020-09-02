@@ -63,14 +63,19 @@ int main() {
 
         k--;
         odd--;
-
-        if((k % 2 == 0) && (even >= k || odd >= k)) {
+        
+        int common = min(even, odd)*2; 
+        if(common >= k) {
+            cout<<"YES"<<"\n";
+            continue;
+        }
+        /*if((k % 2 == 0) && (even >= k || odd >= k)) {
             cout<<"YES"<<"\n";
             continue;
         } else if (even >= k) {
             cout<<"YES"<<"\n";
             continue;
-        }
+        }*/
         cout<<"STOP2"<<"\n";
         cout<<"NO"<<"\n";
 
