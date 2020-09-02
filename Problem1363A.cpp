@@ -56,7 +56,7 @@ int main() {
             }
         }
         if(odd == 0) {
-            cout<<"STOP"<<"\n";
+            cout<<"STOP1"<<"\n";
             cout<<"NO"<<"\n";
             continue;
         }
@@ -71,7 +71,7 @@ int main() {
             cout<<"YES"<<"\n";
             continue;
         }
-        cout<<"STOP"<<"\n";
+        cout<<"STOP2"<<"\n";
         cout<<"NO"<<"\n";
 
     }
