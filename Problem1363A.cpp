@@ -60,7 +60,8 @@ int main() {
             continue;
         }
 
-        k -= even;
+        k -= even+1;
+        odd--;
         
         if(k < 0 || odd >= k){// && odd % 2 == 0)) {
             cout<<"YES"<<"\n";
