@@ -62,7 +62,7 @@ int main() {
 
         k -= even;
         
-        if(k < 0 || odd > k) {
+        if(k < 0 || odd >= k) {
             cout<<"YES"<<"\n";
             continue;
         }
