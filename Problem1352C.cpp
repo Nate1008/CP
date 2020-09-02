@@ -44,10 +44,8 @@ int main() {
     for(int i = 0; i < n; i++) {
         ll a, b;
         cin >> a >> b;
-        ll x = b/a;
-        ll y = b % a;
-        cout<<"X: "<<x<<"\t"<<"Y: "<<y<<"\n";     
-        cout<<"ANS: "<<b+x+y<<"\n";
+        ll x = (b - 1)/(a-1);
+        cout<<b+x<<"\n";
     }
     return 0;
 }
