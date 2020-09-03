@@ -59,8 +59,8 @@ int main() {
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n";
         int temp;
-        temp = k-1;
-        k -= min(k-1, even-1);
+        temp = k;
+        k -= min(k, even);
         even -= temp - k;
         odd--;
         cout<<"ODD: "<<odd<<"\t";
