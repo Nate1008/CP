@@ -62,7 +62,7 @@ int main() {
         even = 0;
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
-        cout<<"K: "<<k<<"\n";
+        cout<<"K: "<<k<<"\n"<<"\n";
     }
     return 0;
 }
