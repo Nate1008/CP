@@ -61,13 +61,17 @@ int main() {
         }
         k -= even+1;
         odd--;
-        if(k <= 0 || (odd > k && k % 2 == 0)) {
+        if(k <= 0|| k % 2 == 0) {
+            cout<<"Yes"<<"\n";
+            continue;
+        }
+        /*if(k <= 0 || (odd > k && k % 2 == 0)) {
             cout<<"Yes"<<"\n";
             continue;
         } else if (odd == k && k % 2 == 0) {
             cout<<"Yes"<<"\n";
             continue;
-        }
+        }*/
         cout<<"No"<<"\n";
     }
     return 0;
