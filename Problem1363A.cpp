@@ -55,11 +55,15 @@ int main() {
                 odd++;
             }
         }
+        // if(odd == 0) {
+        //     cout<<"No"<<"\n";
+        //     continue;
+        // }
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n";
         bool pass = false;
-        for(int i = 1; i <= k; i += 2) {
+        for(int i = 1; i <= odd; i += 2) {
             cout<<i<<"\n";
             if(even >= k-i) {
                 pass = true;
