@@ -58,8 +58,8 @@ int main() {
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n";
-        k -= even+1;
-        even = 0;
+        k -= min(k, even);
+        even = k;
         odd--;
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
