@@ -59,12 +59,11 @@ int main() {
         //     cout<<"No"<<"\n";
         //     continue;
         // }
-        cout<<"ODD: "<<odd<<"\t";
-        cout<<"EVEN: "<<even<<"\t";
-        cout<<"K: "<<k<<"\n";
+        // cout<<"ODD: "<<odd<<"\t";
+        // cout<<"EVEN: "<<even<<"\t";
+        // cout<<"K: "<<k<<"\n";
         bool pass = false;
         for(int i = 1; i <= odd; i += 2) {
-            cout<<i<<"\n";
             if(k-i >= 0 && even >= k-i) {
                 pass = true;
                 break;
