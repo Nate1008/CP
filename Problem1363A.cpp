@@ -55,22 +55,15 @@ int main() {
                 odd++;
             }
         }
-        if(odd == 0) {
-            cout<<"No"<<"\n";
-            continue;
-        }
+        cout<<"ODD: "<<odd<<"\t";
+        cout<<"EVEN: "<<even<<"\t";
+        cout<<"K: "<<k<<"\n";
         k -= even+1;
         odd--;
-        if(k <= 0) {
-            cout<<"Yes"<<"\n";
-            continue;
-        }
-        
-        if(odd > k && k % 2 == 0) {
-            cout<<"Yes"<<"\n";
-        } else {
-            cout<<"No"<<"\n";
-        }
+        cout<<"ODD: "<<odd<<"\t";
+        cout<<"EVEN: "<<even<<"\t";
+        cout<<"K: "<<k<<"\n";
+        cout<<"NEXT"<<"\n";
     }
     return 0;
 }
