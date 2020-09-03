@@ -65,7 +65,7 @@ int main() {
         bool pass = false;
         for(int i = 1; i <= odd; i += 2) {
             cout<<i<<"\n";
-            if(even >= k-i) {
+            if(k-i > 0 && even >= k-i) {
                 pass = true;
                 break;
             }
