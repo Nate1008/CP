@@ -63,6 +63,7 @@ int main() {
         odd--;
         if(k <= 0) {
             cout<<"Yes"<<"\n";
+            continue;
         }
         
         bool pass;
