@@ -63,6 +63,7 @@ int main() {
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n"<<"\n";
+        // if(odd >=)
     }
     return 0;
 }
