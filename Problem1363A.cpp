@@ -66,7 +66,6 @@ int main() {
             continue;
         }
         
-        bool pass = false;
         if(odd > k && k % 2 == 0) {
             cout<<"Yes"<<"\n";
         } else {
