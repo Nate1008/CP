@@ -59,7 +59,7 @@ int main() {
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n";
         bool pass = false;
-        for(int i = 1; i < k; i += 2) {
+        for(int i = -1; i < k; i += 2) {
             cout<<i<<"\n";
             if(even >= k-i) {
                 pass = true;
