@@ -61,7 +61,7 @@ int main() {
         }
         k -= even+1;
         odd--;
-        if(k <= 0|| k % 2 == 0) {
+        if(k <= 0|| odd-k >= 2) {
             cout<<"Yes"<<"\n";
             continue;
         }
