@@ -64,7 +64,7 @@ int main() {
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n";
-        cout<<"NEXT"<<"\n";
+        cout<<"\n"<<"\n";
     }
     return 0;
 }
