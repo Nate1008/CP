@@ -60,7 +60,7 @@ int main() {
         cout<<"K: "<<k<<"\n";
         int temp;
         temp = k-1;
-        k -= min(k-1, even-1);
+        k -= max(k-1, even-1);
         even -= temp - k;
         odd--;
         cout<<"ODD: "<<odd<<"\t";
