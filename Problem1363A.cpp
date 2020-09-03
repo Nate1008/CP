@@ -58,7 +58,7 @@ int main() {
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n";
-        k -= even;
+        k -= odd;
         even = 0;
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
