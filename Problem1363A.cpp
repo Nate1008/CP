@@ -58,14 +58,11 @@ int main() {
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
         cout<<"K: "<<k<<"\n";
-        int x = k - even;
-        int y = k - odd; 
+        k -= even;
         even = 0;
         cout<<"ODD: "<<odd<<"\t";
         cout<<"EVEN: "<<even<<"\t";
-        cout<<"X: "<<x<<"\t";
-        cout<<"Y: "<<y<<"\n";
-        cout<<"\n"<<"\n";
+        cout<<"K: "<<k<<"\n";
     }
     return 0;
 }
