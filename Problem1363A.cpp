@@ -56,19 +56,19 @@ int main() {
             }
         }
         if(odd == 0) {
-            cout<<"NO"<<"\n";
+            cout<<"No"<<"\n";
             continue;
         }
         k -= even+1;
         odd--;
         if(k < 0 || odd > k) {
-            cout<<"YES"<<"\n";
+            cout<<"Yes"<<"\n";
             continue;
         } else if (odd == k && k % 2 == 0) {
-            cout<<"YES"<<"\n";
+            cout<<"Yes"<<"\n";
             continue;
         }
-        cout<<"NO"<<"\n";
+        cout<<"No"<<"\n";
     }
     return 0;
 }
