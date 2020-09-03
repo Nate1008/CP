@@ -59,23 +59,16 @@ int main() {
             cout<<"No"<<"\n";
             continue;
         }
-        int ans = n/k;
-        if(ans % 2 == 1) {
-            cout<<"YES"<<"\n";
-            continue;
-        } else {
-            cout<<"NO"<<"\n";
-        }
-        /*k -= even+1;
+        k -= even+1;
         odd--;
-        if(k <= 0 || (odd > k && k >= 1)) {
+        if(k <= 0 || (odd > k && k >= 2)) {
             cout<<"Yes"<<"\n";
             continue;
         } else if (odd == k && k % 2 == 0) {
             cout<<"Yes"<<"\n";
             continue;
         }
-        cout<<"No"<<"\n";*/
+        cout<<"No"<<"\n";
     }
     return 0;
 }
