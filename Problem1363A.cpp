@@ -67,13 +67,7 @@ int main() {
         }
         
         bool pass = false;
-        for(int i = 0; i < odd; i++) {
-            if(i > k && i % 2 == 0) {
-                pass = true;
-                break;
-            }
-        }
-        if(pass) {
+        if(odd > k && k % 2 == 0) {
             cout<<"Yes"<<"\n";
         } else {
             cout<<"No"<<"\n";
