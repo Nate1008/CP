@@ -49,8 +49,8 @@ int main() {
         cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
         cout<<"HALF: "<<half<<'\n';
-        int ansb = ((b-1)*half) + ((b+1)*(half-1));
-        int ansa = ((a+1)*half) + ((a-1)*(half-1));
+        int ansb = ((b-1)*half) + ((b+1)*(k-half));
+        int ansa = ((a+1)*half) + ((a-1)*(k-half));
         cout<<ansa<<"\t"<<ansb<<"\n";
         if(a == 1){
             ansa = -1;
