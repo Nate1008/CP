@@ -48,6 +48,7 @@ int main() {
         int b = ceil(n/k);
         if(a == b) {
             int x = n/k;
+            cout<<"YES"<<"\n";
             for(int i = 0; i < k; i++) {
                 cout<<x<<" ";
             }
