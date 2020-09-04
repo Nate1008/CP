@@ -44,9 +44,11 @@ int main() {
     string a = "";
     string b = "";
     for(int q = 0; q < t; q++) {
+        int l;
+        cin >> l;
         string str;
         cin >> str;
-        for(int i = 0; i < str.length(); i++) {
+        for(int i = 0; i < l; i++) {
             int k = a[i] - 48;
             int x = k / 2;
             int y = k - x;
