@@ -51,9 +51,9 @@ int main() {
         return 0;
     }
     int side = 0;
-    if(diffv != 0) {
+    if(diffh != 0) {
         side = diffv;
-    } else if(diffh != 0) {
+    } else if(diffv != 0) {
         side = diffh;
     }
     cout<<side<<'\n';
