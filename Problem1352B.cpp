@@ -72,7 +72,7 @@ int main() {
         } else if (ansb == n) {
             cout<<"YES"<<"\n";       
             for(int i = 0; i < half; i++) {
-                cout<<b-1<<" ";
+                cout<<b-1<<i;
             }
             for(int i = 0; i < k-half; i++) {
                 cout<<b+1<<" ";
