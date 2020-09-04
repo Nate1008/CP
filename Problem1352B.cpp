@@ -51,6 +51,7 @@ int main() {
         int half = ceil(k/2);
         ansb = b-1*half + b+1*half-1;
         ansa = a+1*half + a-1*half-1;
+        cout<<ansa<<"\t"<<ansb<<"\n";
         if(a == 1){
             ansa = -1;
         }
