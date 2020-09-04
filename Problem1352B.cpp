@@ -58,7 +58,7 @@ int main() {
         cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
         bool pass = false;
-        for(int v = 1; v <= half; v++){
+        for(int v = 1; v < k; v++){
             cout<<"V: "<<v<<'\n';
             int ansb = ((b-1)*v) + ((b+1)*(k-v));
             int ansa = ((a+1)*v) + ((a-1)*(k-v));
