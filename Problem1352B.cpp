@@ -53,6 +53,7 @@ int main() {
                 cout<<x<<" ";
             }
             cout<<"\n";
+            continue;
         }
         // cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
