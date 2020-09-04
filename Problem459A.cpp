@@ -58,11 +58,14 @@ int main() {
 
     pi mi = min(a, b);
     vpi ans;
-    pi t = pi(mi.f+=side,mi.s);
+    pi t = pi(mi.f+=side,mi.s);            
+    cout<<t.f<<" "<<t.s<<" ";
     ans.push_back(t);
     t = pi(mi.f,mi.s+=side);
+    cout<<t.f<<" "<<t.s<<" ";
     ans.push_back(t);
     t = pi(mi.f+=side,mi.s+=side);
+    cout<<t.f<<" "<<t.s<<" ";
     ans.push_back(t);
     for(int i = 0; i < ans.size(); i++) {
         if(ans[i] != a || ans[i] != b) {
