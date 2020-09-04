@@ -57,38 +57,45 @@ int main() {
         }
         cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
+        bool pass;
         cout<<"HALF: "<<half<<'\n';
-        int ansb = ((b-1)*half) + ((b+1)*(k-half));
-        int ansa = ((a+1)*half) + ((a-1)*(k-half));
-        if(a <= 1){
-            ansa = -1;
+        for(int v = 1; v < half; v++){
+            int ansb = ((b-1)*v) + ((b+1)*(k-v));
+            int ansa = ((a+1)*v) + ((a-1)*(k-v));
+            if(a <= 1){
+                ansa = -1;
+            }
+            if(b <= 1) {
+                ansb = -1;
+            }
+            cout<<ansa<<"\t"<<ansb<<"\n";
+            if(ansa == n) {
+                cout<<"YES"<<"\n";       
+                for(int i = 0; i < v; i++) {
+                    cout<<a+1<<" ";
+                }
+                for(int i = 0; i < k-v; i++) {
+                    cout<<a-1<<" ";
+                }
+                cout<<"\n";
+                pass = true;
+                break;
+            } else if (ansb == n) {
+                cout<<"YES"<<"\n";       
+                for(int i = 0; i < v; i++) {
+                    cout<<b-1<<" ";
+                }
+                for(int i = 0; i < k-v; i++) {
+                    cout<<b+1<<" ";
+                }
+                cout<<"\n";
+                pass = true;
+                break;
+            }
         }
-        if(b <= 1) {
-            ansb = -1;
+        if(!pass){
+            cout<<"NO"<<"\n";
         }
-        cout<<ansa<<"\t"<<ansb<<"\n";
-        if(ansa == n) {
-            cout<<"YES"<<"\n";       
-            for(int i = 0; i < half; i++) {
-                cout<<a+1<<" ";
-            }
-            for(int i = 0; i < k-half; i++) {
-                cout<<a-1<<" ";
-            }
-            cout<<"\n";
-            continue;
-        } else if (ansb == n) {
-            cout<<"YES"<<"\n";       
-            for(int i = 0; i < half; i++) {
-                cout<<b-1<<" ";
-            }
-            for(int i = 0; i < k-half; i++) {
-                cout<<b+1<<" ";
-            }
-            cout<<"\n";
-            continue;
-        }
-        cout<<"NO"<<"\n";
     }
     return 0;
 }
