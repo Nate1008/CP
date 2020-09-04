@@ -69,7 +69,7 @@ int main() {
     // cout<<t.f<<" "<<t.s<<"\n";
     ans.push_back(t);
     for(int i = 0; i < ans.size(); i++) {
-        if(ans[i] != a && ans[i] != b) {
+        if(ans[i] != b) {
             cout<<ans[i].f<<" "<<ans[i].s<<" ";
         }
     }
