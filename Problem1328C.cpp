@@ -52,7 +52,7 @@ int main() {
             int k = str[i] - 48;
             int x = ceil(k / 2);
             int y = k - x;
-            if(i % 2 == 0){
+            if(i % 2 == 1){
                 a += to_string(x);
                 b += to_string(y);
             } else {
