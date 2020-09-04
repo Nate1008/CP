@@ -61,10 +61,10 @@ int main() {
         int ansb = ((b-1)*half) + ((b+1)*(k-half));
         int ansa = ((a+1)*half) + ((a-1)*(k-half));
         // cout<<ansa<<"\t"<<ansb<<"\n";
-        if(a == 1){
+        if(a <= 1){
             ansa = -1;
         }
-        if(b == 1) {
+        if(b <= 1) {
             ansb = -1;
         }
 
