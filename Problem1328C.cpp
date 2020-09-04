@@ -62,7 +62,6 @@ int main() {
                 a += to_string(k);
                 b += '0';
             }
-            // cout<<x<<"\t"<<y<<"\n";
         }
         cout<<a<<"\n"<<b<<"\n"; 
     }
