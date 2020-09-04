@@ -56,7 +56,7 @@ int main() {
     } else if(diffh != 0) {
         side = diffh;
     }
-
+    cout<<side<<'\n'
     pi mi = min(a, b);
     vpi ans;
     pi t = pi(mi.f+side,mi.s);            
