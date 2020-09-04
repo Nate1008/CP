@@ -44,8 +44,8 @@ int main() {
     for(int q = 0; q < t; q++) {
         double n, k;
         cin >> n >> k;
-        int a = ceil(n/k);
-        int b = floor(n/k);
+        int a = floor(n/k);
+        int b = ceil(n/k);
         cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
         int ansb = b-1*half + b+1*half-1;
