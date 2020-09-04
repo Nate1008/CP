@@ -54,9 +54,9 @@ int main() {
             char y = str[i] - x;
             a += x;
             b += y;
-            cout<<x<<"\t"<<y<<"\n";
+            // cout<<x<<"\t"<<y<<"\n";
         }
-        // cout<<a<<"\n"<<b<<"\n"; 
+        cout<<a<<"\n"<<b<<"\n"; 
     }
     return 0;
 }
