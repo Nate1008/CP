@@ -46,11 +46,10 @@ int main() {
         cin >> n >> k;
         int a = ceil(n/k);
         int b = floor(n/k);
-        int ansa = 0;
-        int ansb = 0;
+        cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
-        ansb = b-1*half + b+1*half-1;
-        ansa = a+1*half + a-1*half-1;
+        int ansb = b-1*half + b+1*half-1;
+        int ansa = a+1*half + a-1*half-1;
         cout<<ansa<<"\t"<<ansb<<"\n";
         if(a == 1){
             ansa = -1;
