@@ -56,12 +56,13 @@ int main() {
         side = diffh;
     }
 
+    pi mi = min(a, b);
     vpi ans;
-    pi t = pi(a.f+=side,a.s);
+    pi t = pi(mi.f+=side,mi.s);
     ans.push_back(t);
-    t = pi(a.f,a.s+=side);
+    t = pi(mi.f,mi.s+=side);
     ans.push_back(t);
-    t = pi(a.f+=side,a.s+=side);
+    t = pi(mi.f+=side,mi.s+=side);
     ans.push_back(t);
     for(int i = 0; i < ans.size(); i++) {
         if(ans[i] != a || ans[i] != b) {
