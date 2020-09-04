@@ -34,6 +34,7 @@
 #define vd vector<double>
 #define vf vector<float>
 #define vl vector<long long>
+#define vpi vector<pi>
 
 
 using namespace std;
