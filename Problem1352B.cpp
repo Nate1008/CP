@@ -48,7 +48,7 @@ int main() {
         int b = ceil(n/k);
         // cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
-        cout<<"HALF: "<<half<<'\n';
+        // cout<<"HALF: "<<half<<'\n';
         int ansb = ((b-1)*half) + ((b+1)*(k-half));
         int ansa = ((a+1)*half) + ((a-1)*(k-half));
         // cout<<ansa<<"\t"<<ansb<<"\n";
@@ -64,7 +64,7 @@ int main() {
             for(int i = 0; i < half; i++) {
                 cout<<a+1<<" ";
             }
-            for(int i = 0; i < half-1; i++) {
+            for(int i = 0; i < k-half; i++) {
                 cout<<a-1<<" ";
             }
             cout<<"\n";
@@ -72,7 +72,7 @@ int main() {
         } else if (ansb == n) {
             cout<<"YES"<<"\n";       
             for(int i = 0; i < half; i++) {
-                cout<<b-1<<i;
+                cout<<b-1<<" ";
             }
             for(int i = 0; i < k-half; i++) {
                 cout<<b+1<<" ";
