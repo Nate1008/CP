@@ -51,9 +51,9 @@ int main() {
         return 0;
     }
     int side = 0;
-    if(diffh != 0) {
+    if(diffv != 0) {
         side = diffv;
-    } else if(diffv != 0) {
+    } else if(diffh != 0) {
         side = diffh;
     }
     cout<<side<<'\n';
@@ -65,7 +65,7 @@ int main() {
     t = pi(mi.f,mi.s+side);
     // cout<<t.f<<" "<<t.s<<"\n";
     ans.push_back(t);
-    t = pi(mi.f+side,mi.s+=side);
+    t = pi(mi.f+side,mi.s+side);
     // cout<<t.f<<" "<<t.s<<"\n";
     ans.push_back(t);
     for(int i = 0; i < ans.size(); i++) {
