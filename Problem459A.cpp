@@ -62,7 +62,7 @@ int main() {
         t = pi(b.f,b.s+diffv);
         cout<<t.f<<" "<<t.s<<" ";
     } else {
-        pi t = pi(b.f,a.s);            
+        pi t = pi(a.f,b.s);            
         cout<<t.f<<" "<<t.s<<" ";
         t = pi(b.f,a.s);
         cout<<t.f<<" "<<t.s<<" ";
