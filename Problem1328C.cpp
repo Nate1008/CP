@@ -54,7 +54,7 @@ int main() {
             int y = k - x;
             a += to_string(x);
             b += to_string(y);
-            // cout<<x<<"\t"<<y<<"\n";
+            cout<<x<<"\t"<<y<<"\n";
         }
         cout<<a<<"\n"<<b<<"\n"; 
     }
