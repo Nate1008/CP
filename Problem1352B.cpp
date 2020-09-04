@@ -74,7 +74,7 @@ int main() {
             for(int i = 0; i < half; i++) {
                 cout<<b-1<<" ";
             }
-            for(int i = 0; i < half-1; i++) {
+            for(int i = 0; i < k-half; i++) {
                 cout<<b+1<<" ";
             }
             cout<<"\n";
