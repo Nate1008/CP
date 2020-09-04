@@ -49,7 +49,7 @@ int main() {
         string str;
         cin >> str;
         for(int i = 0; i < l; i++) {
-            int k = a[i] - 48;
+            int k = str[i] - 48;
             int x = k / 2;
             int y = k - x;
             a += x;
