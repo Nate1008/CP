@@ -51,10 +51,21 @@ int main() {
         return 0;
     }
     // cout<<side<<'\n';
-    pi t = pi(a.f+diffh,a.s-diffv);            
-    cout<<t.f<<" "<<t.s<<" ";
-    t = pi(b.f-diffh,b.s+diffv);
-    cout<<t.f<<" "<<t.s<<" ";
-    return 0;
+    if(a.f == b.f) {
+        pi t = pi(a.f,a.s+diffv);            
+        cout<<t.f<<" "<<t.s<<" ";
+        t = pi(b.f,b.s+diffv);
+        cout<<t.f<<" "<<t.s<<" ";
+    } else if(a.s == b.s) {
+        pi t = pi(a.f+diffh,a.s);            
+        cout<<t.f<<" "<<t.s<<" ";
+        t = pi(b.f+diffh,b.s);
+        cout<<t.f<<" "<<t.s<<" ";
+    } else {
+        pi t = pi(a.f+diffh,a.s+diffv);            
+        cout<<t.f<<" "<<t.s<<" ";
+        t = pi(b.f+diffh,b.s+diffv);
+        cout<<t.f<<" "<<t.s<<" ";
+    }
 }
 
