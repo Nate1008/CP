@@ -55,11 +55,11 @@ int main() {
             cout<<"\n";
             continue;
         }
-        cout<<a<<"\t"<<b<<"\n";
+        // cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
         bool pass = false;
         for(int v = 1; v < k; v++){
-            cout<<"V: "<<v<<'\n';
+            // cout<<"V: "<<v<<'\n';
             int ansb = ((b-1)*v) + ((b+1)*(k-v));
             int ansa = ((a+1)*v) + ((a-1)*(k-v));
             if(a <= 1){
@@ -68,7 +68,7 @@ int main() {
             if(b <= 1) {
                 ansb = -1;
             }
-            cout<<ansa<<"\t"<<ansb<<"\n";
+            // cout<<ansa<<"\t"<<ansb<<"\n";
             if(ansa == n) {
                 cout<<"YES"<<"\n";       
                 for(int i = 0; i < v; i++) {
