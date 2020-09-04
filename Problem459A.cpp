@@ -48,6 +48,7 @@ int main() {
 
     if((diffv != 0 && diffh != 0) && diffv != diffh){
         cout<<-1;
+        return 0;
     }
     int side = 0;
     if(diffv != 0) {
