@@ -49,11 +49,11 @@ int main() {
         string str;
         cin >> str;
         for(int i = 0; i < l; i++) {
-            // int k = str[i] - 48;
-            char x = str[i] / 2;
-            char y = str[i] - x;
-            a += x;
-            b += y;
+            int k = str[i] - 48;
+            int x = k / 2;
+            int y = k - x;
+            a += to_string(x);
+            b += to_string(y);
             // cout<<x<<"\t"<<y<<"\n";
         }
         cout<<a<<"\n"<<b<<"\n"; 
