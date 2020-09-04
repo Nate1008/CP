@@ -39,6 +39,22 @@
 using namespace std;
 
 int main() {
+    int t;
+    cin >> t;
+    string a = "";
+    string b = "";
+    for(int q = 0; q < t; q++) {
+        string str;
+        cin >> str;
+        for(int i = 0; i < str.length(); i++) {
+            int k = a[i] - 48;
+            int x = k / 2;
+            int y = k - x;
+            a += x;
+            b += y;
+        }
+        cout<<a<<"\n"<<b<<"\n"; 
+    }
     return 0;
 }
 
