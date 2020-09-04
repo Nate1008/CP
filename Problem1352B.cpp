@@ -48,8 +48,8 @@ int main() {
         int b = ceil(n/k);
         cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
-        int ansb = (b-1)*half + (b+1)*(half-1);
-        int ansa = (a+1)*half + (a-1)*(half-1);
+        int ansb = ((b-1)*half) + ((b+1)*(half-1));
+        int ansa = ((a+1)*half) + ((a-1)*(half-1));
         cout<<ansa<<"\t"<<ansb<<"\n";
         if(a == 1){
             ansa = -1;
