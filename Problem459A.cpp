@@ -56,11 +56,11 @@ int main() {
     } else if(diffh != 0) {
         side = diffh;
     }
-    cout<<side<<'\n';
+    // cout<<side<<'\n';
     pi t = pi(a.f+side,a.s);            
-    cout<<t.f<<" "<<t.s<<"\n";
+    cout<<t.f<<" "<<t.s<<" ";
     t = pi(b.f,b.s+side);
-    cout<<t.f<<" "<<t.s<<"\n";
+    cout<<t.f<<" "<<t.s<<" ";
     return 0;
 }
 
