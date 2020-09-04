@@ -57,7 +57,7 @@ int main() {
         side = diffh;
     }
     // cout<<side<<'\n';
-    pi t = pi(a.f+side,a.s);            
+    pi t = pi(a.f-side,a.s);            
     cout<<t.f<<" "<<t.s<<" ";
     t = pi(b.f+side,b.s);
     cout<<t.f<<" "<<t.s<<" ";
