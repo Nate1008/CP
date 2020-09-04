@@ -51,10 +51,10 @@ int main() {
         return 0;
     }
     int side = 0;
-    if(diffv != 0) {
-        side = diffv;
-    } else if(diffh != 0) {
+    if(diffh != 0) {
         side = diffh;
+    } else if(diffv != 0) {
+        side = diffv;
     }
     // cout<<side<<'\n';
     pi t = pi(a.f+side,a.s);            
