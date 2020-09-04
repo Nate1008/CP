@@ -43,10 +43,10 @@ int main() {
     pi a, b;
     cin >> a.f >> a.s >> b.f >> b.s;
     
-    int diffv = abs(b.f - a.f);
-    int diffh = abs(b.s - a.s);
+    int diffv = b.f - a.f;
+    int diffh = b.s - a.s;
 
-    if((diffv != 0 && diffh != 0) && diffv != diffh){
+    if((diffv != 0 && diffh != 0) && abs(diffv) != abs(diffh)){
         cout<<-1;
     }
     int side = 0;
@@ -56,14 +56,18 @@ int main() {
         side = diffh;
     }
 
-    pi mi = min(a, b);
-    pi ma = max(a, b);
-    vpi
-    if(mi.f == 0 && mi.s == 0) {
-
-    } 
-
-
+    vpi ans;
+    pi t = pi(a.f+=side,a.s);
+    ans.push_back(t);
+    t = pi(a.f,a.s+=side);
+    ans.push_back(t);
+    t = pi(a.f+=side,a.s+=side);
+    ans.push_back(t);
+    for(int i = 0; i < ans.size(); i++) {
+        if(ans[i] != a || ans[i] != b) {
+            cout<<ans[i].f<<" "<<ans[i].s<<" ";
+        }
+    }
     return 0;
 }
 
