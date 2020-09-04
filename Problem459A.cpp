@@ -43,10 +43,10 @@ int main() {
     pi a, b;
     cin >> a.f >> a.s >> b.f >> b.s;
     
-    int diffv = abs(b.f - a.f);
-    int diffh = abs(b.s - a.s);
+    int diffv = (b.f - a.f);
+    int diffh = (b.s - a.s);
 
-    if((diffv != 0 && diffh != 0) && (diffv) != (diffh)){
+    if((diffv != 0 && diffh != 0) && abs(diffv) != abs(diffh)){
         cout<<-1;
         return 0;
     }
@@ -64,7 +64,7 @@ int main() {
     } else {
         pi t = pi(a.f,a.s+diffv);            
         cout<<t.f<<" "<<t.s<<" ";
-        t = pi(b.f,b.s-diffv);
+        t = pi(b.f,b.s+diffv);
         cout<<t.f<<" "<<t.s<<" ";
     }
 }
