@@ -50,7 +50,7 @@ int main() {
         cin >> str;
         for(int i = 0; i < l; i++) {
             int k = str[i] - 48;
-            int x = k / 2;
+            int x = ceil(k / 2);
             int y = k - x;
             a += to_string(x);
             b += to_string(y);
