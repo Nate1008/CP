@@ -51,9 +51,9 @@ int main() {
         return 0;
     }
     // cout<<side<<'\n';
-    pi t = pi(a.f-diffh,a.s);            
+    pi t = pi(a.f-diffh,a.s+diffv);            
     cout<<t.f<<" "<<t.s<<" ";
-    t = pi(b.f-diffv,b.s);
+    t = pi(b.f-diffh,b.s+diffv);
     cout<<t.f<<" "<<t.s<<" ";
     return 0;
 }
