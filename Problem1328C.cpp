@@ -52,9 +52,14 @@ int main() {
             int k = str[i] - 48;
             int x = ceil(k / 2);
             int y = k - x;
-            a += to_string(x);
-            b += to_string(y);
-            cout<<x<<"\t"<<y<<"\n";
+            if(i % 2 == 0){
+                a += to_string(x);
+                b += to_string(y);
+            } else {
+                b += to_string(x);
+                a += to_string(y);
+            }
+            // cout<<x<<"\t"<<y<<"\n";
         }
         cout<<a<<"\n"<<b<<"\n"; 
     }
