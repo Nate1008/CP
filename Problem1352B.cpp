@@ -46,6 +46,13 @@ int main() {
         cin >> n >> k;
         int a = floor(n/k);
         int b = ceil(n/k);
+        if(a == b) {
+            int x = n/k;
+            for(int i = 0; i < k; i++) {
+                cout<<x<<" ";
+            }
+            cout<<"\n";
+        }
         // cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
         // cout<<"HALF: "<<half<<'\n';
