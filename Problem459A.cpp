@@ -43,17 +43,17 @@ int main() {
     pi a, b;
     cin >> a.f >> a.s >> b.f >> b.s;
     
-    int diffv = (b.f - a.f);
-    int diffh = (b.s - a.s);
+    int diffv = abs(b.f - a.f);
+    int diffh = abs(b.s - a.s);
 
-    if((diffv != 0 && diffh != 0) && abs(diffv) != abs(diffh)){
+    if((diffv != 0 && diffh != 0) && (diffv) != (diffh)){
         cout<<-1;
         return 0;
     }
     // cout<<side<<'\n';
-    pi t = pi(a.f-diffh,a.s+diffv);            
+    pi t = pi(a.f+diffh,a.s+diffv);            
     cout<<t.f<<" "<<t.s<<" ";
-    t = pi(b.f-diffh,b.s+diffv);
+    t = pi(b.f+diffh,b.s+diffv);
     cout<<t.f<<" "<<t.s<<" ";
     return 0;
 }
