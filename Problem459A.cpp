@@ -59,7 +59,7 @@ int main() {
     // cout<<side<<'\n';
     pi t = pi(a.f+side,a.s);            
     cout<<t.f<<" "<<t.s<<" ";
-    t = pi(b.f,b.s+side);
+    t = pi(b.f+side,b.s);
     cout<<t.f<<" "<<t.s<<" ";
     return 0;
 }
