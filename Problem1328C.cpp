@@ -41,9 +41,9 @@ using namespace std;
 int main() {
     int t;
     cin >> t;
-    string a = "";
-    string b = "";
     for(int q = 0; q < t; q++) {
+        string a = "";
+        string b = "";
         int l;
         cin >> l;
         string str;
