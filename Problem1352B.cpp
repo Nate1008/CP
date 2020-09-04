@@ -48,7 +48,7 @@ int main() {
         int b = ceil(n/k);
         // cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
-        // cout<<"HALF: "<<half<<'\n';
+        cout<<"HALF: "<<half<<'\n';
         int ansb = ((b-1)*half) + ((b+1)*(k-half));
         int ansa = ((a+1)*half) + ((a-1)*(k-half));
         // cout<<ansa<<"\t"<<ansb<<"\n";
