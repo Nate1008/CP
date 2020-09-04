@@ -48,18 +48,19 @@ int main() {
         cin >> l;
         string str;
         cin >> str;
-        int c = 0;
         for(int i = 0; i < l; i++) {
             int k = str[i] - 48;
-            int x = ceil(k / 2);
-            int y = k - x;
-            if(c % 2 == 0){
+            if(a == b) {
+                int x = ceil(k / 2);
+                int y = k - x;
                 a += to_string(x);
                 b += to_string(y);
-                c++;
+            } else if(a > b) {
+                a += '0';
+                b += to_string(k);
             } else {
-                b += to_string(x);
-                a += to_string(y);
+                a += to_string(k);
+                b += '0';
             }
             // cout<<x<<"\t"<<y<<"\n";
         }
