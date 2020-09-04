@@ -57,7 +57,7 @@ int main() {
         }
         cout<<a<<"\t"<<b<<"\n";
         int half = ceil(k/2);
-        bool pass;
+        bool pass = false;
         cout<<"HALF: "<<half<<'\n';
         for(int v = 1; v < half; v++){
             int ansb = ((b-1)*v) + ((b+1)*(k-v));
