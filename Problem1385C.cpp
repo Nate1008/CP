@@ -55,11 +55,9 @@ int main() {
         }
         int m = n;
         int a = n;
-        for(int i = n; i > 0; i--) {
-            while (a > 0 && nums[a - 1] >= nums[a]) --a;
-		    while (a > 0 && nums[a - 1] <= nums[a]) --a;
-        }
-        cout<<"\n"<<"M: "<<m<<"\n";
+        while (a > 0 && nums[a - 1] >= nums[a]) --a;
+        while (a > 0 && nums[a - 1] <= nums[a]) --a;
+        // cout<<"\n"<<"M: "<<m<<"\n";
         m = min(m, a);
         cout<<m<<'\n';
     }
