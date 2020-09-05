@@ -56,11 +56,11 @@ int main() {
         int a = n-1;
         while (a > 0 && nums[a - 1] >= nums[a]) {
             --a;
-            cout<<a<<'\n';
+            cout<<"FIRST: "<<a<<'\n';
         }
         while (a > 0 && nums[a - 1] <= nums[a]) {
             --a;
-            cout<<a<<'\n';
+            cout<<"SECOND: "<<a<<'\n';
         }
         cout<<a<<"\n\n";
     }
