@@ -54,7 +54,7 @@ int main() {
             cin >> nums[i];
         }
         int m = n;
-        for(int i = n-1; i > 0; i--) {
+        for(int i = n; i > 0; i--) {
             int a = n;
             for(int c = i-1; c >= 0; c--) {
                 // cout<<nums[c]<<"\t";
