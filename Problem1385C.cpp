@@ -54,18 +54,13 @@ int main() {
             cin >> nums[i];
         }
         int m = n;
+        int a = n;
         for(int i = n; i > 0; i--) {
-            int a = n;
-            for(int c = i-1; c >= 0; c--) {
-                // cout<<nums[c]<<"\t";
-                if(!(nums[c] <= nums[c+1])) {
-                    break;
-                }
-                a--;
-            }
-            cout<<"\n"<<"M: "<<m<<"\n";
-            m = min(m, a);
+            while (a > 0 && nums[a - 1] >= nums[a]) --a;
+		    while (a > 0 && nums[a - 1] <= nums[a]) --a;
         }
+        cout<<"\n"<<"M: "<<m<<"\n";
+        m = min(m, a);
         cout<<m<<'\n';
     }
     return 0;
