@@ -58,12 +58,12 @@ int main() {
             int a = n;
             for(int c = i-1; c >= -1; c--) {
                 a--;
-                cout<<nums[c]<<"\t";
+                // cout<<nums[c]<<"\t";
                 if(!(nums[c] <= nums[c+1])) {
                     break;
                 }
             }
-            cout<<"\n"<<"M: "<<m<<"\n";
+            // cout<<"\n"<<"M: "<<m<<"\n";
             m = min(m, a);
         }
         cout<<m<<'\n';
