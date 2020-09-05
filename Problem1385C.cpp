@@ -62,7 +62,7 @@ int main() {
             --a;
             cout<<a<<'\n';
         }
-        cout<<a<<'\n';
+        cout<<a<<"\n\n";
     }
     return 0;
 }
