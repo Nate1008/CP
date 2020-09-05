@@ -49,7 +49,7 @@ int main() {
     FOR(t, q) {
         int n;
         cin >> n;
-        vi nums(n);
+        vi nums(n+1);
         FOR(n, i) {
             cin >> nums[i];
         }
