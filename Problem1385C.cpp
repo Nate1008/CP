@@ -55,15 +55,15 @@ int main() {
         }
         int m = n;
         for(int i = n-1; i >= 0; i--) {
-            int a = i;
+            int a = ;
             for(int c = i-1; c >= 0; c--) {
                 a--;
-                // cout<<nums[c]<<"  ";
+                cout<<nums[c]<<"\t";
                 if(!(nums[c] <= nums[c+1])) {
                     break;
                 }
             }
-            // cout<<'\n'<<"M: "<<m<<'\n';
+            cout<<'\n\n'<<"M: "<<m<<'\n\n';
             m = min(m, a);
         }
         cout<<m<<'\n';
