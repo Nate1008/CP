@@ -55,7 +55,7 @@ int main() {
         }
         sort(ALL(w));
         int mt = 0;
-        for(int i = n-1, c = 0; i >= 0, c < n; i--, c++) {
+        for(int i = n-1, c = 0; i >= 0; i--, c++) {
             int count = 0;
             int total = w[c] + w[i];
             for(int k = c, x = i; k < x; k++, x--) {
