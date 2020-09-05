@@ -56,9 +56,12 @@ int main() {
         sort(ALL(w));
         int mt = 0;
         for(int i = n-1, c = 0; i >= 0; i--, c++) {
+            cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n";
             int count = 0;
             int total = w[c] + w[i];
             for(int k = c, x = i; k < x; k++, x--) {
+                int sum = w[k] + w[x];
+                cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\n";
                 if(w[k] + w[x] == total) {
                     count++;
                 }
