@@ -55,7 +55,7 @@ int main() {
         }
         int m = n;
         for(int i = n-1; i > 0; i--) {
-            int a = n;
+            int a = n-1;
             for(int c = i-1; c >= 0; c--) {
                 // cout<<nums[c]<<"\t";
                 if(!(nums[c] <= nums[c+1])) {
