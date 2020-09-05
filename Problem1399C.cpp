@@ -41,9 +41,14 @@
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
 
+#define TC int t; cin >> t;
+
 using namespace std;
 
 int main() {
+    TC
+    cout<<t;
+    // FOR(t, q) {}
     return 0;
 }
 
