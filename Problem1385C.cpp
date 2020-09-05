@@ -53,7 +53,7 @@ int main() {
         FOR(n, i) {
             cin >> nums[i];
         }
-        int m = 0;
+        int m = n;
         for(int i = n-1; i >= 0; i--) {
             int a = 0;
             for(int c = i-1; c >= 0; c--) {
