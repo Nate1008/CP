@@ -61,10 +61,10 @@ int main() {
             int total = w[c] + w[i];
             for(int k = c, x = i; k < x; k++, x--) {
                 int sum = w[k] + w[x];
-                cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\n";
                 if(w[k] + w[x] == total) {
                     count++;
                 }
+                cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\n";
             }
             mt = max(mt, count);
         }
