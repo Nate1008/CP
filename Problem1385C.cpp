@@ -61,7 +61,7 @@ int main() {
                 if(!(nums[c] <= nums[c+1])) {
                     break;
                 }
-                a--;
+                a = c;
             }
             cout<<"\n"<<"M: "<<m<<"\n";
             m = min(m, a);
