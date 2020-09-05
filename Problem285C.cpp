@@ -55,7 +55,6 @@ int main() {
     int ans = 0;
     FOR(n, i) {
         ans += abs(k-nums[i]);
-        
         k--;
     }
     cout<<ans;
