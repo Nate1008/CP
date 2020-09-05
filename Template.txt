@@ -37,6 +37,7 @@
 #define vpi vector<pi>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
+#define RFOR(t, q) for(int q = t; q > 0; q--)
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
 
