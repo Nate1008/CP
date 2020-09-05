@@ -58,9 +58,9 @@ int main() {
         for(int i = n-1; i >= 0; i--) {
             for(int c = 0; c < i; c++) {
                 cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n\n";
-                int count = 0;
-                int total = w[c] + w[i];
                 for(int v = 0; v < n; v++) {
+                    int count = 0;
+                    int total = w[c] + w[i];
                     for(int k = c, x = i; k < x; k++, x--) {
                         if(k == v) {
                             k++;
@@ -71,7 +71,7 @@ int main() {
                         if(w[k] + w[x] == total) {
                             count++;
                         }
-                        cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\n";
+                        cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
                     }
                     mt = max(mt, count);
                     cout<<"\n";
