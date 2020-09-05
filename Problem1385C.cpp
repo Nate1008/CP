@@ -36,10 +36,24 @@
 #define vl vector<long long>
 #define vpi vector<pi>
 
+#define FOR(t, q) for(int q = 0; q < t; q++)
+#define ALL(v) v.begin(), v.end()
+#define RALL(v) v.rbegin(), v.rend()
 
 using namespace std;
 
 int main() {
+    int t;
+    cin >> t;
+    FOR(t, q) {
+        int n;
+        vi nums(n);
+        FOR(n, i) {
+            cin >> nums[i];
+        }
+        vi dup = nums;
+        sort()
+    }
     return 0;
 }
 
