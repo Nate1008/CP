@@ -63,7 +63,7 @@ int main() {
                     break;
                 }
             }
-            cout<<'\n\n'<<"M: "<<m<<'\n\n';
+            cout<<'\n \n'<<"M: "<<m<<'\n \n';
             m = min(m, a);
         }
         cout<<m<<'\n';
