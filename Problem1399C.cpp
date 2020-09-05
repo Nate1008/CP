@@ -55,18 +55,20 @@ int main() {
         }
         sort(ALL(w));
         int mt = 0;
-        for(int i = n-1, c = 0; i >= 0; i--, c++) {
-            cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n";
-            int count = 0;
-            int total = w[c] + w[i];
-            for(int k = c, x = i; k < x; k++, x--) {
-                int sum = w[k] + w[x];
-                if(w[k] + w[x] == total) {
-                    count++;
+        for(int i = n-1; i >= 0; i--) {
+            for(int c = 0; c < n; c++) {
+                cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n";
+                int count = 0;
+                int total = w[c] + w[i];
+                for(int k = c, x = i; k < x; k++, x--) {
+                    int sum = w[k] + w[x];
+                    if(w[k] + w[x] == total) {
+                        count++;
+                    }
+                    cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\n";
                 }
-                cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\n";
+                mt = max(mt, count);
             }
-            mt = max(mt, count);
         }
         cout<<mt<<"\n";
     }
