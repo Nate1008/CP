@@ -64,7 +64,7 @@ int main() {
                 a = c;
             }
             cout<<"\n"<<"M: "<<m<<"\n";
-            m = min(m, a+1);
+            m = min(m, a);
         }
         cout<<m<<'\n';
     }
