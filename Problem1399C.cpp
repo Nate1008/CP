@@ -47,7 +47,25 @@ using namespace std;
 
 int main() {
     TC {
-        cout<<q<<"\n";
+        int n;
+        cin >> n;
+        vi w(n);
+        FOR(n, i) {
+            cin >> w[i];
+        }
+        sort(ALL(w));
+        int mt = 0;
+        for(int i = n-1, c = 0; i >= 0, c < n; i--, c++) {
+            int count = 0;
+            int total = w[c] + w[i];
+            for(int k = c, x = i; k < x; k++, x--) {
+                if(w[k] + w[x] == total) {
+                    count++;
+                }
+            }
+            mt = max(mt, count);
+        }
+        cout<<mt<<"\n";
     }
     return 0;
 }
