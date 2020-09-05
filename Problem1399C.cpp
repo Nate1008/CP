@@ -57,7 +57,7 @@ int main() {
         int mt = 0;
         for(int i = n-1; i >= 0; i--) {
             for(int c = 0; c < n; c++) {
-                cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n";
+                cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n\n";
                 int count = 0;
                 int total = w[c] + w[i];
                 for(int k = c, x = i; k < x; k++, x--) {
