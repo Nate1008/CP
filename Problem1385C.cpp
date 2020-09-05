@@ -55,10 +55,10 @@ int main() {
         }
         int a = n-1;
         while (a > 0 && nums[a - 1] >= nums[a]) 
-            --a 
+            --a;
             cout<<a<<'\n';
         while (a > 0 && nums[a - 1] <= nums[a]) 
-            --a 
+            --a;
             cout<<a<<'\n';
         cout<<a<<'\n';
     }
