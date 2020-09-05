@@ -58,7 +58,7 @@ int main() {
         while (a > 0 && nums[a - 1] <= nums[a]) --a;
         // cout<<"\n"<<"M: "<<m<<"\n";
         //m = min(m, a);
-        cout<<m<<'\n';
+        cout<<a<<'\n';
     }
     return 0;
 }
