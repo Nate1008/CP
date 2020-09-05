@@ -54,12 +54,14 @@ int main() {
             cin >> nums[i];
         }
         int a = n-1;
-        while (a > 0 && nums[a - 1] >= nums[a]) 
+        while (a > 0 && nums[a - 1] >= nums[a]) {
             --a;
             cout<<a<<'\n';
-        while (a > 0 && nums[a - 1] <= nums[a]) 
+        }
+        while (a > 0 && nums[a - 1] <= nums[a]) {
             --a;
             cout<<a<<'\n';
+        }
         cout<<a<<'\n';
     }
     return 0;
