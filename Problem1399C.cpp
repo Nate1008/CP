@@ -60,14 +60,21 @@ int main() {
                 cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n\n";
                 int count = 0;
                 int total = w[c] + w[i];
-                for(int k = c, x = i; k < x; k++, x--) {
-                    int sum = w[k] + w[x];
-                    if(w[k] + w[x] == total) {
-                        count++;
+                for(int v = 0; v < n; v++) {
+                    for(int k = c, x = i; k < x; k++, x--) {
+                        if(k == v) {
+                            k++;
+                        } else if(x == v) {
+                            x--;
+                        }
+                        int sum = w[k] + w[x];
+                        if(w[k] + w[x] == total) {
+                            count++;
+                        }
+                        cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\n";
                     }
-                    cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\n";
+                    mt = max(mt, count);
                 }
-                mt = max(mt, count);
             }
         }
         cout<<mt<<"\n";
