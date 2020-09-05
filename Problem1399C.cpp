@@ -68,7 +68,7 @@ int main() {
                             x--;
                         }
                         int sum = w[k] + w[x];
-                        if(w[k] + w[x] == total) {
+                        if(w[k] + w[x] == total && k != x) {
                             count++;
                         }
                         cout<<"FIRST: "<<k<<"\t"<<"SECOND: "<<x<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
