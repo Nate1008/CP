@@ -44,15 +44,15 @@
 using namespace std;
 
 int main() {
-    int n;
+    ll n;
     cin >> n;
-    vi nums(n);
+    vl nums(n);
     FOR(n, i) {
         cin >> nums[i];
     }
     sort(RALL(nums));
-    int k = n;
-    int ans = 0;
+    ll k = n;
+    ll ans = 0;
     FOR(n, i) {
         ans += abs(k-nums[i]);
         k--;
