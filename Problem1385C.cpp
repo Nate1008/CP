@@ -37,6 +37,7 @@
 #define vpi vector<pi>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
+#define RFOR(t, q) for(int q = t; q > 0; q--)
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
 
@@ -51,8 +52,18 @@ int main() {
         FOR(n, i) {
             cin >> nums[i];
         }
-        vi dup = nums;
-        sort()
+        int m = 0;
+        for(int i = n-1; i >= 0; i--) {
+            int a = 0;
+            for(int c = i-1; c >= 0; c--) {
+                if(!(nums[c] <= nums[c+1])) {
+                    break;
+                }
+                a++;
+            }
+            m = min(m, a);
+        }
+        cout<<m<<'\n';
     }
     return 0;
 }
