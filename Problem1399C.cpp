@@ -75,7 +75,7 @@ int main() {
                     }
                     mt = max(mt, count);
                 }
-                cout<<"\n";
+                // cout<<"\n";
             }
         }
         cout<<mt<<"\n";
