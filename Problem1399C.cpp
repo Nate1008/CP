@@ -57,7 +57,7 @@ int main() {
         int mt = 0;
         for(int i = n-1; i >= 0; i--) {
             for(int c = 0; c < i; c++) {
-                cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n\n";
+                // cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n\n";
                 for(int v = 0; v <= n; v++) {
                     int count = 0;
                     int total = w[c] + w[i];
@@ -71,7 +71,7 @@ int main() {
                         if(w[k] + w[x] == total) {
                             count++;
                         }
-                        cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
+                        // cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
                     }
                     mt = max(mt, count);
                 }
