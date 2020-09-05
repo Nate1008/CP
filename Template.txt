@@ -40,7 +40,6 @@
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
 
-
 using namespace std;
 
 int main() {
