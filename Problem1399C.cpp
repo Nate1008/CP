@@ -50,35 +50,22 @@ int main() {
         int n;
         cin >> n;
         vi w(n);
+        vi cnt(n + 1);
         FOR(n, i) {
             cin >> w[i];
+            ++cnt[w[i]];
         }
-        sort(ALL(w));
-        int mt = 0;
-        for(int i = n-1; i >= 0; i--) {
-            for(int c = 0; c < i; c++) {
-                // cout<<"START: "<<c<<"\t"<<"END: "<<i<<"\n\n";
-                for(int v = 0; v <= n; v++) {
-                    int count = 0;
-                    int total = w[c] + w[i];
-                    for(int k = c, x = i; k < x; k++, x--) {
-                        if(k == v) {
-                            k++;
-                        } else if(x == v) {
-                            x--;
-                        }
-                        int sum = w[k] + w[x];
-                        if(w[k] + w[x] == total && k != x) {
-                            count++;
-                        }
-                        // cout<<"FIRST: "<<k<<"\t"<<"SECOND: "<<x<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
-                    }
-                    mt = max(mt, count);
-                }
-                // cout<<"\n";
-            }
-        }
-        cout<<mt<<"\n";
+        int ans = 0;
+		for (int s = 2; s <= 2 * n; ++s) {
+			int cur = 0;
+			for (int i = 1; i < (s + 1) / 2; ++i) {
+				if (s - i > n) continue;
+				cur += min(cnt[i], cnt[s - i]);
+			}
+			if (s % 2 == 0) cur += cnt[s / 2] / 2;
+			ans = max(ans, cur);
+		}
+		cout << ans << endl;
     }
     return 0;
 }
