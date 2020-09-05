@@ -44,6 +44,20 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    vi nums(n);
+    FOR(n, i) {
+        cin >> nums[i];
+    }
+    sort(RALL(nums));
+    int k = n;
+    int ans = 0;
+    FOR(n, i) {
+        ans += k-nums[i];
+        k--;
+    }
+    cout<<ans;
     return 0;
 }
 
