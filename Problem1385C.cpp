@@ -55,7 +55,7 @@ int main() {
         }
         int m = n;
         for(int i = n-1; i > 0; i--) {
-            int a = i;
+            int a = n;
             for(int c = i-1; c >= 0; c--) {
                 a--;
                 // cout<<nums[c]<<"\t";
@@ -63,7 +63,7 @@ int main() {
                     break;
                 }
             }
-            // cout<<"\n"<<"M: "<<m<<"\n";
+            cout<<"\n"<<"M: "<<m<<"\n";
             m = min(m, a);
         }
         cout<<m<<'\n';
