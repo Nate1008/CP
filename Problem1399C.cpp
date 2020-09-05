@@ -71,7 +71,7 @@ int main() {
                         if(w[k] + w[x] == total) {
                             count++;
                         }
-                        cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
+                        cout<<"FIRST: "<<k<<"\t"<<"SECOND: "<<x<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
                     }
                     mt = max(mt, count);
                 }
