@@ -74,8 +74,8 @@ int main() {
                         cout<<"FIRST: "<<c<<"\t"<<"SECOND: "<<i<<"\t"<<"SUM: "<<sum<<"\t"<<"COUNT: "<<count<<"\t"<<"V: "<<v<<"\n";
                     }
                     mt = max(mt, count);
-                    cout<<"\n";
                 }
+                cout<<"\n";
             }
         }
         cout<<mt<<"\n";
