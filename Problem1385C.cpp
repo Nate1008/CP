@@ -57,11 +57,11 @@ int main() {
         for(int i = n-1; i > 0; i--) {
             int a = n;
             for(int c = i-1; c >= 0; c--) {
-                a = c;
                 // cout<<nums[c]<<"\t";
                 if(!(nums[c] <= nums[c+1])) {
                     break;
                 }
+                a = c;
             }
             cout<<"\n"<<"M: "<<m<<"\n";
             m = min(m, a+1);
