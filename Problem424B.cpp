@@ -54,12 +54,12 @@ bool max_greater(pii a, pii b) {
     int p = a.s;
     int t = a.f.f;
     int l = a.f.s;
-    cout<<"A: "<"\n";    
+    cout<<"A: "<<"\n";    
     cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
     p = b.s;
     t = b.f.f;
     l = b.f.s;
-    cout<<"B: "<"\n";    
+    cout<<"B: "<<"\n";    
     cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
     if(a >= b){
         return true;
