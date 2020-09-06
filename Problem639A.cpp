@@ -74,10 +74,13 @@ int main() {
                     min = v;
                 }
             }
+            cout<<"MIN: "<<online[min]<<"\n";      
             if(t[a] > online[min]) {
                 online[min] = t[a];
+                cout<<t[a]<<"\n";
             }
         } else if (online.size() < k){
+            cout<<t[a]<<"\n";      
             online.push_back(t[a]);
         }
     }
