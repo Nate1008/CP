@@ -65,9 +65,9 @@ int main() {
             }
             cur += nums[i];
             cout<<"CURRENT MAX: "<<cur<<"\n"; 
+            l = max(l, c);
             c++;                
             cout<<"COUNT: "<<c<<"\n"; 
-            l = max(l, c);
             cout<<"LEN: "<<l<<"\n"; 
             
         }
