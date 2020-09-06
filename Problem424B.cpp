@@ -62,7 +62,7 @@ bool max_greater(pii a, pii b) {
     cout<<"B: "<<"\t"<<"MAX: "<<mb<<'\n';    
     cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n\n";
 
-    if(a >= b){
+    if(a <= b){
         return true;
     } else {
         return false;
