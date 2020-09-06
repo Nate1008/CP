@@ -61,7 +61,7 @@ int main() {
         float v = sqrt((pow(a, 2) + pow(b, 2)));
         dist[i] = v;
         pop[i] = c;
-        cout<<"DIS: "<<v<<'\n';
+        cout<<"DIS: "<<v<<"\n";
     }
     sort(ALL(dist));
     FOR(n, i) {
