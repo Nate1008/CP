@@ -68,8 +68,8 @@ int main() {
         int p = pop[i];
         float t = dist[i];
         k += p;
-        cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
         if(k >= 1000000 && !pass) {
+            cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
             pass = true;
             ans = t;
         }
