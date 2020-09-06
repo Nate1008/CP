@@ -80,17 +80,17 @@ int main() {
         int cur = 0;
         int l = -1;
         FOR(n, i) {
-            cur += nums[i];
-            l = max(l, c);
-            c++;
-            // cout<<"CURRENT MAX: "<<cur<<"\n";     
-            // cout<<"COUNT: "<<c<<"\n"; 
-            // cout<<"LEN: "<<l<<"\n"; 
             if(cur % k == 0) {
                 // cout<<"DIV BY K: "<<nums[i]<<"\n";
                 c = 0;
                 cur = 0;
             }
+            cur += nums[i];
+            l = max(l, c);
+            c++;
+            // cout<<"CURRENT MAX: "<<cur<<"\n";     
+            // cout<<"COUNT: "<<c<<"\n"; 
+            // cout<<"LEN: "<<l<<"\n";
         }
         if(l == 0) {
             l = -1;
