@@ -76,6 +76,7 @@ int main() {
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
+            ans = t;
         }
     }
     if(k < 1000000) {
