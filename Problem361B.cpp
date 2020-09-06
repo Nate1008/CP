@@ -51,7 +51,7 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    if(n == 1) {
+    if(n == 1 && k == 1) {
         cout<<-1;
         return 0;
     }
