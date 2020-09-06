@@ -37,6 +37,7 @@
 #define vf vector<float>
 #define vl vector<long long>
 #define vpi vector<pi>
+#define vpii vector<pii>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
 #define RFOR(t, q) for(int q = t; q > 0; q--)
@@ -52,7 +53,7 @@ int main() {
     cin >> n >> k;
     bool pass = false;
     double x = 0, y = 0;
-    vpi 
+    vt<pii>
     
     FOR(n, i) {
         int t, l, p;
