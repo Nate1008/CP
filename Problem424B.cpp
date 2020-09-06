@@ -60,15 +60,15 @@ int main() {
     int n, k;
     cin >> n >> k;
     bool pass = false;
-    float ans;
+    float ans = 0;
     vpi coor(n);
     FOR(n, i) {
-        float a, b, c;
+        int a, b, c;
         cin >> a >> b >> c;
         float v = sqrt((pow(a, 2) + pow(b, 2)));
         coor[i] = pair<float, int>(v, c);
     }
-    sort(RALL(coor), max_greater);
+    sort(ALL(coor));
     FOR(n, i) {
         int p = coor[i].s;
         float t = coor[i].f;
