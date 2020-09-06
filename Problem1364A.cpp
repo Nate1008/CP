@@ -95,8 +95,7 @@ int main() {
         if(l == 0) {
             l = -1;
         }
-        cout<<ind<<'\t';
-        cout<<l<<'\n';
+        cout<<max(l, ind)<<'\n';
     }
     return 0;
 }
