@@ -70,7 +70,12 @@ int main() {
                 perm[i%n] = i;
             }
         } else {
-            perm[(i-1)%n] = i;
+            if(perm[i%n] != 0) {
+                perm[i-1] = perm[i%n];
+                perm[i%n] = i;
+            } else {
+                perm[i%n] = i;
+            }
         }
         cout<<i<<"\n";
     }
