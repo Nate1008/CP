@@ -73,7 +73,8 @@ int main() {
             cout<<-1<<"\n";
             continue;    
         } else if (sum % k != 0) {
-            cout<<n;
+            cout<<n<<"\n";
+            continue;
         }
         int c = 0;
         int cur = 0;
