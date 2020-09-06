@@ -60,6 +60,7 @@ int main() {
     FOR(q, i) {
         int type, a;
         cin >> type >> a;
+        a--;
         if(type == 2) {
             int c = count(ALL(online), t[a]);
             if(c > 0) {
