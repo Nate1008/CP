@@ -23,10 +23,11 @@
 #include <climits>
 
 #define ll long long
+#define pi pair<int, int>
 #define mi map<int, int>
 #define ms map<string, int>
 #define mc map<char, int>
-#define pi pair<int, int>
+#define mpi map<pi, int>
 #define f first
 #define s second
 #define vt vector
@@ -50,9 +51,12 @@ int main() {
     cin >> n >> k;
     bool pass = false;
     double x = 0, y = 0;
+    vpi
     FOR(n, i) {
         int t, l, p;
         cin >> t >> l >> p;
+    }
+    FOR(n, i) {
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
