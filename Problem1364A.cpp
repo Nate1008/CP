@@ -72,6 +72,9 @@ int main() {
             cout<<"LEN: "<<l<<"\n"; 
             
         }
+        if(l == 0) {
+            l = -1;
+        }
         cout<<l<<'\n';
     }
     return 0;
