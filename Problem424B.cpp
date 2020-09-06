@@ -73,7 +73,7 @@ int main() {
     FOR(n, i) {
         int p = coor[i].s;
         float t = coor[i].f;
-        // cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
+        cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
