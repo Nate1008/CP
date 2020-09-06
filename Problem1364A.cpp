@@ -58,6 +58,7 @@ int main() {
         int curm = 0;
         FOR(n, i) {
             curm = max(nums[i], curm + nums[i]);
+            cout<<"CURRENT MAX: "<<curm<<"\n"; 
             if(curm % k != 0) {
                 m = max(curm, m);
             } 
