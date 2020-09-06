@@ -59,7 +59,8 @@ int main() {
             }
         }
         if(!pass) {
-            cout<<-1<<"\n";    
+            cout<<-1<<"\n";
+            continue;    
         }
         int c = 0;
         int cur = 0;
