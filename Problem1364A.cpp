@@ -82,11 +82,10 @@ int main() {
         FOR(n, i) {
             if((cur+nums[i]) % k == 0) {
                 // cout<<"DIV BY K: "<<nums[i]<<"\n";
-                cur += nums[i];
-                if(i < n-1 && cur+nums[i+1] % k == 0) {
+                if(i < n-1 && (cur+nums[i]+nums[i+1]) % k == 0) {
                     c = 0;
                     cur = 0;
-                }
+                } 
             }
             c++;
             cur += nums[i];
