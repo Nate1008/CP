@@ -69,7 +69,7 @@ int main() {
         float t = dist[i];
         k += p;
         if(k >= 1000000 && !pass) {
-            cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<k<<"\n";
+            cout<<"DIS: "<<t<<" POP: "<<k<<"\n";
             pass = true;
             ans = sqrt(t);
         }
