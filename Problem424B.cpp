@@ -74,7 +74,7 @@ int main() {
         int p = coor[i].s;
         int t = coor[i].f.f;
         int l = coor[i].f.s;
-        cout<<"X: "<<t<<"Y: "<<l<<"POP: "<<p<<"\n";
+        cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
