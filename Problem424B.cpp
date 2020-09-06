@@ -58,7 +58,7 @@ int main() {
     FOR(n, i) {
         int a, b, c;
         cin >> a >> b >> c;
-        float v = sqrt((pow(a, 2) + pow(b, 2)));
+        float v = sqrt((pow(abs(a), 2) + pow(abs(b), 2)));
         dist[i] = v;
         pop[i] = c;
         cout<<"DIS: "<<v<<"\n";
