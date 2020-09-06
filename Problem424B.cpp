@@ -66,13 +66,14 @@ int main() {
         double a, b, c;
         cin >> a >> b >> c;
         float v = sqrt((pow(a, 2) + pow(b, 2)));
+        cout<<"DIS: "<<v<<'\n';
         coor[i] = pair<float, int>(v, c);
     }
     sort(ALL(coor));
     FOR(n, i) {
         int p = coor[i].s;
         float t = coor[i].f;
-        cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
+        // cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
