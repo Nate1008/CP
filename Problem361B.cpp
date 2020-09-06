@@ -63,6 +63,7 @@ int main() {
         } else {
             perm[i-2] = i;
         }
+        cout<<i<<"\n";
     }
     
     for(int i = 0; i < n; i++) {
