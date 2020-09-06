@@ -49,7 +49,7 @@
 using namespace std;
 
 bool max_greater(pi a, pi b) {
-    if(a.f >= b.f){
+    if(a.f > b.f){
         return true;
     } else {
         return false;
@@ -72,7 +72,7 @@ int main() {
     FOR(n, i) {
         int p = coor[i].s;
         float t = coor[i].f;
-        cout<<"DIS: "<<t<<" POP: "<<p<<"\n";
+        cout<<"DIS: "<<("%.6f", t)<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
