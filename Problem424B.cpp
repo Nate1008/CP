@@ -63,7 +63,7 @@ int main() {
         pop[i] = c;
         cout<<"DIS: "<<v<<"\n";
     }
-    sort(RALL(dist));
+    sort(ALL(dist));
     FOR(n, i) {
         int p = pop[i];
         float t = dist[i];
