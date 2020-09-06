@@ -56,12 +56,19 @@ int main() {
         }
         int m = 0;
         int curm = 0;
+        int c = 0;
+        int l = -1;
         FOR(n, i) {
             curm = max(nums[i], curm + nums[i]);
             cout<<"CURRENT MAX: "<<curm<<"\n"; 
             if(curm % k != 0) {
                 m = max(curm, m);
-            } 
+                cout<<"MAX: "<<m<<"\n"; 
+                c++;
+                l = max(l, c);
+            } else {
+                c = 0;
+            }
         }
         cout<<m<<'\n';
     }
