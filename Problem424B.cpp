@@ -52,9 +52,9 @@ bool max_greater(pii a, pii b) {
     int ma = max(a.f.f, a.f.s);
     int mb = max(b.f.f, b.f.s);
     if(a >= b){
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 
