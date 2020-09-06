@@ -90,7 +90,7 @@ int main() {
                 break;
             }
         }
-        int ans = min(l, n-(r-1));
+        int ans = min(l+1, n-r);
         cout<<n-ans<<'\n';
     }
     return 0;
