@@ -48,9 +48,8 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    int ans = 0;
     bool pass = false;
-    int x = 0, y = 0;
+    double x = 0, y = 0;
     FOR(n, i) {
         int t, l, p;
         cin >> t >> l >> p;
@@ -61,7 +60,7 @@ int main() {
             y = l; 
         }
     }
-    int ans = sqrt((pow(x, 2) + pow(y, 2)));
+    float ans = sqrt((pow(x, 2) + pow(y, 2)));
     cout<<ans;
     return 0;
 }
