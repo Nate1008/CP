@@ -62,11 +62,15 @@ int main() {
     }
 
     for(int i = k+2; i <= n; i++){
-        if(perm[i%n] != 0) {
+        if(i % 2 == 1) {
+            if(perm[i%n] != 0) {
             perm[i-1] = perm[i%n];
             perm[i%n] = i;
+            } else {
+                perm[i%n] = i;            
+            }
         } else {
-            perm[i%n] = i;            
+            perm[i-2] = i;
         }
     }
     
