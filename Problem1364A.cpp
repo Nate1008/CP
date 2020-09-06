@@ -63,7 +63,7 @@ int main() {
         }
         int m = -1;
         FOR(n, i) {
-            for(int j = 0; j < i; j++){
+            for(int j = 0; j <= i; j++){
                 int sum = 0;
                 int c = (i - j)+1;
                 cout<<"C: "<<c<<'\n';
