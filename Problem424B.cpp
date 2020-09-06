@@ -67,12 +67,13 @@ int main() {
     FOR(n, i) {
         float t = dist[i];
         k += pop[i];
-        cout<<"DIS: "<<t<<" POP: "<<k<<"\n";
+        cout<<"DIS: "<<t<<" POP: "<<pop[i]<<"\n";
         if(k >= 1000000 && !pass) {
             pass = true;
             ans = sqrt(t);
             cout.precision(7);
             cout<<ans;
+            return 0;
         }
     }
     cout << -1;
