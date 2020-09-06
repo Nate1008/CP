@@ -57,10 +57,12 @@ int main() {
         perm[i-1] = i;
     }
 
-    for(int i = k+2; i <= n; i += 2){
-        cout<<i<<'\n';
-        perm[i+1] = i;
-        perm[i] = i+1;
+    for(int i = k+2; i <= n; i++){
+        if(i % 2 == 0) {
+            perm[i+1] = i;
+        } else {
+            perm[i] = i+1;
+        }
     }
     
     for(int i = 0; i < n; i++) {
