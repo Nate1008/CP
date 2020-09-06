@@ -62,11 +62,12 @@ int main() {
                 cout<<"DIV BY K: "<<nums[i]<<"\n";
                 c = 0;
                 cur = 0;
+            } else {
+                c++;
             }
             cur += nums[i];
             cout<<"CURRENT MAX: "<<cur<<"\n"; 
-            l = max(l, c);
-            c++;                
+            l = max(l, c);              
             cout<<"COUNT: "<<c<<"\n"; 
             cout<<"LEN: "<<l<<"\n"; 
             
