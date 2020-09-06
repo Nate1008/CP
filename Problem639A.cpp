@@ -49,6 +49,39 @@
 using namespace std;
 
 int main() {
+    int n, q, k;
+    cin >> n >> q >> k;
+    vi t(n);
+    vi online;
+    FOR(n, i) {
+        cin >> t[i];
+    }
+
+    FOR(q, i) {
+        int type, a;
+        cin >> type >> a;
+        if(type == 2) {
+            int c = count(ALL(online), t[a]);
+            if(c > 0) {
+                cout<<"YES"<<"\n";
+            } else {
+                cout<<"NO"<<"\n";
+            }
+        } else if(online.size() == k){
+            int min = 0;
+            for(int v = 1; v < online.size(); v++) {
+                if(online[min] > online[v]) {
+                    min = v;
+                }
+            }
+            if(t[a] > online[min]) {
+                online[min] = t[a];
+            }
+        } else if (online.size() < k){
+            online.push_back(t[a]);
+        }
+    }
+    
     return 0;
 }
 
