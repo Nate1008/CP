@@ -52,32 +52,37 @@ int main() {
         cin >> n >> k;
         vi nums(n);
         bool pass = false;
+        int sum = 0;
         FOR(n, i) {
-            cin >> nums[i];
-            if(nums[i] % k != 0) {
+            int v;
+            cin >> v;
+            nums[i] = v;
+            if(v % k != 0) {
                 pass = true;
             }
+            sum += v;
         }
         if(!pass) {
             cout<<-1<<"\n";
             continue;    
+        } else if (sum % k != 0) {
+            cout<<n;
         }
         int c = 0;
         int cur = 0;
         int l = -1;
         FOR(n, i) {
-            if((cur+nums[i]) % k == 0) {
+            cur += nums[i];
+            l = max(l, c);
+            c++;
+            // cout<<"CURRENT MAX: "<<cur<<"\n";     
+            // cout<<"COUNT: "<<c<<"\n"; 
+            // cout<<"LEN: "<<l<<"\n"; 
+            if(cur % k == 0) {
                 // cout<<"DIV BY K: "<<nums[i]<<"\n";
                 c = 0;
                 cur = 0;
             }
-            c++;
-            cur += nums[i];
-            l = max(l, c);       
-            // cout<<"CURRENT MAX: "<<cur<<"\n";     
-            // cout<<"COUNT: "<<c<<"\n"; 
-            // cout<<"LEN: "<<l<<"\n"; 
-            
         }
         if(l == 0) {
             l = -1;
