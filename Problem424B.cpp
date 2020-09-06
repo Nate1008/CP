@@ -65,21 +65,17 @@ int main() {
     }
     sort(ALL(dist));
     FOR(n, i) {
-        int p = pop[i];
         float t = dist[i];
-        k += p;
+        k += pop[i];
         cout<<"DIS: "<<t<<" POP: "<<k<<"\n";
         if(k >= 1000000 && !pass) {
             pass = true;
             ans = sqrt(t);
+            cout.precision(7);
+            cout<<ans;
         }
     }
-    if(k < 1000000) {
-        cout<<-1;
-        return 0;
-    }
-    
-    std::printf("%.7f", ans);
+    cout << -1;
     return 0;
 }
 
