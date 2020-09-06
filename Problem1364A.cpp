@@ -66,7 +66,7 @@ int main() {
             for(int j = 0; j <= i; j++){
                 int sum = 0;
                 int c = (i - j)+1;
-                cout<<"C: "<<c<<'\n';
+                // cout<<"C: "<<c<<'\n';
                 for(int v = j; v <= i; v++) {
                     sum += nums[v];
                 }
