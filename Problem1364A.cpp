@@ -51,6 +51,9 @@ int main() {
         int n, k;
         cin >> n >> k;
         vi nums(n);
+        vi sums(n+1);
+        int ind = n;
+        sums[ind] = 0;
         bool pass = false;
         int sum = 0;
         FOR(n, i) {
@@ -61,6 +64,10 @@ int main() {
                 pass = true;
             }
             sum += v;
+            sums[i] = v;
+            if(sums[i] % k != 0) {
+                ind = i;
+            }
         }
         if(!pass) {
             cout<<-1<<"\n";
@@ -87,7 +94,7 @@ int main() {
         if(l == 0) {
             l = -1;
         }
-        cout<<l<<'\n';
+        cout<<max(l, (ind+1))<<'\n';
     }
     return 0;
 }
