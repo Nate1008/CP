@@ -60,39 +60,53 @@ int main() {
             int v;
             cin >> v;
             nums[i] = v;
-            if(v % k != 0) {
-                pass = true;
-            }
-            sum += v;
-            sums[i] = v;
-            if(sums[i] % k != 0) {
-                ind = i;
-            }
         }
-        if(!pass) {
-            cout<<-1<<"\n";
-            continue;    
-        } else if (sum % k != 0) {
-            cout<<n<<"\n";
-            continue;
-        }
-        int c = 0;
-        int cur = 0;
-        int l = -1;
+        int m = -1;
         FOR(n, i) {
-            if((cur+nums[i]) % k == 0) {
-                // cout<<"DIV BY K: "<<nums[i]<<"\n";
-                c = 0;
-                cur = 0;
+            for(int j = 0; j < i; j++){
+                int sum = 0;
+                int c = i - j;
+                for(int v = j; v < i; v++) {
+                    sum += nums[v];
+                }
+                if(sum % k != 0){
+                    m = max(m, c);
+                }
             }
-            c++;
-            cur += nums[i];
-            l = max(l, c);
-            // cout<<"CURRENT MAX: "<<cur<<"\n";     
-            // cout<<"COUNT: "<<c<<"\n"; 
-            // cout<<"LEN: "<<l<<"\n";
         }
-        cout<<max(l, ind)<<'\n';
+        //     if(v % k != 0) {
+        //         pass = true;
+        //     }
+        //     sum += v;
+        //     sums[i] = v;
+        //     if(sums[i] % k != 0) {
+        //         ind = i;
+        //     }
+        // }
+        // if(!pass) {
+        //     cout<<-1<<"\n";
+        //     continue;    
+        // } else if (sum % k != 0) {
+        //     cout<<n<<"\n";
+        //     continue;
+        // }
+        // int c = 0; 
+        // int cur = 0;
+        // int l = 0;
+        // FOR(n, i) {
+        //     if((cur+nums[i]) % k == 0) {
+        //         // cout<<"DIV BY K: "<<nums[i]<<"\n";
+        //         c = 0;
+        //         cur = 0;
+        //     }
+        //     c++;
+        //     cur += nums[i];
+        //     l = max(l, c);
+        //     // cout<<"CURRENT MAX: "<<cur<<"\n";     
+        //     // cout<<"COUNT: "<<c<<"\n"; 
+        //     // cout<<"LEN: "<<l<<"\n";
+        // }
+        // cout<<max(l, ind)<<'\n';
     }
     return 0;
 }
