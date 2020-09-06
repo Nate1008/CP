@@ -61,7 +61,7 @@ int main() {
         }
     }
     float ans = sqrt((pow(x, 2) + pow(y, 2)));
-    cout<<ans;
+    printf("%.6f", ans);
     return 0;
 }
 
