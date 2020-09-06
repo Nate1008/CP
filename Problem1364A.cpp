@@ -59,17 +59,17 @@ int main() {
         int l = -1;
         FOR(n, i) {
             if((cur+nums[i]) % k == 0) {
-                cout<<"DIV BY K: "<<nums[i]<<"\n";
+                // cout<<"DIV BY K: "<<nums[i]<<"\n";
                 c = 0;
                 cur = 0;
             } else {
                 c++;
             }
             cur += nums[i];
-            cout<<"CURRENT MAX: "<<cur<<"\n"; 
+            // cout<<"CURRENT MAX: "<<cur<<"\n"; 
             l = max(l, c);              
-            cout<<"COUNT: "<<c<<"\n"; 
-            cout<<"LEN: "<<l<<"\n"; 
+            // cout<<"COUNT: "<<c<<"\n"; 
+            // cout<<"LEN: "<<l<<"\n"; 
             
         }
         if(l == 0) {
