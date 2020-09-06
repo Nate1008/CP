@@ -63,11 +63,10 @@ int main() {
     }
     sort(ALL(dist));
     FOR(n, i) {
-        float t = dist[i];
         k += pop[i];
         cout<<"DIS: "<<t<<" POP: "<<pop[i]<<"\n";
         if(k >= 1000000) {
-            float ans = sqrt(t);
+            float ans = sqrt(dist[i]);
             cout.precision(15);
             cout<<ans;
             return 0;
