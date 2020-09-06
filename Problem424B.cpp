@@ -81,9 +81,9 @@ int main() {
     }
     sort(RALL(coor), max_greater);
     FOR(n, i) {
-        // int p = coor[i].s;
-        // int t = coor[i].f.f;
-        // int l = coor[i].f.s;
+        int p = coor[i].s;
+        int t = coor[i].f.f;
+        int l = coor[i].f.s;
         // cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
