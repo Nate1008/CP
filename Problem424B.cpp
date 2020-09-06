@@ -60,6 +60,10 @@ int main() {
             y = l; 
         }
     }
+    if(k < 1000000) {
+        cout<<-1;
+        return 0;
+    }
     float ans = sqrt((pow(x, 2) + pow(y, 2)));
     printf("%.8f", ans);
     return 0;
