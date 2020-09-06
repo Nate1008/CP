@@ -51,7 +51,6 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    bool pass = false;
     float ans = 0;
     vpi dist(n);
     FOR(n, i) {
@@ -60,16 +59,15 @@ int main() {
         float v = pow(a, 2) + pow(b, 2);
         dist[i].f = v;
         dist[i].s = c;
-        cout<<"DIS: "<<v<<"\n";
+        // cout<<"DIS: "<<v<<"\n";
     }
     sort(ALL(dist));
     FOR(n, i) {
         int p = dist[i].s;
         float t = dist[i].f;
         k += p;
-        //cout<<"DIS: "<<t<<" POP: "<<k<<"\n";
-        if(k >= 1000000 && !pass) {
-            pass = true;
+        // cout<<"DIS: "<<t<<" POP: "<<k<<"\n";
+        if(k >= 1000000) {
             ans = sqrt(t);
             cout.precision(7);
             cout<<ans;
