@@ -46,6 +46,23 @@
 using namespace std;
 
 int main() {
+    int n, k;
+    cin >> n >> k;
+    int ans = 0;
+    bool pass = false;
+    int x = 0, y = 0;
+    FOR(n, i) {
+        int t, l, p;
+        cin >> t >> l >> p;
+        k += p;
+        if(k >= 1000000 && !pass) {
+            pass = true;
+            x = t;
+            y = l; 
+        }
+    }
+    int ans = sqrt((pow(x, 2) + pow(y, 2)));
+    cout<<ans;
     return 0;
 }
 
