@@ -67,7 +67,7 @@ int main() {
                 int sum = 0;
                 int c = (i - j)+1;
                 cout<<"C: "<<c<<'\n';
-                for(int v = j; v < i; v++) {
+                for(int v = j; v <= i; v++) {
                     sum += nums[v];
                 }
                 if(sum % k != 0){
