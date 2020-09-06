@@ -51,17 +51,6 @@ using namespace std;
 bool max_greater(pii a, pii b) {
     int ma = max(a.f.f, a.f.s);
     int mb = max(b.f.f, b.f.s);
-    int p = a.s;
-    int t = a.f.f;
-    int l = a.f.s;
-    cout<<"A: "<<"\t"<<"MAX: "<<ma<<'\n';
-    cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n\n";
-    p = b.s;
-    t = b.f.f;
-    l = b.f.s;
-    cout<<"B: "<<"\t"<<"MAX: "<<mb<<'\n';    
-    cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n\n";
-
     if(a <= b){
         return true;
     } else {
@@ -73,31 +62,29 @@ int main() {
     int n, k;
     cin >> n >> k;
     bool pass = false;
-    double x = 0, y = 0;
-    vpii coor(n);
+    float ans;
+    vpi coor(n);
     FOR(n, i) {
-        pii t;
-        cin >> t.f.f >> t.f.s >> t.s;
-        coor[i] = pii(pi(abs(t.f.f), abs(t.f.s)),t.s);
+        int a, b, c;
+        cin >> a >> b >> c;
+        int v = sqrt((pow(a, 2) + pow(b, 2)));
+        coor[i] = pi(v, c);
     }
     sort(RALL(coor), max_greater);
     FOR(n, i) {
         int p = coor[i].s;
-        int t = coor[i].f.f;
-        int l = coor[i].f.s;
+        int t = coor[i].f;
         // cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
-            x = t;
-            y = l; 
         }
     }
     if(k < 1000000) {
         cout<<-1;
         return 0;
     }
-    float ans = sqrt((pow(x, 2) + pow(y, 2)));
+    
     printf("%.7f", ans);
     return 0;
 }
