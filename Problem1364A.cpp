@@ -60,12 +60,14 @@ int main() {
         int l = -1;
         FOR(n, i) {
             curm = max(nums[i], curm + nums[i]);
-            cout<<"CURRENT MAX: "<<curm<<"\n"; 
+            // cout<<"CURRENT MAX: "<<curm<<"\n"; 
             if(curm % k != 0) {
                 m = max(curm, m);
-                cout<<"MAX: "<<m<<"\n"; 
+                // cout<<"MAX: "<<m<<"\n"; 
                 c++;
+                cout<<"COUNT: "<<c<<"\n"; 
                 l = max(l, c);
+                cout<<"LEN: "<<l<<"\n"; 
             } else {
                 c = 0;
             }
