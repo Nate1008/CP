@@ -51,7 +51,7 @@ int main() {
         int n, k;
         cin >> n >> k;
         vi nums(n);
-        bool pass; = false;
+        bool pass = false;
         FOR(n, i) {
             cin >> nums[i];
             if(nums[i] % k != 0) {
