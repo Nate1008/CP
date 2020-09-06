@@ -48,14 +48,6 @@
 
 using namespace std;
 
-bool max_greater(pi a, pi b) {
-    if(a.f > b.f){
-        return true;
-    } else {
-        return false;
-    }
-}
-
 int main() {
     int n, k;
     cin >> n >> k;
@@ -69,7 +61,7 @@ int main() {
         float v = sqrt((pow(a, 2) + pow(b, 2)));
         dist[i] = v;
         pop[i] = c;
-        cout<<"DIS: "<<dist[i]<<'\n';
+        cout<<"DIS: "<<v<<'\n';
     }
     sort(ALL(dist));
     FOR(n, i) {
