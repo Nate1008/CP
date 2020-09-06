@@ -59,6 +59,7 @@ int main() {
         int l = -1;
         FOR(n, i) {
             if(cur+nums[i] % k == 0) {
+                cout<<"DIV BY K: "<<nums[i]<<"\n";
                 c = 0;
                 cur = 0;
             }
