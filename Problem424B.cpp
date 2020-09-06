@@ -58,7 +58,7 @@ int main() {
     FOR(n, i) {
         int a, b, c;
         cin >> a >> b >> c;
-        float v = sqrt((pow(a, 2) + pow(b, 2)));
+        float v = pow(a, 2) + pow(b, 2);
         dist[i] = v;
         pop[i] = c;
         cout<<"DIS: "<<v<<"\n";
@@ -71,7 +71,7 @@ int main() {
         if(k >= 1000000 && !pass) {
             cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<k<<"\n";
             pass = true;
-            ans = t;
+            ans = sqrt(t);
         }
     }
     if(k < 1000000) {
