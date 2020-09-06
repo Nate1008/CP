@@ -59,7 +59,12 @@ int main() {
 
     for(int i = k+2; i <= n; i++){
         if(i % 2 == 0) {
-            perm[i%n] = i;
+            if(perm[i%n]) {
+                perm[i-1] = perm[i%n];
+                perm[i%n] = i;
+            } else {
+                perm[i%n] = i;
+            }
         } else {
             perm[(i-2)%n] = i;
         }
