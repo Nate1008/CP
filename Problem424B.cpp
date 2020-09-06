@@ -85,7 +85,7 @@ int main() {
         return 0;
     }
     
-    printf("%.7f", ans);
+    std::printf("%.7f", ans);
     return 0;
 }
 
