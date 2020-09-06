@@ -58,6 +58,7 @@ int main() {
     }
 
     for(int i = k+2; i <= n; i += 2){
+        cout<<i<<'\n';
         perm[i+1] = i;
         perm[i] = i+1;
     }
