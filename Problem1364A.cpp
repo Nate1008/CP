@@ -65,7 +65,7 @@ int main() {
         FOR(n, i) {
             for(int j = 0; j < i; j++){
                 int sum = 0;
-                int c = i - j;
+                int c = (i - j)+1;
                 for(int v = j; v < i; v++) {
                     sum += nums[v];
                 }
