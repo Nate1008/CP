@@ -85,8 +85,8 @@ int main() {
                 c = 0;
                 cur = 0;
             }
-            cur += nums[i];
             c++;
+            cur += nums[i];
             l = max(l, c);
             // cout<<"CURRENT MAX: "<<cur<<"\n";     
             // cout<<"COUNT: "<<c<<"\n"; 
@@ -95,7 +95,8 @@ int main() {
         if(l == 0) {
             l = -1;
         }
-        cout<<max(l, ind)<<'\n';
+        cout<<ind<<'\t';
+        cout<<l<<'\n';
     }
     return 0;
 }
