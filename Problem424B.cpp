@@ -57,8 +57,8 @@ int main() {
         int a, b, c;
         cin >> a >> b >> c;
         int v = (a*a) + (b*b);
-        dist[i] = v;
-        pop[i] = c;
+        dist.push_back(v);
+        pop.push_back(c);
         //cout<<"DIS: "<<v<<"\n";
     }
     sort(ALL(dist));
