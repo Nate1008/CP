@@ -54,25 +54,23 @@ int main() {
         FOR(n, i) {
             cin >> nums[i];
         }
-        int m = 0;
-        int curm = 0;
         int c = 0;
+        int cur = 0;
         int l = -1;
         FOR(n, i) {
-            curm = max(nums[i], curm + nums[i]);
-            // cout<<"CURRENT MAX: "<<curm<<"\n"; 
-            if(curm % k != 0) {
-                m = max(curm, m);
-                // cout<<"MAX: "<<m<<"\n"; 
-                c++;
-                cout<<"COUNT: "<<c<<"\n"; 
-                l = max(l, c);
-                cout<<"LEN: "<<l<<"\n"; 
-            } else {
+            if(cur+nums[i] % k == 0) {
                 c = 0;
+                cur = 0;
             }
+            cur += nums[i];
+            cout<<"CURRENT MAX: "<<cur<<"\n"; 
+            c++;                
+            cout<<"COUNT: "<<c<<"\n"; 
+            l = max(l, c);
+            cout<<"LEN: "<<l<<"\n"; 
+            
         }
-        cout<<m<<'\n';
+        cout<<l<<'\n';
     }
     return 0;
 }
