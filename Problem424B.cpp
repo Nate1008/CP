@@ -55,12 +55,11 @@ int main() {
     double x = 0, y = 0;
     vpii coor(n);
     FOR(n, i) {
-        int a, b, c;
-        cin >> a >> b >> c;
-        pii t = pii(pi(abs(a),abs(b)), c);
+        pii t;
+        cin >> t.f.f >> t.f.s >> t.s;
         coor[i] = t;
     }
-    sort(ALL(coor));
+    sort(RALL(coor));
     FOR(n, i) {
         int p = coor[i].s;
         int t = coor[i].f.f;
