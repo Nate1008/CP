@@ -48,10 +48,8 @@
 
 using namespace std;
 
-bool max_greater(pii a, pii b) {
-    int ma = max(a.f.f, a.f.s);
-    int mb = max(b.f.f, b.f.s);
-    if(a <= b){
+bool max_greater(pi a, pi b) {
+    if(a.f >= b.f){
         return true;
     } else {
         return false;
