@@ -51,6 +51,9 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
+    if(n == 1) {
+        cout<<-1;
+    }
     vi perm(n);
     perm[0] = 1;
     for(int i = 2; i < k+2; i++) {
