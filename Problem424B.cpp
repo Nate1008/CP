@@ -63,7 +63,7 @@ int main() {
     float ans = 0;
     vpi coor(n);
     FOR(n, i) {
-        int a, b, c;
+        double a, b, c;
         cin >> a >> b >> c;
         float v = sqrt((pow(a, 2) + pow(b, 2)));
         coor[i] = pair<float, int>(v, c);
