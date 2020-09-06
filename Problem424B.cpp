@@ -53,13 +53,16 @@ int main() {
     cin >> n >> k;
     bool pass = false;
     double x = 0, y = 0;
-    vt<pii>
-    
+    vpii coor;
     FOR(n, i) {
-        int t, l, p;
-        cin >> t >> l >> p;
+        pii t;
+        cin >> t.f.f >> t.f.s >> t.s;
     }
+    sort(ALL(coor));
     FOR(n, i) {
+        int p = coor[i].s;
+        int t = coor[i].f.f;
+        int l = coor[i].f.s;
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
