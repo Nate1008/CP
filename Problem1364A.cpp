@@ -70,9 +70,8 @@ int main() {
                 cout<<"DIV BY K: "<<nums[i]<<"\n";
                 c = 0;
                 cur = 0;
-            } else {
-                c++;
             }
+            c++;
             cur += nums[i];
             cout<<"CURRENT MAX: "<<cur<<"\n"; 
             l = max(l, c);              
