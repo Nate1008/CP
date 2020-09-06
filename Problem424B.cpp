@@ -65,13 +65,13 @@ int main() {
     FOR(n, i) {
         int a, b, c;
         cin >> a >> b >> c;
-        int v = sqrt((pow(a, 2) + pow(b, 2)));
-        coor[i] = pi(v, c);
+        float v = sqrt((pow(a, 2) + pow(b, 2)));
+        coor[i] = pair<float, int>(v, c);
     }
     sort(RALL(coor), max_greater);
     FOR(n, i) {
         int p = coor[i].s;
-        int t = coor[i].f;
+        float t = coor[i].f;
         // cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
