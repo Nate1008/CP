@@ -76,25 +76,22 @@ int main() {
             cout<<n<<"\n";
             continue;
         }
-        int c = 0; 
-        int cur = 0;
-        int l = 0;
-        FOR(n, i) {
-            if((cur+nums[i]) % k == 0) {
-                // cout<<"DIV BY K: "<<nums[i]<<"\n";
-                if(i < n-1 && (cur+nums[i]+nums[i+1]) % k == 0) {
-                    c = 0;
-                    cur = 0;
-                } 
+        int l = -1;
+        int r = -1;
+        for(int i = 0; i < n; i++) {
+            if(nums[i] % k != 0) {
+                l = i;
+                break;
             }
-            c++;
-            cur += nums[i];
-            l = max(l, c);
-            // cout<<"CURRENT MAX: "<<cur<<"\n";     
-            // cout<<"COUNT: "<<c<<"\n"; 
-            // cout<<"LEN: "<<l<<"\n";
         }
-        cout<<max(l, ind)<<'\n';
+        for(int i = n-1; i >= 0; i--) {
+            if(nums[i] % k != 0) {
+                r = i;
+                break;
+            }
+        }
+        int ans = min(l, n-r);
+        cout<<n-ans<<'\n';
     }
     return 0;
 }
