@@ -51,25 +51,28 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    vi dist;
-    vi pop;
+    bool pass = false;
+    float ans = 0;
+    vpi dist(n);
     FOR(n, i) {
         int a, b, c;
         cin >> a >> b >> c;
-        int v = (a*a) + (b*b);
-        dist.push_back(v);
-        pop.push_back(c);
-        //cout<<"DIS: "<<v<<"\n";
+        float v = pow(a, 2) + pow(b, 2);
+        dist[i].f = v;
+        dist[i].s = c;
+        cout<<"DIS: "<<v<<"\n";
     }
     sort(ALL(dist));
     FOR(n, i) {
-        k += pop[i];
-        cout<<"DIS: "<<dist[i]<<" POP: "<<pop[i]<<"\n";
-        if(k >= 1000000) {
-            float ans = sqrt(dist[i]);
-            cout.precision(15);
+        int p = dist[i].s;
+        float t = dist[i].f;
+        k += p;
+        cout<<"DIS: "<<t<<" POP: "<<k<<"\n";
+        if(k >= 1000000 && !pass) {
+            pass = true;
+            ans = sqrt(t);
+            cout.precision(7);
             cout<<ans;
-            return 0;
         }
     }
     cout << -1;
