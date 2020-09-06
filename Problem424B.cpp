@@ -56,7 +56,7 @@ int main() {
     FOR(n, i) {
         int a, b, c;
         cin >> a >> b >> c;
-        int v = a*a + b*b;
+        int v = (a*a) + (b*b);
         dist[i] = v;
         pop[i] = c;
         //cout<<"DIS: "<<v<<"\n";
