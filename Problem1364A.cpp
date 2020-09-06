@@ -74,6 +74,7 @@ int main() {
                 }
             }
         }
+        cout<<m<<'\n'
         //     if(v % k != 0) {
         //         pass = true;
         //     }
