@@ -51,8 +51,8 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    vi dist(n);
-    vi pop(n);
+    vi dist;
+    vi pop;
     FOR(n, i) {
         int a, b, c;
         cin >> a >> b >> c;
