@@ -24,6 +24,7 @@
 
 #define ll long long
 #define pi pair<int, int>
+#define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>
 #define mc map<char, int>
@@ -51,7 +52,8 @@ int main() {
     cin >> n >> k;
     bool pass = false;
     double x = 0, y = 0;
-    vpi
+    vpi 
+    
     FOR(n, i) {
         int t, l, p;
         cin >> t >> l >> p;
