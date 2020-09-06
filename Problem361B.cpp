@@ -53,6 +53,7 @@ int main() {
     cin >> n >> k;
     if(n == 1) {
         cout<<-1;
+        return 0;
     }
     vi perm(n);
     perm[0] = 1;
