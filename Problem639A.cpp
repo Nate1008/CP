@@ -50,7 +50,7 @@ using namespace std;
 
 int main() {
     int n, q, k;
-    cin >> n >> q >> k;
+    cin >> n >> k >> q;
     vi t(n);
     vi online;
     FOR(n, i) {
