@@ -43,9 +43,27 @@
 
 #define TC int t; cin >> t; FOR(t, q)
 
+
 using namespace std;
 
 int main() {
+    TC {
+        int n, k;
+        cin >> n >> k;
+        vi nums;
+        FOR(n, i) {
+            cin >> nums[i];
+        }
+        int m = 0;
+        int curm = 0;
+        FOR(n, i) {
+            curm = max(nums[i], curm + nums[i]);
+            if(curm % k != 0) {
+                m = max(curm, m);
+            } 
+        }
+        cout<<m<<'\n';
+    }
     return 0;
 }
 
