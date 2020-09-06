@@ -52,9 +52,9 @@ bool max_greater(pii a, pii b) {
     int ma = max(a.f.f, a.f.s);
     int mb = max(b.f.f, b.f.s);
     if(a >= b){
-        return false;
-    } else {
         return true;
+    } else {
+        return false;
     }
 }
 
@@ -69,7 +69,7 @@ int main() {
         cin >> t.f.f >> t.f.s >> t.s;
         coor[i] = pii(pi(abs(t.f.f), abs(t.f.s)),t.s);
     }
-    sort(ALL(coor), max_greater);
+    sort(RALL(coor), max_greater);
     FOR(n, i) {
         int p = coor[i].s;
         int t = coor[i].f.f;
