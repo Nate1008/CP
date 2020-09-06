@@ -51,6 +51,16 @@ using namespace std;
 bool max_greater(pii a, pii b) {
     int ma = max(a.f.f, a.f.s);
     int mb = max(b.f.f, b.f.s);
+    int p = a.s;
+    int t = a.f.f;
+    int l = a.f.s;
+    cout<<"A: "<"\n";    
+    cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
+    p = b.s;
+    t = b.f.f;
+    l = b.f.s;
+    cout<<"B: "<"\n";    
+    cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
     if(a >= b){
         return true;
     } else {
@@ -71,10 +81,10 @@ int main() {
     }
     sort(RALL(coor), max_greater);
     FOR(n, i) {
-        int p = coor[i].s;
-        int t = coor[i].f.f;
-        int l = coor[i].f.s;
-        cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
+        // int p = coor[i].s;
+        // int t = coor[i].f.f;
+        // int l = coor[i].f.s;
+        // cout<<"X: "<<t<<" Y: "<<l<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
             pass = true;
