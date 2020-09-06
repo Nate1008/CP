@@ -50,7 +50,7 @@ int main() {
     TC {
         int n, k;
         cin >> n >> k;
-        vi nums;
+        vi nums(n);
         FOR(n, i) {
             cin >> nums[i];
         }
