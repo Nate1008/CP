@@ -57,9 +57,9 @@ int main() {
     FOR(n, i) {
         pii t;
         cin >> t.f.f >> t.f.s >> t.s;
-        coor[i] = t;
+        coor[i] = pii(pi(abs(t.f.f), abs(t.f.s)),t.s);
     }
-    sort(RALL(coor));
+    sort(ALL(coor));
     FOR(n, i) {
         int p = coor[i].s;
         int t = coor[i].f.f;
