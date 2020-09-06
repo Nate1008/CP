@@ -51,8 +51,15 @@ int main() {
         int n, k;
         cin >> n >> k;
         vi nums(n);
+        bool pass; = false;
         FOR(n, i) {
             cin >> nums[i];
+            if(nums[i] % k != 0) {
+                pass = true;
+            }
+        }
+        if(!pass) {
+            cout<<-1<<"\n";    
         }
         int c = 0;
         int cur = 0;
@@ -62,9 +69,8 @@ int main() {
                 cout<<"DIV BY K: "<<nums[i]<<"\n";
                 c = 0;
                 cur = 0;
-            } else {
-                c++;
             }
+            c++;
             cur += nums[i];
             cout<<"CURRENT MAX: "<<cur<<"\n"; 
             l = max(l, c);              
