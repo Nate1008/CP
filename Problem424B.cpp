@@ -67,8 +67,8 @@ int main() {
     FOR(n, i) {
         int p = pop[i];
         float t = dist[i];
-        cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
         k += p;
+        cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<k<<"\n";
         if(k >= 1000000 && !pass) {
             pass = true;
             ans = t;
