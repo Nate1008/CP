@@ -61,18 +61,20 @@ int main() {
     cin >> n >> k;
     bool pass = false;
     float ans = 0;
-    vpi coor(n);
+    vf dist(n);
+    vf pop(n);
     FOR(n, i) {
         double a, b, c;
         cin >> a >> b >> c;
         float v = sqrt((pow(a, 2) + pow(b, 2)));
-        coor[i] = pair<float, float>(v, c);
-        cout<<"DIS: "<<coor[i].f<<'\n';
+        dist[i] = v;
+        pop[i] = c;
+        cout<<"DIS: "<<dist[i]<<'\n';
     }
-    sort(ALL(coor));
+    sort(ALL(dist));
     FOR(n, i) {
-        int p = coor[i].s;
-        float t = coor[i].f;
+        float p = pop[i];
+        float t = dist[i];
         cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
         k += p;
         if(k >= 1000000 && !pass) {
