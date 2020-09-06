@@ -92,10 +92,7 @@ int main() {
             // cout<<"COUNT: "<<c<<"\n"; 
             // cout<<"LEN: "<<l<<"\n";
         }
-        if(l == 0) {
-            l = -1;
-        }
-        cout<<ind<<'\n';
+        cout<<max(l, ind)<<'\n';
     }
     return 0;
 }
