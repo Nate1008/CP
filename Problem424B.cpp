@@ -62,9 +62,9 @@ int main() {
     bool pass = false;
     float ans = 0;
     vf dist(n);
-    vf pop(n);
+    vi pop(n);
     FOR(n, i) {
-        double a, b, c;
+        int a, b, c;
         cin >> a >> b >> c;
         float v = sqrt((pow(a, 2) + pow(b, 2)));
         dist[i] = v;
@@ -73,7 +73,7 @@ int main() {
     }
     sort(ALL(dist));
     FOR(n, i) {
-        float p = pop[i];
+        int p = pop[i];
         float t = dist[i];
         cout<<"DIS: "<<printf("%.9f", t)<<" POP: "<<p<<"\n";
         k += p;
