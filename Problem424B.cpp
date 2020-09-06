@@ -56,7 +56,7 @@ int main() {
     vpii coor(n);
     FOR(n, i) {
         pii t;
-        cin >> t.f.f >> t.f.s >> t.s;
+        cin >> abs(t.f.f) >> abs(t.f.s) >> t.s;
         coor[i] = t;
     }
     sort(RALL(coor));
