@@ -73,8 +73,8 @@ int main() {
             }
             c++;
             cur += nums[i];
-            cout<<"CURRENT MAX: "<<cur<<"\n"; 
-            l = max(l, c);              
+            l = max(l, c);       
+            cout<<"CURRENT MAX: "<<cur<<"\n";     
             cout<<"COUNT: "<<c<<"\n"; 
             cout<<"LEN: "<<l<<"\n"; 
             
