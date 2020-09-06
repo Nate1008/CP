@@ -67,7 +67,7 @@ int main() {
         cin >> a >> b >> c;
         float v = sqrt((pow(a, 2) + pow(b, 2)));
         coor[i] = pair<float, float>(v, c);
-        cout<<"DIS: "<<printf("%.d", coor[i].f)<<'\n';
+        cout<<"DIS: "<<printf("%d", coor[i].f)<<'\n';
     }
     sort(ALL(coor));
     FOR(n, i) {
