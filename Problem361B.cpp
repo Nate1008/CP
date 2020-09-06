@@ -59,9 +59,9 @@ int main() {
 
     for(int i = k+2; i <= n; i++){
         if(i % 2 == 0) {
-            perm[i] = i;
+            perm[i%n] = i;
         } else {
-            perm[i-2] = i;
+            perm[(i-2)%n] = i;
         }
         cout<<i<<"\n";
     }
