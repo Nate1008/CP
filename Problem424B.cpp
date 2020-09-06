@@ -53,10 +53,11 @@ int main() {
     cin >> n >> k;
     bool pass = false;
     double x = 0, y = 0;
-    vpii coor;
+    vpii coor(n);
     FOR(n, i) {
         pii t;
         cin >> t.f.f >> t.f.s >> t.s;
+        coor[i] = t;
     }
     sort(ALL(coor));
     FOR(n, i) {
