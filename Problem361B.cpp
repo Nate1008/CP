@@ -61,7 +61,7 @@ int main() {
         if(i % 2 == 0) {
             perm[i+1] = i;
         } else {
-            perm[i] = i+1;
+            perm[i-1] = i;
         }
     }
     
