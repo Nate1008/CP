@@ -78,7 +78,7 @@ int main() {
         return 0;
     }
     float ans = sqrt((pow(x, 2) + pow(y, 2)));
-    printf("%.8f", ans);
+    printf("%.7f", ans);
     return 0;
 }
 
