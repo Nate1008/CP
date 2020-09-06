@@ -59,7 +59,7 @@ int main() {
         cin >> t.f.f >> t.f.s >> t.s;
         coor[i] = t;
     }
-    sort(ALL(coor));
+    sort(RALL(coor));
     FOR(n, i) {
         int p = coor[i].s;
         int t = coor[i].f.f;
