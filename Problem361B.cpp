@@ -49,6 +49,22 @@
 using namespace std;
 
 int main() {
+    int n, k;
+    cin >> n >> k;
+    vi perm(n);
+    perm[0] = 1;
+    for(int i = 2; i < k+2; i++) {
+        perm[i-1] = i;
+    }
+
+    for(int i = k+2; i <= n; i += 2){
+        perm[i+1] = i;
+        perm[i] = i+1;
+    }
+    
+    for(int i = 0; i < n; i++) {
+        cout<<perm[i]<<" "
+    }
     return 0;
 }
 
