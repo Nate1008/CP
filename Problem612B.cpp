@@ -60,7 +60,7 @@ int main() {
     int time = 0;
     for(int i = 1; i < n; i++) {
         time += abs(sector[i] - sector[i+1]);
-        cout<<time<<'\n';
+        // cout<<time<<'\n';
     }
     cout<<time;
     return 0;
