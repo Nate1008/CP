@@ -43,10 +43,11 @@
 #define RFOR(t, q) for(int q = t; q > 0; q--)
 #define FORE(t, q) for(int q = 0; q <= t; q++)
 #define RFORE(t, q) for(int q = t; q >= 0; q--)
-#define FOR(t, q, v) for(int q = v; q < t; q++)
-#define RFOR(t, q, v) for(int q = t; q > v; q--)
-#define FORE(t, q, v) for(int q = v; q <= t; q++)
-#define RFORE(t, q, v) for(int q = t; q >= v; q--)
+
+#define FORN(t, q, v) for(int q = v; q < t; q++)
+#define RFORN(t, q, v) for(int q = t; q > v; q--)
+#define FOREN(t, q, v) for(int q = v; q <= t; q++)
+#define RFOREN(t, q, v) for(int q = t; q >= v; q--)
 
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
