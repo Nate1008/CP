@@ -59,7 +59,7 @@ using namespace std;
 int main() {
     int n, m;
     cin >> n >> m;
-    vl times(n);
+    vl times(n+1);
     times[0] = 0; 
     FOREN(n, i, 1) {
         ll c, t;
