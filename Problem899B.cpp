@@ -57,6 +57,23 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    int a = 0, b = 0;
+    FOR(n, i) {
+        int t;
+        cin >> t; 
+        if(t < 31) {
+            b++;
+        } else {
+            a++;
+        }
+    }
+    if(a%2 == 0 && b%2 == 1) {
+        cout<<"YES";
+    } else {
+        cout<<"NO";
+    }
     return 0;
 }
 
