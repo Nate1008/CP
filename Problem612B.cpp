@@ -49,6 +49,19 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    mi sector;
+    FOR(n, i){
+        int t;
+        cin >> t; 
+        sector[t] = i+1;
+    }
+    int time = 0;
+    FOR(n, i){
+        time += abs(sector[i] - sector[i+1]);
+    }
+    cout<<time;
     return 0;
 }
 
