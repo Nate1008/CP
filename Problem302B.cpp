@@ -35,7 +35,7 @@
 #define vi vector<int>
 #define vd vector<double>
 #define vf vector<float>
-#define vl vector<ll>
+#define vl vector<long long>
 #define vpi vector<pi>
 #define vpii vector<pii>
 
@@ -60,14 +60,14 @@ int main() {
     int n, m;
     cin >> n >> m;
     vl times(n);
-    times[0] = 0; 
+    times[0] = 0LL; 
     FOREN(n, i, 1) {
         ll c, t;
         cin >> c >> t;
         times[i] = (c*t) + times[i-1];
     }
     FOR(m, i) {
-        ll mo;
+        int mo;
         cin >> mo;
         int so = lower_bound(ALL(times), mo)-times.begin();
         cout<<so<<"\n";
