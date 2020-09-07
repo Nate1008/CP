@@ -71,6 +71,7 @@ int main() {
             int v, x;
             cin >> v >> x;
             a[v-1] = x;
+            add = 0;
         } else if (t == 2) {
             int y;
             cin >> y;
