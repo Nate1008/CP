@@ -57,6 +57,18 @@
 using namespace std;
 
 int main() {
+    int n, m;
+    cin >> n >> m;
+    vi times(n);
+    FOR(n, i) {
+        int c, t;
+        cin >> c >> t;
+        times[i] = c*t;
+    }
+    FOR(m, i) {
+        int mo;
+        cin >> mo;
+    }
     return 0;
 }
 
