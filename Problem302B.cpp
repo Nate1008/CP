@@ -61,7 +61,7 @@ int main() {
     cin >> n >> m;
     vi times(n);
     times[0] = 0; 
-    FORN(n, i, 1) {
+    FORN((n+1), i, 1) {
         int c, t;
         cin >> c >> t;
         times[i] = (c*t) + times[i-1];
