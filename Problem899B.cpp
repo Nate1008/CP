@@ -59,7 +59,7 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vi months;
+    vi months(n);
     FOR(n, i) {
         cin >> months[i];
     }
