@@ -59,7 +59,7 @@ using namespace std;
 int main() {
     int n, m;
     cin >> n >> m;
-    vi times(n);
+    int times[n];
     FOR(n, i) {
         int c, t;
         cin >> c >> t;
@@ -68,6 +68,8 @@ int main() {
     FOR(m, i) {
         int mo;
         cin >> mo;
+        int *so = lower_bound(times, times+n, mo);
+        cout<<(so+1)<<"\n";
     }
     return 0;
 }
