@@ -63,12 +63,16 @@ int main() {
     FOR(n, i) {
         cin >> months[i];
     }
+    int row = 0;
     FOR(n, i) {
         if(months[i] < 31 && (months[i-1] >= 31 && months[i+1] >= 31)) {
+            row = 0;
             continue;
         } else if (months[i] < 31 && (i == 0 || i == n-1) && (months[i-1] >= 31 || months[i+1] >= 31)) {
+            row = 0;
             continue;
-        } else if (months[i] == 31) {
+        } else if (months[i] == 31 && row >= 1) {
+            row++;
             continue;
         }
         cout<<"NO";
