@@ -59,7 +59,7 @@ using namespace std;
 int main() {
     int n, m;
     cin >> n >> m;
-    vi a;
+    vi a(n);
     FOR(n, i) {
         cin >> a[i];
     }
