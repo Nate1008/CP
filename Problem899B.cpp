@@ -59,21 +59,17 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    int a = 0, b = 0;
+    vi months;
     FOR(n, i) {
-        int t;
-        cin >> t; 
-        if(t < 31) {
-            b++;
-        } else {
-            a++;
+        cin >> months[i];
+    }
+    FOR(n, i) {
+        if(!(months[i] < 31 && (months[i-1] >= 31 && months[i+1] >= 31))) {
+            cout<<"NO";
+            return 0;
         }
     }
-    if((a%2 == 0 && a != 0) || (b%2 == 1 && b != 0)) {
-        cout<<"YES";
-    } else {
-        cout<<"NO";
-    }
+    cout<<"YES";
     return 0;
 }
 
