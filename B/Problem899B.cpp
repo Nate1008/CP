@@ -57,6 +57,19 @@
 using namespace std;
 
 int main() {
+    string month = "181010110101181010110101181010110101191010110101";
+    month+=month;
+    month+=month;
+    int n;
+    cin>>n;
+    string a="";
+    while(n--){
+        int temp;
+        cin>>temp;
+        a+=(temp%10)+'0';
+    }
+    if(month.find(a)!=-1)cout<<"Yes"<<endl;
+    else cout<<"No"<<endl;
     return 0;
 }
 
