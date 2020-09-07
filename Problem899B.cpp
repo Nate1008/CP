@@ -66,7 +66,7 @@ int main() {
     FOR(n, i) {
         if(months[i] < 31 && (months[i-1] >= 31 && months[i+1] >= 31)) {
             continue;
-        } else if ((i == 0||i == n-1) && (months[i-1] >= 31 || months[i+1] >= 31)) {
+        } else if (months[i] < 31 &&(i == 0||i == n-1) && (months[i-1] >= 31 || months[i+1] >= 31)) {
             continue;
         }
         cout<<"NO";
