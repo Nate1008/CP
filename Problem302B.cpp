@@ -70,7 +70,7 @@ int main() {
         int mo;
         cin >> mo;
         int so = lower_bound(ALL(times), mo)-times.begin();
-        cout<<so+1<<"\n";
+        cout<<so<<"\n";
     }
     return 0;
 }
