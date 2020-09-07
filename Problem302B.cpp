@@ -69,7 +69,7 @@ int main() {
         int mo;
         cin >> mo;
         int *so = lower_bound(times, times+n, mo);
-        cout<<(*so+1)<<"\n";
+        cout<<*so<<"\n";
     }
     return 0;
 }
