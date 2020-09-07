@@ -63,7 +63,7 @@ int main() {
     FOR(n, i) {
         cin >> a[i];
     }
-
+    int add = 0;
     FOR(m, i) {
         int t;
         cin >> t;
@@ -74,13 +74,11 @@ int main() {
         } else if (t == 2) {
             int y;
             cin >> y;
-            FOR(n, c){
-                a[c] += y;
-            }
+            add += y;
         } else {
             int q;
             cin >> q;
-            cout<<a[q-1]<<'\n';
+            cout<<a[q-1] + add<<'\n';
         }
     }
     return 0;
