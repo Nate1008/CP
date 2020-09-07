@@ -79,7 +79,7 @@ int main() {
         } else {
             int q;
             cin >> q;
-            cout<<a[q-1] + add<<'\n';
+            cout<<a[q-1] += add<<'\n';
         }
     }
     return 0;
