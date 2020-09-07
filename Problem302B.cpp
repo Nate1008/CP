@@ -35,7 +35,7 @@
 #define vi vector<int>
 #define vd vector<double>
 #define vf vector<float>
-#define vl vector<long long>
+#define vl vector<ll>
 #define vpi vector<pi>
 #define vpii vector<pii>
 
@@ -59,9 +59,9 @@ using namespace std;
 int main() {
     int n, m;
     cin >> n >> m;
-    vi times(n);
+    vl times(n);
     times[0] = 0; 
-    FORN((n+1), i, 1) {
+    FOREN(n, i, 1) {
         int c, t;
         cin >> c >> t;
         times[i] = (c*t) + times[i-1];
