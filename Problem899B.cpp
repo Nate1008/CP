@@ -64,10 +64,13 @@ int main() {
         cin >> months[i];
     }
     int row = 0;
+    int leap = -1;
     FOR(n, i) {
         if(months[i] < 31 && (months[i-1] >= 31 && months[i+1] >= 31)) {
-            row = 0;
-            continue;
+            if((months[i] <= 29 && (leap == -1 || i-leap == 12)) || months[i] == 30) {
+                row = 0;
+                continue;
+            }
         } else if (months[i] < 31 && (i == 0 || i == n-1) && (months[i-1] >= 31 || months[i+1] >= 31)) {
             row = 0;
             continue;
