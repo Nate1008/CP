@@ -57,6 +57,32 @@
 using namespace std;
 
 int main() {
+    int n, m;
+    cin >> n >> m;
+    vi a;
+    FOR(n, i) {
+        cin >> a[i];
+    }
+
+    FOR(m, i) {
+        int t;
+        cin >> t;
+        if (t == 1) {
+            int v, x;
+            cin >> v >> x;
+            a[v] = x;
+        } else if (t == 2) {
+            int y;
+            cin >> y;
+            FOR(n, c){
+                a[c] += y;
+            }
+        } else {
+            int q;
+            cin >> q;
+            cout<<a[q]<<'\n';
+        }
+    }
     return 0;
 }
 
