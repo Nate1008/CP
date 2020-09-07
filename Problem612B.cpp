@@ -58,7 +58,7 @@ int main() {
         sector[t] = i+1;
     }
     int time = 0;
-    FOR(n, i){
+    for(int i = 1; i < n; i++){
         time += abs(sector[i] - sector[i+1]);
         cout<<time<<'\n';
     }
