@@ -60,11 +60,11 @@ int main() {
     int n, m;
     cin >> n >> m;
     vl times(n);
-    times[0] = 0LL; 
+    times[0] = 0; 
     FOREN(n, i, 1) {
         ll c, t;
         cin >> c >> t;
-        times[i] = (c*t) + times[i-1];
+        times[i] = times[i-1]+(c*t);
     }
     FOR(m, i) {
         int mo;
