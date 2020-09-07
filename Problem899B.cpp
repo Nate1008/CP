@@ -84,8 +84,6 @@ int main() {
                 row = 0;
                 continue;
             }
-            row = 0;
-            continue;
         } else if (months[i] == 31 && !(row > 2)) {
             row++;
             continue;
