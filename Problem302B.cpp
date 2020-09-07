@@ -68,7 +68,7 @@ int main() {
     FOR(m, i) {
         int mo;
         cin >> mo;
-        int so = lower_bound(ALL(times), mo)-times.begin();
+        int so = greater_bound(ALL(times), mo)-times.begin();
         cout<<so+1<<"\n";
     }
     return 0;
