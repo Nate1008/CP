@@ -71,7 +71,7 @@ int main() {
             int v, x;
             cin >> v >> x;
             a[v-1] = x;
-            add = 0;
+            add -= x;
         } else if (t == 2) {
             int y;
             cin >> y;
@@ -79,7 +79,7 @@ int main() {
         } else {
             int q;
             cin >> q;
-            a[q-1] += add;
+            a[q-1] += add
             cout<<a[q-1]<<'\n';
         }
     }
