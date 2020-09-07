@@ -49,18 +49,6 @@
 using namespace std;
 
 int main() {
-    int n;
-    cin >> n;
-    vi frag;
-    mi sector;
-    FOR(n, i){
-        cin >> frag[i]; 
-        sector[frag[i]] = i+1;
-    }
-
-    for(int i = 0; i <= n;){
-        
-    }
     return 0;
 }
 
