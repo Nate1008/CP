@@ -60,10 +60,11 @@ int main() {
     int n, m;
     cin >> n >> m;
     vi times(n);
-    FOR(n, i) {
+    times[0] = 0; 
+    FORN(n, i, 1) {
         int c, t;
         cin >> c >> t;
-        times[i] = c*t;
+        times[i] = (c*t) + times[i-1];
     }
     FOR(m, i) {
         int mo;
