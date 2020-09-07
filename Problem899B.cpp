@@ -68,6 +68,7 @@ int main() {
     FOR(n, i) {
         if(months[i] < 31 && (months[i-1] >= 31 && months[i+1] >= 31)) {
             if((months[i] <= 29 && (leap == -1 || i-leap == 12)) || months[i] == 30) {
+                leap = i;
                 row = 0;
                 continue;
             }
