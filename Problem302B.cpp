@@ -62,12 +62,12 @@ int main() {
     vl times(n);
     times[0] = 0; 
     FOREN(n, i, 1) {
-        int c, t;
+        ll c, t;
         cin >> c >> t;
         times[i] = (c*t) + times[i-1];
     }
     FOR(m, i) {
-        int mo;
+        ll mo;
         cin >> mo;
         int so = lower_bound(ALL(times), mo)-times.begin();
         cout<<so<<"\n";
