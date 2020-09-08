@@ -61,8 +61,17 @@ int main() {
     cin >> n >> k;
     vi power(k);
     FOR(n, i) {
-        cout<<power[i%k]<<'\n';
+        int t;
+        cin >> t;
+        power[i%k] += t;
     }
+    int max = -1;
+    FOR(k, i) {
+        if(max < power[i]) {
+            max = power[i];
+        }
+    }
+    cout << max;
     return 0;
 }
 
