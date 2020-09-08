@@ -78,10 +78,10 @@ int main() {
     } else if(last == 'c') {
         t += 6;
     }
-    cout<<"T: "<<t<<"\n";
     
     //int m = (k % 4) + 1;
     t += floor((k-1)/4.0) * 16;
+    cout<<t;
     return 0;
 }
 
