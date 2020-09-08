@@ -74,13 +74,15 @@ int main() {
             continue;
         }
         int c;
+        int md;
         if(i > len) {
             c = lower_bound(RALL(zeros), i)-zeros.rend();
+            md = abs(i - zeros[c]);
         } else {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
+            md = abs(i - zeros[c]);
         }
         cout<<"C: "<<c<<'\n';
-        int md = abs(i - zeros[c]);
         // FOR(zeros.size(), c) {
         //     int t = abs(i - c);
         //     md = min(md, t);
