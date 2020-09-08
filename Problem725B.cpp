@@ -86,6 +86,8 @@ int main() {
     } else {
         k--;
     }
+    cout<<"K: "<<k<<"\n";
+
     t += k;
     if(k % 2 == 1) {
         t += ceil(k/2.0) * 6;
