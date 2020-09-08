@@ -76,12 +76,11 @@ int main() {
         int c;
         int md;
         if(i > len) {
-            c = lower_bound(RALL(zeros), i)-zeros.rend();
-            md = abs(i - zeros[c]);
+            c = len - 1;
         } else {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
-            md = abs(i - zeros[c]);
         }
+        md = abs(i - zeros[c]);
         cout<<"C: "<<c<<'\n';
         // FOR(zeros.size(), c) {
         //     int t = abs(i - c);
