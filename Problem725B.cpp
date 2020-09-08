@@ -78,7 +78,7 @@ int main() {
     
     int m = k % 4;
     if(m == 3 || m == 0) {
-        k - 3;
+        k -= 3;
     } else {
         k--;
     }
