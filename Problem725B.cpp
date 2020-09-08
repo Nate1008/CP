@@ -62,6 +62,7 @@ int main() {
     cin >> s;
     ull t = 0;
     ull k = s[0] - '0';
+    cout<<k<<"\n";
     if(s[1] == 'f') {
         t += 1;
     } else if(s[1] == 'e') {
