@@ -77,9 +77,8 @@ int main() {
         int md;
         a = lower_bound(ALL(zeros), i)-zeros.begin();
         b = lower_bound(RALL(zeros), i)-zeros.rbegin();
-        int mn = min(a, b);
-        cout<<"MIN: "<<mn<<'\n';
-        md = abs(i - zeros[mn]);
+        cout<<"A: "<<a<<" "<<"B: "<<b<<'\n';
+        md = min(abs(i - zeros[a]), abs(i - zeros[b]));
         cout<<md<<"\n";
     }
     return 0;
