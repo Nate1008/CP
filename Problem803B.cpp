@@ -69,7 +69,7 @@ int main() {
         }
     }
     int len = zeros.size();
-    FORN(n, i) {
+    FOR(n, i) {
         if(dist[i] == 0){
             cout<<0<<" ";
             continue;
