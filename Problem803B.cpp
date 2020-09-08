@@ -76,17 +76,17 @@ int main() {
         int md = n;
         FORN(n, c, i) {
             if(dist[c] == 0) {
-                md = c;
+                md = abs(i-c);
                 break;
             }
         }
         RFORN(n, c, i) {
             if(dist[c] == 0) {
-                md = min(md, c);
+                md = min(abs(i-c), md);
                 break;
             }
         }
-        cout<<abs(i-md)<<" ";
+        cout<<md<<" ";
     }
     return 0;
 }
