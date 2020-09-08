@@ -70,7 +70,7 @@ int main() {
     int len = zeros.size();
     FOR(n, i) {
         if(dist[i] == 0){
-            cout<<0<<"\n";
+            cout<<0<<" ";
             continue;
         }
         int c;
@@ -81,7 +81,7 @@ int main() {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
         }
         md = abs(i - zeros[c]);
-        cout<<md<<"\n";
+        cout<<md<<" ";
     }
     return 0;
 }
