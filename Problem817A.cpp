@@ -57,6 +57,15 @@
 using namespace std;
 
 int main() {
+    int x1, y1, x2, y2, a, b;
+    cin >> x1 >> y1 >> x2 >> y2 >> a >> b;
+    bool x = (x1%a==0) && (x2%a==0);
+    bool y = (y1%b==0) && (y2%b==0);
+    if(x && y) {
+        cout<<"YES";
+    } else {
+        cout<<"NO";
+    }
     return 0;
 }
 
