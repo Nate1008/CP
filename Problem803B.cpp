@@ -57,6 +57,25 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    vi dist(n);
+    vi zeros;
+    FOR(n, i) {
+        cin >> dist[i];
+        if(dist[i] == 0) {
+            zeros.push_back(i);
+        }
+    }
+
+    FOR(n, i) {
+        int md = n;
+        FOR(zeros.size(), c) {
+            int t = abs(i - c);
+            md = min(md, t);
+        }
+        cout<<md<<" ";
+    }
     return 0;
 }
 
