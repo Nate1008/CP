@@ -70,7 +70,7 @@ int main() {
 
     FOR(n, i) {
         if(dist[i] == 0){
-            // cout<<0<<" ";
+            cout<<0<<" ";
             continue;
         }
         int c = lower_bound(ALL(zeros), i)-zeros.begin();
