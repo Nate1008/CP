@@ -59,9 +59,12 @@ using namespace std;
 int main() {
     int x1, y1, x2, y2, a, b;
     cin >> x1 >> y1 >> x2 >> y2 >> a >> b;
-    bool both = (abs(x1-x2)/a==abs(y1-y2)/b);
-    bool cancel = (((x1-x2)/a)%2==((y1-y2)/b)%2);
-    if(both || cancel) {
+    int stepx = abs(x1-x2)/a;
+    int stepy = abs(y1-y2)/b;
+    int mn = min(stepy, stepx);
+    int mx = max(stepy, stepx);
+    
+    if((mx - mn) % 2 == 0) {
         cout<<"YES";
     } else {
         cout<<"NO";
