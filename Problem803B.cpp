@@ -75,7 +75,7 @@ int main() {
         }
         int md = n;
         FOR(len, c) {
-            if(md < abs(i - zeros[c])) {
+            if(md > abs(i - zeros[c])) {
                 md = abs(i - zeros[c]);
             } else {
                 
