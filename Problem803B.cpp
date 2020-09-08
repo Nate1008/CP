@@ -70,6 +70,10 @@ int main() {
 
     FOR(n, i) {
         int md = n;
+        if(dist[i] == 0){
+            cout<<0<<" ";
+            continue;
+        }
         FOR(zeros.size(), c) {
             int t = abs(i - zeros[c]);
             md = min(md, t);
