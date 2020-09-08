@@ -71,7 +71,7 @@ int main() {
     FOR(n, i) {
         int md = n;
         FOR(zeros.size(), c) {
-            int t = abs(i - c);
+            int t = abs(i - zeros[c]);
             md = min(md, t);
         }
         cout<<md<<" ";
