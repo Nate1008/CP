@@ -80,22 +80,8 @@ int main() {
     }
     cout<<"T: "<<t<<"\n";
     
-    int m = k % 4;
-    if(m == 3 || m == 0) {
-        k -= 3;
-    } else {
-        k--;
-    }
-    cout<<"K: "<<k<<"\n";
-    t += k;
-    cout<<"T: "<<t<<"\n";
-    
-    if(k % 2 == 1) {
-        t += ceil(k/2.0) * 6;
-    } else {
-        t += floor(k/2.0) * 6;
-    }
-    cout << t;
+    //int m = (k % 4) + 1;
+    t += floor((k-1)/4.0) * 16;
     return 0;
 }
 
