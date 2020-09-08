@@ -67,17 +67,20 @@ int main() {
             zeros.push_back(i);
         }
     }
-    int len = zeros.size()-1;
+    int len = zeros.size();
     FOR(n, i) {
         if(dist[i] == 0){
             cout<<0<<"\n";
             continue;
         }
-        int a, b;
-        int md;
-        a = upper_bound(ALL(zeros), i)-zeros.begin();
-        //b = lower_bound(RALL(zeros), i)-zeros.rbegin();
-        // cout<<"A: "<<a<<" "<<zeros[a]<<" "<<"B: "<<b<<" "<<zeros[b]<<'\n';
+        int md = n;
+        FOR(len, c) {
+            if(md < zeros[c]) {
+                md = zeros[c];
+            } else {
+                break;
+            }
+        }
         md = abs(i - zeros[a]);
         cout<<md<<"\n";
     }
