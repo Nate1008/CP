@@ -23,7 +23,7 @@
 #include <climits>
 
 #define ll long long
-#define ull unsigned long long int
+#define ull unsigned long long
 #define pi pair<int, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
@@ -60,20 +60,23 @@ using namespace std;
 int main() {
     string s;
     cin >> s;
+    int len = s.length() - 1;
+    char last = s[len];
+    s.erase(len);
     ull t = 0;
-    ull k = s[0] - '0';
+    ull k = stoi(s);
     cout<<k<<"\n";
-    if(s[1] == 'f') {
+    if(last == 'f') {
         t += 1;
-    } else if(s[1] == 'e') {
+    } else if(last == 'e') {
         t += 2;
-    } else if(s[1] == 'd') {
+    } else if(last == 'd') {
         t += 3;
-    } else if(s[1] == 'a') {
+    } else if(last == 'a') {
         t += 4;
-    } else if(s[1] == 'b') {
+    } else if(last == 'b') {
         t += 5;
-    } else if(s[1] == 'c') {
+    } else if(last == 'c') {
         t += 6;
     }
 
