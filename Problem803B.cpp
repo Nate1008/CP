@@ -77,7 +77,7 @@ int main() {
         }
         int md;
         int c = lower_bound(ALL(zeros), i)-zeros.begin();
-        cout<<"C: "<<c<<"\n"; 
+        // cout<<"C: "<<c<<"\n"; 
         md = min(abs(i-zeros[c]), abs(i-zeros[c-1]));
         cout<<md<<" ";
     }
