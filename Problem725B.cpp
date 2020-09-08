@@ -78,12 +78,12 @@ int main() {
     
     int m = k % 4;
     if(m == 3 || m == 0) {
-        t += k - 3;
+        k - 3;
     } else {
-        t += k - 1;
+        k--;
     }
 
-    t += k + (k/2) * 6;
+    t += k + k * 6;
 
     cout << t;
     return 0;
