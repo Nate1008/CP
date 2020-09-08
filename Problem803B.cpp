@@ -70,18 +70,23 @@ int main() {
     int len = zeros.size();
     FOR(n, i) {
         if(dist[i] == 0){
-            cout<<0<<"\n";
+            cout<<0<<" ";
             continue;
         }
         int md = n;
-        FOR(len, c) {
-            if(md > abs(i - zeros[c])) {
-                md = abs(i - zeros[c]);
-            } else {
+        FORN(n, c, i) {
+            if(dist[c] == 0) {
+                md = c;
                 break;
             }
         }
-        cout<<md<<"\n";
+        RFORN(n, c, i) {
+            if(dist[c] == 0) {
+                md = min(md, c);
+                break;
+            }
+        }
+        cout<<md<<" ";
     }
     return 0;
 }
