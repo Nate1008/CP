@@ -59,6 +59,31 @@ using namespace std;
 int main() {
     string s;
     cin >> s;
+    int t = 0;
+    int k = s[0] - '0';
+    if(s[1] == 'f') {
+        t += 1;
+    } else if(s[1] == 'e') {
+        t += 2;
+    } else if(s[1] == 'd') {
+        t += 3;
+    } else if(s[1] == 'a') {
+        t += 4;
+    } else if(s[1] == 'b') {
+        t += 5;
+    } else if(s[1] == 'c') {
+        t += 6;
+    }
+
+    
+    int m = k % 4;
+    if(m == 3 || m == 0) {
+        k -= 3;
+    } else {
+        k--;
+    }
+
+    t += k + (k/2) * 6;
     return 0;
 }
 
