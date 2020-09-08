@@ -78,7 +78,7 @@ int main() {
     } else if(last == 'c') {
         t += 6;
     }
-    cout<<"T: "<<t<<"\n"
+    cout<<"T: "<<t<<"\n";
     
     int m = k % 4;
     if(m == 3 || m == 0) {
