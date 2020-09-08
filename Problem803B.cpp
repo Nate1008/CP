@@ -81,11 +81,6 @@ int main() {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
         }
         md = abs(i - zeros[c]);
-        cout<<"C: "<<c<<'\n';
-        // FOR(zeros.size(), c) {
-        //     int t = abs(i - c);
-        //     md = min(md, t);
-        // }
         cout<<md<<"\n";
     }
     return 0;
