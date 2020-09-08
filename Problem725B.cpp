@@ -84,6 +84,8 @@ int main() {
     }
 
     t += k + (k/2) * 6;
+
+    cout << t;
     return 0;
 }
 
