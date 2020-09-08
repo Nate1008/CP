@@ -60,7 +60,7 @@ int main() {
     int x1, y1, x2, y2, a, b;
     cin >> x1 >> y1 >> x2 >> y2 >> a >> b;
     bool both = (abs(x1+x2)/a==abs(y1+y2)/b);
-    bool cancel = ((x1+x2/a)%2==(y1+y2/b)%2);
+    bool cancel = (((x1+x2)/a)%2==((y1+y2)/b)%2);
     if(both || cancel) {
         cout<<"YES";
     } else {
