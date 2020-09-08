@@ -23,7 +23,7 @@
 #include <climits>
 
 #define ll long long
-#define ull unsigned long long
+#define ull unsigned long long int
 #define pi pair<int, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
