@@ -64,7 +64,7 @@ int main() {
     char last = s[len];
     s.erase(len);
     ull t = 0;
-    ull k = stoi(s);
+    ull k = stoll(s);
     cout<<k<<"\n";
     if(last == 'f') {
         t += 1;
