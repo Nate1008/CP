@@ -67,7 +67,7 @@ int main() {
             zeros.push_back(i);
         }
     }
-    int len = zeros.size();
+    int len = zeros.size()-1;
     FOR(n, i) {
         if(dist[i] == 0){
             cout<<0<<" ";
@@ -75,7 +75,7 @@ int main() {
         }
         int c;
         int md;
-        if(i >= len) {
+        if(i > zeros[len]) {
             c = len - 1;
         } else {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
