@@ -68,6 +68,7 @@ int main() {
             zeros.push_back(i);
         }
     }
+    zeros.push_back(n);
     int len = zeros.size();
     FOR(n, i) {
         if(dist[i] == 0){
