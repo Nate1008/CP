@@ -59,9 +59,8 @@ using namespace std;
 int main() {
     int x1, y1, x2, y2, a, b;
     cin >> x1 >> y1 >> x2 >> y2 >> a >> b;
-    bool x = (x1/a%2==x2/a%2);
-    bool y = (y1/b%2==y2/b%2);
-    if(x && y) {
+    bool pass = (x1+x2/a%2==y1+y2/b%2);
+    if(pass) {
         cout<<"YES";
     } else {
         cout<<"NO";
