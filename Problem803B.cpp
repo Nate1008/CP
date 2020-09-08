@@ -86,7 +86,7 @@ int main() {
                 break;
             }
         }
-        cout<<md<<" ";
+        cout<<abs(i-md)<<" ";
     }
     return 0;
 }
