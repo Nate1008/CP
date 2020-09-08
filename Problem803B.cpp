@@ -74,6 +74,7 @@ int main() {
             continue;
         }
         int c = lower_bound(ALL(zeros), i)-zeros.begin();
+        cout<<c<<'\n';
         int md = abs(i - c);
         // FOR(zeros.size(), c) {
         //     int t = abs(i - 0);
