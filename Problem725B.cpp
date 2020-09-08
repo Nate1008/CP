@@ -60,8 +60,8 @@ using namespace std;
 int main() {
     string s;
     cin >> s;
-    ll t = 0;
-    ll k = s[0] - '0';
+    ull t = 0;
+    ull k = s[0] - '0';
     if(s[1] == 'f') {
         t += 1;
     } else if(s[1] == 'e') {
