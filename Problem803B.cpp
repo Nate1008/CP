@@ -73,19 +73,9 @@ int main() {
             cout<<0<<" ";
             continue;
         }
-        int md = n;
-        FORN(n, c, i) {
-            if(dist[c] == 0) {
-                md = abs(i-c);
-                break;
-            }
-        }
-        RFORE(i, c) {
-            if(dist[c] == 0) {
-                md = min(abs(i-c), md);
-                break;
-            }
-        }
+        int md;
+        int c = lower_bound(ALL(zeros), i)-zeros.begin();
+        md = min(abs(i-zeros[c]), abs(i-zeros[c-1]));
         cout<<md<<" ";
     }
     return 0;
