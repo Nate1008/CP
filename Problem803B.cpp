@@ -75,7 +75,7 @@ int main() {
         }
         int c;
         if(i > len) {
-            c = lower_bound(RALL(zeros), i)-zeros.rend();
+            c = lower_bound(RALL(zeros), i)-zeros.rbegin();
         } else {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
         }
