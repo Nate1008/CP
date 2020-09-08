@@ -80,7 +80,7 @@ int main() {
                 break;
             }
         }
-        RFOR(i, c) {
+        RFORE(i, c) {
             if(dist[c] == 0) {
                 md = min(abs(i-c), md);
                 break;
