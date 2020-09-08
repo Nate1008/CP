@@ -83,8 +83,11 @@ int main() {
         k--;
     }
     t += k;
-    t += (k/2) * 6;
-
+    if(k % 2 == 1) {
+        t += ceil(k/2) * 6;
+    } else {
+        t += (k/2) * 6;
+    }
     cout << t;
     return 0;
 }
