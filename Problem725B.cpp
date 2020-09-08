@@ -83,7 +83,7 @@ int main() {
         t += k - 1;
     }
 
-    t += (k/2 * 6);
+    t += ((k/2)-1 * 6);
 
     cout << t;
     return 0;
