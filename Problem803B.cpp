@@ -61,7 +61,7 @@ int main() {
     cin >> n;
     vi dist(n);
     vi zeros;
-    zeros.push_back(INT_MAX);
+    zeros.push_back(0);
     FOR(n, i) {
         cin >> dist[i];
         if(dist[i] == 0) {
