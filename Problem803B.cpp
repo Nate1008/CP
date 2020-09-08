@@ -69,7 +69,7 @@ int main() {
         }
     }
     int len = zeros.size();
-    FORN(n, i, 1) {
+    FORN(n, i) {
         if(dist[i] == 0){
             cout<<0<<" ";
             continue;
