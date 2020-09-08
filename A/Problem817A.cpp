@@ -59,12 +59,9 @@ using namespace std;
 int main() {
     int x1, y1, x2, y2, a, b;
     cin >> x1 >> y1 >> x2 >> y2 >> a >> b;
-    int stepx = abs(x1-x2)/a;
-    int stepy = abs(y1-y2)/b;
-    int mn = min(stepy, stepx);
-    int mx = max(stepy, stepx);
-    
-    if((mx - mn) % 2 == 0) {
+    int difx = abs(x1-x2);
+    int dify = abs(y1 - y2);
+    if(difx%a==0&&dify%b==0&&(difx/a)%2==(dify/b)%2){
         cout<<"YES";
     } else {
         cout<<"NO";
