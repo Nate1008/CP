@@ -78,7 +78,7 @@ int main() {
             if(md < abs(i - zeros[md])) {
                 md = abs(i - zeros[md]);
             } else {
-                break;
+                
             }
         }
         cout<<md<<"\n";
