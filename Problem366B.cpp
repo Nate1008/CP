@@ -65,13 +65,13 @@ int main() {
         cin >> t;
         power[i%k] += t;
     }
-    int max = 0;
+    int min = 0;
     FORN(k, i, 1) {
-        if(power[max] < power[i]) {
-            max = i;
+        if(power[min] > power[i]) {
+            min = i;
         }
     }
-    cout << (max+1);
+    cout << (min+1);
     return 0;
 }
 
