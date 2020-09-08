@@ -70,7 +70,7 @@ int main() {
     int len = zeros.size()-1;
     FOR(n, i) {
         if(dist[i] == 0){
-            cout<<0<<"/n";
+            cout<<0<<"\n";
             continue;
         }
         int a, b;
