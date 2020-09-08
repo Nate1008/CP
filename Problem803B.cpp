@@ -75,13 +75,12 @@ int main() {
         }
         int md = n;
         FOR(len, c) {
-            if(md < zeros[c]) {
-                md = zeros[c];
+            if(md < abs(i - zeros[md])) {
+                md = abs(i - zeros[md]);
             } else {
                 break;
             }
         }
-        md = abs(i - zeros[a]);
         cout<<md<<"\n";
     }
     return 0;
