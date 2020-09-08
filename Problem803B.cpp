@@ -80,7 +80,7 @@ int main() {
         //     int t = abs(i - c);
         //     md = min(md, t);
         // }
-        //cout<<md<<" ";
+        cout<<md<<" ";
     }
     return 0;
 }
