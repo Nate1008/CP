@@ -58,30 +58,12 @@
 using namespace std;
 
 int main() {
-    string s;
-    cin >> s;
-    int len = s.length() - 1;
-    char last = s[len];
-    s.erase(len);
-    ll t = 0;
-    ll k = stoll(s);
-    if(last == 'f') {
-        t += 1;
-    } else if(last == 'e') {
-        t += 2;
-    } else if(last == 'd') {
-        t += 3;
-    } else if(last == 'a') {
-        t += 4;
-    } else if(last == 'b') {
-        t += 5;
-    } else if(last == 'c') {
-        t += 6;
-    }
-    
-    //int m = (k % 4) + 1;
-    t += floor((k-1)/4.0) * 16;
-    cout<<t;
+    ll n, t[6] = {4, 5, 6, 3, 2, 1};
+    char c;
+    cin >> n >> c;
+    n--;
+    int ans = n/4*16+(n%2)*7+t[c-'a'];
+    cout<<ans;
     return 0;
 }
 
