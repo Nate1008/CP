@@ -57,6 +57,29 @@
 using namespace std;
 
 int main() {
+    int n, m;
+    cin >> n >> m;
+    set<int> uni;
+    FOR(n, j) {
+        int g = -1;
+        int c = -1;
+        FOR(m, i) {
+            char t;
+            cin >> t;
+            if(t == 'G') {
+                g = i;
+            } else if (t == 'S') {
+                if(g == -1) {
+                    cout<<g;
+                    return 0;
+                }
+                c = i;
+            }
+        }
+        int len = c - g;
+        uni.insert(len);
+    }
+    cout<<uni.size();
     return 0;
 }
 
