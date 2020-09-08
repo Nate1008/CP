@@ -74,7 +74,7 @@ int main() {
             continue;
         }
         int c = lower_bound(ALL(zeros), i)-zeros.begin();
-        int md = abs(i - 0);
+        int md = abs(i - c);
         // FOR(zeros.size(), c) {
         //     int t = abs(i - 0);
         //     md = min(md, t);
