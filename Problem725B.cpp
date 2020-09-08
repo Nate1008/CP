@@ -63,9 +63,8 @@ int main() {
     int len = s.length() - 1;
     char last = s[len];
     s.erase(len);
-    ull t = 0;
-    ull k = stoll(s);
-    cout<<k<<"\n";
+    ll t = 0;
+    ll k = stoll(s);
     if(last == 'f') {
         t += 1;
     } else if(last == 'e') {
