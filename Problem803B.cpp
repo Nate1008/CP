@@ -70,7 +70,7 @@ int main() {
     int len = zeros.size();
     FOR(n, i) {
         if(dist[i] == 0){
-            cout<<0<<" ";
+            cout<<0<<"\n";
             continue;
         }
         int c;
@@ -85,7 +85,7 @@ int main() {
         //     int t = abs(i - c);
         //     md = min(md, t);
         // }
-        cout<<md<<" ";
+        cout<<md<<"\n";
     }
     return 0;
 }
