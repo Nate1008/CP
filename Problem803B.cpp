@@ -69,15 +69,16 @@ int main() {
     }
 
     FOR(n, i) {
-        int md = n;
         if(dist[i] == 0){
             cout<<0<<" ";
             continue;
         }
-        FOR(zeros.size(), c) {
-            int t = abs(i - zeros[c]);
-            md = min(md, t);
-        }
+        int c = lower_bound(ALL(zeros), i)-zeros.begin();
+        int md = abs(i - 0);
+        // FOR(zeros.size(), c) {
+        //     int t = abs(i - 0);
+        //     md = min(md, t);
+        // }
         cout<<md<<" ";
     }
     return 0;
