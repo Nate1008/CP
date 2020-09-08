@@ -79,7 +79,7 @@ int main() {
         } else {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
         }
-        cout<<c<<'\n';
+        cout<<"C: "<<c<<'\n';
         int md = abs(i - zeros[c]);
         // FOR(zeros.size(), c) {
         //     int t = abs(i - c);
