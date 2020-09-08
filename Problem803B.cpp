@@ -80,7 +80,7 @@ int main() {
         } else {
             c = upper_bound(ALL(zeros), i)-zeros.begin();
         }
-        cout<<"C: "<<c<<" ";
+        // cout<<"C: "<<c<<" ";
         md = abs(i - zeros[c]);
         cout<<md<<" ";
     }
