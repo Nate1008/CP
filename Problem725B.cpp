@@ -84,9 +84,9 @@ int main() {
     }
     t += k;
     if(k % 2 == 1) {
-        t += ceil(k/2) * 6;
+        t += ceil(k/2.0) * 6;
     } else {
-        t += (k/2) * 6;
+        t += floor(k/2.0) * 6;
     }
     cout << t;
     return 0;
