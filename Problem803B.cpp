@@ -75,7 +75,7 @@ int main() {
         }
         int a, b;
         int md;
-        a = lower_bound(ALL(zeros), i)-zeros.begin();
+        a = upper_bound(ALL(zeros), i)-zeros.begin();
         //b = lower_bound(RALL(zeros), i)-zeros.rbegin();
         // cout<<"A: "<<a<<" "<<zeros[a]<<" "<<"B: "<<b<<" "<<zeros[b]<<'\n';
         md = abs(i - zeros[a]);
