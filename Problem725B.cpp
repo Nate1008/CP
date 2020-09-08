@@ -29,8 +29,8 @@
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
-#define f first
-#define s second
+#define F first
+#define S second
 #define vt vector
 #define vi vector<int>
 #define vd vector<double>
@@ -57,6 +57,8 @@
 using namespace std;
 
 int main() {
+    string s;
+    cin >> s;
     return 0;
 }
 
