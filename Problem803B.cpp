@@ -78,7 +78,7 @@ int main() {
         if(i > zeros[len]) {
             c = len;
         } else {
-            c = lower_bound(ALL(zeros), i)-zeros.begin();
+            c = upper_bound(ALL(zeros), i)-zeros.begin();
         }
         cout<<"C: "<<c<<" ";
         md = abs(i - zeros[c]);
