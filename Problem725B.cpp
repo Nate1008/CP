@@ -62,7 +62,7 @@ int main() {
     char c;
     cin >> n >> c;
     n--;
-    int ans = n/4*16+n%2*7+t[c-'a'];
+    ll ans = n/4*16+n%2*7+t[c-'a'];
     cout<<ans;
     return 0;
 }
