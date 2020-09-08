@@ -73,15 +73,12 @@ int main() {
             cout<<0<<" ";
             continue;
         }
-        int c;
+        int a, b;
         int md;
-        if(i > zeros[len]) {
-            c = len;
-        } else {
-            c = upper_bound(ALL(zeros), i)-zeros.begin();
-        }
-        // cout<<"C: "<<c<<" ";
-        md = abs(i - zeros[c]);
+        a = lower_bound(ALL(zeros), i)-zeros.begin();
+        b = lower_bound(RALL(zeros), i)-zeros.rend();
+        cout<<"A: "<<a<<" "<<"B: "<<b<<"\n";
+        md = abs(i - zeros[a]);
         cout<<md<<" ";
     }
     return 0;
