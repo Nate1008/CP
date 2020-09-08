@@ -78,9 +78,9 @@ int main() {
     
     int m = k % 4;
     if(m == 3 || m == 0) {
-        k -= 3;
+        t += k - 3;
     } else {
-        k--;
+        t += k - 1;
     }
 
     t += k + (k/2 * 6);
