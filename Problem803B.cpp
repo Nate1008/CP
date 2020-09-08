@@ -76,7 +76,7 @@ int main() {
         int c;
         int md;
         if(i > zeros[len]) {
-            c = len - 1;
+            c = len;
         } else {
             c = lower_bound(ALL(zeros), i)-zeros.begin();
         }
