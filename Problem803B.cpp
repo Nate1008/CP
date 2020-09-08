@@ -73,7 +73,7 @@ int main() {
             // cout<<0<<" ";
             continue;
         }
-        int c = lower_bound(ALL(zeros), i)-zeros.begin();
+        int c = upper_bound(ALL(zeros), i)-zeros.begin();
         cout<<c<<'\n';
         int md = abs(i - c);
         // FOR(zeros.size(), c) {
