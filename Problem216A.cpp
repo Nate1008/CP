@@ -76,6 +76,7 @@ int main() {
 
     FOR(mini, i) {
         sum += (a+b+c)*2;
+        cout<<sum<<"\n";
         if(a > 0) {
             a--;
         }
