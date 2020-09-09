@@ -63,6 +63,7 @@ int main() {
     FORN(c, i, a) {
         sum += i;
     }
+    cout<<sum;
     return 0;
 }
 
