@@ -78,6 +78,9 @@ int main() {
         sum += (a+b+c)*2;
         cout<<sum<<"\n";
         cout<<a<<"\t"<<b<<"\t"<<c<<"\n";
+        if(a+b+c == 0) {
+            sum++;
+        }
         if(a > 0) {
             a--;
         }
@@ -86,9 +89,6 @@ int main() {
         }
         if(c > 0) {
             c--;
-        }
-        if(a+b+c == 0) {
-            sum++;
         }
     }
     cout<<sum;
