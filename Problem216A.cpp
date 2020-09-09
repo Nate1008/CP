@@ -57,6 +57,12 @@
 using namespace std;
 
 int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    ll sum = 0;
+    FORN(c, i, a) {
+        sum += i;
+    }
     return 0;
 }
 
