@@ -57,6 +57,20 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    int k = n-1;
+    int cur = 1;
+
+    RFOR(n, i) {
+        cout<<cur<<" ";
+        if(i % 2 == 0) {
+            cur += k;
+        } else {
+            cur -= k;
+        }
+        k--;
+    }
     return 0;
 }
 
