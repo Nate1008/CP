@@ -59,39 +59,16 @@ using namespace std;
 int main() {
     int a, b, c;
     cin >> a >> b >> c;
-    int mini = min(a, min(b, c));
     ll sum = 0;
-    a--;
-    b--;
-    c--;
-    if(a < 0) {
-        a = 0;
-    }
-    if(b < 0) {
-        b = 0;
-    }
-    if(c < 0) {
-        c = 0;
-    }
-
-    FOR(mini, i) {
-        sum += (a+b+c)*2;
+    FOR(b, i) {
+        sum += (i+a);
         cout<<sum<<"\n";
-        cout<<a<<"\t"<<b<<"\t"<<c<<"\n";
-        if(a+b+c == 0) {
-            sum++;
-        }
-        if(a > 0) {
-            a--;
-        }
-        if(b > 0) {
-            b--;
-        }
-        if(c > 0) {
-            c--;
-        }
     }
-    cout<<sum;
+    if(b % 2 == 1) {
+        cout<<sum*2;
+    } else {
+        cout<<(sum*2)-(b+a-1);
+    }
     return 0;
 }
 
