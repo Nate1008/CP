@@ -60,8 +60,8 @@ int main() {
     int a, b, c;
     cin >> a >> b >> c;
     ll sum = 0;
-    FORN(c+a, i, a) {
-        sum += i;
+    FOR(c, i) {
+        sum += (i+a);
     }
     cout<<sum;
     return 0;
