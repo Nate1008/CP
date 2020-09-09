@@ -60,7 +60,7 @@ int main() {
     int a, b, c;
     cin >> a >> b >> c;
     ll sum = 0;
-    FOR(c, i) {
+    FOR(b, i) {
         sum += (i+a);
         cout<<sum<<"\n";
     }
