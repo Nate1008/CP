@@ -80,13 +80,14 @@ int main() {
     } else {
         int odds = 0;
         FOR(n, i) {
+            if(flow[i] % 2 == 1) {
+                odds++;
+            }
+            
             if(odds == odd) {
                 break;
             }
             sum += flow[i];
-            if(flow[i] % 2 == 1) {
-                odds++;
-            }
         }
     }
     cout<<sum;
