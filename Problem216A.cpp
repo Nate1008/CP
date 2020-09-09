@@ -64,7 +64,7 @@ int main() {
         sum += (i+a);
         cout<<sum<<"\n";
     }
-    cout<<sum;
+    cout<<(sum*2);
     return 0;
 }
 
