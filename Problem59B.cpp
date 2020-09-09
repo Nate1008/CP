@@ -80,7 +80,7 @@ int main() {
     } else {
         int odds = 0;
         FOR(n, i) {
-            if(odds == odd - 1) {
+            if(odds == odd) {
                 break;
             }
             sum += flow[i];
