@@ -59,6 +59,7 @@ using namespace std;
 int main() {
     int a, b, c;
     cin >> a >> b >> c;
+    int mini = min(a, min(b, c));
     ll sum = 0;
     b -= 2;
     c -= 1;
@@ -69,10 +70,7 @@ int main() {
         c = 0;
     }
 
-    int mid[3] = {a, b, c};
-    sort(mid, mid+3);
-    int middle = mid[1];
-    FORE(middle, i) {
+    FORE(mini, i) {
         sum += (a+b+c)*2;
         if(a > 0) {
             a--;
