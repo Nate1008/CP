@@ -86,7 +86,7 @@ int main() {
     }
     sort(ALL(flow), even);
 
-    int sum = 0;
+    ll sum = 0;
     if(odd % 2 == 1) {
         FOR(n, i) {
             sum += flow[i];
