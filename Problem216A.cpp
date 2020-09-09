@@ -60,11 +60,31 @@ int main() {
     int a, b, c;
     cin >> a >> b >> c;
     ll sum = 0;
-    FOR(b, i) {
-        sum += (i+a);
-        cout<<sum<<"\n";
+    b -= 2;
+    c -= 1;
+    if(b < 0) {
+        b = 0;
     }
-    cout<<(sum*2);
+    if(c < 0) {
+        c = 0;
+    }
+
+    vi mid = {a, b, c};
+    sort(ALL(mid));
+    int middle = mid[1];
+    FOR(middle, i) {
+        sum += (a+b+c)*2;
+        if(a > 0) {
+            a--;
+        }
+        if(b > 0) {
+            b--;
+        }
+        if(c > 0) {
+            c--;
+        }
+    }
+    cout<<sum;
     return 0;
 }
 
