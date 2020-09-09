@@ -69,6 +69,7 @@ int main() {
     }
     if(odd == 0) {
         cout<<0;
+        return 0;
     }
     sort(RALL(flow));
 
@@ -83,7 +84,7 @@ int main() {
             if(flow[i] % 2 == 1) {
                 odds++;
             }
-            
+
             if(odds == odd) {
                 break;
             }
