@@ -62,6 +62,7 @@ int main() {
     ll sum = 0;
     FOR(c, i) {
         sum += (i+a);
+        cout<<sum<<"\n";
     }
     cout<<sum;
     return 0;
