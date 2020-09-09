@@ -57,6 +57,24 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    vi flow(n);
+    FOR(n, i) {
+        cin >> flow[i];
+    }
+    int mp = 0;
+    FOR(n, i) {
+        FORN(n, c, i+1) {
+            int sum = 0; 
+            FOREN(i, x, c) {
+                sum += flow[x];
+            }
+            if(sum % 2 == 1) {
+                mp = max(sum, mp);
+            }
+        }
+    }
     return 0;
 }
 
