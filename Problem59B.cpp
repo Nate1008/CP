@@ -55,6 +55,19 @@
 #define TC int t; cin >> t; FOR(t, q)
 
 using namespace std;
+int even(int a, int b) {
+    if(a % 2 == 0) {
+        return true;
+    } else if(b % 2 == 0) {
+        return false;
+    }
+
+    if(a > b) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 int main() {
     int n;
@@ -71,7 +84,7 @@ int main() {
         cout<<0;
         return 0;
     }
-    sort(RALL(flow));
+    sort(ALL(flow), even);
 
     int sum = 0;
     if(odd % 2 == 1) {
