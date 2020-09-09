@@ -74,8 +74,8 @@ int main() {
     cin >> n;
     vi flow(n);
     int odd = 0;
-    FOR(n, i) {
-        cout<<i<<"\n";
+    for(int i = 0; i < n; i++){
+        // cout<<i<<"\n";
         cin >> flow[i]; 
         if(flow[i] % 2 == 1) {
             odd++;
@@ -91,8 +91,8 @@ int main() {
     if(odd % 2 == 0) {
         n--;
     }
-    FOR(n, i) {
-        cout<<i<<"\n";
+    for(int i = 0; i < n; i++) {
+        // cout<<i<<"\n";
         //cout<<flow[i]<<" ";
         sum += flow[i];        
     } 
