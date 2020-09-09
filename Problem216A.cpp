@@ -61,8 +61,12 @@ int main() {
     cin >> a >> b >> c;
     int mini = min(a, min(b, c));
     ll sum = 0;
-    b -= 2;
-    c -= 1;
+    a--;
+    b--;
+    c--;
+    if(a < 0) {
+        a = 0;
+    }
     if(b < 0) {
         b = 0;
     }
@@ -80,6 +84,9 @@ int main() {
         }
         if(c > 0) {
             c--;
+        }
+        if(a+b+c == 0) {
+            sum++;
         }
     }
     cout<<sum;
