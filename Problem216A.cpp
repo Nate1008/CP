@@ -69,8 +69,8 @@ int main() {
         c = 0;
     }
 
-    vi mid = {a, b, c};
-    sort(ALL(mid));
+    int mid[3] = {a, b, c};
+    sort(mid, mid+3);
     int middle = mid[1];
     FOR(middle, i) {
         sum += (a+b+c)*2;
