@@ -62,7 +62,7 @@ int main() {
     int k = n-1;
     int cur = 1;
 
-    RFOR(n, i) {
+    FOR(n, i) {
         cout<<cur<<" ";
         if(i % 2 == 0) {
             cur += k;
