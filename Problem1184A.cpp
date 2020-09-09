@@ -57,6 +57,14 @@
 using namespace std;
 
 int main() {
+    int r;
+    cin >> r;
+    int y = (r-3)/2;
+    if(r % 2 == 0 || y <= 0) {
+        cout<<"NO";
+        return 0;
+    }
+    cout<<1<<" "<<(r-3)/2;
     return 0;
 }
 
