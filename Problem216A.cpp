@@ -60,15 +60,16 @@ int main() {
     int a, b, c;
     cin >> a >> b >> c;
     ll sum = 0;
-    int ma = max(b, c);
+    int ma = max(b, max(a, c));
+    int mn = min(a, min(b, c));
     FOR(ma, i) {
-        sum += (i+a);
+        sum += (i+mn);
         // cout<<sum<<"\n";
     }
     if(ma % 2 == 1) {
         cout<<sum*2;
     } else {
-        cout<<(sum*2)-(ma+a-1);
+        cout<<(sum*2)-(ma+mn-1);
     }
     return 0;
 }
