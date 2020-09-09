@@ -70,7 +70,7 @@ int main() {
         c = 0;
     }
 
-    FORE(mini, i) {
+    FOR(mini, i) {
         sum += (a+b+c)*2;
         if(a > 0) {
             a--;
