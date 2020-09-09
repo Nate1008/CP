@@ -62,7 +62,7 @@ int main() {
     ll sum = 0;
     FOR(b, i) {
         sum += (i+a);
-        cout<<sum<<"\n";
+        // cout<<sum<<"\n";
     }
     if(b % 2 == 1) {
         cout<<sum*2;
