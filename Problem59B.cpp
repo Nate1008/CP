@@ -92,15 +92,7 @@ int main() {
             sum += flow[i];
         } 
     } else {
-        int odds = 0;
-        FOR(n, i) {
-            if(flow[i] % 2 == 1) {
-                odds++;
-            }
-
-            if(odds == odd) {
-                break;
-            }
+        FOR(n-1, i) {
             sum += flow[i];
         }
     }
