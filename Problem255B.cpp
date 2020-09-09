@@ -57,6 +57,28 @@
 using namespace std;
 
 int main() {
+    string s;
+    cin >> s;
+    int len = s.length();
+    int x = 0;
+    int y = 0;
+    FOR(len, i) {
+        if(s[i] == 'x') {
+            x++;
+        } else {
+            y++;
+        }
+    }
+
+    int m = min(x, y);
+    x -= m;
+    y -= m;
+    FOR(x, i) {
+        cout<<'x';
+    }
+    FOR(y, i){
+        cout<<'y';
+    }
     return 0;
 }
 
