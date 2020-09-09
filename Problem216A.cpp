@@ -72,7 +72,7 @@ int main() {
     int mid[3] = {a, b, c};
     sort(mid, mid+3);
     int middle = mid[1];
-    FOR(middle, i) {
+    FORE(middle, i) {
         sum += (a+b+c)*2;
         if(a > 0) {
             a--;
