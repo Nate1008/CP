@@ -87,16 +87,14 @@ int main() {
     sort(ALL(flow), even);
 
     ll sum = 0;
-    if(odd % 2 == 1) {
-        FOR(n, i) {
-            sum += flow[i];
-        } 
-    } else {
-        FOR(n-1, i) {
-            sum += flow[i];
-        }
+    if(odd % 2 == 0) {
+        n--;
     }
-    cout<<sum;
+    FOR(n, i) {
+        cout<<flow[i]<<" "
+        sum += flow[i];        
+    } 
+    cout<<"\n"<<sum;
     return 0;
 }
 
