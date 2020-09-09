@@ -60,22 +60,37 @@ int main() {
     int n;
     cin >> n;
     vi flow(n);
+    int odd = 0;
     FOR(n, i) {
-        cin >> flow[i];
+        cin >> flow[i]; 
+        if(flow[i] % 2 == 1) {
+            odd++;
+        }
     }
-    int mp = 0;
-    FOR(n, i) {
-        FORN(n, c, i+1) {
-            int sum = 0; 
-            FOREN(i, x, c) {
-                sum += flow[x];
+    if(odd == 0) {
+        cout<<0;
+    }
+    sort(RALL(flow));
+
+    int sum = 0;
+    if(odd % 2 == 1) {
+        FOR(n, i) {
+            sum += flow[i];
+        } 
+    } else {
+        int odds = 0;
+        FOR(n, i) {
+            if(odds == odd - 1) {
+                break;
             }
-            if(sum % 2 == 1) {
-                mp = max(sum, mp);
+            sum += flow[i];
+            if(flow[i] % 2 == 1) {
+                odds++;
             }
         }
     }
-    cout << mp;
+
+
     return 0;
 }
 
