@@ -74,10 +74,14 @@ int main() {
     cin >> n;
     vi flow(n);
     int odd = 0;
+    ll sum = 0;
+    int ma = INT_MAX;
     for(int i = 0; i < n; i++){
         // cout<<i<<"\n";
-        cin >> flow[i]; 
+        cin >> flow[i];
+        sum += flow[i];
         if(flow[i] % 2 == 1) {
+            ma = min(flow[i], ma);
             odd++;
         }
     }
@@ -85,17 +89,9 @@ int main() {
         cout<<0;
         return 0;
     }
-    sort(ALL(flow), even);
-
-    ll sum = 0;
     if(odd % 2 == 0) {
-        n--;
+        sum -= ma;
     }
-    for(int i = 0; i < n; i++) {
-        // cout<<i<<"\n";
-        // cout<<flow[i]<<" ";
-        sum += flow[i];        
-    } 
     cout<<sum;
     return 0;
 }
