@@ -91,7 +91,7 @@ int main() {
         n--;
     }
     FOR(n, i) {
-        cout<<flow[i]<<" ";
+        //cout<<flow[i]<<" ";
         sum += flow[i];        
     } 
     cout<<"\n"<<sum;
