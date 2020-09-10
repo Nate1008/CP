@@ -67,7 +67,7 @@ int main() {
     h %= 12;
 
     int dm = (m/5)*30;
-    int hm = (h+(m/60))*30
+    int hm = (h+(m/60))*30;
 
     cout<<hm<<" "<<dm;
     return 0;
