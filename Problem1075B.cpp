@@ -76,9 +76,9 @@ int main() {
         int t;
         cin >> t;
         if(t == 1) {
-            taxi.push_back(coor[t]);
+            taxi.push_back(coor[i]);
         } else {
-            rider.push_back(coor[t]);
+            rider.push_back(coor[i]);
         }
     }
     sort(ALL(taxi));
