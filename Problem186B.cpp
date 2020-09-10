@@ -38,7 +38,7 @@
 #define vf vector<float>
 #define vl vector<long long>
 #define vpi vector<pi>
-#define vpi vector<pf>
+#define vpf vector<pf>
 #define vpii vector<pii>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
@@ -67,16 +67,20 @@ using namespace std;
 int main() {
     int n,t1,t2,k;
     cin >> n >> t1 >> t2 >> k;
-    vpf rank;
+    vpf rank(n);
     FOR(n, i) {
         int s1, s2;
         cin >> s1 >> s2;
         pf t;
         t.S = max((s1*t1*(k/100.0f))+(s2*t2), (s2*t1*(k/100.0f))+(s1*t2));
         t.F = i+1;
-        re
+        rank[i] = t;
     }
-    sort(RALL(r))
+    sort(RALL(rank));
+    FOR(n, i){
+        pf t = rank[i];
+        printf("%d %.2f", t.F,t.S);
+    }
     return 0;
 }
 

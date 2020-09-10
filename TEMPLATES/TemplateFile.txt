@@ -38,7 +38,7 @@
 #define vf vector<float>
 #define vl vector<long long>
 #define vpi vector<pi>
-#define vpi vector<pf>
+#define vpf vector<pf>
 #define vpii vector<pii>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
