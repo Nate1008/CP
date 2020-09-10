@@ -62,7 +62,7 @@
 using namespace std;
 
 int main() {
-    float h, m;
+    int h, m;
     cin >> h >> m;
     h %= 12;
 
