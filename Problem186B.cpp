@@ -65,14 +65,14 @@ using namespace std;
 
 bool sorted(pf a, pf b) {
     if(a.F > b.F) {
-        return true;
-    } else if (b.F > a.F){
         return false;
+    } else if (b.F > a.F){
+        return true;
     } else {
         if(a.S < b.S) {
-            return true;
-        } else {
             return false;
+        } else {
+            return true;
         }
     }
     
