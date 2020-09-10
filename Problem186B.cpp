@@ -63,6 +63,20 @@
 
 using namespace std;
 
+bool sorted(pf a, pf b) {
+    if(a.F > b.F) {
+        return true;
+    } else {
+        return false;
+    } else {
+        if(a.S > b.S) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+}
 
 int main() {
     int n,t1,t2,k;
