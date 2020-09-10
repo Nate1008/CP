@@ -68,6 +68,7 @@ int main() {
     cin >> n >> x >> y;
     if((n >= 2 && n <= 4) && (x >= 2 && x < 4) && (y >= 2 && y < 4)) {
         cout<<"NO";
+        return 0;
     }
     cout<<"YES";
     return 0;
