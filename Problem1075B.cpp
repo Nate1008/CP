@@ -65,8 +65,8 @@ int main() {
     int n, m;
     cin >> n >> m;
     vi coor(n+m);
-    vi taxi(m);
-    vi rider(n);
+    vi taxi;
+    vi rider;
     vi ans(m);
     FOR(n+m, i) {
         cin >> coor[i];
