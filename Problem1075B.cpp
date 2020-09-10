@@ -52,11 +52,40 @@
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
 
+#define B(v) v.begin()
+#define RB(v) v.rbegin()
+#define E(v) v.end()
+#define RE(v) v.rend()
+
 #define TC int t; cin >> t; FOR(t, q)
 
 using namespace std;
 
 int main() {
+    int n, m;
+    cin >> n >> m;
+    vi coor(n+m);
+    vi taxi(m);
+    vi rider(n);
+    vi ans(m);
+    FOR(n+m, i) {
+        cin >> coor[i];
+    }
+
+    FOR(n+m, i) {
+        int t;
+        cin >> t;
+        if(t == 1) {
+            taxi.push_back(coor[t]);
+        } else {
+            rider.push_back(coor[t]);
+        }
+    }
+    sort(ALL(taxi));
+    
+    FOR(n, i) {
+        int k = lower_bound(ALL(taxi), rider[i])-taxi.begin();
+    }
     return 0;
 }
 
