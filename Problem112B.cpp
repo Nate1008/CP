@@ -66,7 +66,7 @@ using namespace std;
 int main() {
     int n, x, y;
     cin >> n >> x >> y;
-    if((n >= 2 && n <= 4) && (x >= 2 && x < 4) && (y >= 2 && y < 4)) {
+    if((x >= n/2 && x <= (n/2)+1) && (x >= n/2 && x <= (n/2)+1)) {
         cout<<"NO";
         return 0;
     }
