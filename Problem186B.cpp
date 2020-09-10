@@ -86,8 +86,6 @@ int main() {
         int s1, s2;
         cin >> s1 >> s2;
         pf t;
-        float a = ((s1*t1*(1-(k/100.0f)))+(s2*t2));
-        float b = ((s2*t1*(1-(k/100.0f)))+(s1*t2));
         t.F = max(((s1*t1*(1-(k/100.0f)))+(s2*t2)), ((s2*t1*(1-(k/100.0f)))+(s1*t2)));
         t.S = i+1;
         rank[i] = t;
@@ -96,7 +94,7 @@ int main() {
     FOR(n, i){
         pf t = rank[i];
         t.F = floor(t.F*100 + 0.5)/100;
-        printf("%d %.2f \n", t.S,t.F);
+        printf("%d %.8f \n", t.S,t.F);
     }
     return 0;
 }
