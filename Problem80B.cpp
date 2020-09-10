@@ -71,6 +71,7 @@ int main() {
     h %= 12;
     double dm = (m/5.0)*30;
     double dh = (h+(m/60.0))*30;
+    cout.precision(10);
     cout<<dh<<" "<<dm;
     return 0;
 }
