@@ -72,14 +72,14 @@ int main() {
         int s1, s2;
         cin >> s1 >> s2;
         pf t;
-        t.S = max((s1*t1*(k/100.0f))+(s2*t2), (s2*t1*(k/100.0f))+(s1*t2));
-        t.F = i+1;
+        t.F = max((s1*t1*(k/100.0f))+(s2*t2), (s2*t1*(k/100.0f))+(s1*t2));
+        t.S = i+1;
         rank[i] = t;
     }
     sort(RALL(rank));
     FOR(n, i){
         pf t = rank[i];
-        printf("%f %.2d", t.F,t.S);
+        printf("%f %.2d\n", t.S,t.F);
     }
     return 0;
 }
