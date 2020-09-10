@@ -68,9 +68,7 @@ int main() {
     string b = s.substr(0, 2);
     int m = stoi(a);
     int h = stoi(b);
-    if(h == 12) {
-        h=0;
-    }
+    h %= 12
     double dm = (m/5.0)*30;
     double dh = (h+(m/60.0))*30;
     cout.precision(10);
