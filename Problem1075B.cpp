@@ -85,6 +85,23 @@ int main() {
     
     FOR(n, i) {
         int k = lower_bound(ALL(taxi), rider[i])-taxi.begin();
+        if(k == 0) {
+            ans[k]++;
+        } else if (k == m) {
+            ans[k-1]++;
+        } else {
+            int a = abs(rider[i] - taxi[k]);
+            int b = abs(rider[i] - taxi[k-1]);
+            if(a < b){
+                ans[k]++;
+            } else {
+                ans[k-1]++;
+            }
+        }
+    }
+
+    FOR(m, i) {
+        cout<<ans[i]<<" ";
     }
     return 0;
 }
