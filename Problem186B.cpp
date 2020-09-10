@@ -87,7 +87,7 @@ int main() {
         cin >> s1 >> s2;
         pf t;
         float a = ((s1*t1*(1-(k/100.0f)))+(s2*t2));
-        float b = ((s2*t1*((k/100.0f)))+(s1*t2));
+        float b = ((s2*t1*(1-(k/100.0f)))+(s1*t2));
         t.F = max(a, b);
         t.S = i+1;
         rank[i] = t;
