@@ -62,13 +62,13 @@
 using namespace std;
 
 int main() {
-    int h, m;
+    float h, m;
     cin >> h >> m;
     h %= 12;
 
-    int dm = (m/5)*30;
-    int hm = (h+(m/60))*30;
-
+    float dm = (m/5)*30;
+    float hm = (h+(m/60))*30;
+    cout.precision(10);
     cout<<hm<<" "<<dm;
     return 0;
 }
