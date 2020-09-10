@@ -86,8 +86,8 @@ int main() {
         int s1, s2;
         cin >> s1 >> s2;
         pf t;
-        float = 1- k/100
-        t.F = max(((s1*t1*(1-(k/100)))+(s2*t2)), ((s2*t1*(1.0f-(k/100)))+(s1*t2)));
+        float p = 1-k/100;
+        t.F = max(((s1*t1*p)+(s2*t2)), ((s2*t1*p)+(s1*t2)));
         t.S = i+1;
         printf("%d %.8f \n", t.S,t.F);
         rank[i] = t;
