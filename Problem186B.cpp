@@ -69,7 +69,7 @@ bool sorted(pf a, pf b) {
     } else if (b.F > a.F){
         return false;
     } else {
-        if(a.S > b.S) {
+        if(a.S < b.S) {
             return true;
         } else {
             return false;
