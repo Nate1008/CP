@@ -67,7 +67,7 @@ int main() {
     h %= 12;
 
     float dm = (m/5)*30;
-    float hm = (h+(m/60))*30;
+    float hm = (h+(m/60.0))*30;
     cout.precision(10);
     cout<<hm<<" "<<dm;
     return 0;
