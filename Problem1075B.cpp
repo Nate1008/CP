@@ -102,7 +102,7 @@ int main() {
     }
 
     FOR(m, i) {
-        cout<<taxi[i]<<" ";
+        cout<<ans[i]<<" ";
     }
     return 0;
 }
