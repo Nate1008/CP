@@ -68,14 +68,14 @@ int main() {
     string b = s.substr(0, 2);
     cout<<a<<"\n";
     cout<<b<<"\n";
-    if(h == 12) {
-        h=0;
-    }
-    cout<<h<<m;
-    double dm = (m/5.0)*30;
-    double dh = (h+(m/60.0))*30;
-    cout.precision(10);
-    cout<<dh<<" "<<dm;
+    // if(h == 12) {
+    //     h=0;
+    // }
+    // cout<<h<<m;
+    // double dm = (m/5.0)*30;
+    // double dh = (h+(m/60.0))*30;
+    // cout.precision(10);
+    // cout<<dh<<" "<<dm;
     return 0;
 }
 
