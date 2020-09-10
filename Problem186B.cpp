@@ -81,12 +81,12 @@ bool sorted(pf a, pf b) {
 int main() {
     float n,t1,t2,k;
     cin >> n >> t1 >> t2 >> k;
-    vpf rank(n);
+    vt<pair<double, int> > rank(n);
     FOR(n, i) {
         int s1, s2;
         cin >> s1 >> s2;
-        pf t;
-        float p = 1-k/100;
+        pair<double, int> t;
+        double p = 1-k/100;
         cout.precision(3);
         cout<<p<<'\n';
         t.F = max(((s1*t1*p)+(s2*t2)), ((s2*t1*p)+(s1*t2)));
