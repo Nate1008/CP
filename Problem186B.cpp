@@ -87,7 +87,7 @@ int main() {
 	double a, b;
 	for(int i = 1; i <= n; ++i){
 		cin>>a>>b;
-		v[i].first = max((a * t1 * (1-(k/100))) + b * t2, (b * t1 * (1-(k/100))) + a * t2); 
+		v[i].first = max((a * t1 * (1-k/100)) + b * t2, (b * t1 * (1-k/100)) + a * t2); 
 		v[i].second = -i;
 	}
 	
