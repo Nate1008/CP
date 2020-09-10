@@ -79,23 +79,24 @@ bool sorted(pf a, pf b) {
 }
 
 int main() {
-    float n,t1,t2,k;
-    cin >> n >> t1 >> t2 >> k;
-    vt<pair<double, int> > rank(n);
-    FOR(n, i) {
-        int s1, s2;
-        cin >> s1 >> s2;
-        pair<double, int> t;
-        double p = 1-k/100;
-        t.F = max(((s1*t1*p)+(s2*t2)), ((s2*t1*p)+(s1*t2)));
-        t.S = i+1;
-        rank[i] = t;
-    }
-    sort(RALL(rank), sorted);
-    FOR(n, i){
-        pf t = rank[i];
-        printf("%d %.2f \n", t.S,t.F);
-    }
+    double n, t1, t2, k;
+	cin>>n>>t1>>t2>>k;
+	k /= 100;
+	vector<pair<double, int>> v(n+1);
+	
+	double a, b;
+	for(int i = 1; i <= n; ++i){
+		cin>>a>>b;
+		v[i].first = max(((a * t1) - (a * t1 * k)) + b * t2, ((b * t1) - (b * t1 * k)) + a * t2); 
+		v[i].second = -i;
+	}
+	
+	sort(RALL(v));
+	
+	for(int i = 0; i < n; ++i)
+		printf("%d %.2lf\n", -v[i].second, v[i].first);
+	
+	return 0;
     return 0;
 }
 
