@@ -79,11 +79,11 @@ bool sorted(pf a, pf b) {
 }
 
 int main() {
-    int n,t1,t2,k;
+    float n,t1,t2,k;
     cin >> n >> t1 >> t2 >> k;
     vpf rank(n);
     FOR(n, i) {
-        int s1, s2;
+        float s1, s2;
         cin >> s1 >> s2;
         pf t;
         float a = ((s1*t1*(k/100.0f))+(s2*t2));
