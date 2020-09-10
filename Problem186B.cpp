@@ -24,6 +24,7 @@
 
 #define ll long long
 #define pi pair<int, int>
+#define pf pair<float, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>
@@ -62,6 +63,16 @@
 using namespace std;
 
 int main() {
+    int n,t1,t2,k;
+    cin >> n >> t1 >> t2 >> k;
+    vpi rank;
+    FOR(n, i) {
+        int s1, s2;
+        cin >> s1 >> s2;
+        pf t;
+        float m = max((s1*t1*(k/100.0f))+(s2*t2), (s2*t1*(k/100.0f))+(s1*t2));
+
+    }
     return 0;
 }
 
