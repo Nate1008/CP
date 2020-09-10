@@ -64,6 +64,11 @@
 using namespace std;
 
 int main() {
+    int n, x, y;
+    if((n >= 2 && n <= 4) && (x >= 2 && x < 4) && (y >= 2 && y < 4)) {
+        cout<<"NO";
+    }
+    cout<<"YES";
     return 0;
 }
 
