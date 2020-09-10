@@ -84,7 +84,7 @@ int main() {
     sort(ALL(taxi));
     
     FOR(n, i) {
-        int k = lower_bound(ALL(taxi), rider[i])-taxi.begin();
+        int k = upper_bound(ALL(taxi), rider[i])-B(taxi);
         cout<<k<<'\n';
         if(k == 0) {
             ans[k]++;
