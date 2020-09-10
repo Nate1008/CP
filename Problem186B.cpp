@@ -79,14 +79,15 @@ bool sorted(pf a, pf b) {
 }
 
 int main() {
-    int n,t1,t2,k;
+    int n;
+    float t1,t2,k;
     cin >> n >> t1 >> t2 >> k;
     vpf rank(n);
     FOR(n, i) {
         int s1, s2;
         cin >> s1 >> s2;
         pf t;
-        t.F = max((s1*t1*(k/100.0f))+(s2*t2), (s2*t1*(k/100.0f))+(s1*t2));
+        t.F = max(((s1*t1*(k/100.0f))+(s2*t2)), ((s2*t1*(k/100.0f))+(s1*t2)));
         t.S = i+1;
         rank[i] = t;
     }
