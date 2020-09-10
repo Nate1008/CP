@@ -82,12 +82,12 @@ int main() {
     double n, t1, t2, k;
 	cin>>n>>t1>>t2>>k;
 	k /= 100;
-	vector<pair<double, int> > v(n+1);
+	vector<pair<double, int>> v(n+1);
 	
 	double a, b;
 	for(int i = 1; i <= n; ++i){
 		cin>>a>>b;
-		v[i].first = max((a * t1 * (1-k/100)) + (b * t2), (b * t1 * (1-k/100)) + (a * t2)); 
+		v[i].first = max(((a * t1) - (a * t1 * k)) + b * t2, ((b * t1) - (b * t1 * k)) + a * t2); 
 		v[i].second = -i;
 	}
 	
