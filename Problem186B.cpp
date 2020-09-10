@@ -87,17 +87,14 @@ int main() {
         cin >> s1 >> s2;
         pair<double, int> t;
         double p = 1-k/100;
-        cout.precision(3);
-        cout<<p<<'\n';
         t.F = max(((s1*t1*p)+(s2*t2)), ((s2*t1*p)+(s1*t2)));
         t.S = i+1;
-        printf("%d %.8f \n", t.S,t.F);
         rank[i] = t;
     }
     sort(RALL(rank), sorted);
     FOR(n, i){
         pf t = rank[i];
-        printf("%d %.8f \n", t.S,t.F);
+        printf("%d %.2f \n", t.S,t.F);
     }
     return 0;
 }
