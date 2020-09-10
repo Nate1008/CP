@@ -68,6 +68,7 @@ int main() {
     int n;
     string s;
     cin >> n >> s;
+    fclose(stdin);
     vi seats(n);
     FOR(n, i) {
         seats[i] = i+1;
@@ -79,7 +80,7 @@ int main() {
         }
         cout << seats[i] << " " << seats[i+half] << "\n";
     }
-
+    fclose(stdout);
     
     return 0;
 }
