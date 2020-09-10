@@ -65,8 +65,22 @@ int main() {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 
-    
+    int n;
+    string s;
+    cin >> n >> s;
+    vi seats(n);
+    FOR(n, i) {
+        seats[i] = i+1;
+    }
+    int half = n/2;
+    FOR(half, i) {
+        if(s[i] == 'R') {
+            swap(seats[i], seats[i+half]);
+        }
+        cout << seats[i] << " " << seats[i+half] << "\n";
+    }
 
+    
     return 0;
 }
 
