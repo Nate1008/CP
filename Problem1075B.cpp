@@ -85,7 +85,7 @@ int main() {
     
     FOR(n, i) {
         int k = lower_bound(ALL(taxi), rider[i])-B(taxi);
-        cout<<k<<'\n';
+        // cout<<k<<'\n';
         if(k == 0) {
             ans[k]++;
         } else if (k == m) {
