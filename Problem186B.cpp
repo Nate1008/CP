@@ -87,6 +87,8 @@ int main() {
         cin >> s1 >> s2;
         pf t;
         float p = 1-k/100;
+        cout.precision(10);
+        cout<<p<<'\n';
         t.F = max(((s1*t1*p)+(s2*t2)), ((s2*t1*p)+(s1*t2)));
         t.S = i+1;
         printf("%d %.8f \n", t.S,t.F);
