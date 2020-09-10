@@ -65,14 +65,14 @@ using namespace std;
 
 bool sorted(pf a, pf b) {
     if(a.F > b.F) {
-        return false;
-    } else if (b.F > a.F){
         return true;
+    } else if (b.F > a.F){
+        return false;
     } else {
-        if(a.S < b.S) {
-            return false;
-        } else {
+        if(a.S > b.S) {
             return true;
+        } else {
+            return false;
         }
     }
     
@@ -90,7 +90,7 @@ int main() {
         t.S = i+1;
         rank[i] = t;
     }
-    sort(RALL(rank));
+    sort(RALL(rank), sorted);
     FOR(n, i){
         pf t = rank[i];
         printf("%d %.2f \n", t.S,t.F);
