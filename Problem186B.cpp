@@ -82,7 +82,7 @@ int main() {
     double n, t1, t2, k;
 	cin>>n>>t1>>t2>>k;
 	k /= 100;
-	vector<pair<double, int>> v(n+1);
+	vector<pair<double, int> > v(n+1);
 	
 	double a, b;
 	for(int i = 1; i <= n; ++i){
