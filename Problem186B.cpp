@@ -79,7 +79,7 @@ int main() {
     sort(RALL(rank));
     FOR(n, i){
         pf t = rank[i];
-        printf("%f %.2d\n", t.S,t.F);
+        printf("%d %.2f \n", t.S,t.F);
     }
     return 0;
 }
