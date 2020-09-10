@@ -62,8 +62,12 @@
 using namespace std;
 
 int main() {
-    double h, m;
-    cin >> h >> m;
+    string s;
+    cin>>s;
+    string a = s.substr(3, 2);
+    string b = s.substr(0, 2);
+    cout<<a<<"\n";
+    cout<<b<<"\n";
     if(h == 12) {
         h=0;
     }
