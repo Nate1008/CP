@@ -93,7 +93,7 @@ int main() {
     sort(RALL(rank), sorted);
     FOR(n, i){
         pf t = rank[i];
-        t.F = floor(t.F*100 + 0.5)/100;
+        // t.F = floor(t.F*100 + 0.5)/100;
         printf("%d %.8f \n", t.S,t.F);
     }
     return 0;
