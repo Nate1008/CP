@@ -59,11 +59,23 @@
 #define E(v) v.end()
 #define RE(v) v.rend()
 
+#define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
+#define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+
 #define TC int t; cin >> t; FOR(t, q)
 
 using namespace std;
 
 int main() {
+    string str;
+    int n;
+    cin >> str >> n;
+    LOWER(str);
+    FOR(n, i) {
+        string sim;
+        cin >> sim;
+        LOWER(sim);
+    }
     return 0;
 }
 
