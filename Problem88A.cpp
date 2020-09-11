@@ -70,7 +70,19 @@ int main() {
     string a, b, c;
     cin >> a >> b >> c;
     string note[] = { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H" };
-    mc notes;
+    ms notes;
+    FOR(12, i) {
+        notes[note[i]] = i;
+    }
+    int d1 = ((notes[a] - notes[b])+12)%12;
+    int d2 = ((notes[b] - notes[c])+12)%12;
+    if(d1 == 4 && d2 == 3) {
+        cout<<"major";
+    } else if (d1 == 3 && d2 == 4){
+        cout<<"minor";
+    } else {
+        cout<<"strange";
+    }
     return 0;
 }
 
