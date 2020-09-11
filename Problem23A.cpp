@@ -67,13 +67,18 @@ int main() {
     string s;
     cin >> s;
     int n = s.length();
+    int m = 0;
     for(int i = 0; i < n; i++) {
         for(int c = i+1; c <= n; c++) {
             string str = s.substr(i, c);
             string left = s.substr(c);
-            cout<<str<<'\t'<<left<<'\n';
+            int len = str.length();
+            if(s.find(str, str.length()) != -1) {
+                m = max(m, len);
+            }
         }
     }
+    cout<<m;
     return 0;
 }
 
