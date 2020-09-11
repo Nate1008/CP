@@ -74,7 +74,7 @@ int main() {
             string left = s.substr(i+1);
             int len = str.length();
             int v = left.find(str);
-            cout<<str<<"\t"<<left<<'\t'<<v<<'\n';
+            // cout<<str<<"\t"<<left<<'\t'<<v<<'\n';
             if(v != -1) {
                 m = max(m, len);
             }
