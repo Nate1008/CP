@@ -77,7 +77,6 @@ int main() {
 	n = strlen(s);
 	for (i = 0; i < maxc; i++)
 		p[i].second = i;
-        vit[i] = false;
 	for (i = 0; i < n; i++)
 		p[s[i] - 'a'].first++;
 	sort(p, p + maxc);
