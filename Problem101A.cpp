@@ -28,7 +28,7 @@
 #define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>
-#define mc map<char, int>
+//#define mc map<char, int>
 #define mpi map<pi, int>
 #define F first
 #define S second
@@ -67,29 +67,27 @@
 using namespace std;
 
 int main() {
-    int maxn = 100001;
-    int maxc = 26;
-    char s[maxn];
-    pair<int, int> p[maxc];
-    bool vit[maxc];
-    int n, k, i, sum = 0, cnt = 0, ret = 0;
-	scanf("%s %d", s, &k);
-	n = strlen(s);
-	for (i = 0; i < maxc; i++)
-		p[i].second = i;
-	for (i = 0; i < n; i++)
-		p[s[i] - 'a'].first++;
-	sort(p, p + maxc);
-	for (i = 0; i < maxc; i++) {
-		sum += p[i].first;
-		if (sum <= k) vit[p[i].second] = true;
-		else ret++;
-	}
-	for (i = 0; i < n; i++)
-		if (!vit[s[i] - 'a']) s[cnt++] = s[i];
-	s[cnt] = '\0';
-	printf("%d\n%s", ret, s);
-	return 0;
-    return 0;
+        string str; int k; cin>>str>>k;
+    map<char,int>m;
+    for(int i=0;i<str.size();i++)
+        m[str[i]]++;
+        int ans=m.size();
+    if(k>str.size()) {cout<<0; return 0;}
+    while(k)
+    {
+        int mn=m[str[0]]; char mc=str[0];
+        for(int i=0;i<str.size();i++){
+        if(m[str[i]]<mn) {mn=m[str[i]]; mc=str[i];}}
+        while(m[mc]!=0)
+        {
+            m[mc]--;
+            str.erase(str.find(mc),1);
+            k--;
+            if(k==0) break;
+        }
+        if(m[mc]==0) ans--;
+    }
+    cout<<ans<<endl;
+    cout<<str;
 }
 
