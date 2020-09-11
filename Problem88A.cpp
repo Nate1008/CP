@@ -74,18 +74,16 @@ int main() {
     FOR(12, i) {
         notes[note[i]] = i;
     }
-    int d1, d2, d3;
-    d1 = abs(min(notes[b] - notes[a], (notes[a]+12) - notes[b]));
-    d2 = abs(min(notes[c] - notes[b], (notes[b]+12) - notes[c]));
-    d3 = abs(min(notes[c] - notes[a], (notes[a]+12) - notes[c]));
-    cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\t"<<"D3: "<<d3<<"\n";
-    if((d1 == 4 && d2 == 3) || (d3 == 4 && d2 == 3) || (d2 == 4 && d1 == 3) || (d2 == 4 && d3 == 3)) {
+    int notei[] = {notes[a], notes[b], notes[c]};
+    sort(RALL(notei));
+    if(notei[2] - notei[1] == 3 && notei[1] - notei[0] == 4) {
         cout<<"major";
-    } else if ((d1 == 3 && d2 == 4) || (d1 == 3 && d3 == 4) || (d2 == 3 && d3 == 4)){
+    } else if(notei[2] - notei[1] == 4 && notei[1] - notei[0] == 3) {
         cout<<"minor";
     } else {
         cout<<"strange";
     }
+
     return 0;
 }
 
