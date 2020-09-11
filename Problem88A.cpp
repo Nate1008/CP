@@ -74,21 +74,14 @@ int main() {
     FOR(12, i) {
         notes[note[i]] = i;
     }
-    int d1, d2;
-    if(notes[a] < notes[b]) {
-        swap(a, b);
-    }
-    d1 = notes[b] - notes[a];
-    
-    if(notes[b] < notes[c]) {
-        swap(b, c);
-    }
-    d2 = notes[c] - notes[b];
-
+    int d1, d2, d3;
+    d1 = abs(min(notes[b] - notes[a], notes[b] - (notes[a]+12)));
+    d2 = abs(min(notes[c] - notes[b], notes[c] - (notes[b]+12)));
+    d3 = abs(min(notes[c] - notes[a], notes[c] - (notes[a]+12)));
     cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
-    if(d1 == 4 && d2 == 3) {
+    if((d1 == 4 && d2 == 3) && (d1 == 4 && d3 == 3) && (d3 == 4 && d2 == 3)) {
         cout<<"major";
-    } else if (d1 == 3 && d2 == 4){
+    } else if ((d1 == 3 && d2 == 4) && (d1 == 3 && d3 == 4) && (d2 == 3 && d3 == 4)){
         cout<<"minor";
     } else {
         cout<<"strange";
