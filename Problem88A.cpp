@@ -85,10 +85,10 @@ int main() {
     
     if(notes[b] > notes[c]) {
         swap(b, c);
-        d2 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+        d2 = min(notes[c] - notes[b], (notes[b]+12) - notes[c]);
         swap(b, c);
     } else {
-        d2 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+        d2 = min(notes[c] - notes[b], (notes[b]+12) - notes[c]);
     }
 
     cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
