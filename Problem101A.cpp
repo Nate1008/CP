@@ -77,6 +77,7 @@ int main() {
 	n = strlen(s);
 	for (i = 0; i < maxc; i++)
 		p[i].second = i;
+        vit[i] = false;
 	for (i = 0; i < n; i++)
 		p[s[i] - 'a'].first++;
 	sort(p, p + maxc);
@@ -84,7 +85,6 @@ int main() {
 		sum += p[i].first;
 		if (sum <= k) vit[p[i].second] = true;
 		else ret++;
-        cout<<ret<<'\n';
 	}
 	for (i = 0; i < n; i++)
 		if (!vit[s[i] - 'a']) s[cnt++] = s[i];
