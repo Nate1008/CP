@@ -69,12 +69,12 @@ int main() {
     int n = s.length();
     int m = 0;
     for(int i = 0; i < n; i++) {
-        for(int c = 1; c < ceil(n/2.0); c++) {
+        for(int c = 1; c < ceil(n/2.0)+1; c++) {
             string str = s.substr(i, c);
             string left = s.substr(i+1);
             int len = str.length();
             int v = left.find(str);
-            // cout<<str<<"\t"<<left<<'\t'<<v<<'\n';
+            cout<<str<<"\t"<<left<<'\t'<<v<<'\n';
             if(v != -1) {
                 m = max(m, len);
             }
