@@ -71,11 +71,31 @@ int main() {
     int n;
     cin >> str >> n;
     LOWER(str);
+    int len = str.length();
     FOR(n, i) {
         string sim;
         cin >> sim;
         LOWER(sim);
+        if(sim.length() != len) {
+            continue;
+        }
+        FOR(len, c) {
+            if(sim[c] == str[c]) {
+                continue;
+            } else {
+                if ((sim[c] == '0' || sim[c] == 'o') && (str[c] == '0' || str[c] == 'o')){
+                    continue;
+                }
+                else if ((sim[c] == '1' || sim[c] == 'l' || sim[c] == 'i') && (str[c] == '1' || str[c] == 'l' || str[c] == 'i')) {
+                    continue;
+                } else {
+                    cout<<"NO";
+                    return 0;
+                }
+            }
+        }
     }
+    cout<<"YES";
     return 0;
 }
 
