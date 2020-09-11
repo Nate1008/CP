@@ -67,9 +67,9 @@
 using namespace std;
 
 int main() {
-    char a, b, c;
+    string a, b, c;
     cin >> a >> b >> c;
-    char note[] = { 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'B', 'H' };
+    string note[] = { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H" };
     mc notes;
     return 0;
 }
