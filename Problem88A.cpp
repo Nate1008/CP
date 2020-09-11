@@ -78,7 +78,7 @@ int main() {
     notei.push_back(notes[a]);
     notei.push_back(notes[b]);
     notei.push_back(notes[c]);
-    sort(RALL(notei));
+    sort(ALL(notei));
     if(notei[2] - notei[1] == 3 && notei[1] - notei[0] == 4) {
         cout<<"major";
     } else if(notei[2] - notei[1] == 4 && notei[1] - notei[0] == 3) {
