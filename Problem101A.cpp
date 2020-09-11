@@ -67,6 +67,29 @@
 using namespace std;
 
 int main() {
+    int maxn = 100001;
+    int maxc = 26;
+    char s[maxn];
+    pair<int, int> p[maxc];
+    bool vit[maxc];
+    int n, k, i, sum = 0, cnt = 0, ret = 0;
+	scanf("%s %d", s, &k);
+	n = strlen(s);
+	for (i = 0; i < maxc; i++)
+		p[i].second = i;
+	for (i = 0; i < n; i++)
+		p[s[i] - 'a'].first++;
+	sort(p, p + maxc);
+	for (i = 0; i < maxc; i++) {
+		sum += p[i].first;
+		if (sum <= k) vit[p[i].second] = true;
+		else ret++;
+	}
+	for (i = 0; i < n; i++)
+		if (!vit[s[i] - 'a']) s[cnt++] = s[i];
+	s[cnt] = '\0';
+	printf("%d\n%s", ret, s);
+	return 0;
     return 0;
 }
 
