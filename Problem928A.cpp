@@ -79,20 +79,28 @@ int main() {
         if(sim.length() != len) {
             continue;
         }
+        bool pass = true;
         FOR(len, c) {
             if(sim[c] == str[c]) {
+                pass = false;
                 continue;
             } else {
                 if ((sim[c] == '0' || sim[c] == 'o') && (str[c] == '0' || str[c] == 'o')){
+                    pass = false;
                     continue;
                 }
                 else if ((sim[c] == '1' || sim[c] == 'l' || sim[c] == 'i') && (str[c] == '1' || str[c] == 'l' || str[c] == 'i')) {
+                    pass = false;
                     continue;
                 } else {
-                    cout<<"NO";
-                    return 0;
+                    pass = true;
+                    break;
                 }
             }
+        }
+        if(!pass) {
+            cout<<"NO";
+            return 0;
         }
     }
     cout<<"YES";
