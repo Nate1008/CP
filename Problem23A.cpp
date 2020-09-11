@@ -66,7 +66,7 @@ using namespace std;
 int main() {
     string s;
     cin >> s;
-    int n = s.length()/2;
+    int n = s.length();
     FOR(n, i) {
         FORN(n, c, i) {
             string str = s.substr(c, i);
