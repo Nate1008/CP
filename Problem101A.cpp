@@ -84,10 +84,11 @@ int main() {
 		sum += p[i].first;
 		if (sum <= k) vit[p[i].second] = true;
 		else ret++;
+        cout<<ret<<'\n';
 	}
 	for (i = 0; i < n; i++)
 		if (!vit[s[i] - 'a']) s[cnt++] = s[i];
-	s[0] = '\0';
+	s[cnt] = '\0';
 	printf("%d\n%s", ret, s);
 	return 0;
     return 0;
