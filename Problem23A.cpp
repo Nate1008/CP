@@ -70,7 +70,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         for(int c = i+1; c < n; c++) {
             string str = s.substr(i, c);
-            string left = s.substr(c+1);
+            string left = s.substr(c);
             cout<<str<<'\t'<<left<<'\n';
         }
     }
