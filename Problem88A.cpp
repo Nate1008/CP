@@ -74,8 +74,23 @@ int main() {
     FOR(12, i) {
         notes[note[i]] = i;
     }
-    int d1 = min(((notes[b] - notes[a])+12)%12, ((notes[a]+12) - notes[b]));
-    int d2 = min(((notes[c] - notes[b])+12)%12, ((notes[b]+12) - notes[c]));
+    int d1, d2;
+    if(notes[a] > notes[b]) {
+        swap(a, b);
+        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+        swap(a, b);
+    } else {
+        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+    }
+    
+    if(notes[b] > notes[c]) {
+        swap(b, c);
+        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+        swap(b, c);
+    } else {
+        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+    }
+    
     cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
     if(d1 == 4 && d2 == 3) {
         cout<<"major";
