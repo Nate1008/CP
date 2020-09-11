@@ -75,19 +75,15 @@ int main() {
         notes[note[i]] = i;
     }
     int d1, d2;
-    if(notes[a] > notes[b]) {
+    if(notes[a] < notes[b]) {
         swap(a, b);
-        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
-    } else {
-        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
     }
+    d1 = notes[b] - notes[a];
     
-    if(notes[b] > notes[c]) {
+    if(notes[b] < notes[c]) {
         swap(b, c);
-        d2 = min(notes[c] - notes[b], (notes[b]+12) - notes[c]);
-    } else {
-        d2 = min(notes[c] - notes[b], (notes[b]+12) - notes[c]);
     }
+    d2 = notes[c] - notes[b];
 
     cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
     if(d1 == 4 && d2 == 3) {
