@@ -76,7 +76,7 @@ int main() {
     }
     int d1 = ((notes[b] - notes[a])+12)%12;
     int d2 = ((notes[c] - notes[b])+12)%12;
-    cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
+    // cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
     if(d1 == 4 && d2 == 3) {
         cout<<"major";
     } else if (d1 == 3 && d2 == 4){
