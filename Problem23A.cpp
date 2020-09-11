@@ -67,12 +67,11 @@ int main() {
     string s;
     cin >> s;
     int n = s.length();
-    FOR(n, i) {
-        FORN(n, c, i) {
-            string str = s.substr(c, i+1);
-            string left = s.substr(c+1);
-            cout<<str<<"\n";
-            cout<<left<<"\n";
+    for(int i = 0; i < n; i++) {
+        for(int c = i+1; c < n; c++) {
+            string str = s.substr(i, c);
+            string left = s.substr(c);
+            cout<<str<<'\t'<<left<<'\n';
         }
     }
     return 0;
