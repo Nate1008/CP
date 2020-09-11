@@ -74,7 +74,10 @@ int main() {
     FOR(12, i) {
         notes[note[i]] = i;
     }
-    int notei[] = {notes[a], notes[b], notes[c]};
+    vi notei;
+    notei.push_back(notes[a]);
+    notei.push_back(notes[b]);
+    notei.push_back(notes[c]);
     sort(RALL(notei));
     if(notei[2] - notei[1] == 3 && notei[1] - notei[0] == 4) {
         cout<<"major";
