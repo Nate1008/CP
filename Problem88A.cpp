@@ -85,12 +85,12 @@ int main() {
     
     if(notes[b] > notes[c]) {
         swap(b, c);
-        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+        d2 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
         swap(b, c);
     } else {
-        d1 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
+        d2 = min(notes[b] - notes[a], (notes[a]+12) - notes[b]);
     }
-    
+
     cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
     if(d1 == 4 && d2 == 3) {
         cout<<"major";
