@@ -70,7 +70,7 @@ int main() {
     FOR(n, i) {
         FORN(n, c, i) {
             string str = s.substr(c, i+1);
-            string left = s.substr(i+1);
+            string left = s.substr(c+1);
             cout<<str<<"\n";
             cout<<left<<"\n";
         }
