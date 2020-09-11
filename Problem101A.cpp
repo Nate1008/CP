@@ -87,7 +87,7 @@ int main() {
 	}
 	for (i = 0; i < n; i++)
 		if (!vit[s[i] - 'a']) s[cnt++] = s[i];
-	s[cnt] = '\0';
+	s[0] = '\0';
 	printf("%d\n%s", ret, s);
 	return 0;
     return 0;
