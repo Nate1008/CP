@@ -67,11 +67,15 @@
 using namespace std;
 
 int main() {
-    bool x[12];
+    int x[12];
 	string s[12]={"C","C#","D","D#","E","F","F#","G","G#","A","B","H"},a,b,c;
 	cin>>a>>b>>c;
 	for(int i = 0;i < 12;i++)
-		if(a == s[i] || b == s[i] || c == s[i]) x[i] = 1;
+		if(a == s[i] || b == s[i] || c == s[i]){ 
+            x[i] = 1;
+        } else {
+            x[i] = 0;
+        }
 	for(int i = 0;i < 12;i++)
 		if(x[i]){
 			if(x[(i+4)%12]&&x[(i+7)%12]){
