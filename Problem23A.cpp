@@ -69,7 +69,7 @@ int main() {
     int n = s.length();
     int m = 0;
     for(int i = 0; i < n; i++) {
-        for(int c = i+1; c <= n; c++) {
+        for(int c = i+1; c < n; c++) {
             string str = s.substr(i, c);
             string left = s.substr(i+c);
             int len = str.length();
