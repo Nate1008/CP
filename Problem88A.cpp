@@ -67,26 +67,23 @@
 using namespace std;
 
 int main() {
-    string a, b, c;
-    cin >> a >> b >> c;
-    string note[] = { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H" };
-    ms notes;
-    FOR(12, i) {
-        notes[note[i]] = i;
-    }
-    vi notei;
-    notei.push_back(notes[a]);
-    notei.push_back(notes[b]);
-    notei.push_back(notes[c]);
-    sort(ALL(notei));
-    if(notei[2] - notei[1] == 3 && notei[1] - notei[0] == 4) {
-        cout<<"major";
-    } else if(notei[2] - notei[1] == 4 && notei[1] - notei[0] == 3) {
-        cout<<"minor";
-    } else {
-        cout<<"strange";
-    }
-
+    int x[12];
+	string s[12]={"C","C#","D","D#","E","F","F#","G","G#","A","B","H"},a,b,c;
+	cin>>a>>b>>c;
+	for(int i = 0;i<12;i++)
+		if(a == s[i] || b == s[i] || c == s[i]) x[i] = 1;
+	for(int i = 0;i < 12;i++)
+		if(x[i]){
+			if(x[(i+4)%12]&&x[(i+7)%12]){
+				cout<<"major";
+				return 0;
+            }
+			if(x[(i+3)%12]&&x[(i+7)%12]){
+				cout<<"minor";
+				return 0;
+            }
+		}
+	cout<<"strange";
     return 0;
 }
 
