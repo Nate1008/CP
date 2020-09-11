@@ -74,7 +74,7 @@ int main() {
     FOR(12, i) {
         notes[note[i]] = i;
     }
-    int d1 = min(notes[b] - notes[a], notes[b] - (notes[a]+12));
+    int d1 = min(notes[a] - notes[b], notes[a] - (notes[b]+12));
     int d2 = min(notes[c] - notes[b], notes[c] - (notes[b]+12));
     cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
     if(d1 == 4 && d2 == 3) {
