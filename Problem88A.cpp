@@ -78,7 +78,7 @@ int main() {
     d1 = abs(min(notes[b] - notes[a], notes[b] - (notes[a]+12)));
     d2 = abs(min(notes[c] - notes[b], notes[c] - (notes[b]+12)));
     d3 = abs(min(notes[c] - notes[a], notes[c] - (notes[a]+12)));
-    cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\n";
+    cout<<"D1: "<<d1<<"\t"<<"D2: "<<d2<<"\t"<<"D3: "<<d3<<'\n';
     if((d1 == 4 && d2 == 3) && (d1 == 4 && d3 == 3) && (d3 == 4 && d2 == 3)) {
         cout<<"major";
     } else if ((d1 == 3 && d2 == 4) && (d1 == 3 && d3 == 4) && (d2 == 3 && d3 == 4)){
