@@ -64,6 +64,17 @@
 using namespace std;
 
 int main() {
+    string s;
+    cin >> s;
+    int n = s.length()/2;
+    FOR(n, i) {
+        FORN(n, c, i) {
+            string str = s.substr(c, i);
+            string left = s.substr(i);
+            cout<<str<<"\n";
+            cout<<left<<"\n";
+        }
+    }
     return 0;
 }
 
