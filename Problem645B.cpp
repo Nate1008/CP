@@ -69,19 +69,19 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    
-    int c = n/2;
-    int s = min(c, k);
+    int h = n/2;
+    vi stalls(n);
     int ans = 0;
-    // c -= s;
-    // if(c < 0) {
-    //     c = 0;
-    // } 
-    for(int i = 0; i < s; i++) {
-        ans += (n-1);
-        n--;
+    FOR(n, i) {
+        stalls[i] = (i+1);
     }
-    cout<<ans;
+    int s = min(h, k);
+    RFORE(s-1, i){
+        ans += (stalls[n-i]-1);
+    }
+    ans += s;
+
+    
     return 0;
 }
 
