@@ -71,9 +71,7 @@ int main() {
     FOR(4, i) {
         char c;
         cin >> c;
-        if(c != 'X') {
-            a += c;
-        }
+        a += c;
     }
     int dif = 0;
     FOR(4, i) {
