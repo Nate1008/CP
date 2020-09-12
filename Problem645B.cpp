@@ -76,7 +76,7 @@ int main() {
         stalls[i] = (i+1);
     }
     int s = min(h, k);
-    RFORE(s-1, i){
+    RFOR(s, i){
         ans += (stalls[n-i]-1);
     }
     ans += s;
