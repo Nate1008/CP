@@ -76,8 +76,10 @@ int main() {
         stalls[i] = (i+1);
     }
     int s = min(h, k);
-    RFOR(s, i){
+    n--;
+    RFOR(s-1, i){
         ans += (stalls[n-i]-1);
+        ans += i;
     }
     ans += s;
     cout<<ans;
