@@ -70,6 +70,7 @@ int main() {
     int n, k;
     cin >> n >> k;
     int ans = ((n-2*k)*(n-2*k-1))/2;
+    cout<<ans;
     return 0;
 }
 
