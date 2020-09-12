@@ -73,12 +73,12 @@ int main() {
     string b = b1 + b2;
     a.erase(a.find('X'), 1);
     b.erase(b.find('X'), 1);
-    // int k = (a + a).find(b);
-    // if(k != -1) {
-    //     cout<<"YES";
-    // } else {
-    //     cout<<"NO";
-    // }
+    int k = (a + a).find(b);
+    if(k != -1) {
+        cout<<"YES";
+    } else {
+        cout<<"NO";
+    }
     return 0;
 }
 
