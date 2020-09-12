@@ -78,7 +78,7 @@ int main() {
         c = 0;
     } 
     RFOR(n-1, i) {
-        ans += (i-c)
+        ans += (i-c);
     }
     cout<<ans;
     return 0;
