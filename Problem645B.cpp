@@ -69,20 +69,7 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    int h = n/2;
-    vi stalls(n);
-    int ans = 0;
-    FOR(n, i) {
-        stalls[i] = (i+1);
-    }
-    int s = min(h, k);
-    n--;
-    RFORE(s-1, i){
-        ans += (stalls[n-i]-1);
-        ans += i;
-    }
-    ans += s;
-    cout<<ans;
+    int ans = ((n-2*k)*(n-2*k-1))/2;
     return 0;
 }
 
