@@ -67,6 +67,37 @@
 using namespace std;
 
 int main() {
+    string a, b;
+    FOR(4, i) {
+        char c;
+        cin >> c;
+        if(c != 'X') {
+            a += c;
+        }
+    }
+    FOR(4, i) {
+        char c;
+        cin >> c;
+        if (c != 'X'){
+            b += c;
+        }
+    }
+    FOR(3, i) {
+        bool pass = false;
+        FOR(3, c) {
+            if (b[(i+c)%3] != a[c]) {
+                pass = false;
+                break;
+            } else {
+                pass = true;
+            }
+        }
+        if(pass) {
+            cout<<"YES";
+            return 0;
+        }
+    }
+    cout<<"NO";
     return 0;
 }
 
