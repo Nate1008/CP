@@ -85,6 +85,7 @@ int main() {
     FOR(3, i) {
         bool pass = false;
         FOR(3, c) {
+            cout<<b[(i+c)%3]<<a[c];
             if (b[(i+c)%3] != a[c]) {
                 pass = false;
                 break;
