@@ -74,6 +74,7 @@ int main() {
     a.erase(a.find('X'), 1);
     b.erase(b.find('X'), 1);
     int k = (a + a).find(b);
+    cout << k << '\n';
     if(k != -1) {
         cout<<"YES";
     } else {
