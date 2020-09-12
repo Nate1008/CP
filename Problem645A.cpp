@@ -76,14 +76,12 @@ int main() {
         }
     }
     int dif = 0;
-    int k = 0;
     FOR(4, i) {
         char c;
         cin >> c;
         if (c != 'X'){
-            if(c != a[k]) {
+            if(c != a[i]) {
                 dif++;
-                k++;
             }
         }
     }
