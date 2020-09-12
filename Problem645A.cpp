@@ -78,7 +78,7 @@ int main() {
         char c;
         cin >> c;
         if (c != 'X'){
-            cout<<c<<'\t'<<a[i]<<'\n';
+            // cout<<c<<'\t'<<a[i]<<'\n';
             if(c != a[i]) {
                 dif++;
             }
