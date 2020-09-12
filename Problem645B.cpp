@@ -69,7 +69,7 @@ using namespace std;
 int main() {
     int n, k;
     cin >> n >> k;
-    int h = ceil(n/2.0);
+    
     int c = n/2;
     int s = min(c, k);
     int ans = 0;
@@ -77,8 +77,8 @@ int main() {
     if(c < 0) {
         c = 0;
     } 
-    RFOR(n, i) {
-        ans += (i-c);
+    RFOR(n-1, i) {
+        ans += (i-c)
     }
     cout<<ans;
     return 0;
