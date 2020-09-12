@@ -67,7 +67,7 @@
 using namespace std;
 
 int main() {
-    string a, b;
+    string a;
     FOR(4, i) {
         char c;
         cin >> c;
@@ -75,30 +75,38 @@ int main() {
             a += c;
         }
     }
+    int dif = 0;
     FOR(4, i) {
         char c;
         cin >> c;
         if (c != 'X'){
-            b += c;
-        }
-    }
-    FOR(3, i) {
-        bool pass = false;
-        FOR(3, c) {
-            cout<<b[(i+c)%3]<<"\t"<<a[c]<<"\n";
-            if (b[(i+c)%3] != a[c]) {
-                pass = false;
-                break;
-            } else {
-                pass = true;
+            if(c != a[i]) {
+                dif++;
             }
         }
-        if(pass) {
-            cout<<"YES";
-            return 0;
-        }
     }
-    cout<<"NO";
+    if(dif >= 2) {
+        cout<<"NO";
+    } else {
+        cout<<"YES";
+    }
+    // FOR(3, i) {
+    //     bool pass = false;
+    //     FOR(3, c) {
+    //         cout<<b[(i+c)%3]<<"\t"<<a[c]<<"\n";
+    //         if (b[(i+c)%3] != a[c]) {
+    //             pass = false;
+    //             break;
+    //         } else {
+    //             pass = true;
+    //         }
+    //     }
+    //     if(pass) {
+    //         cout<<"YES";
+    //         return 0;
+    //     }
+    // }
+    // cout<<"NO";
     return 0;
 }
 
