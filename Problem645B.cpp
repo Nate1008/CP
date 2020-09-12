@@ -67,10 +67,11 @@
 using namespace std;
 
 int main() {
-    int n, k;
+    ll n, k;
     cin >> n >> k;
-    int ans = ((n-2*k)*(n-2*(k-1)))/2;
-    cout<<ans;
+    ll c = max(n-2*k,0LL);
+	ll a = n*(n-1)/2-c*(c-1)/2;
+    cout<<a;
     return 0;
 }
 
