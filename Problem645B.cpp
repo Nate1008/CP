@@ -73,12 +73,13 @@ int main() {
     int c = n/2;
     int s = min(c, k);
     int ans = 0;
-    c -= s;
-    if(c < 0) {
-        c = 0;
-    } 
-    RFOR(n-1, i) {
-        ans += (i-c);
+    // c -= s;
+    // if(c < 0) {
+    //     c = 0;
+    // } 
+    for(int i = 0; i < s; i++) {
+        ans += (n-1);
+        n--;
     }
     cout<<ans;
     return 0;
