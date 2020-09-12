@@ -71,8 +71,8 @@ int main() {
     cin >> a1 >> a2 >> b1 >> b2;
     string a = a1 + a2;
     string b = b1 + b2;
-    a.erase('X', 1);
-    b.erase('X', 1);
+    a.erase(a.find('X'), 1);
+    b.erase(b.find('X'), 1);
     // int k = (a + a).find(b);
     // if(k != -1) {
     //     cout<<"YES";
