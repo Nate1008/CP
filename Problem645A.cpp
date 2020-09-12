@@ -85,6 +85,7 @@ int main() {
             }
         }
     }
+    cout<<dif<<'\n';
     if(dif >= 2) {
         cout<<"NO";
     } else {
