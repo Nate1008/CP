@@ -80,8 +80,7 @@ int main() {
         ans += (stalls[n-i]-1);
     }
     ans += s;
-
-    
+    cout<<ans;
     return 0;
 }
 
