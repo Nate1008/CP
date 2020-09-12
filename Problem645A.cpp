@@ -67,46 +67,18 @@
 using namespace std;
 
 int main() {
-    string a;
-    FOR(4, i) {
-        char c;
-        cin >> c;
-        a += c;
-    }
-    int dif = 0;
-    FOR(4, i) {
-        char c;
-        cin >> c;
-        if (c != 'X'){
-            // cout<<c<<'\t'<<a[i]<<'\n';
-            if(c != a[i]) {
-                dif++;
-            }
-        }
-    }
-    cout<<dif<<'\n';
-    if(dif >= 2) {
-        cout<<"NO";
-    } else {
+    string a1, a2, b1, b2;
+    cin >> a1 >> a2 >> b1 >> b2;
+    string a = a1 + a2;
+    string b = b1 + b2;
+    a.erase('X', 1);
+    b.erase('X', 1);
+    int k = (a + a).find(b);
+    if(k != -1) {
         cout<<"YES";
+    } else {
+        cout<<"NO";
     }
-    // FOR(3, i) {
-    //     bool pass = false;
-    //     FOR(3, c) {
-    //         cout<<b[(i+c)%3]<<"\t"<<a[c]<<"\n";
-    //         if (b[(i+c)%3] != a[c]) {
-    //             pass = false;
-    //             break;
-    //         } else {
-    //             pass = true;
-    //         }
-    //     }
-    //     if(pass) {
-    //         cout<<"YES";
-    //         return 0;
-    //     }
-    // }
-    // cout<<"NO";
     return 0;
 }
 
