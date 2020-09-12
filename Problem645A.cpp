@@ -81,7 +81,7 @@ int main() {
         char c;
         cin >> c;
         if (c != 'X'){
-            if(c != a[k]]) {
+            if(c != a[k]) {
                 dif++;
                 k++;
             }
