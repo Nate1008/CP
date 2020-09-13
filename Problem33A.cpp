@@ -71,7 +71,7 @@ int main() {
     mi res;
     int n, m, k;
     cin >> n >> m >> k;
-    FOR(m, i) {
+    FOR(m+1, i) {
         res[i] = INT_MAX;
     }
     FOR(n, i) {
