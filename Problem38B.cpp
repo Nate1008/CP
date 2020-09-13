@@ -81,10 +81,14 @@ int main() {
         ans += 2;
     }
     cout<<kx<<"\t"<<ky<<"\n";
-    if(kx == 1 || kx == 8) {
-        ans += 2;
-    }
-    if(ky == 1 || ky == 8) {
+    // if(kx == 1 || kx == 8) {
+    //     ans += 2;
+    // }
+    // if(ky == 1 || ky == 8) {
+    //     ans += 2;
+    // }
+
+    if(kx == 1 || kx == 8 || ky == 1 || ky == 8) {
         ans += 2;
     }
     if(rx <= 2 || rx >= 7) {
