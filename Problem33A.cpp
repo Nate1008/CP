@@ -74,7 +74,9 @@ int main() {
     FOR(n, i) {
         int r, c;
         cin >> r >> c;
-        res[r] = INT_MAX;
+        if(res[r] == 0) {
+            res[r] = INT_MAX;
+        }
         res[r] = min(res[r], c);
     }
     int sum = 0;
