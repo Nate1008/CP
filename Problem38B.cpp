@@ -79,6 +79,7 @@ int main() {
     if(ky <= 2 || ky >= 7) {
         ans -= 2;
     }
+    cout<<ans;
     return 0;
 }
 
