@@ -76,7 +76,7 @@ int main() {
         cin >> nums[i];
     }
 
-    int avg;
+    int avg = 0;
     FOR(n, i) {
         avg += nums[i];
     }
