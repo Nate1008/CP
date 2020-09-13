@@ -75,29 +75,23 @@ int main() {
     kx = (k - 'a')+1;
     rx = (k - 'a')+1;
     if(kx <= 2 || kx >= 7) {
-        ans -= 2;
+        ans += 2;
     }
     if(ky <= 2 || ky >= 7) {
-        ans -= 2;
+        ans += 2;
     }
     cout<<kx<<"\t"<<ky<<"\n";
-    if(kx == 1 || kx == 8) {
-        ans -= 2;
-    }
-    if(ky == 1 || ky == 8) {
-        ans -= 2;
+    if(kx == 1 || kx == 8 || ky == 1 || ky == 8) {
+        ans += 2;
     }
     if(rx <= 2 || rx >= 7) {
-        ans -= 2;
+        ans += 2;
     }
     if(ry <= 2 || ry >= 7) {
-        ans -= 2;
+        ans += 2;
     }
     cout<<kx<<"\t"<<ky<<"\n";
-    if(rx == 1 || rx == 8) {
-        ans -= 2;
-    }
-    if(ry == 1 || ry == 8) {
+    if(rx == 1 || rx == 8 || ry == 1 || ry == 8) {
         ans += 2;
     }
     cout<<ans;
