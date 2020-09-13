@@ -68,6 +68,26 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    vi nums(n);
+    vi mean;
+    FOR(n, i) {
+        cin >> nums[i];
+    }
+
+    int avg;
+    FOR(n, i) {
+        avg += nums[i];
+    }
+    avg /= n;
+    int k = count(ALL(nums), avg);
+    cout<<k<<"\n";
+    FOR(n, i) {
+        if(nums[i] == avg) {
+            cout<<i<<" ";
+        }
+    }
     return 0;
 }
 
