@@ -13,7 +13,6 @@
 #include <numeric>
 #include <iterator>
 #include <functional>
-#include <math.h>
 
 #include <cstdio>
 #include <cassert>
@@ -71,7 +70,7 @@ int main() {
     TC {
         int n;
         cin >> n;
-        int ans = 4*n/(__gcd(n+1,4*n))+1;
+        int ans = 4*n/__gcd(n+1,4*n)+1;
         cout<<ans<<'\n';
     }
     return 0;
