@@ -70,7 +70,7 @@ int main() {
     TC {
         int n;
         cin >> n;
-        int ans = __gcd(n+1,4*n);
+        int ans = gcd(n+1,4*n);
         ans = 4*n/ans+1;
         cout<<ans<<'\n';
     }
