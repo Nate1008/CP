@@ -79,7 +79,7 @@ int main() {
     int sum = 0;
     FOREN(m, i, 1) {
         sum += res[i];
-        cout<<sum<<'\n';
+        cout<<res[i]<<'\n';
     }
     int ans = min(sum, k);
     cout<<ans;
