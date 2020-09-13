@@ -81,6 +81,7 @@ int main() {
         avg += nums[i];
     }
     avg /= n;
+    cout<<avg<<"\n";
     int k = count(ALL(nums), avg);
     cout<<k<<"\n";
     FOR(n, i) {
