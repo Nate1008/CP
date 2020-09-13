@@ -71,7 +71,7 @@ int main() {
     int n;
     cin >> n;
     int k = find(sect+10, sect, n)-sect;
-    cout<<<k;
+    cout<<k;
     return 0;
 }
 
