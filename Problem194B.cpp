@@ -70,8 +70,7 @@ int main() {
     TC {
         int n;
         cin >> n;
-        int ans = lcm<int, int>(n+1, 4*n);
-        ans = (ans/n+1)+1;
+        int ans = 1+(4*n)/__gcd(4*n,n+1);
         cout<<ans<<'\n';
     }
     return 0;
