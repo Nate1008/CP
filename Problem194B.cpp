@@ -70,9 +70,13 @@ int main() {
     TC {
         int n;
         cin >> n;
-        int ans = gcd(n+1,4*n);
-        ans = 4*n/ans+1;
-        cout<<ans<<'\n';
+        if(n%4==1)
+			cout<<2*n+1;
+		else if(n%4==3)
+			cout<<n+1;
+		else
+			cout<<4*n+1;
+		puts("");
     }
     return 0;
 }
