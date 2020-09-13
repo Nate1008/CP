@@ -94,11 +94,8 @@ int main() {
         ans += 2;
     }
     cout<<kx<<"\t"<<ky<<"\n";
-    if(rx == 1 || rx == 8) {
-        ans += 1;
-    }
-    if(ry == 1 || ry == 8) {
-        ans += 1;
+    if(rx == 1 || rx == 8 || ry == 1 || ry == 8) {
+        ans += 2;
     }
     cout<<ans;
     return 0;
