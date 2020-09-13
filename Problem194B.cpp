@@ -70,7 +70,7 @@ int main() {
     TC {
         int n;
         cin >> n;
-        int ans = 1+(4*n)/__gcd(4*n,n+1);
+        int ans = 1+(4*n)/gcd(4*n,n+1);
         cout<<ans<<'\n';
     }
     return 0;
