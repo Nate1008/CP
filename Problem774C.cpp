@@ -85,10 +85,10 @@ int main() {
         if(n > sect[i].S) {
             string pass;
             int c = 0;
-            FOR(4, i) {
-                if(n == sect[i].S) {
-                    c = i;
-                    pass += sect[i].F;
+            FOR(4, v) {
+                if(n == sect[v].S) {
+                    c = v;
+                    pass += sect[v].F;
                 }
             }
             s += sect[i].F;
