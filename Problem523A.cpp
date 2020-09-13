@@ -68,6 +68,20 @@
 using namespace std;
 
 int main() {
+    int n, m;
+    cin >> n >> m;
+    vt<string> row(m);
+    FOR(m, i) {
+        cin >> row[i];
+    }
+
+    FOR(n, i) {
+        FOR(2, v) {
+            FOR(m, c) {
+                cout<<row[c][i]<<row[c][i];
+            }
+        }
+    }
     return 0;
 }
 
