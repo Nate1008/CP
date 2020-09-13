@@ -67,10 +67,10 @@
 using namespace std;
 
 int main() {
-    int sect[] = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
+    vi sect = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
     int n;
     cin >> n;
-    int k = find(sect+10, sect, n)-10;
+    int k = find(RALL(sect), n)-RB(sect);
     cout<<k;
     return 0;
 }
