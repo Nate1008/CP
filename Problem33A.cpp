@@ -72,17 +72,17 @@ int main() {
     int n, m, k;
     cin >> n >> m >> k;
     FOR(n, i) {
+        res[i] = INT_MAX;
+    }
+    FOR(n, i) {
         int r, c;
         cin >> r >> c;
-        if(res[r] == 0) {
-            res[r] = INT_MAX;
-        }
         res[r] = min(res[r], c);
     }
     int sum = 0;
     FOREN(m, i, 1) {
         sum += res[i];
-        cout<<res[i]<<'\n';
+        // cout<<res[i]<<'\n';
     }
     int ans = min(sum, k);
     cout<<ans;
