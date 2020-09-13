@@ -68,6 +68,17 @@
 using namespace std;
 
 int main() {
+    char r, k;
+    int ry, ky, kx;
+    cin >> r >> ry >> k >> ky;
+    int ans = 64 - 15;
+    kx = k - 'a';
+    if(kx <= 2 || kx >= 7) {
+        ans -= 2;
+    }
+    if(ky <= 2 || ky >= 7) {
+        ans -= 2;
+    }
     return 0;
 }
 
