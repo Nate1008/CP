@@ -71,15 +71,16 @@ int main() {
     char r, k;
     int rx, ry, ky, kx;
     cin >> r >> ry >> k >> ky;
-    int ans = 64;
+    int ans = 0;
     kx = k - 'a';
     rx = r - 'a';
     ry -= 1;
     ky -= 1;
     FOR(8, i) {
         FOR(8, c) {
-            if((i == rx && c == ry) || (i == kx && c == ky) || (abs((i-rx)*(c-ry))==2) || (abs((i-kx)*(c-ky))==2)) {
-                ans--;
+            if((i == rx && c == ry) || (i == kx && c == ky) || (abs((i-rx)*(c-ry))==2) || (abs((i-kx)*(c-ky))==2))
+            else {
+                ans++;
             }
         }
     }
