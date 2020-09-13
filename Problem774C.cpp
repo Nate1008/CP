@@ -69,19 +69,19 @@ using namespace std;
 
 int main() {
     vt<ps> sect;
-    sect.push_back(ps("8", 7));
-    // sect.push_back(ps("9", 6));
-    sect.push_back(ps("5", 5));
-    // sect.push_back(ps("4", 4));
-    sect.push_back(ps("7", 3));
     sect.push_back(ps("1", 2));
+    sect.push_back(ps("7", 3));
+    // sect.push_back(ps("4", 4));
+    sect.push_back(ps("5", 5));
+    // sect.push_back(ps("9", 6));
+    sect.push_back(ps("8", 7));
 
     int n;
     cin >> n;
     string s;
     int i = 0;
     while(n > 0) {
-        cout<<i<<"\n";
+        // cout<<i<<"\n";
         if(n >= sect[i].S) {
             n -= sect[i].S;
             s += sect[i].F;
