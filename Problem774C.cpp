@@ -82,28 +82,18 @@ int main() {
     int i = 0;
     while(n > 0) {
         // cout<<i<<"\n";
-        if(n > sect[i].S) {
-            string pass;
-            int c = 0;
-            FOR(4, v) {
-                if(n == sect[v].S) {
-                    c = v;
-                    pass += sect[v].F;
-                }
-            }
-            s += sect[i].F;
-            if(s > pass) {
-                n -= sect[i].S;
-            } else {
-                s = pass;
-                n -= sect[c].S;
+        if(n % sect[i].S == 0) {
+            int k = n / sect[i].S;
+            FOR(k, c) {
+                s += sect[i].F;
+                n -= sect[i].S*k;
             }
         } else {
             i++;
         }
     }
 
-    std::cout<<s;
+    cout<<s;
     return 0;
 }
 
