@@ -68,22 +68,24 @@
 using namespace std;
 
 int main() {
-    vpi sect;
-    sect.push_back(ps(6, 9));
-    sect.push_back(pi(7, 8));
-    sect.push_back(pi(3, 7));
-    sect.push_back(pi(5, 5));
-    sect.push_back(pi(4, 4));
-    sect.push_back(pi(2, 1));
+    vt<ps> sect;
+    sect.push_back(ps("9", 6));
+    sect.push_back(ps("8", 7));
+    sect.push_back(ps("7", 3));
+    sect.push_back(ps("5", 5));
+    sect.push_back(ps("4", 4));
+    sect.push_back(ps("1", 2));
 
     int n;
     cin >> n;
     string s;
     int i = 0;
     while(n > 0) {
-        if(n > sect[i].F) {
-            n -= sect[i].F;
-
+        if(n >= sect[i].S) {
+            n -= sect[i].S;
+            s += sect[i].F;
+        } else {
+            i++;
         }
     }
     return 0;
