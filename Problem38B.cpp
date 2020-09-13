@@ -82,10 +82,10 @@ int main() {
     }
     cout<<kx<<"\t"<<ky<<"\n";
     if(kx == 1 || kx == 8) {
-        ans += 1;
+        ans += 2;
     }
     if(ky == 1 || ky == 8) {
-        ans += 1;
+        ans += 2;
     }
     if(rx <= 2 || rx >= 7) {
         ans += 2;
@@ -95,10 +95,10 @@ int main() {
     }
     cout<<kx<<"\t"<<ky<<"\n";
     if(rx == 1 || rx == 8) {
-        ans += 1;
+        ans += 2;
     }
     if(ry == 1 || ry == 8) {
-        ans += 1;
+        ans += 2;
     }
     cout<<ans;
     return 0;
