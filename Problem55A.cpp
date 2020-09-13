@@ -68,6 +68,20 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    set<int> uni;
+    int sum = 0;
+    FOR(10000, i) {
+        sum += (i%n);
+        sum %= n;
+        uni.insert(sum);
+    }
+    if(uni.size() == n) {
+        cout<<"YES";
+    } else {
+        cout<<"NO";
+    }
     return 0;
 }
 
