@@ -71,7 +71,7 @@ int main() {
     char r, k;
     int ry, ky, kx;
     cin >> r >> ry >> k >> ky;
-    int ans = 64 - 15;
+    int ans = 64 - 16;
     kx = k - 'a';
     if(kx <= 2 || kx >= 7) {
         ans -= 2;
