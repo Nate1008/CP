@@ -25,6 +25,7 @@
 #define ll long long
 #define pi pair<int, int>
 #define pf pair<float, int>
+#define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>

@@ -25,6 +25,7 @@
 #define ll long long
 #define pi pair<int, int>
 #define pf pair<float, int>
+#define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>
@@ -67,13 +68,22 @@
 using namespace std;
 
 int main() {
-    int sect[] = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
+    vpi sect;
+    sect.push_back(ps(6, 9));
+    sect.push_back(pi(7, 8));
+    sect.push_back(pi(3, 7));
+    sect.push_back(pi(5, 5));
+    sect.push_back(pi(4, 4));
+    sect.push_back(pi(2, 1));
+
     int n;
     cin >> n;
-    
-    RFORE(9, i) {
-        if(sect[i] == n) {
-            cout<<i;
+    string s;
+    int i = 0;
+    while(n > 0) {
+        if(n > sect[i].F) {
+            n -= sect[i].F;
+
         }
     }
     return 0;
