@@ -78,8 +78,8 @@ int main() {
     ky -= 1;
     FOR(8, i) {
         FOR(8, c) {
-            if((i == rx && c == ry) || (i == kx && c == ky) || (abs((i-rx)*(c-ry))==2) || (abs((i-kx)*(c-ky))==2)) {
-                
+            if((i == rx || c == ry) || (i == kx && c == ky) || (abs((i-rx)*(c-ry))==2) || (abs((i-kx)*(c-ky))==2)) {
+
             }
             else {
                 ans++;
