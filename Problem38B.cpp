@@ -71,35 +71,17 @@ int main() {
     char r, k;
     int rx, ry, ky, kx;
     cin >> r >> ry >> k >> ky;
-    int ans = 64 - 32;
-    kx = (k - 'a')+1;
-    rx = (r - 'a')+1;
-    if(kx <= 2 || kx >= 7) {
-        ans += 2;
-    }
-    if(ky <= 2 || ky >= 7) {
-        ans += 2;
-    }
-    cout<<kx<<"\t"<<ky<<"\n";
-    if(kx == 1 || kx == 8) {
-        ans += 2;
-    }
-    if(ky == 1 || ky == 8) {
-        ans += 2;
-    }
-
-    // if(kx == 1 || kx == 8 || ky == 1 || ky == 8) {
-    //     ans += 2;
-    // }
-    if(rx <= 2 || rx >= 7) {
-        ans += 2;
-    }
-    if(ry <= 2 || ry >= 7) {
-        ans += 2;
-    }
-    cout<<kx<<"\t"<<ky<<"\n";
-    if(rx == 1 || rx == 8 || ry == 1 || ry == 8) {
-        ans += 2;
+    int ans = 64;
+    kx = k - 'a';
+    rx = r - 'a';
+    ry -= 1;
+    ky -= 1;
+    FOR(8, i) {
+        FOR(8, c) {
+            if((i == rx && c == ry) || (i == kx && c == ky) || (abs((i-rx)*(c-ry))==2) || (abs((i-kx)*(c-ky))==2)) {
+                ans--;
+            }
+        }
     }
     cout<<ans;
     return 0;
