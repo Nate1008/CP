@@ -71,23 +71,22 @@ int main() {
     int n;
     cin >> n;
     vi nums(n);
-    vi mean;
+    vi mean(n);
+    ll avg = 0; 
     FOR(n, i) {
         cin >> nums[i];
-    }
-
-    int avg = 0;
-    FOR(n, i) {
         avg += nums[i];
     }
-    avg /= n;
-    // cout<<avg<<"\n";
-    int k = count(ALL(nums), avg);
-    cout<<k<<"\n";
+    int k = 0;
     FOR(n, i) {
-        if(nums[i] == avg) {
-            cout<<(i+1)<<" ";
+		if (nums[i]*(n-1)==avg-nums[i]){
+            mean[k]=i+1; 
+            k++;
         }
+    }
+    cout<<k<<"\n";
+    FOR(k, i) {
+        cout<<mean[i]<<" ";
     }
     return 0;
 }
