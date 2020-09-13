@@ -67,6 +67,12 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n;
+        cin >> n;
+        int ans = (lcm(n+1, 4*n)/n+1)+1;
+        cout<<ans<'\n';
+    }
     return 0;
 }
 
