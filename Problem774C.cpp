@@ -88,6 +88,7 @@ int main() {
             i++;
         }
     }
+    cout<<s;
     return 0;
 }
 
