@@ -80,6 +80,7 @@ int main() {
             FOR(m, c) {
                 cout<<row[c][i]<<row[c][i];
             }
+            cout<<"\n";
         }
     }
     return 0;
