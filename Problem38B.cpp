@@ -71,7 +71,7 @@ int main() {
     char r, k;
     int rx, ry, ky, kx;
     cin >> r >> ry >> k >> ky;
-    int ans = 64 - 24;
+    int ans = 64 - 32;
     kx = (k - 'a')+1;
     rx = (k - 'a')+1;
     if(kx <= 2 || kx >= 7) {
@@ -88,17 +88,17 @@ int main() {
         ans += 2;
     }
     if(rx <= 2 || rx >= 7) {
-        ans -= 2;
+        ans += 2;
     }
     if(ry <= 2 || ry >= 7) {
-        ans -= 2;
+        ans += 2;
     }
     cout<<kx<<"\t"<<ky<<"\n";
     if(rx == 1 || rx == 8) {
-        ans -= 2;
+        ans += 2;
     }
     if(ry == 1 || ry == 8) {
-        ans -= 2;
+        ans += 2;
     }
     cout<<ans;
     return 0;
