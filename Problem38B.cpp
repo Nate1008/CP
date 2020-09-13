@@ -95,10 +95,10 @@ int main() {
     }
     cout<<kx<<"\t"<<ky<<"\n";
     if(rx == 1 || rx == 8) {
-        ans += 2;
+        ans += 1;
     }
     if(ry == 1 || ry == 8) {
-        ans += 2;
+        ans += 1;
     }
     cout<<ans;
     return 0;
