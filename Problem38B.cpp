@@ -80,7 +80,7 @@ int main() {
     if(ky <= 2 || ky >= 7) {
         ans += 2;
     }
-    cout<<kx<<"\t"<<ky<<"\n";
+    // cout<<kx<<"\t"<<ky<<"\n";
     if(kx == 1 || kx == 8 || ky == 1 || ky == 8) {
         ans += 2;
     }
@@ -90,7 +90,7 @@ int main() {
     if(ry <= 2 || ry >= 7) {
         ans += 2;
     }
-    cout<<kx<<"\t"<<ky<<"\n";
+    // cout<<kx<<"\t"<<ky<<"\n";
     if(rx == 1 || rx == 8 || ry == 1 || ry == 8) {
         ans += 2;
     }
