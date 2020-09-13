@@ -81,12 +81,12 @@ int main() {
         avg += nums[i];
     }
     avg /= n;
-    cout<<avg<<"\n";
+    // cout<<avg<<"\n";
     int k = count(ALL(nums), avg);
     cout<<k<<"\n";
     FOR(n, i) {
         if(nums[i] == avg) {
-            cout<<i<<" ";
+            cout<<(i+1)<<" ";
         }
     }
     return 0;
