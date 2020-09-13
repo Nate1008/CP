@@ -88,17 +88,17 @@ int main() {
         ans += 1;
     }
     if(rx <= 2 || rx >= 7) {
-        ans += 2;
+        ans -= 2;
     }
     if(ry <= 2 || ry >= 7) {
-        ans += 2;
+        ans -= 2;
     }
     cout<<kx<<"\t"<<ky<<"\n";
     if(rx == 1 || rx == 8) {
-        ans += 1;
+        ans -= 1;
     }
     if(ry == 1 || ry == 8) {
-        ans += 1;
+        ans -= 1;
     }
     cout<<ans;
     return 0;
