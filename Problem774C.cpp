@@ -70,8 +70,12 @@ int main() {
     vi sect = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
     int n;
     cin >> n;
-    int k = find(RALL(sect), n)-RB(sect);
-    cout<<k;
+    
+    RFORE(9, i) {
+        if(sect[i] == n) {
+            cout<<i;
+        }
+    }
     return 0;
 }
 
