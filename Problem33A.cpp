@@ -68,21 +68,21 @@
 using namespace std;
 
 int main() {
+    mi res;
     int n, m, k;
     cin >> n >> m >> k;
-    vi res(m);
-    FOR(n, i) {
+    FOR(m, i) {
         res[i] = INT_MAX;
     }
     FOR(n, i) {
         int r, c;
         cin >> r >> c;
-        res[r-1] = min(res[r-1], c);
+        res[r] = min(res[r], c);
     }
     int sum = 0;
-    FOR(m, i) {
+    FOREN(m, i, 1) {
         sum += res[i];
-        // cout<<i<<'\n';
+        cout<<i<<'\n';
     }
     int ans = min(sum, k);
     cout<<ans;
