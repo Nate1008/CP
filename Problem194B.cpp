@@ -13,6 +13,7 @@
 #include <numeric>
 #include <iterator>
 #include <functional>
+#include <math.h>
 
 #include <cstdio>
 #include <cassert>
