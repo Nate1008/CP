@@ -71,19 +71,16 @@ int main() {
     TC {
         int n, k;
         cin >> n >> k;
-        int ans = n - k;
-        if(ans < 0) {
-            ans = abs(ans);
+        if(k > n) {
+            cout<<k-n<<'\n';
         } else {
-            ans = 0;
-            if (ans + n % 2 == 1) {
-                ans = 1;
+            int ans = n - k;
+            if(ans % 2 == 0){
+                cout<<0<<"\n";
+            } else {
+                cout<<1<<"\n";
             }
         }
-        
-
-        
-        cout<<ans<<"\n";
     }
     return 0;
 }
