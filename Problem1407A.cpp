@@ -68,21 +68,6 @@
 using namespace std;
 
 int main() {
-    TC {
-        int n;
-        vi a, b;
-        FOR(n, i) {
-            int c;
-            cin >> c;
-            int k = count(ALL(a), c);
-            if(k % 2 == 0) {
-                a.push_back(c);
-            } else {
-
-            }
-            
-        }
-    }
     return 0;
 }
 
