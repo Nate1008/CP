@@ -83,7 +83,7 @@ int main() {
         int c = k/d;
         cout<<"C: "<<c<<" D: "<<d<<"\n";
         FOR(d, i) {
-            if(s > c) {
+            if(s > 0) {
                 s -= c;
             } else {
                 break;
