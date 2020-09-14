@@ -83,7 +83,7 @@ int main() {
                 pass = false;
             }
         }
-        if(digits == s) {
+        if(digits <= s) {
             cout<<0<<"\n";
             continue;
         }
