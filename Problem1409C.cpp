@@ -72,9 +72,26 @@ int main() {
         int n, x, y;
         cin >> n >> x >> y;
         int k = y - x;
+        int d = n - 1;
+        int s = x;
+        FOR(d-1, i) {
+            if(k % d == 0) {
+                break;
+            }
+            d--;
+        }
+        int c = k/d;
+        FOR(d, i) {
+            if(s > c) {
+                s -= c;
+            } else {
+                break;
+            }
+        }
+
         FOR(n, i) {
-            cout << x << " ";
-            x += k;
+            cout<<s<<" ";
+            s += c;
         }
         cout << "\n";
     }
