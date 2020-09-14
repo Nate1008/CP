@@ -68,6 +68,37 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n;
+        cin >> n;
+        vi arr(n);
+        FOR(n, i) {
+            cin >> arr[i];
+        }
+        int o = count(ALL(arr), 1);
+        int z = count(ALL(arr), 0);
+        if(z >= n/2) {
+            if(z % 2 == 1) {
+                z--;
+            }
+            cout<<z<<'\n';
+            FOR(z, i) {
+                cout<<0<<" ";
+            }
+            cout<<"\n";
+        } else if (o > n / 2) {
+            if (o % 2 == 1)
+            {
+                o--;
+            }
+            cout << o << '\n';
+            FOR(z, i)
+            {
+                cout << 1 << " ";
+            }
+            cout << "\n";
+        }
+    }
     return 0;
 }
 
