@@ -77,7 +77,7 @@ int main() {
         }
         sort(ALL(arr));
         FOR(n-1, i) {
-            int k = arr[i] - arr[i+1];
+            int k = arr[i+1] - arr[i];
             if(k > 1) {
                 cout<<"N0";
                 return 0;
