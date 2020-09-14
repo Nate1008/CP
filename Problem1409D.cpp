@@ -73,8 +73,6 @@ int main() {
         int s;
         cin >> n >> s;
         int l = n.length();
-        ll over = pow(10, l);
-        ll extra = over - stoll(n);
         int digits = 0;
         int dig = l+1;
         FOR(l, i) {
@@ -84,6 +82,12 @@ int main() {
                 break;
             }
         }
+        if(digits == s) {
+            cout<<0<<"\n";
+            continue;
+        }
+        ll over = pow(10, l);
+        ll extra = over - stoll(n);
         // dig -= 1;
         ll in = pow(10,(l-dig));
         extra %= in;
