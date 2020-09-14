@@ -74,7 +74,11 @@ int main() {
         int ans = n - k;
         if(ans < 0) {
             ans = abs(ans);
+        } else
+        {
+            ans = 0;
         }
+        
 
         if(ans+n%2==1) {
             ans++;
