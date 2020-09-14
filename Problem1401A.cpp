@@ -83,6 +83,7 @@ int main() {
                 ans = n - k;
             }
         }
+        cout<<ans<<"\n";
     }
     return 0;
 }
