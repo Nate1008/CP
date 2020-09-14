@@ -77,7 +77,7 @@ int main() {
         } else {
             ans = 0;
             if (ans + n % 2 == 1) {
-                ans++;
+                ans = 1;
             }
         }
         
