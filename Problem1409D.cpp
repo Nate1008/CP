@@ -75,11 +75,12 @@ int main() {
         int l = n.length();
         int digits = 0;
         int dig = l+1;
+        bool pass = true;
         FOR(l, i) {
             digits += n[i] - '0';
-            if(digits >= s) {
+            if(digits >= s && pass) {
                 dig = i;
-                break;
+                pass = false;
             }
         }
         if(digits == s) {
