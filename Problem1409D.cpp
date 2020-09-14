@@ -84,7 +84,7 @@ int main() {
                 break;
             }
         }
-        dig -= 1;
+        // dig -= 1;
         ll in = pow(10,(l-dig));
         extra %= in;
         cout<<extra<<"\n";
