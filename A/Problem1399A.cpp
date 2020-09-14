@@ -80,7 +80,7 @@ int main() {
         FOR(n-1, i) {
             int k = arr[i+1] - arr[i];
             if(k > 1) {
-                cout<<"N0"<<"\n";
+                cout<<"NO"<<"\n";
                 pass = false;
                 break;
             }
