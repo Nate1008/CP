@@ -76,14 +76,18 @@ int main() {
             cin >> arr[i];
         }
         sort(ALL(arr));
+        bool pass = true;
         FOR(n-1, i) {
             int k = arr[i+1] - arr[i];
             if(k > 1) {
                 cout<<"N0";
-                return 0;
+                pass = false;
+                break;
             }
         }
-        cout<<"YES";
+        if(pass) {
+            cout<<"YES";
+        }
     }
     return 0;
 }
