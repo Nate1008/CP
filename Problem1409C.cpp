@@ -74,7 +74,7 @@ int main() {
         int k = y - x;
         int d = n - 1;
         int s = x;
-        FORN(d+1, i, 1) {
+        RFOR(d, i) {
             if(k % i == 0) {
                 d = i;
                 break;
