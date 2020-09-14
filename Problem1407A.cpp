@@ -92,7 +92,7 @@ int main() {
                 o--;
             }
             cout << o << '\n';
-            FOR(z, i)
+            FOR(o, i)
             {
                 cout << 1 << " ";
             }
