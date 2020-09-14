@@ -78,7 +78,7 @@ int main() {
         int o = count(ALL(arr), 1);
         int z = count(ALL(arr), 0);
         if(z >= n/2) {
-            if(z % 2 == 1) {
+            if(z % 2 == 1 && z != 1) {
                 z--;
             }
             cout<<z<<'\n';
