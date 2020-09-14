@@ -74,7 +74,7 @@ int main() {
         cin >> n >> s;
         int l = n.length();
         ll over = pow(10, l+1);
-        ll extra = stoll(n) - over;
+        ll extra = over - stoll(n);
         int digits = 0;
         int dig = l+1;
         FOR(l, i) {
