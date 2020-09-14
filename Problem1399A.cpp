@@ -80,13 +80,13 @@ int main() {
         FOR(n-1, i) {
             int k = arr[i+1] - arr[i];
             if(k > 1) {
-                cout<<"N0";
+                cout<<"N0"<<"\n";
                 pass = false;
                 break;
             }
         }
         if(pass) {
-            cout<<"YES";
+            cout<<"YES"<<"\n";
         }
     }
     return 0;
