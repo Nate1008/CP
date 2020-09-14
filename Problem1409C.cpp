@@ -74,11 +74,11 @@ int main() {
         int k = y - x;
         int d = n - 1;
         int s = x;
-        FOR(d-1, i) {
-            if(k % d == 0) {
+        FORN(d+1, i, 1) {
+            if(k % i == 0) {
+                d = i;
                 break;
             }
-            d--;
         }
         int c = k/d;
         FOR(d, i) {
