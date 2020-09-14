@@ -71,7 +71,7 @@ int main() {
     TC {
         int n, k;
         cin >> n >> k;
-        int ans = k - n;
+        int ans = n - k;
         if(ans < 0) {
             ans = abs(ans);
         }
