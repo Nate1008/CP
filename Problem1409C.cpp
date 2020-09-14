@@ -68,6 +68,16 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n, x, y;
+        cin >> n >> x >> y;
+        int k = y - x;
+        FOR(n, i) {
+            cout << x << " ";
+            x += k;
+        }
+        cout << "\n";
+    }
     return 0;
 }
 
