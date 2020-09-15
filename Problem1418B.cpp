@@ -87,9 +87,9 @@ int main() {
         int k = 0;
         FOR(n, i){
             if(locked[i] == 1) {
-                cout<<arr[i]<<" ";
+                cout<<arr[i]<<"A ";
             } else {
-                cout<<ans[k]<<" ";
+                cout<<ans[k]<<"B ";
                 k++;
             }
         }
