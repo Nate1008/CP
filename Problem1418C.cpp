@@ -80,7 +80,7 @@ int main() {
         bool turn = false;
         FOR(n, i) {
             if(c == 2) {
-                cout<<"FRIEND: "<<i<<"\n";
+                // cout<<"FRIEND: "<<i<<"\n";
                 turn = false;
                 c++;
             }
@@ -91,10 +91,10 @@ int main() {
             }
             
             if(arr[i] == 1 && !turn) {
-                cout<<i<<"\n";
+                // cout<<i<<"\n";
                 k++;
                 if(i == n-1 || arr[i+1] != 0) {
-                    cout<<"TURN"<<"\n";
+                    // cout<<"TURN"<<"\n";
                     turn = true;
                     c = 0;
                 }
