@@ -90,7 +90,7 @@ int main() {
                 continue;
             }
             
-            if((arr[i] == 1 && !turn) || !turn) {
+            if(!turn) {
                 // cout<<i<<"\n";
                 if(arr[i] == 1) {
                     k++;
@@ -99,6 +99,13 @@ int main() {
                     // cout<<"TURN"<<"\n";
                     turn = true;
                     c = 0;
+                }
+            } else if (turn) {
+                if (i != n - 1 && arr[i + 1] == 0)
+                {
+                    // cout<<"TURN"<<"\n";
+                    turn = false;
+                    c = 2;
                 }
             }
         }
