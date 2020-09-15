@@ -68,6 +68,36 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n, k;
+        cin >> n;
+        vi arr(n);
+        FOR(n, i) {
+            cin >> arr[i];
+        }
+
+        int c = 0;
+        bool turn = false;
+        FOR(n, i) {
+            if(c == 2) {
+                turn = false;
+                c++;
+            }
+             
+            if(c < 2) {
+                c++;
+            }
+            
+            if(arr[i] == 1 && !turn) {
+                k++;
+                if(i == n-1 || arr[i+1] != 0) {
+                    turn = true;
+                    c = 0;
+                }
+            }
+        }
+        cout<<k<<"\n";
+    }
     return 0;
 }
 
