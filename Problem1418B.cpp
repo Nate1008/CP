@@ -73,7 +73,7 @@ int main() {
         cin >> n;
         vi arr(n);
         vi locked(n);
-        vi ans(n);
+        vi ans;
         FOR(n, i) {
             cin >> arr[i];
         }
