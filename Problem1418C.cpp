@@ -101,7 +101,7 @@ int main() {
                 turn = true;
             }
         }
-        cout<<k<<"\n";
+        cout<<"K: "<<k<<"\n";
     }
     return 0;
 }
