@@ -67,18 +67,12 @@
 
 using namespace std;
 
-bool sorted(pi a, pi b) {
-    if(a.S == 1 || b.S == 1) {
+bool sorted(int a, int b) {
+    if(abs(a) > abs(b)) {
+        return true;
+    } else {
         return false;
-    } else
-    {
-        if(abs(a.F) > abs(b.F)) {
-            return true;
-        } else {
-            return false;
-        }
     }
-    
 }
 int main() {
     TC {
@@ -86,17 +80,23 @@ int main() {
         cin >> n;
         vi arr(n);
         vi locked(n);
-        vpi ans;
+        vi ans(n);
         FOR(n, i) {
             cin >> arr[i];
         }
         FOR(n, i) {
             cin >> locked[i];
-            ans.push_back(pi(arr[i], locked[i]));
+            if(locked[i] == 0) {
+                ans[i] = arr[i];
+            }
         }
         sort(ALL(ans), sorted);
         FOR(n, i){
-            cout<<ans[i].F<<" ";
+            if(locked[i]) {
+                cout<<arr[i]<<" ";
+            } else {
+                cout<<ans[i]<<" ";
+            }
         }
         cout<<"\n";
     }
