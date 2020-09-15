@@ -100,6 +100,7 @@ int main() {
                 }
             } else if (!turn) {
                 turn = true;
+                c = 0;
             }
         }
         cout<<"K: "<<k<<"\n";
