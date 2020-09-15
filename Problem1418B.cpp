@@ -86,9 +86,9 @@ int main() {
         vi arr(n);
         vi locked(n);
         vpi ans;
-        FOR(n, i) {
-            cin >> arr[i];
-        }
+        // FOR(n, i) {
+        //     cin >> arr[i];
+        // }
         // FOR(n, i) {
         //     cin >> locked[i];
         //     ans.push_back(pi(arr[i], locked[i]));
