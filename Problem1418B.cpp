@@ -67,7 +67,38 @@
 
 using namespace std;
 
+bool sorted(pi a, pi b) {
+    if(a.S == 1 || b.S == 1) {
+        return false;
+    } else
+    {
+        if(abs(a.F) > abs(b.F)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+}
 int main() {
+    TC {
+        int n;
+        vi arr(n);
+        vi locked(n);
+        vpi ans(n);
+        FOR(n, i) {
+            cin >> arr[i];
+        }
+        FOR(n, i) {
+            cin >> locked[i];
+            ans[i] = pi(arr[i], locked[i]);
+        }
+        sort(ALL(ans), sorted);
+        FOR(n, i){
+            cout<<ans[i].F<<" ";
+        }
+        cout<<"\n";
+    }
     return 0;
 }
 
