@@ -90,12 +90,15 @@ int main() {
             }
             
             if(arr[i] == 1 && !turn) {
+                cout<<i<<"\n";
                 k++;
                 if(i == n-1 || arr[i+1] != 0) {
                     cout<<"TURN"<<"\n";
                     turn = true;
                     c = 0;
                 }
+            } else if (!turn) {
+                turn = true;
             }
         }
         cout<<k<<"\n";
