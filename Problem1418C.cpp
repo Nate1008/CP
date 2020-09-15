@@ -100,6 +100,7 @@ int main() {
                     turn = true;
                     c = 0;
                 }
+            }
         }
         cout<<k<<"\n";
     }
