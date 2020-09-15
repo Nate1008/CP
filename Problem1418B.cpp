@@ -85,13 +85,13 @@ int main() {
         int n;
         vi arr(n);
         vi locked(n);
-        vpi ans(n);
+        vpi ans;
         FOR(n, i) {
             cin >> arr[i];
         }
         FOR(n, i) {
             cin >> locked[i];
-            ans[i] = pi(arr[i], locked[i]);
+            ans.push_back(pi(arr[i], locked[i]));
         }
         sort(ALL(ans), sorted);
         FOR(n, i){
