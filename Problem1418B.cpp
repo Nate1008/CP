@@ -89,15 +89,15 @@ int main() {
         FOR(n, i) {
             cin >> arr[i];
         }
-        FOR(n, i) {
-            cin >> locked[i];
-            ans.push_back(pi(arr[i], locked[i]));
-        }
-        sort(ALL(ans), sorted);
-        FOR(n, i){
-            cout<<ans[i].F<<" ";
-        }
-        cout<<"\n";
+        // FOR(n, i) {
+        //     cin >> locked[i];
+        //     ans.push_back(pi(arr[i], locked[i]));
+        // }
+        // sort(ALL(ans), sorted);
+        // FOR(n, i){
+        //     cout<<ans[i].F<<" ";
+        // }
+        // cout<<"\n";
     }
     return 0;
 }
