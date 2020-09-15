@@ -67,13 +67,6 @@
 
 using namespace std;
 
-bool sorted(int a, int b) {
-    if(a > b) {
-        return true;
-    } else {
-        return false;
-    }
-}
 int main() {
     TC {
         int n;
@@ -87,7 +80,7 @@ int main() {
         FOR(n, i) {
             cin >> locked[i];
             if(locked[i] == 0) {
-                ans[i] = arr[i];
+                ans.push_back(arr[i]);
             }
         }
         sort(RALL(ans));
