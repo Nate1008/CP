@@ -95,7 +95,7 @@ int main() {
                 if(arr[i] == 1) {
                     k++;
                 }
-                if(i == n-1 || arr[i+1] != 0) {
+                if(i != n-1 && arr[i+1] != 0) {
                     // cout<<"TURN"<<"\n";
                     turn = true;
                     c = 0;
