@@ -83,7 +83,7 @@ int main() {
         scanf("%d", &n);
         for (int i = 1; i <= n; i++)
             scanf("%lld", &a[i]), mx = max(mx, a[i]);
-        sort(a + 1, a + n + 1, [](long long x, long long y) { return abs(x) > abs(y); });
+        sort(a + 1, a + n + 1, x(long long x, long long y) { return abs(x) > abs(y); });
         if (mx < 0)
         {
             cout << a[n] * a[n - 1] * a[n - 2] * a[n - 3] * a[n - 4] << '\n';
