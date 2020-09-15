@@ -86,6 +86,7 @@ int main() {
              
             if(c < 2) {
                 c++;
+                continue
             }
             
             if(arr[i] == 1 && !turn) {
