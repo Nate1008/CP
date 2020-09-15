@@ -69,7 +69,7 @@ using namespace std;
 
 int main() {
     TC {
-        int n, k;
+        int n, k = 0;
         cin >> n;
         vi arr(n);
         FOR(n, i) {
