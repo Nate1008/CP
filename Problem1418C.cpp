@@ -103,7 +103,7 @@ int main() {
                 c = 0;
             }
         }
-        cout<<"K: "<<k<<"\n";
+        cout<<k<<"\n";
     }
     return 0;
 }
