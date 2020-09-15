@@ -94,7 +94,7 @@ int main() {
         int k = 0;
         FOR(n, i){
             if(locked[i] == 0) {
-                cout<<ans[i]<<" ";
+                cout<<ans[k]<<" ";
                 k++;
             } else {
                 cout<<arr[i]<<" ";
