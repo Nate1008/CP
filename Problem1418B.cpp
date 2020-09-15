@@ -93,11 +93,11 @@ int main() {
         sort(ALL(ans), sorted);
         int k = 0;
         FOR(n, i){
-            if(locked[i] == 0) {
+            if(locked[i]) {
+                cout<<arr[i]<<" ";
+            } else {
                 cout<<ans[k]<<" ";
                 k++;
-            } else {
-                cout<<arr[i]<<" ";
             }
         }
         cout<<"\n";
