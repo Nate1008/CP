@@ -77,33 +77,14 @@ int absolute(int a, int b) {
 
 int main() {
     TC {
-        long long ans, a[100005];
-        int n;
-        long long mx = -1e9;
-        scanf("%d", &n);
+        long long n, a[101010];
+        cin >> n;
         for (int i = 1; i <= n; i++)
-            scanf("%lld", &a[i]), mx = max(mx, a[i]);
-        sort(a + 1, a + n + 1, x(long long x, long long y) { return abs(x) > abs(y); });
-        if (mx < 0)
         {
-            cout << a[n] * a[n - 1] * a[n - 2] * a[n - 3] * a[n - 4] << '\n';
-            continue;
+            cin >> a[i];
         }
-        ans = a[1] * a[2] * a[3] * a[4] * a[5];
-        for (int i = 6; i <= n; i++)
-        {
-            for (int j = 1; j <= 5; j++)
-            {
-                long long tmp = a[i];
-                for (int k = 1; k <= 5; k++)
-                {
-                    if (k != j)
-                        tmp *= a[k];
-                }
-                ans = max(ans, tmp);
-            }
-        }
-        printf("%lld\n", ans);
+        sort(a + 1, a + n + 1);
+        cout << max(max(a[n] * a[n - 1] * a[n - 2] * a[n - 3] * a[n - 4], a[n] * a[n - 1] * a[n - 2] * a[1] * a[2]), a[n] * a[1] * a[2] * a[3] * a[4]) << endl;
     }
     return 0;
 }
