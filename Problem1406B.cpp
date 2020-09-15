@@ -77,31 +77,33 @@ int absolute(int a, int b) {
 
 int main() {
     TC {
+        long long ans, a[100005];
         int n;
-        cin >> n;
-        vi arr(n);
-        int neg = 0;
-        FOR(n, i) {
-            cin >> arr[i];
-            if(arr[i] < 0) {
-                neg++;
-            }
+        long long mx = -1e9;
+        scanf("%d", &n);
+        for (int i = 1; i <= n; i++)
+            scanf("%lld", &a[i]), mx = max(mx, a[i]);
+        sort(a + 1, a + n + 1, [](long long x, long long y) { return abs(x) > abs(y); });
+        if (mx < 0)
+        {
+            cout << a[n] * a[n - 1] * a[n - 2] * a[n - 3] * a[n - 4] << '\n';
+            continue;
         }
-        sort(ALL(arr));
-        int s;
-        if(neg == n) {
-            s = arr[0]*arr[1]*arr[2]*arr[3]*arr[4];
-        } else {
-            sort(ALL(arr), absolute);
-            FOR((n-5), i) {
-                int k = arr[i]*arr[i+1]*arr[i+2]*arr[i+3]*arr[i+4];
-                if(k > 0) {
-                    s = k;
-                    break;
+        ans = a[1] * a[2] * a[3] * a[4] * a[5];
+        for (int i = 6; i <= n; i++)
+        {
+            for (int j = 1; j <= 5; j++)
+            {
+                long long tmp = a[i];
+                for (int k = 1; k <= 5; k++)
+                {
+                    if (k != j)
+                        tmp *= a[k];
                 }
+                ans = max(ans, tmp);
             }
         }
-        cout<<s<<"\n";
+        printf("%lld\n", ans);
     }
     return 0;
 }
