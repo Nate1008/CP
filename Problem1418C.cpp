@@ -76,7 +76,7 @@ int main() {
             cin >> arr[i];
         }
 
-        int c = 0;
+        int c = 2;
         bool turn = false;
         FOR(n, i) {
             if(c == 2) {
