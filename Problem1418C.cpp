@@ -80,6 +80,7 @@ int main() {
         bool turn = false;
         FOR(n, i) {
             if(c == 2) {
+                cout<<"FRIEND: "<<i<<"\n";
                 turn = false;
                 c++;
             }
