@@ -90,7 +90,7 @@ int main() {
                 ans[i] = arr[i];
             }
         }
-        sort(ALL(ans), sorted);
+        sort(RALL(ans));
         int k = 0;
         FOR(n, i){
             if(locked[i]) {
