@@ -91,9 +91,11 @@ int main() {
             }
         }
         sort(ALL(ans), sorted);
+        int k = 0;
         FOR(n, i){
             if(locked[i] == 0) {
                 cout<<ans[i]<<" ";
+                k++;
             } else {
                 cout<<arr[i]<<" ";
             }
