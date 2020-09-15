@@ -67,7 +67,42 @@
 
 using namespace std;
 
+int absolute(int a, int b) {
+    if(abs(a) > abs(b)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 int main() {
+    TC {
+        int n;
+        cin >> n;
+        vi arr(n);
+        int neg = 0;
+        FOR(n, i) {
+            cin >> arr[i];
+            if(arr[i] < 0) {
+                neg++;
+            }
+        }
+        sort(ALL(arr));
+        int s;
+        if(neg == n) {
+            s = arr[0]*arr[1]*arr[2]*arr[3]*arr[4];
+        } else {
+            sort(ALL(arr), absolute);
+            FOR((n-5), i) {
+                int k = arr[i]*arr[i+1]*arr[i+2]*arr[i+3]*arr[i+4];
+                if(k > 0) {
+                    s = k;
+                    break;
+                }
+            }
+        }
+        cout<<s<<"\n";
+    }
     return 0;
 }
 
