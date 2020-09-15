@@ -68,7 +68,7 @@
 using namespace std;
 
 bool sorted(int a, int b) {
-    if(abs(a) > abs(b)) {
+    if(a > b) {
         return true;
     } else {
         return false;
