@@ -84,11 +84,6 @@ int main() {
                 turn = false;
                 c++;
             }
-             
-            if(c < 2) {
-                c++;
-                continue;
-            }
             
             if(!turn) {
                 // cout<<i<<"\n";
@@ -101,6 +96,7 @@ int main() {
                     c = 0;
                 }
             } else if (turn) {
+                c++;
                 if (i != n - 1 && arr[i + 1] == 0)
                 {
                     // cout<<"TURN"<<"\n";
