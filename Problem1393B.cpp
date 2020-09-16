@@ -73,12 +73,18 @@ int main() {
     set<int> uni;
     set<int>::iterator itr;
     mi planks;
+    bool pass = false;
     FOR(n, i) {
         int t;
         cin >> t;
         planks[t]++;
+        if(planks[t] >= 2) {
+            pass = true;
+        }
         uni.insert(t);
     }
+
+
     int q;
     cin >> q;
     FOR(q, i) {
