@@ -68,6 +68,54 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    set<int> uni;
+    set<int>::iterator itr;
+    mi planks;
+    FOR(n, i) {
+        int t;
+        cin >> t;
+        planks[t]++;
+        uni.insert(t);
+    }
+    int q;
+    cin >> q;
+    FOR(q, i) {
+        char c;
+        int x;
+        cin >> c >> x;
+        if(c == '-') {
+            planks[x]--;
+        } else {
+            planks[x]++;
+            uni.insert(x);
+        }
+        bool squ = false, rect1 = false, rect2 = false;
+        for(itr = uni.begin(); itr != uni.end(); ++itr) {
+            int k = *itr;
+            int cnt = planks[k];
+            if(cnt >= 4) {
+                squ = true;
+                cnt -= 4;
+            }
+            
+            if (cnt >= 2 && !rect1) {
+                rect1 = true;
+                cnt -= 2;
+            }
+
+            if(cnt >= 2 && !rect2) {
+                rect2 = true;
+            }
+        }
+        
+        if(squ && (rect2 && rect1)) {
+            cout<<"YES"<<"\n"; 
+        } else {
+            cout<<"NO"<<"\n";
+        }
+    }
     return 0;
 }
 
