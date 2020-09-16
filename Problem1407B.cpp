@@ -80,7 +80,7 @@ int main() {
         }
 
         FOR(n, i) {
-            int g = __gcd(arr[i], m);
+            int g = __algo_gcd(arr[i], m);
             ans[i] = pi(g, arr[i]);
         }
         sort(RALL(ans));
