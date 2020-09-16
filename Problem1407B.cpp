@@ -68,6 +68,27 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n;
+        cin >> n;
+        vi arr(n);
+        vpi ans(n);
+        int m = INT_MIN;
+        FOR(n, i) {
+            cin >> arr[i];
+            m = max(arr[i], m);
+        }
+
+        FOR(n, i) {
+            int g = __gcd(arr[i], m);
+            ans[i] = pi(g, arr[i]);
+        }
+        sort(RALL(ans));
+        FOR(n, i) {
+            cout<<ans[i].S<<" ";
+        }
+        cout<<"\n";
+    }
     return 0;
 }
 
