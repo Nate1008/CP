@@ -85,7 +85,7 @@ int main() {
         }
         sort(RALL(ans));
         FOR(n, i) {
-            cout<<ans[i].S<<" ";
+            cout<<"F: "<<ans[i].F<<" "<<ans[i].S<<"\n";
         }
         cout<<"\n";
     }
