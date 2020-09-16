@@ -95,7 +95,7 @@ int main() {
         for(itr = uni.begin(); itr != uni.end(); ++itr) {
             int k = *itr;
             int cnt = planks[k];
-            if(cnt >= 4) {
+            if(cnt >= 4 && !squ) {
                 squ = true;
                 cnt -= 4;
             }
