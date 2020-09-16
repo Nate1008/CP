@@ -67,34 +67,34 @@
 
 using namespace std;
 
-int gcd(int a, int b)
-{
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
-}
 
 int main() {
     TC {
         int n;
-        cin >> n;
-        vi arr(n);
-        vpi ans(n);
-        int m = INT_MIN;
-        FOR(n, i) {
-            cin >> arr[i];
-            m = max(arr[i], m);
-        }
-
-        FOR(n, i) {
-            int g = gcd(m, arr[i]);
-            ans[i] = pi(g, arr[i]);
-        }
-        sort(RALL(ans));
-        FOR(n, i) {
-            cout<<"F: "<<ans[i].F<<" "<<ans[i].S<<"\n";
-        }
-        cout<<"\n";
+    cin >> n;
+    int a[n];
+    int m = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        m = (a[i] > a[m] ? i : m);
+    }
+    vector<int> b(n);
+    b[0] = a[m]; a[m] = 0;
+    int cg = b[0];
+    for (int i = 1; i < n; i++) {
+        int ci = 0, cans = 0;
+        for (int j = 0; j < n; j++)
+            if (a[j] && __gcd(a[j], cg) > cans) {
+                cans = __gcd(a[j], cg);
+                ci = j;
+            }
+        b[i] = a[ci];
+        cg = cans;
+        a[ci] = 0;
+    }
+    for (int i = 0; i < n; i++)
+        cout << b[i] << ' ';
+    cout << '\n';
     }
     return 0;
 }
