@@ -80,7 +80,8 @@ int main() {
         }
 
         FOR(n, i) {
-            ans[i] = pi(__gcd(arr[i], m), arr[i]);
+            int g = std::__argc_gcd(arr[i], m);
+            ans[i] = pi(g, arr[i]);
         }
         sort(RALL(ans));
         FOR(n, i) {
