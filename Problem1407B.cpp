@@ -67,6 +67,13 @@
 
 using namespace std;
 
+int gcd(int a, int b)
+{
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
 int main() {
     TC {
         int n;
@@ -80,7 +87,7 @@ int main() {
         }
 
         FOR(n, i) {
-            int g = __algo_gcd(m, arr[i]);
+            int g = gcd(m, arr[i]);
             ans[i] = pi(g, arr[i]);
         }
         sort(RALL(ans));
