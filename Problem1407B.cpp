@@ -19,7 +19,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <ctime>
-#include <cmath>
+//å#include <cmath>
 #include <climits>
 
 #define ll long long
