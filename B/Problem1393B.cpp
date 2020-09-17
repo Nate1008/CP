@@ -70,7 +70,7 @@ using namespace std;
 int const MAXN = 1e5 + 5;
 int cnt[MAXN];
 
-main()
+int main()
 {
     int n, q, x, cnt2 = 0, cnt4 = 0;
     char type;
