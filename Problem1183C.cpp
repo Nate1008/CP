@@ -75,17 +75,13 @@ int main() {
             cout<<-1<<"\n";
             continue;
         }
-
-        FORE(n, i) {
-            int c = n-i;
-            if((i*a) >= k) {
-                break;
-            }
-            int x = (i*a) + (c*b);
-            if(x < k) {
-                cnt = i;
-            }
+        if(k%a==0){
+            cnt = floor((k-1) / a);
+        } else {
+            cnt = floor(k / a);
         }
+        
+        
         cout<<cnt<<"\n";
     }
     return 0;
