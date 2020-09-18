@@ -82,7 +82,7 @@ int main() {
         }
         
         
-        cout<<cnt<<"\n";
+        cout<<min(cnt, n)<<"\n";
     }
     return 0;
 }
