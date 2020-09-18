@@ -68,6 +68,25 @@
 using namespace std;
 
 int main() {
+    TC {
+        int k, n, a, b, cnt;
+        cin >> k >> n >> a >> b;
+        if((n*b) >= k) {
+            cout<<-1<<"\n";
+        }
+
+        FOR(n, i) {
+            int c = n-i;
+            if((i*a) >= k) {
+                break;
+            }
+            int x = (i*a) + (c*b);
+            if(x < k) {
+                cnt = i;
+            }
+        }
+
+    }
     return 0;
 }
 
