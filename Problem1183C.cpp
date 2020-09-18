@@ -85,7 +85,7 @@ int main() {
                 cnt = i;
             }
         }
-
+        cout<<cnt<<"\n";
     }
     return 0;
 }
