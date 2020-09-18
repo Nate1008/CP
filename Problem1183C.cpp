@@ -75,7 +75,7 @@ int main() {
             cout<<-1<<"\n";
         }
 
-        FOR(n, i) {
+        FORE(n, i) {
             int c = n-i;
             if((i*a) >= k) {
                 break;
