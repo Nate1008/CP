@@ -73,6 +73,7 @@ int main() {
         cin >> k >> n >> a >> b;
         if((n*b) >= k) {
             cout<<-1<<"\n";
+            continue;
         }
 
         FORE(n, i) {
