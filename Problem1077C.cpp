@@ -101,6 +101,7 @@ int main() {
         int k = it-B(dup);
         ans.push_back(k+1);
         dup.erase(it);
+        cout<<k<<'\n';
     }
 
     if(sumsm == sm) {
