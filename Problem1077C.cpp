@@ -68,6 +68,48 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    vi arr(n);
+    int m = INT_MIN;
+    int sm = INT_MIN;
+    ll summ = 0;
+    ll sumsm = 0; 
+    vi ans;
+    FOR(n, i){
+        cin >> arr[i];
+        if(m < arr[i]){
+            sm = m;
+            m = arr[i];
+        }
+    }
+
+    FOR(n, i) {
+        if(m != arr[i]) {
+            summ += arr[i];
+            if(sm != arr[i]) {
+                sumsm += arr[i];
+            }
+        }
+    }
+
+    int diff = summ - m; 
+    int cnt = count(ALL(arr), summ - m);
+    vi dup = arr;
+    FOR(cnt, i) {
+        vi::iterator it = find(ALL(dup), diff);
+        int k = it-B(dup);
+        ans.push_back(k+1);
+        dup.erase(it);
+    }
+
+    if(sumsm == sm) {
+        ans.push_back(1);
+    }
+
+    FOR(ans.size(), i) {
+        cout<<ans[i]<<" ";
+    }
     return 0;
 }
 
