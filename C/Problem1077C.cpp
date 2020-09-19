@@ -70,50 +70,31 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vi arr(n);
-    int m = INT_MIN;
-    int sm = INT_MIN;
-    ll summ = 0;
-    ll sumsm = 0; 
-    vi ans;
-    FOR(n, i){
-        cin >> arr[i];
-        if(m < arr[i]){
-            sm = m;
-            m = arr[i];
-        } else if (arr[i] > sm) {
-            sm = arr[i];
-        } 
+    vector<int> a(n);
+    vector<int> cnt(1e6 + 1);
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> a[i];
+        ++cnt[a[i]];
     }
-    int c = count(ALL(arr), sm);
-    FOR(n, i) {
-        if(m != arr[i]) {
-            summ += arr[i];
-            if(sm != arr[i] && c == 1) {
-                sumsm += arr[i];
-            }
-        }
-    }
-    int mini = find(ALL(arr), m)-B(arr);
-    cout<<summ<<"\t"<<sumsm<<"\n";
-    int diff = summ - m; 
-    int cnt = count(ALL(arr), summ - m);
-    vi dup = arr;
-    FOR(cnt, i) {
-        vi::iterator it = find(ALL(dup), diff);
-        int k = it-B(dup);
-        if(mini != k)
-            ans.push_back(k+1+i);
-            dup.erase(it);
-    }
+    long long sum = accumulate(a.begin(), a.end(), 0ll);
 
-    if(sumsm == sm) {
-        ans.push_back(mini+1);
+    vector<int> ans;
+    for (int i = 0; i < n; ++i)
+    {
+        sum -= a[i];
+        --cnt[a[i]];
+        if (sum % 2 == 0 && sum / 2 <= 1e6 && cnt[sum / 2] > 0)
+        {
+            ans.push_back(i);
+        }
+        sum += a[i];
+        ++cnt[a[i]];
     }
     int l = ans.size();
     cout<<l<<"\n";
     FOR(l, i) {
-        cout<<ans[i]<<" ";
+        cout<<ans[i]+1<<" ";
     }
     return 0;
 }
