@@ -94,7 +94,7 @@ int main() {
             }
         }
     }
-    cout<<summ<<"\t"<<sm<<"\n";
+    // cout<<summ<<"\t"<<sumsm<<"\n";
     int diff = summ - m; 
     int cnt = count(ALL(arr), summ - m);
     vi dup = arr;
