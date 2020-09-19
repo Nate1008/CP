@@ -94,6 +94,7 @@ int main() {
             }
         }
     }
+    int mini = find(ALL(arr), m)-B(arr);
     cout<<summ<<"\t"<<sumsm<<"\n";
     int diff = summ - m; 
     int cnt = count(ALL(arr), summ - m);
@@ -101,8 +102,9 @@ int main() {
     FOR(cnt, i) {
         vi::iterator it = find(ALL(dup), diff);
         int k = it-B(dup);
-        ans.push_back(k+1+i);
-        dup.erase(it);
+        if(mini != k)
+            ans.push_back(k+1+i);
+            dup.erase(it);
     }
 
     if(sumsm == sm) {
