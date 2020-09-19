@@ -106,8 +106,9 @@ int main() {
     if(sumsm == sm) {
         ans.push_back(find(ALL(arr), m)-B(arr));
     }
-
-    FOR(ans.size(), i) {
+    int l = ans.size();
+    cout<<l<<"\n";
+    FOR(l, i) {
         cout<<ans[i]<<" ";
     }
     return 0;
