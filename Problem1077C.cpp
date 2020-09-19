@@ -81,7 +81,9 @@ int main() {
         if(m < arr[i]){
             sm = m;
             m = arr[i];
-        }
+        } else if (arr[i] > sm) {
+            sm = arr[i];
+        } 
     }
     int c = count(ALL(arr), sm);
     FOR(n, i) {
