@@ -83,11 +83,11 @@ int main() {
             m = arr[i];
         }
     }
-
+    int c = count(ALL(arr), sm);
     FOR(n, i) {
         if(m != arr[i]) {
             summ += arr[i];
-            if(sm != arr[i]) {
+            if(sm != arr[i] && c == 1) {
                 sumsm += arr[i];
             }
         }
