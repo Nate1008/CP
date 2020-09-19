@@ -98,7 +98,7 @@ int main() {
     vi dup = arr;
     FOR(cnt, i) {
         vi::iterator it = find(ALL(dup), diff);
-        int k = it-B(dup);
+        int k = it-B(arr);
         ans.push_back(k+1);
         dup.erase(it);
     }
