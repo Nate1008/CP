@@ -92,7 +92,7 @@ int main() {
             }
         }
     }
-
+    cout<<summ<<"\t"<<summ<<"\n";
     int diff = summ - m; 
     int cnt = count(ALL(arr), summ - m);
     vi dup = arr;
@@ -101,7 +101,6 @@ int main() {
         int k = it-B(dup);
         ans.push_back(k+1);
         dup.erase(it);
-        cout<<k<<'\n';
     }
 
     if(sumsm == sm) {
