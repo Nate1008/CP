@@ -108,7 +108,7 @@ int main() {
     }
 
     if(sumsm == sm) {
-        ans.push_back((find(ALL(arr), m)-B(arr))+1);
+        ans.push_back(mini+1);
     }
     int l = ans.size();
     cout<<l<<"\n";
