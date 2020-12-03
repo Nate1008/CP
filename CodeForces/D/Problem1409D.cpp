@@ -68,6 +68,36 @@
 using namespace std;
 
 int main() {
+    TC {
+        string n;
+        int s;
+        cin >> n >> s;
+        int l = n.length();
+        int digits = 0;
+        int dig = l+1;
+        bool pass = true;
+        FOR(l, i) {
+            digits += n[i] - '0';
+            if(digits >= s && pass) {
+                dig = i;
+                pass = false;
+            }
+        }
+        if(digits <= s) {
+            cout<<0<<"\n";
+            continue;
+        }
+        ll over = pow(10, l);
+        ll extra = over - stoll(n);
+        // dig -= 1;
+        ll in = pow(10,(l-dig));
+        extra %= in;
+        cout<<extra<<"\n";
+
+        
+
+
+    }
     return 0;
 }
 

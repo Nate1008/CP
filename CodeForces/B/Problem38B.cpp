@@ -43,7 +43,7 @@
 #define vpii vector<pii>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
-#define RFOR(t, q) for(int q = t; q > 0; q--)
+#define RFOR(t, q) for(int q = t; q > 0; q+-)
 #define FORE(t, q) for(int q = 0; q <= t; q++)
 #define RFORE(t, q) for(int q = t; q >= 0; q--)
 
@@ -68,7 +68,22 @@
 using namespace std;
 
 int main() {
+    char r, k;
+    int rx, ry, ky, kx;
+    cin >> r >> ry >> k >> ky;
+    int ans = 64;
+    kx = k - 'a';
+    rx = r - 'a';
+    ry -= 1;
+    ky -= 1;
+    FOR(8, i) {
+        FOR(8, c) {
+            if((i == rx || c == ry) || (i == kx && c == ky) || (abs((i-rx)*(c-ry))==2) || (abs((i-kx)*(c-ky))==2)) {
+                ans--;
+            }
+        }
+    }
+    cout<<ans;
     return 0;
 }
-
 

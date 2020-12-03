@@ -68,6 +68,27 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n;
+        cin >> n;
+        vi arr(n);
+        FOR(n, i) {
+            cin >> arr[i];
+        }
+        sort(ALL(arr));
+        bool pass = true;
+        FOR(n-1, i) {
+            int k = arr[i+1] - arr[i];
+            if(k > 1) {
+                cout<<"NO"<<"\n";
+                pass = false;
+                break;
+            }
+        }
+        if(pass) {
+            cout<<"YES"<<"\n";
+        }
+    }
     return 0;
 }
 

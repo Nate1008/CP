@@ -68,6 +68,45 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n, k = 0;
+        cin >> n;
+        vi arr(n);
+        FOR(n, i) {
+            cin >> arr[i];
+        }
+
+        int c = 2;
+        bool turn = false;
+        FOR(n, i) {
+            if(c == 2) {
+                // cout<<"FRIEND: "<<i<<"\n";
+                turn = false;
+                c++;
+            }
+            
+            if(!turn) {
+                // cout<<i<<"\n";
+                if(arr[i] == 1) {
+                    k++;
+                }
+                if(i != n-1 && arr[i+1] != 0) {
+                    // cout<<"TURN"<<"\n";
+                    turn = true;
+                    c = 0;
+                }
+            } else if (turn) {
+                c++;
+                if (i != n - 1 && arr[i + 1] == 0)
+                {
+                    // cout<<"TURN"<<"\n";
+                    turn = false;
+                    c = 2;
+                }
+            }
+        }
+        cout<<k<<"\n";
+    }
     return 0;
 }
 

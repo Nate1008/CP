@@ -68,6 +68,34 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    vector<int> cnt(1e6 + 1);
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> a[i];
+        ++cnt[a[i]];
+    }
+    long long sum = accumulate(a.begin(), a.end(), 0ll);
+
+    vector<int> ans;
+    for (int i = 0; i < n; ++i)
+    {
+        sum -= a[i];
+        --cnt[a[i]];
+        if (sum % 2 == 0 && sum / 2 <= 1e6 && cnt[sum / 2] > 0)
+        {
+            ans.push_back(i);
+        }
+        sum += a[i];
+        ++cnt[a[i]];
+    }
+    int l = ans.size();
+    cout<<l<<"\n";
+    FOR(l, i) {
+        cout<<ans[i]+1<<" ";
+    }
     return 0;
 }
 

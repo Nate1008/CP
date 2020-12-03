@@ -68,6 +68,20 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n, k;
+        cin >> n >> k;
+        if(k > n) {
+            cout<<k-n<<'\n';
+        } else {
+            int ans = n - k;
+            if(ans % 2 == 0){
+                cout<<0<<"\n";
+            } else {
+                cout<<1<<"\n";
+            }
+        }
+    }
     return 0;
 }
 

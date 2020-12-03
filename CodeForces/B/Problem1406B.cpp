@@ -67,7 +67,25 @@
 
 using namespace std;
 
+int absolute(int a, int b) {
+    if(abs(a) > abs(b)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 int main() {
+    TC {
+        long long n, a[101010];
+        cin >> n;
+        for (int i = 1; i <= n; i++)
+        {
+            cin >> a[i];
+        }
+        sort(a + 1, a + n + 1);
+        cout << max(max(a[n] * a[n - 1] * a[n - 2] * a[n - 3] * a[n - 4], a[n] * a[n - 1] * a[n - 2] * a[1] * a[2]), a[n] * a[1] * a[2] * a[3] * a[4]) << endl;
+    }
     return 0;
 }
 

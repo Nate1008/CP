@@ -25,7 +25,6 @@
 #define ll long long
 #define pi pair<int, int>
 #define pf pair<float, int>
-#define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>
@@ -68,7 +67,17 @@
 using namespace std;
 
 int main() {
+    TC {
+        ll n;
+        cin >> n;
+        if(n%4==1)
+			cout<<2*n+1;
+		else if(n%4==3)
+			cout<<n+1;
+		else
+			cout<<4*n+1;
+		puts("");
+    }
     return 0;
 }
-
 

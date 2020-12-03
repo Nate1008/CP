@@ -25,7 +25,6 @@
 #define ll long long
 #define pi pair<int, int>
 #define pf pair<float, int>
-#define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>
@@ -68,7 +67,23 @@
 using namespace std;
 
 int main() {
+    string s;
+    int n;
+    cin >> n;
+    for(int i=0;i<n;i++){
+		string x;
+		cin>>x;
+		if(i==0){
+			for(int j=0;j<x.size();j++) s+='-';
+		}
+		for(int j=0;j<x.size();j++){
+			if(x[j]=='?') continue;
+			if(s[j]=='-') s[j]=x[j];
+			if(s[j]!=x[j]) s[j]='?';
+		}
+	}
+	for(int i=0;i<s.size();i++) if(s[i]=='-') s[i]='a';
+	cout<<s<<endl;
     return 0;
 }
-
 

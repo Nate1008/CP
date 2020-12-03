@@ -68,6 +68,14 @@
 using namespace std;
 
 int main() {
+    TC {
+        int k, n, a, b, cnt;
+        cin >> k >> n >> a >> b;
+        if ((k - 1) / b < n)
+            cout << -1 << endl;
+        else
+            cout << min(n, (k - 1 - n * b) / (a - b)) << endl;
+    }
     return 0;
 }
 

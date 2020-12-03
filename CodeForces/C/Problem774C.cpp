@@ -68,7 +68,23 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
+    string s;
+    int i = 0;
+    if(n % 2 == 1) {
+        cout<<"7";
+        n -= 3;
+    }
+    int k = n / 2;
+    if(n % 2 == 0) {
+        int k = n / 2;
+        FOR(k, i) {
+            cout<<"1";
+        }
+    }
+
+    cout<<s;
     return 0;
 }
-
 

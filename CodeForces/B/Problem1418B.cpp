@@ -68,6 +68,33 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n;
+        cin >> n;
+        vi arr(n);
+        vi locked(n);
+        vi ans;
+        FOR(n, i) {
+            cin >> arr[i];
+        }
+        FOR(n, i) {
+            cin >> locked[i];
+            if(locked[i] == 0) {
+                ans.push_back(arr[i]);
+            }
+        }
+        sort(RALL(ans));
+        int k = 0;
+        FOR(n, i){
+            if(locked[i] == 1) {
+                cout<<arr[i]<<" ";
+            } else {
+                cout<<ans[k]<<" ";
+                k++;
+            }
+        }
+        cout<<"\n";
+    }
     return 0;
 }
 

@@ -68,6 +68,34 @@
 using namespace std;
 
 int main() {
+    TC {
+        int n, x, y;
+        cin >> n >> x >> y;
+        int k = y - x;
+        int d = n - 1;
+        int s = x;
+        RFOR(d, i) {
+            if(k % i == 0) {
+                d = i;
+                break;
+            }
+        }
+        int c = k/d;
+        // cout<<"C: "<<c<<" D: "<<d<<"\n";
+        FOR(n-(d+1), i) {
+            if(s-c > 0) {
+                s -= c;
+            } else {
+                break;
+            }
+        }
+
+        FOR(n, i) {
+            cout<<s<<" ";
+            s += c;
+        }
+        cout << "\n";
+    }
     return 0;
 }
 
