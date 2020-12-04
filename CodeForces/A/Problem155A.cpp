@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h>	
 
 #define ll long long
 #define pi pair<int, int>
@@ -53,6 +53,26 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    int n; cin >> n;
+    int f; cin >> f;
 
+    int max = f;
+    int min = f;
+
+    int ans = 0;
+
+    FOR(n-1, i) {
+    	int x; cin >> x;
+    	if (max < x) {
+    		ans++;
+    		max = x;
+    	} else if (min > x) {
+    		ans++;
+    		min = x;
+    	}
+    }
+    
+
+    cout << ans;
     return 0;
-}
+};
