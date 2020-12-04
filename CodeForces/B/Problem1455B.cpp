@@ -55,15 +55,31 @@ int main() {
 
     TC {
     	int n; cin >> n;
-  		int m = 0;
+  		if (n == 1) {
+        cout << 1 << endl;
+        continue;
+      }
 
-  		FORN(n, i, 1) {
-        cout << i << endl;
-  			m += i;
-  		}
 
+      int m = 0;
+      int i = 0;
+  		while(m < n) {
+        i++;
+        m += i;
+      }
+      int a = 0;
   		int d = m - n;
-  		cout << d + n << endl;
+      if (d > 0) {
+        if (d > 1) {
+          a = 1;
+        }
+        d = 1;
+      } else {
+        d = 0;
+      }
+
+      // cout << i << " " << a << " " << d << endl;
+  		cout << (d + i - a) << endl;
     }
 
 
