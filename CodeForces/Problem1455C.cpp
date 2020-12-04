@@ -53,6 +53,9 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-
+    TC {
+    	int x, y; cin >> x >> y;
+        cout << x - 1 << " " << y << endl;
+    }
     return 0;
 }
