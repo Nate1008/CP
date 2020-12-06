@@ -53,6 +53,30 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    int k,n,m,ans[510][510];
+	int maps[250010];
+
+    TC {
+    	cin>>n>>m;
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=m;j++){
+				cin>>k;
+				maps[k]=j;
+			}
+		}
+		for(int i=1;i<=m;i++){
+			for(int j=1;j<=n;j++){
+				cin>>k;
+				ans[j][maps[k]]=k;
+				//if(k == 6) printf("%d %d\n", j, maps[k]);
+			}
+		}
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=m;j++){
+				cout<<ans[i][j]<<" ";
+			}cout<<endl;
+		}
+    }
 
 
     return 0;
