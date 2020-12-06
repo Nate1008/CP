@@ -53,6 +53,19 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    int r, g, b; cin >> r >> g >> b;
+    
+    int i = 30;
+    while(r != 0 || g != 0 || b != 0) {
+    	if (i % 3 == 0) r = max(0, r-2);
+    	else if (i % 3 == 1) g = max(0, g-2);
+    	else b = max(0, b-2);
+    	i++;
+    }
+
+    cout << i-1;
+    
+
 
     return 0;
 }

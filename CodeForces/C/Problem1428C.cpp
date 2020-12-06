@@ -52,9 +52,19 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    cout.tie(0);
 
+    TC {
+    	string s; cin >> s;
+    	int n = s.length();
+    	int ans = 0;
 
+    	FOR(n, i) {
+    		if(ans && s[i] == 'B') {ans--; cout << i << endl;}
+    		else ans++;
+    	}
+
+    	cout << ans << endl;
+    }
 
     return 0;
 }
