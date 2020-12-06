@@ -54,6 +54,30 @@ int main() {
     cin.tie(0);
     cout.tie(0);
 
+    TC {
+    	ll a, b, x, y, n; cin >> a >> b >> x >> y >> n;
+
+    	ll a1 = (a-x);
+    	ll b1 = 0;
+    	if (a1 > n) a1 = n;
+    	else b1 = min((n - a1), (b-y));
+
+
+    	ll a2 = 0;
+    	ll b2 = (b-y);
+    	if (b2 > n) b2 = n;
+    	else a2 = min((n - b2), (a-x));
+
+    	// cout << "OPT 1:" << a1 << " " << b1 << endl;
+    	// cout << "OPT 2:" << a2 << " " << b2 << endl;
+    	cout << min((a-a1)*(b-b1), (a-a2)*(b-b2)) << endl;
+
+
+
+
+    }
+
+
 
 
     return 0;
