@@ -45,31 +45,25 @@
 
 #define TC int t; cin >> t; FOR(t, q)
 
-#define endl '\n'
-
 using namespace std;
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    TC {
-    	int n, k; cin >> n >> k;
-    	vi arr(n);
-    	FOR(n, i) {
-    		cin >> arr[i];
-    	}
+    int n; cin >> n;
+    vi cnt(4);
 
-    	vi v(n);
-
-    	sort(ALL(arr));
-
-    	FOR(n, i) {
-    		
-    	}
-
+    FOR(n, i) {
+    	int x; cin >> x;
+    	cnt[x-1]++;
     }
 
+    cnt[0] = max(cnt[0] - cnt[2], 0);
+
+    int ans = cnt[2]+cnt[3]+(cnt[0]+2*cnt[1]+3)/4;
+
+    cout << ans << endl;
 
     return 0;
 }

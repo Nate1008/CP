@@ -51,7 +51,29 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    TC {
+    	int n; cin >> n;
+    	vi arr(n);
+    	vi cnt(n+1, 1);
 
+    	FOR(n, i) {
+    		cin >> arr[i];
+    	}
+
+    	n = unique(arr.begin(), arr.end()) - arr.begin();
+		arr.resize(n);
+    	FOR(n, i) {
+			cnt[arr[i]]++;
+		}
+		cnt[arr[0]]--;
+		cnt[arr[n - 1]]--;
+
+		int ans = 1e9;
+		FOR(n, i) {
+			ans = min(ans, cnt[arr[i]]);
+		}
+		cout << ans << endl;
+    }
 
     return 0;
 }
