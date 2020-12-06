@@ -53,6 +53,22 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    TC {
+    	int n, k; cin >> n >> k;
+    	vi arr(n);
+    	FOR(n, i) {
+    		cin >> arr[i];
+    	}
+
+    	vi v(n);
+
+    	sort(ALL(arr));
+
+    	FOR(n, i) {
+    		
+    	}
+
+    }
 
 
     return 0;
