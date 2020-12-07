@@ -50,7 +50,6 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    cout.tie(0);
 
     TC {
     	int n; cin >> n;
@@ -70,23 +69,23 @@ int main() {
     	cout << "YES" << endl;
         vi same;
 
-        FOR(n-1, i) {
-            int j = i+1;
-            if(arr[i] == arr[j]) {
-                same.push_back(j);
+        FORN(n, i, 1) {
+            if(arr[0] == arr[i]) {
+                same.push_back(i);
+                // cout << i << endl;
                 continue;
             }
-            cout << (i+1) << " " << (j+1) << endl;
+            cout << 1 << " " << (i+1) << endl;
         }
 
 
     	FOR(same.size(), i) {
-    		int j = same[i]+1;
+    		int j = (same[i])%n;
     		while(arr[same[i]] == arr[j]) {
     			j++;
     			j %= n;
     		}
-    		cout << (i+1) << " " << (j+1) << endl;
+    		cout << (same[i]+1) << " " << (j+1) << endl;
     	}
     }
 
