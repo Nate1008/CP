@@ -51,6 +51,26 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    TC {
+    	ll n; cin >> n;
+    	if (n == 1) {
+    		cout << 1 << endl;
+    		continue;
+    	}
+    	ll cnt = 0;
+    	ll k = 0;
+    	int ans = 0;
+    	ll i = 1;
+    	while(k <= n) {
+    		cnt *= 2;
+    		cnt += i*i;
+    		k += cnt;
+    		i *= 2;
+    		ans++;
+    	}
+
+    	cout << (ans-1) << endl;
+    }
 
 
     return 0;
