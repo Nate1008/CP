@@ -64,14 +64,13 @@ int main() {
 			else break;
 		}
 
-		RFOR(n-1, i) {
+		RFORE(n-1, i) {
 			if(s[i] == '1') b++;
 			else break;
 		}
 
 		// cout << "1: " << b << endl;
     	// cout << "0: " << a << endl;
-
 		FOR(a, i) {
 			cout << '0';
 		}
