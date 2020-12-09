@@ -53,6 +53,24 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    TC {
+    	int n; cin >> n;
+    	vi e(n);
+    	FOR(n, i) {
+    		cin >> e[i];
+    	}
+
+    	sort(ALL(e));
+    	int ans = 0, cnt = 0;
+    	FOR(n, i) {
+    		if (++cnt == e[i]) {
+    			ans++;
+    			cnt = 0;
+    		}
+    	}
+    	cout << ans << endl;
+    }
+
 
 
     return 0;
