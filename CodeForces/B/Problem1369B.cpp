@@ -31,8 +31,6 @@
 #define RFOREN(t, q, v) for(int q = t; q >= v; q--)
 
 #define FORV(v, type) for (vt<type>::iterator it = v.begin(); it <= v.end(); it++)
-#define si(v) (int)(v.size())
-
 
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
@@ -53,6 +51,39 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    TC {
+    	int n; cin >> n;
+    	string s; cin >> s;
+    	
+    	int ones = count(ALL(s), '1');
+
+    	int a = 0; // ZERO
+    	int b = 0; // ONE
+		FOR(n, i) {
+			if(s[i] == '0') a++; 
+			else break;
+		}
+
+		RFORE(n-1, i) {
+			if(s[i] == '1') b++;
+			else break;
+		}
+
+		// cout << "1: " << b << endl;
+    	// cout << "0: " << a << endl;
+		FOR(a, i) {
+			cout << '0';
+		}
+
+		if(b != ones) {
+			cout << '0';
+		}
+
+		FOR(b, i) {
+			cout << '1';
+		}
+		cout << endl;
+    }
 
 
     return 0;

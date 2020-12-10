@@ -33,7 +33,6 @@
 #define FORV(v, type) for (vt<type>::iterator it = v.begin(); it <= v.end(); it++)
 #define si(v) (int)(v.size())
 
-
 #define ALL(v) v.begin(), v.end()
 #define RALL(v) v.rbegin(), v.rend()
 
@@ -53,7 +52,47 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-
+    TC {
+    	int n; cin >> n;
+    	vi odd, even;
+    	int a = 0, b = 0;
+    	FOR(n, i) {
+    		int x; cin >> x;
+    		if(x % 2 == 0) {
+    			even.push_back(x);
+    			a++;
+    		} else {
+    			odd.push_back(x);
+    			b++;
+    		}
+    	}
+    	if (a % 2 == 0 && b % 2 == 0) {
+    		cout << "YES" << endl;
+    	} else {
+    		sort(ALL(odd));
+    		sort(ALL(even));
+    		bool done = false;
+    		for(int i = 0, j = 0; i < si(odd) && j < si(even);) {
+    			int d = odd[i] - even[j];
+    			if (d > 1) {
+    				j++;
+    			} else if (d < -1) {
+    				i++;
+    			} else if (d == -1 || d == 1) {
+    				done = true;
+    				break;
+    			} else {
+    				j++;
+    				i++;
+    			}
+    		}
+    		if(done) {
+    			cout << "YES" << endl;
+    		} else {
+    			cout << "NO" << endl;
+    		}
+    	}
+    }
 
     return 0;
 }
