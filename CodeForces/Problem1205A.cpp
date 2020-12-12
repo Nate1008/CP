@@ -30,7 +30,7 @@
 #define FOREN(t, q, v) for(int q = v; q <= t; q++)
 #define RFOREN(t, q, v) for(int q = t; q >= v; q--)
 
-#define FORV(v, type) for (vt<type>::iterator it = v.begin(); it < v.end(); it++)
+#define FORV(v, type) for (vt<type>::iterator it = v.begin(); it <= v.end(); it++)
 #define si(v) (int)(v.size())
 
 
@@ -54,23 +54,9 @@ int main() {
     cin.tie(0);
 
     int n; cin >> n;
-    vi arr(n);
-    FOR(n, i) {
-    	cin >> arr[i];
-    }
-
-    sort(ALL(arr));
-
-    RFOR(n-1, i) {
-    	if (arr[i] == arr[i-1]) {
-    		int val = arr[i];
-    		arr.erase(B(arr) + i);
-    		arr.push_back(val);
-    	}
-   	}
-
-   	FOR(n, i) cout << arr[i] << " ";
-   	cout << endl;
+    if(n % 2 == 0) {
+    	cout << "NO" << endl;
+    } 
 
     return 0;
 }
