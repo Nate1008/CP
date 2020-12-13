@@ -16,6 +16,7 @@
 #define vd vector<double>
 #define vf vector<float>
 #define vl vector<long long>
+#define vii vector<vi>
 #define vpi vector<pi>
 #define vpf vector<pf>
 #define vpii vector<pii>
@@ -53,19 +54,49 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    TC {
-    	ll n, m; cin >> n >> m;
-    	n /= m;
-    	vi digits(10);
-    	FOR(10, i) {
-    		digits[i] = ((i+1) * m) % 10;
+    int n, m; cin >> n >> m;
+    vii a(n);
+    FOR(n, i) {
+    	vi b(m);
+    	FOR(m, j) {
+    		cin >> b[j];
     	}
-    	ll sum = 0;
-    	FOR(n%10, i) {
-    		sum += digits[i];
-    	}
-    	cout << sum + n / 10 * accumulate(ALL(digits), 0LL) << endl;
+    	a[i] = b;
     }
+
+   	vii ans; 
+    FOR(n-1, i) {
+    	FOR(m-1, j) {
+    		if(a[i][j] * a[i][j+1] * a[i+1][j] * a[i+1][j+1] > 0) {
+    			a[i][j] = 2;
+    			a[i][j+1] = 2;
+    			a[i+1][j] = 2;
+    			a[i+1][j+1] = 2;
+    			vi arr(2);
+    			arr[0] = i;
+    			arr[1] = j;
+    			ans.push_back(arr);
+    		}
+    	}
+    }
+
+    int cnt = 0;
+    FOR(n, i) {
+    	FOR(m, j) {
+    		if(a[i][j] == 1) cnt++;
+    	}
+    }
+
+    if(cnt != 0) {
+    	cout << -1 << endl;
+    } else {
+    	cout << si(ans) << endl;
+    	FOR(si(ans), i) {
+    		cout << ans[i][0]+1 << " " << ans[i][1]+1 << endl;
+    	}
+    }
+
+
 
     return 0;
 }

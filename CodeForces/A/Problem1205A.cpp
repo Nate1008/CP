@@ -56,7 +56,15 @@ int main() {
     int n; cin >> n;
     if(n % 2 == 0) {
     	cout << "NO" << endl;
+    	return 0;
     } 
+
+    cout << "YES" << endl;
+    FOREN(n*2, i, 1) {
+    	if(i <= n) cout << 2 * i - i % 2 << " ";
+    	else cout << 2 * (i-n) - i % 2 << " ";
+    }
+
 
     return 0;
 }
