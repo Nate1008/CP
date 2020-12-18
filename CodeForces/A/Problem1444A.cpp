@@ -49,11 +49,10 @@
 
 using namespace std;
 
-int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-
-
-
-    return 0;
-}
+ll t,n,m,ali;
+int main(){ cin>>t; while(t--){
+cin>>n>>m; if(n<m){cout<<n<<endl;continue;}
+ali=0; for(ll i=1;i*i<=m;i++){ if(m%i)continue;
+if(i!=1){ ll k=n; while(!(k%m))k/=i; ali=max(ali,k);				
+} ll k=n; while(!(k%m))k/=m/i; ali=max(ali,k);}
+cout<<ali<<'\n'; } return 0; }
