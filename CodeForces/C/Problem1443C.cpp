@@ -54,29 +54,20 @@ int main() {
     cin.tie(0);
 
     TC {
-    	int n, k; cin >> n >> k;
-    	string a; cin >> a;
-    	string b; cin >> b;
-
-    	vi ca(27), cb(27);
-
-    	
-    	FOR(n, i) {
-    		cb[b[i]-'a']++;
-    		ca[a[i]-'a']++;
+    	int n; cin >> n;
+    	int sum = 0;
+    	vpi arr(n);
+    	FOR(n, i) cin >> arr[i].F;
+    	FOR(n, i) cin >> arr[i].S;
+    	sort(ALL(arr));
+    	int k = n-1;
+    	while(sum <= arr[k].F && k >= 0) {
+    		sum += arr[k].S;
+    		// cout << sum << endl;
+    		k--;
     	}
-
-    	FOR(26, i) {
-    		if(ca[i] < cb[i] || (ca[i] -= cb[i]) % k != 0) {
-    			goto bad;
-    		}
-    		ca[i+1] += ca[i];
-    	}
-    	cout << "Yes" << endl;
-    	continue;
-    	bad: cout << "No" << endl;
-    }	
-
+    	cout << min(arr[k+1].F, sum) << endl;
+    }
 
     return 0;
 }
