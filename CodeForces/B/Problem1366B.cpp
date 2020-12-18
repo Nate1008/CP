@@ -58,6 +58,18 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    TC {
+    	int n, x, m; cin >> n >> x >> m;
+    	int l = x, r = x;
+    	FOR(m, i) {
+			int L, R; cin >> L >> R;
+			if (max(l, L) <= min(r, R)) {
+				l = min(l, L);
+				r = max(r, R);
+			}
+    	}
+    	cout <<	r-l+1 << endl;
+    }
 
 
     return 0;
