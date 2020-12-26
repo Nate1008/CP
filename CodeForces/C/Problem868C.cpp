@@ -58,7 +58,23 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-
-
+    int n, k; cin >> n >> k;
+    si uni;
+    FOR(n, i) {
+        int a = 0;
+        FOR(k, j) {
+            int y; cin >> y;
+            a += (y << j);
+        }
+        uni.insert(a);
+    }
+    for(auto &i : uni){
+        for(auto &j : uni) {
+            if (__builtin_popcount(i&j) == 0) goto W;
+        }
+    }
+    puts("NO");
+    return 0;
+    W: puts("YES");
     return 0;
 }
