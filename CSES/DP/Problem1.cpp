@@ -25,8 +25,8 @@
 #define sf set<float>
 #define sl set<long long>
 
-#define FOR(t, q) for(int q = 0; q < t; q++)
-#define FORV(a, x) for (auto& a : x)
+#define rep(t, q) for(int q = 0; q < t; q++)
+#define trav(v, type) for (auto& a : x)
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
@@ -45,6 +45,10 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    int n; cin >> n;
+    int dp[n+1];
+    dp[0] = 0;
+    rep()
 
     return 0;
 }
