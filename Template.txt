@@ -37,14 +37,19 @@
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 
-#define TC int t; cin >> t; FOR(t, q)
+#define TC int t; cin >> t; FOR(t, _q)
 
 using namespace std;
+
+void solve() {
+
+}
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    solve();
 
     return 0;
 }

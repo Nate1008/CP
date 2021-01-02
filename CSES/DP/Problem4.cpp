@@ -45,6 +45,21 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
+    int n, k; cin >> n >> k;
+    vi c(n);
+    FOR(n, i) cin >> c[i];
+    sort(all(c));
+    int dp[k+1][c[n-1]]; memset(dp[0], 0, sizeof(dp[0]))
+
+    for(int i = 1; i <= k; ++i) {
+        dp[i] = 0;
+        for(auto& x : c) {
+            if (x > i) continue;
+            dp[i] += dp[i-x];
+            dp[i] %= MOD;
+        }
+    }
+    cout << dp[k];
 
     return 0;
 }
