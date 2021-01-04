@@ -42,14 +42,27 @@
 using namespace std;
 
 void solve() {
+	int n, a = 0, b = 0; cin >> n;
+	FOR(n, i) {
+		int x; cin >> x;
+		if (x == 1) a++;
+		else b++;
+	}
+	if (a & 1) goto L;
 
+	if (b & 1 && a < 2) goto L;
+
+	cout << "YES" << endl;
+	return;
+	L: cout << "NO" << endl;
+	return;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+    TC solve();
 
     return 0;
 }
