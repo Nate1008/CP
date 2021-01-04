@@ -42,14 +42,21 @@
 using namespace std;
 
 void solve() {
-
-}
+	int n; cin >> n;
+	vi dp(n+1, 0), a(n+1, 0);
+	for(int i = 1; i <= n; i++) {cin >> dp[i]; a[i] = dp[i];}
+	for(int i = 1; i <= n; i++) {
+		if (a[i]+i <= n) {dp[a[i]+i]=max(dp[a[i]+i], a[a[i]+i]+dp[i]);}
+		dp[i] = max(dp[i-1], dp[i]);
+	}	
+	cout << dp[n] << endl;
+} 
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+    TC solve();
 
     return 0;
 }
