@@ -42,14 +42,28 @@
 using namespace std;
 
 void solve() {
-
+	int n; cin >> n;
+	ll bal = 0;
+	vi s(n);
+	FOR(n, i) cin >> s[i];
+	sort(rall(s));
+	FOR(n, i) {
+		if (i % 2) {
+			if (s[i] % 2) bal += -s[i];
+		} else {
+			if (s[i] % 2 == 0) bal += s[i];
+		}
+	}
+	if (!bal) cout << "Tie" << endl;
+	else if (bal > 0) cout << "Alice" << endl;
+	else cout << "Bob" << endl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+    TC solve();
 
     return 0;
 }
