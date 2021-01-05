@@ -42,14 +42,31 @@
 using namespace std;
 
 void solve() {
-
+	int n; cin >> n;
+	ll b = 0;
+	si uni;
+	vi w(n), dup;
+	FOR(n, i) {cin >> w[i]; b+=w[i];}
+	FOR(n-1, i) {
+		int x, y; cin >> x >> y;
+		if (uni.count(x)) dup.push_back(w[x-1]);
+		if (uni.count(y)) dup.push_back(w[y-1]);
+		uni.insert(x), uni.insert(y);
+	}
+	sort(rall(dup));
+	cout << b << " ";
+	FOR(n-2, i) {
+		b += dup[i];
+		cout << b << " ";
+	}
+	cout << endl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+   	TC solve();
 
     return 0;
 }

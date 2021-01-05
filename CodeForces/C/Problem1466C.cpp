@@ -41,15 +41,21 @@
 
 using namespace std;
 
-void solve() {
+void solve(){
+	string s; cin >> s;
+	int n = s.length(), cnt = 0;
+	for(int i = 1; i < n; i++) {
+		if(s[i-1] == s[i] || s[i-2] == s[i]) cnt++, s[i] = 0;
+	}
 
+	cout << cnt << endl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+    TC solve();
 
     return 0;
 }
