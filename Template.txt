@@ -36,6 +36,8 @@
 #define RE(v) v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
+
 
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
