@@ -8,7 +8,7 @@ alias clion='open -na "CLion.app" --args "$@"'
 alias desktop='cd ~/Desktop'
 alias obash='clion ~/.bash_profile'
 alias bash='nano ~/.bash_profile'
-alias CP='cd ~/Documents/CompetitiveProgramming'
+alias CP='cd ~/Documents/CompetitiveProgramming/CP'
 alias CSES='cd ~/Documents/CompetitiveProgramming/CP/CSES'
 alias CF='cd ~/Documents/CompetitiveProgramming/CP/CodeForces'
 alias COMP='cd ~/Documents/CompetitiveProgramming/CP/Competitions'
@@ -109,4 +109,17 @@ function sort() {
     update
 }
 
+function start() {
+    CP
+    cf race $1
+    wait
+    cd "Competitions/$1"
+}
+
+function cases() {
+    cd $1
+    cf test
+    wait
+    cd ..
+}
 
