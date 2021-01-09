@@ -44,18 +44,14 @@
 using namespace std;
 
 void solve() {
-	int a1, b1, a2, b2; cin >> a1 >> b1 >> a2 >> b2;
-	if (max(a1, b1) != max(a2, b2)) {cout << "No" << endl; return;} 
-	int s = min(a1, b1) + min(a2, b2);
-	if (s != max(a1, b1)) {cout << "No" << endl; return;}
-	cout << "Yes" << endl;
+
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    TC solve();
+    solve();
 
     return 0;
 }
