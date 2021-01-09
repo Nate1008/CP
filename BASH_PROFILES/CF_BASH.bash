@@ -71,6 +71,7 @@ function filesort() {
 function create() {
     touch Problem$1.cpp
     cat ~/Documents/CompetitiveProgramming/CP/Template.txt > Problem$1.cpp
+    sublime Problem$1.cpp
     str=$1
     i=$((${#str}-1))
     var=${str:$i:1}
@@ -107,3 +108,5 @@ function sort() {
     mv Problem$str.cpp $dir/Problem$str.cpp
     update
 }
+
+
