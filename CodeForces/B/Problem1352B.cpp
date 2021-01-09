@@ -1,102 +1,70 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-
-#include <vector>
-#include <set>
-#include <bitset>
-#include <map>
-#include <deque>
-#include <string>
-
-#include <algorithm>
-#include <numeric>
-#include <iterator>
-#include <functional>
-
-#include <cstdio>
-#include <cassert>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
-#include <cmath>
-#include <climits>
+#include <bits/stdc++.h>
 
 #define ll long long
+#define pi pair<int, int>
+#define pf pair<float, int>
+#define ps pair<string, int>
+#define pii pair<pi, int>
 #define mi map<int, int>
 #define ms map<string, int>
 #define mc map<char, int>
-#define pi pair<int, int>
-#define f first
-#define s second
+#define mpi map<pi, int>
+#define F first
+#define S second
 #define vt vector
 #define vi vector<int>
 #define vd vector<double>
 #define vf vector<float>
 #define vl vector<long long>
+#define vpi vector<pi>
+#define vpf vector<pf>
+#define vpii vector<pii>
+#define st set
+#define si set<int>
+#define sd set<double>
+#define sf set<float>
+#define sl set<long long>
 
+#define FOR(t, q) for(int q = 0; q < t; q++)
+#define FORV(a, x) for (auto& a : x)
+#define sz(v) (int)(v.size())
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
+#define B(v) v.begin()
+#define RB(v) v.rbegin()
+#define E(v) v.end()
+#define RE(v) v.rend()
+#define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
+#define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
+
+
+#define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
-int main() {
-    int t;
-    cin >> t;
-    for(int q = 0; q < t; q++) {
-        double n, k;
-        cin >> n >> k;
-        int a = floor(n/k);
-        int b = ceil(n/k);
-        if(a == b) {
-            int x = n/k;
-            cout<<"YES"<<"\n";
-            for(int i = 0; i < k; i++) {
-                cout<<x<<" ";
-            }
-            cout<<"\n";
-            continue;
-        }
-        // cout<<a<<"\t"<<b<<"\n";
-        int half = ceil(k/2);
-        bool pass = false;
-        for(int v = 1; v < k; v++){
-            // cout<<"V: "<<v<<'\n';
-            int ansb = ((b-1)*v) + ((b+1)*(k-v));
-            int ansa = ((a+1)*v) + ((a-1)*(k-v));
-            if(a <= 1){
-                ansa = -1;
-            }
-            if(b <= 1) {
-                ansb = -1;
-            }
-            // cout<<ansa<<"\t"<<ansb<<"\n";
-            if(ansa == n) {
-                cout<<"YES"<<"\n";       
-                for(int i = 0; i < v; i++) {
-                    cout<<a+1<<" ";
-                }
-                for(int i = 0; i < k-v; i++) {
-                    cout<<a-1<<" ";
-                }
-                cout<<"\n";
-                pass = true;
-                break;
-            } else if (ansb == n) {
-                cout<<"YES"<<"\n";       
-                for(int i = 0; i < v; i++) {
-                    cout<<b-1<<" ";
-                }
-                for(int i = 0; i < k-v; i++) {
-                    cout<<b+1<<" ";
-                }
-                cout<<"\n";
-                pass = true;
-                break;
-            }
-        }
-        if(!pass){
-            cout<<"NO"<<"\n";
-        }
-    }
-    return 0;
+void solve() {
+	int n, k, c = 0, d = 0; cin >> n >> k;
+	int m = n;
+	if (n < k) goto L;
+	c = n%k;
+	n -= n%k;
+	if (c % 2) n-=k,c+=k;
+	if (c % 2 || n <= 0) goto L;
+
+	cout << "YES" << endl;
+	d = n / k;
+	FOR(k-1, i) cout << d << " ";
+	cout << d + c << endl;
+	return;
+	L: cout << "NO" << endl;
 }
 
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    TC solve();
+
+    return 0;
+}
