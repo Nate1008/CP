@@ -44,14 +44,20 @@
 using namespace std;
 
 void solve() {
-
+	int n; cin >> n;
+	si uni;
+	FOR(n, i) {
+		int x; cin >> x;
+		uni.insert(x);
+	}
+	cout << (uni.size()==n?"NO":"YES") << endl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+    TC solve();
 
     return 0;
 }
