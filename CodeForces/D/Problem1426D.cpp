@@ -6,6 +6,7 @@
 #define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
+#define ml map<long long, int>
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
@@ -45,8 +46,23 @@
 using namespace std;
 
 void solve() {
-
-}
+	int n, ans = 0; cin >> n;
+	sl uni;
+	uni.insert(0);
+	ll a = 0;
+	FOR(n, i) {
+		int x; cin >> x;
+		a += x;
+		if (uni.count(a)) {
+			ans++;
+			uni = {};
+			uni.insert(0);
+			a = x;
+		} 
+		uni.insert(a);
+	}
+	cout << ans << endl;
+}	
 
 int main() {
     ios_base::sync_with_stdio(0);
