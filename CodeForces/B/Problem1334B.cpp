@@ -45,14 +45,22 @@
 using namespace std;
 
 void solve() {
-
+	int n, x, ans = 0; cin >> n >> x;
+	vl a(n);
+	FOR(n, i) cin >> a[i];
+	sort(rall(a));
+	FORN(n, i, 1) a[i] += a[i-1];
+	FOR(n, i) {
+		if ((a[i]*1.) / (i+1.) >= x) ans = i+1;
+	}
+	cout << ans << endl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+    TC solve();
 
     return 0;
 }
