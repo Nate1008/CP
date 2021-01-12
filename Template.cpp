@@ -6,6 +6,7 @@
 #define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
+#define ml map<long long, int>
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
@@ -26,6 +27,7 @@
 #define sl set<long long>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
+#define FORN(t, q, v) for(int q = v; q < t; q++)
 #define FORV(a, x) for (auto& a : x)
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
