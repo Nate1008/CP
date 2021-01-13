@@ -6,6 +6,7 @@
 #define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
+#define ml map<long long, int>
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
@@ -26,6 +27,7 @@
 #define sl set<long long>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
+#define FORN(t, q, v) for(int q = v; q < t; q++)
 #define FORV(a, x) for (auto& a : x)
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
@@ -36,34 +38,55 @@
 #define RE(v) v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
+
 
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
 void solve() {
-    int n, q, S = 0; cin >> n >> q;
-    vpi p(q);
-    vi cnt(n, 0), pre(n+1, 0);
-    for(pi i : p){
-        cin >> i.F >> i.S;
-        --i.F, --i.S;
-        for(int j = i.F; j <= i.S; j++) ++cnt[j];
-    }
-    p[0] = cnt[0];
-    for(int i = 0; i < n; i++) if (cnt[i] == 1) pre[i-1] = cnt[i]; else pre[i] = pre[i-1];
-    for(auto i : cnt) cout << i << " ";
-    cout << endl;
-    for(auto i : pre) cout << i << " ";
-//    for(auto i : p) {
-//        int l = i.F, r = i.S;
-//        pre[l]
-//    }
-}
+	int n, la = 0, k = 1; cin >> n;
+	string s; cin >> s;
+	vi ans(n, 0);
+	vpi sub;
+	FOR(n-1, i) {
+		if (s[i] == s[i+1]) {
+			sub.pb(pi(la, i));
+			la = i+1;
+			k++;
+		}
+	}
+	sub.pb(pi(la, n-1));
+	int cnt = 1, c = 0;
+	vi a, b;
+	for(auto& [l, r] : sub) {
+		if (s[l] == '0' && !b.empty()) {
+			c = b[sz(b)-1];
+			k--;
+			b.pop_back();
+		} else if (s[l] == '1' && !a.empty()) {
+			c = a[sz(a)-1];
+			k--;
+			a.pop_back();
+		} else {
+			c = cnt;
+			cnt++;
+		}
+		FORN(r+1, i, l) ans[i] = c;
+		if (s[r] == '0') a.push_back(c);
+		else b.push_back(c);
+	}
+	cout << k << endl;
+	FOR(n, i) cout << ans[i] << " ";
+	cout << endl;
+}	
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    solve();
+
+    TC solve();
+
     return 0;
 }
