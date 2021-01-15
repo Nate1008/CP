@@ -1,2 +1,2 @@
 # Competitive Programming
-### Files for CP Training
+## Files for CP Training
