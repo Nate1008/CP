@@ -1,2 +1,2 @@
-# Competitive Programming (CCC)
-# Files for CP Training
+# Competitive Programming
+### Files for CP Training
