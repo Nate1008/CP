@@ -53,13 +53,13 @@ void solve() {
 		int x = 1<<k;
 		int cnt = 0;
 		int y = 0;
-		for(int i=0;i<N;i++) if(a[i]&x) cnt++, y = i;
+		for(int i=0;i<n;i++) if(a[i]&x) cnt++, y = i;
 		if(cnt == 1){
 			swap(a[0], a[y]);
 			break;
 		}
 	}
-	for(int i=0;i<N;i++) printf("%d ", a[i]);
+	for(int i=0;i<n;i++) printf("%d ", a[i]);
 }
 
 int main() {
