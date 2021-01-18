@@ -28,7 +28,6 @@
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
 #define FORN(t, q, v) for(int q = v; q < t; q++)
-#define FORV(a, x) for (auto& a : x)
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
