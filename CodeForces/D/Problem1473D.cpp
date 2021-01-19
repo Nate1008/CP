@@ -45,14 +45,37 @@
 using namespace std;
 
 void solve() {
+	int n, m; cin >> n >> m;
+	string s; cin >> s;
+	vi sur(1, 0), sul(1, 0);
+	for(int i = n-1; i >= 0; i--) {
+		int d = s[i] == '+' ? 1 : -1;
+		sul.pb(min(0, sul.back()+d));
+		sur.pb(max(0, sur.back()+d));
+	}
+	reverse(all(sul)), reverse(all(sur));
+	vi prl(1, 0), prr(1, 0), pr(1, 0);
+	FOR(n, i) {
+		int d = s[i] == '+' ? 1 : -1;
+		pr.pb(pr.back() + d);
+		prl.pb(min(prl.back(), pr.back()));
+		prr.pb(max(prr.back(), pr.back()));
+	}
 
+	FOR(m, i) {
+		int l, r; cin >> l >> r;
+		l--;
+		int l1 = prl[l], r1 = prr[l];
+		int l2 = sul[r] + pr[l], r2 = sur[r] + pr[l];
+		cout << max(r1, r2) - min(l1, l2) + 1 << endl;
+	}
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    solve();
+    TC solve();
 
     return 0;
 }
