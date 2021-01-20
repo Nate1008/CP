@@ -45,7 +45,42 @@
 using namespace std;
 
 void solve() {
+	int n, k; cin >> n;
+	n *= 2, k = (n/2)-1;
+	vi a(n); vpi ans;
+	mi cp;
+	FOR(n, i) {cin >> a[i]; cp[a[i]]++;}
+	sort(all(a));
+	cp[a[n-1]]--;
+	int skip = -1;
+	FOR(n, i) {
+		ans.clear();
+		mi cnt = cp;
+		cnt[a[i]]--;
+		int cur = n-2, m = a[n-1];
+		while(sz(ans) < k) {
+			while(!cnt[a[cur]]) cur--;
+			int x = a[cur], y = m-x;
+			// cout <<"X: " << x << "::" << cnt[x] << endl;
+			cnt[x]--;
+			// cout <<"Y: " << y << "::" << cnt[y] << endl;
+			if (cnt[y]) cnt[y]--;
+			else break;
+			ans.pb(pi(x, y));
+			m = x;
+			cur--;
+		}
+		cnt[a[i]]++;
+		if (sz(ans) >= k) {skip = i; break;}
+	}
+	if (skip == -1) goto L;
 
+	cout << "YES" << endl;
+	cout << a[skip]+a[n-1] << endl;
+	cout << a[n-1] << " " << a[skip] << endl;
+	for(auto p : ans) cout << p.F << " " << p.S << endl;
+	return;
+	L: cout << "NO" << endl;
 }
 
 int main() {
