@@ -45,7 +45,18 @@
 using namespace std;
 
 void solve() {
-
+	int n; cin >> n;
+	int k = ceil(sqrt(n));
+	vpi ans;
+	for(int i = n-1; i >= k; i--) {
+		if (i == k) {
+			ans.pb(pi(n, k));
+			ans.pb(pi(n, k));
+			n = k, k = ceil(sqrt(n));
+		} else ans.pb(pi(i, n));
+	}
+	cout << sz(ans) << endl;
+	for(auto p : ans) cout << p.F << " " << p.S << endl;
 }
 
 int main() {
