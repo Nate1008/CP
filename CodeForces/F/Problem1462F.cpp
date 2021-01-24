@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
 
-#define ll long long
+// #define ll long long
 #define pi pair<int, int>
 #define pf pair<float, int>
 #define ps pair<string, int>
 #define pii pair<pi, int>
 #define mi map<int, int>
+#define ml map<long long, int>
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
@@ -26,7 +27,7 @@
 #define sl set<long long>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
-#define FORV(a, x) for (auto& a : x)
+#define FORN(t, q, v) for(int q = v; q < t; q++)
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
@@ -36,23 +37,36 @@
 #define RE(v) v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
 
-#define TC int t; cin >> t; FOR(t, q)
+
+#define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
+
+void solve() {
+	int n; cin >> n;
+	vi l(n), r(n), ll(n), rr(n);
+	FOR(n, i) {
+		cin >> l[i] >> r[i];
+		ll[i] = l[i]; rr[i] = r[i];
+	}
+	sort(all(l)), sort(all(r));
+
+	int ans = n-1;
+	FOR(n, i) {
+		int x = lower_bound(all(r), ll[i]) - B(r);
+		int y = upper_bound(all(l), rr[i]) - B(l);
+		ans = min(ans, n - y + x);
+	}
+	cout << ans << endl;
+}
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-
-    TC {
-        int n, l; cin >> n >> l;
-        vi c(n);
-        FOR(n, i) cin >> c[i];
-        float ans = 0;
-        cout.precision(6);
-        cout << ans << endl;
-    };
+    TC
+    	solve();
 
     return 0;
 }
