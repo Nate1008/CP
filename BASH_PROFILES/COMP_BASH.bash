@@ -57,9 +57,9 @@ function create() {
 function comp() {
     COMP_BASH
     if [ "$1" == "EDU" ]; then
-        str="EDU_R"$2
+        str=$2
     else 
-        str="R"$1
+        str=$1
     fi
     echo $str
     if [ -d $str ]; then
