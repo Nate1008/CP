@@ -31,7 +31,7 @@
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
-#define B(v) v.begin()
+// #define B(v) v.begin()
 #define RB(v) v.rbegin()
 #define E(v) v.end()
 #define RE(v) v.rend()
@@ -39,13 +39,26 @@
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 #define pb(s) push_back(s);
 
-#define nl endl
+
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
 void solve() {
-
+	int a, b, n; cin >> a >> b >> n;
+	ll ans = 0;
+	vi A(n), B(n);
+	FOR(n, i) cin >> A[i];
+	FOR(n, i) cin >> B[i];
+	mi ma, mb;
+	FOR(n, i) {
+		ma[A[i]]++;
+		mb[B[i]]++;
+	}
+	FOR(n, i) {
+		ans += (n-1) - (ma[A[i]] - 1) - (mb[B[i]] - 1);
+	}
+	cout << ans/2 << endl;
 }
 
 int main() {

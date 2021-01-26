@@ -39,13 +39,17 @@
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 #define pb(s) push_back(s);
 
-#define nl endl
+
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
 void solve() {
-
+	int n; cin >> n;
+	int k = n % 2020;
+	int d = n / 2020;
+	if (k <= d) cout << "YES" << endl;
+	else cout << "NO" << endl;
 }
 
 int main() {

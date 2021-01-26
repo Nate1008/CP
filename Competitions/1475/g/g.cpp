@@ -39,13 +39,27 @@
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 #define pb(s) push_back(s);
 
-#define nl endl
+
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
 void solve() {
-
+	int n, ans = 2e5; cin >> n;
+	vi a(n);
+	FOR(n, i) {
+		cin >> a[i];
+	}
+	sort(all(a));
+	FOR(n, i) {
+		int c = i, x = i;
+		FORN(n, j, i) {
+			if (a[j] % a[x]) c++;
+			else x = j;
+		}
+		ans = min(c, ans);
+	}
+	cout << ans << endl;
 }
 
 int main() {

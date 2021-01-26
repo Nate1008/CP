@@ -39,7 +39,7 @@
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 #define pb(s) push_back(s);
 
-#define nl endl
+
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;

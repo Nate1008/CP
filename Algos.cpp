@@ -1,20 +1,3 @@
-// nCr - Start
-
-long long nCr(int n, int r) {
-    if(r > n - r) r = n - r;
-    long long ans = 1;
-    int i;
-
-    for(i = 1; i <= r; i++) {
-        ans *= n - r + i;
-        ans /= i;
-    }
-
-    return ans;
-}
-
-// nCr - End
-
 // sieve - Start
 
 vector<int> smallest_factor;
@@ -43,20 +26,33 @@ void sieve(int maximum) {
 
 // sieve - End
 
-// fast_pow - Start
+// C - Start
 
 ll fast_pow(ll a, ll p) {
     ll res = 1;
     while (p) {
         if (p % 2 == 0) {
-            a = (a * a) % mod;
+            a = (a * a) /*% mod*/;
             p /= 2;
         } else {
-            res = (res * a) % mod;
+            res = (res * a) /*% mod*/;
             p--;
         }
     }
     return res;
 }
 
-// fast_pow - End
+ll fact(int n) {
+  ll res = 1;
+  for (int i = 1; i <= n; i++) {
+    res = res * 1ll * i /*% mod*/;
+  }
+  return res;
+}
+
+
+ll C(int n, int k) {
+  return fact(n) * 1ll * fast_pow(fact(k), mod - 2) /*% mod*/ * 1ll * fast_pow(fact(n - k), mod - 2) % /*% mod*/;
+}
+
+// C - End

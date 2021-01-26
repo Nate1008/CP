@@ -43,9 +43,47 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
+const int mod =  1e9+7;
+
+ll fast_pow(ll a, ll p) {
+    ll res = 1;
+    while (p) {
+        if (p % 2 == 0) {
+            a = (a * a) % mod;
+            p /= 2;
+        } else {
+            res = (res * a) % mod;
+            p--;
+        }
+    }
+    return res;
+}
+
+ll fact(int n) {
+  ll res = 1;
+  for (int i = 1; i <= n; i++) {
+    res = res * 1ll * i % mod;
+  }
+  return res;
+}
+
+
+ll C(int n, int k) {
+  return fact(n) * 1ll * fast_pow(fact(k), mod - 2) % mod * 1ll * fast_pow(fact(n - k), mod - 2) % mod;
+}
 
 void solve() {
-
+	int n, k; cin >> n >> k;
+	vi a(n);
+	FOR(n, i) {
+		cin >> a[i];
+	}
+	sort(rall(a));
+	int c = k-1;
+	while(a[c] == a[c-1] && c > 0) c--;
+	int cnt = count(all(a), a[c]);
+	k -= c;
+	cout << C(cnt, k) << nl;
 }
 
 int main() {

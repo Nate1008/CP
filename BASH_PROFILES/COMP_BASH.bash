@@ -72,5 +72,5 @@ function comp() {
 
 
 function sort() {
-    mv $1.cpp Problems/$1.cpp
+    mv $1.cpp Problems/$1.CompetitiveProgramming
 }
