@@ -31,21 +31,43 @@
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
-#define B(v) v.begin()
-#define RB(v) v.rbegin()
-#define E(v) v.end()
-#define RE(v) v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 #define pb(s) push_back(s);
 
-
+#define nl endl
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
-void solve() {
+bool ok = false;
 
+void solve() {
+	int n; cin >> n;
+	vt<string> A(n), B(n);
+	FOR(n, i) cin >> A[i];
+	FOR(n, i) cin >> B[i];
+	FOR(n, i) {
+		if (A[0][i] != B[0][i]) {
+			FOR(n, j) {
+				if (A[j][i] == '1') A[j][i] = '0';
+				else A[j][i] = '1';
+			}
+		}
+	}
+	FOR(n, i) {
+		if (A[i][0] != B[i][0]) {
+			FOR(n, j) {
+				if (A[i][j] == '1') A[i][j] = '0';
+				else A[i][j] = '1';
+			}
+		}
+	}
+	ok = true;
+	FOR(n, i) {
+		if (A[i] != B[i]) {ok = false; break;}
+	}
+	cout << (ok ? "YES" : "NO") << nl;
 }
 
 int main() {

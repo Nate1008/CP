@@ -31,10 +31,6 @@
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
-#define B(v) v.begin()
-#define RB(v) v.rbegin()
-#define E(v) v.end()
-#define RE(v) v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 #define pb(s) push_back(s);

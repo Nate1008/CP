@@ -31,35 +31,27 @@
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
-#define B(v) v.begin()
-#define RB(v) v.rbegin()
-#define E(v) v.end()
-#define RE(v) v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
 #define pb(s) push_back(s);
 
-
+#define nl endl
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-
+const int N = 2e5+1;
 void solve() {
 	int n, ans = 2e5; cin >> n;
-	vi a(n);
-	FOR(n, i) {
-		cin >> a[i];
-	}
-	sort(all(a));
-	FOR(n, i) {
-		int c = i, x = i;
-		FORN(n, j, i) {
-			if (a[j] % a[x]) c++;
-			else x = j;
+	vi dp(N), cnt(N), A(n);
+	FOR(n, i) cin >> A[i];
+	for(auto &a : A) cnt[a]++;
+
+	for(int i = N-1; i > 0; i--) {
+		for(int j = i; j < N; j+=i) {
+			dp[i] = max(dp[i], cnt[i]+dp[j]);
 		}
-		ans = min(c, ans);
 	}
-	cout << ans << endl;
+	cout << n-dp[1] << endl;
 }
 
 int main() {
