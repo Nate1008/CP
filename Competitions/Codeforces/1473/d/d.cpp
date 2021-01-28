@@ -46,20 +46,34 @@
 using namespace std;
 
 void solve() {
-	int n, m, x = 0; cin >> n >> m;
+	int n, m, x = 0, mxx = 0, mnx = 0; cin >> n >> m;
 	string s; cin >> s;
-	vpi cnt(n, pi(0, 0));
+	vi mx(n+1), mn(n+1), end(n+1);
 	FOR(n, i) {
-		cnt[i] = cnt[i-1];
-		if (s[i] == '-') cnt[i].S++;
-		else cnt[i].F++;
+		x += (s[i] == '+' ? 1 : -1);
+		mxx = max(mxx, x);
+		mnx = min(mnx, x);
+		mx[i+1] = mxx;
+		mn[i+1] = mnx;
+		end[i+1] = x;
 	}
+	mxx = mnx = x = 0;
+	vi mxr(n+1), mnr(n+1), endr(n+1);
+	for(int i = n-1; i >= 0; i--) {
+		x += (s[i] == '-' ? 1 : -1);
+		mxx = max(mxx, x);
+		mnx = min(mnx, x);
+		mxr[i] = mxx;
+		mnr[i] = mnx;
+		endr[i] = x;
+	}
+
 	FOR(m, i) {
 		int l, r; cin >> l >> r;
-		l--, r--;
-		int d1 = cnt[r].F - cnt[l].F;
-		int d2 = cnt[r].S - cnt[l].S;
-
+		l--;
+		int l1 = mx[l], l2 = mn[l];
+		int r1 = end[l] + (mxr[r] - endr[r]), r2 = end[l] + (mnr[r] - endr[r]);
+		cout << max(r1, l1) - min(l2, r2) + 1 << endl;
 	}
 }	
 
