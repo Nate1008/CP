@@ -39,16 +39,33 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-
+const int mod = 998244353;
 void solve() {
+	int n, k; cin >> n >> k;
+	ll ans = 1, res = 0, cnt = 0;
+	vi p(n);
+	FOR(n, i) cin >> p[i];
 
+	int idx = 0;
+	while(p[idx] < n-k+1) idx++;
+	FORN(n, i, idx) {
+		cnt++;
+		if (p[i] >= n-k+1) {
+			res += p[i];
+			ans %= mod;
+			ans *= cnt;
+			ans %= mod;
+			cnt = 0;
+		}
+	}
+	cout << res << " " << ans << nl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
-    	solve();
+    solve();
 
     return 0;
 }
+
