@@ -39,10 +39,11 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-
 void solve() {
-
-}
+	ll n, k; cin >> n >> k;
+	if ((k*k) <= n && k%2 == n%2) cout << "YES" << nl;
+	else cout << "NO" << nl;
+} 
 
 int main() {
     ios_base::sync_with_stdio(0);
