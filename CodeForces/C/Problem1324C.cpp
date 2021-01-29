@@ -41,7 +41,15 @@
 using namespace std;
 
 void solve() {
-
+	string s; cin >> s;
+	int n = sz(s);
+	int ans = 0, cnt = 0;
+	FOR(n, i) {
+		cnt++;
+		if (s[i] == 'R') ans = max(ans, cnt), cnt = 0;
+	}
+	ans = max(ans, cnt+1);
+	cout << ans << nl;
 }
 
 int main() {
@@ -52,3 +60,4 @@ int main() {
 
     return 0;
 }
+
