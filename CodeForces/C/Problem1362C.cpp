@@ -33,6 +33,7 @@
 #define rall(v) v.rbegin(), v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+
 #define pb(s) push_back(s);
 
 #define nl endl
@@ -41,8 +42,9 @@
 using namespace std;
 
 void solve() {
-	
-} 
+	ll n; cin >> n;
+	cout << (n << 1) - __builtin_popcountll(n) << nl;	
+}
 
 int main() {
     ios_base::sync_with_stdio(0);
