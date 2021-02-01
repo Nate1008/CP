@@ -40,61 +40,34 @@
 
 using namespace std;
 
-vector<int> smallest_factor;
-vector<bool> prime;
-vector<int> primes;
-
-void sieve(ll maximum) {
-    maximum = max(maximum, 1LL);
-    smallest_factor.assign(maximum + 1, 0);
-    prime.assign(maximum + 1, true);
-    prime[0] = prime[1] = false;
-    primes = {};
- 
-    for (int p = 2; p <= maximum; p++)
-        if (prime[p]) {
-            smallest_factor[p] = p;
-            primes.push_back(p);
- 
-            for (ll i = p * p * 1LL; i <= maximum; i += p)
-                if (prime[i]) {
-                    prime[i] = false;
-                    smallest_factor[i] = p;
-                }
-        }
-}
-
-ll fast_pow(ll a, ll p) {
-    ll res = 1;
-
-    while (p) {
-        if (p % 2 == 0) {
-            a = (a * a) /*% mod*/;
-            p /= 2;
-        } else {
-            res = (res * a) /*% mod*/;
-            p--;
-        }
-    }
-    return res;
-}
-
 void solve() {
-	ll a, m; cin >> a >> m;
-	ll ans = 1; int k = 0, c = 0;
-	while(m > 1) {
-		k = 0;
-		while(m % primes[c]) m /= primes[c], k++;
-		if (k) ans *= fast_pow(primes[c], k-1) * (primes[c]-1);
-		c++;
+	int n, cnt = 0, lev = 0; cin >> n;
+	vi A(n), l;
+	cin >> A[0];
+	FORN(n, i, 1) {
+		cin >> A[i];
+		if (cnt == 0) cnt++;
+		else if (A[i-1] < A[i]) cnt++;
+		else {l.pb(cnt); cnt = 1;}
 	}
-	cout << ans << nl;
+	l.pb(cnt);
+	int m = 1, s = 0; cnt = 0;
+	for(auto i : l) {
+		cnt++;
+		s += i;
+		if (cnt == m) {
+			m = s;
+			cnt = s = 0;
+			lev++;
+		}
+	}
+	if (cnt) lev++;
+	cout << lev << nl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    sieve((long long)1e10+10);
     TC
     	solve();
 
