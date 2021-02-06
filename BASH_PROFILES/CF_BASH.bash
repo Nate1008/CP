@@ -123,9 +123,9 @@ function cases() {
     cd ..
 }
 
-TIME=`date +"%T"`
+TIME=`date +"%I:%M:%S %p"`
 function title() {
-    TIME=`date +"%T"`
+    TIME=`date +"%I:%M:%S %p"`
     PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]''\n''\[\033[32m\]''[''$TIME'']''\[\033[36m\]'' \w''\n''\[\033[39m\]''$ '
 }
 trap "title" DEBUG
