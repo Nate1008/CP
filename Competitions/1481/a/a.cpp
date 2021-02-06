@@ -41,7 +41,15 @@
 using namespace std;
 
 void solve() {
-
+	int x, y; cin >> x >> y;
+	string s; cin >> s;
+	int u = count(all(s), 'U');
+	int d = -count(all(s), 'D');
+	int r = count(all(s), 'R');
+	int l = -count(all(s), 'L');
+	if (r >= x && x >= l && u >= y && y >= d) {
+		cout << "YES" << nl;
+	} else cout << "NO" << nl;
 }
 
 int main() {

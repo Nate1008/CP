@@ -41,13 +41,34 @@
 using namespace std;
 
 void solve() {
-
+	int n, m, ans = 0; cin >> n >> m;
+	vpi A(n, pi(m, 0));
+	FOR(n, i) {
+		string s; cin >> s;
+		FOR(m, j) {
+			if (s[j] == '#') {
+				A[i] = pi(min(A[i].F, j), max(A[i].S, j));
+			}
+		}
+	}
+	bool ok1 = false, ok2 = false;
+	FORN(n-2, i, 1) {
+		if (A[i].F == A[i+1].F) ok1 = true;
+		else ans += 1+ok1, ok1 = 0;
+		
+		if (A[i].S == A[i+1].S) ok2 = true;
+		else ans += 1+ok2, ok2 = 0;
+	}
+	ans += ok1 + ok2;
+	if (A[0].F != A[0].S) ans++;
+	if (A[n-2].F != A[n-2].S) ans++;
+	cout << ans << nl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;

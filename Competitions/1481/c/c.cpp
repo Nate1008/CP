@@ -41,7 +41,34 @@
 using namespace std;
 
 void solve() {
-
+	int n, m; cin >> n >> m;
+	vi a(n), b(n), ans(m);
+	vt<vi> d(n+1), c(n+1);
+	FOR(n, i) cin >> a[i];
+	FOR(n, i) cin >> b[i];
+	FOR(n, i) {
+		if (a[i] != b[i]) d[b[i]].pb(i); 
+		c[a[i]].pb(i);
+	}
+	FOR(m, i) {
+		int x; cin >> x;
+		if (!d[x].empty()) {
+			ans.pb(d[x][0]);
+			cnt[a[d[x][0]]]--;
+			cnt[b[d[x][0]]]++;
+			d[x].pop_front();
+		} else {
+			if (!c[x].empty()) {
+				ans.pb(c[x][0]);
+				c[x].pop_front();
+			} else goto L;
+		}
+	}
+	cout << "YES" << nl;
+	for(auto a : ans) cout << a+1 << " ";
+	cout << nl;
+	return;
+	L: cout << "NO" << nl;
 }
 
 int main() {

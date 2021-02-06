@@ -41,13 +41,15 @@
 using namespace std;
 
 void solve() {
-
+	int v, t, s, d; cin >> v >> t >> s >> d;
+	if ((v*t) <= d && d <= (s*v)) cout << "No" << nl;
+	else cout << "Yes" << nl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;

@@ -41,7 +41,8 @@
 using namespace std;
 
 void solve() {
-
+	float x, y, r; cin >> x >> y >> r;
+	
 }
 
 int main() {

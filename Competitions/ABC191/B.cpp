@@ -41,13 +41,17 @@
 using namespace std;
 
 void solve() {
-
+	int n, x; cin >> n >> x;
+	FOR(n, i) {
+		int a; cin >> a;
+		if (a != x) cout << a << " ";
+	}
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;

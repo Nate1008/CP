@@ -48,7 +48,7 @@ function filesort() {
 }
 function create() {
     touch $1.cpp
-    cat ~/Documents/CompetitiveProgramming/CP/Template.txt > $1.cpp
+    cat ~/Documents/CompetitiveProgramming/CP/Template.cpp > $1.cpp
     if [ ! -d Problems ]; then
         mkdir Problems
     fi
@@ -74,3 +74,5 @@ function comp() {
 function sort() {
     mv $1.cpp Problems/$1.CompetitiveProgramming
 }
+
+trap "PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]''\n''\[\033[32m\]''[''`date +"%T %p"`'']''\[\033[36m\]'' \w''\n''\[\033[39m\]''$ '" DEBUG

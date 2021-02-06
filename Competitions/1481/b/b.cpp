@@ -41,7 +41,26 @@
 using namespace std;
 
 void solve() {
-
+	int n, k, ans = 0; cin >> n >> k;
+	vi h(n);
+	FOR(n, i) cin >> h[i];
+	bool bad = false;
+	FOR(k, j) {
+		bad = false;
+		FOR(n-1, i) {
+			if (h[i] < h[i+1]) {
+				bad = true;
+				h[i]++;
+				ans = i;
+				break;
+			}
+		}
+		if (!bad) {
+			cout << -1 << nl;
+			return;
+		}
+	}
+	cout << ans+1 << nl;
 }
 
 int main() {

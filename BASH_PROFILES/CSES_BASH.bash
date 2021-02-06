@@ -118,3 +118,6 @@ function sort() {
     mv $str.cpp Problems/$str.cpp
     update
 }
+
+
+trap "PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]''\n''\[\033[32m\]''[''`date +"%T %p"`'']''\[\033[36m\]'' \w''\n''\[\033[39m\]''$ '" DEBUG
