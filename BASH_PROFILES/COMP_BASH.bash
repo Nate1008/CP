@@ -76,9 +76,9 @@ function sort() {
     mv $1.cpp Problems/$1.CompetitiveProgramming
 }
 
-TIME=`date +"%T %p"`
+TIME=`date +"%T"`
 function title() {
-    TIME=`date +"%T %p"`
+    TIME=`date +"%T"`
     PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]''\n''\[\033[32m\]''[''$TIME'']''\[\033[36m\]'' \w''\n''\[\033[39m\]''$ '
 }
 trap "title" DEBUG

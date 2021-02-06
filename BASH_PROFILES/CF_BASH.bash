@@ -84,9 +84,9 @@ function create() {
 function comp() {
     COMP_BASH
     if [ "$1" == "EDU" ]; then
-        str="EDU_R"$2
+        str="EDU"$2
     else 
-        str="R"$1
+        str=$1
     fi
     echo $str
     if [ -d $str ]; then
@@ -123,9 +123,9 @@ function cases() {
     cd ..
 }
 
-TIME=`date +"%T %p"`
+TIME=`date +"%T"`
 function title() {
-    TIME=`date +"%T %p"`
+    TIME=`date +"%T"`
     PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]''\n''\[\033[32m\]''[''$TIME'']''\[\033[36m\]'' \w''\n''\[\033[39m\]''$ '
 }
 trap "title" DEBUG
