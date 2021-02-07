@@ -123,6 +123,13 @@ function cases() {
     cd ..
 }
 
+function give() {
+    cd $1
+    cf submit
+    wait
+    cd ..
+}
+
 TIME=`date +"%I:%M:%S %p"`
 function title() {
     TIME=`date +"%I:%M:%S %p"`
