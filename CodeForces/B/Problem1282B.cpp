@@ -41,7 +41,21 @@
 using namespace std;
 
 void solve() {
-
+	int n, p, k; cin >> n >> p >> k;
+	vi a(n);
+	FOR(n, i) cin >> a[i];
+	sort(all(a));
+	int ans = 0; ll sum = 0;
+	for(int i = 0; i < n; i+=2) {
+		sum += a[i];
+		if (sum <= p) ans = max(ans, i+1);
+	} 
+	sum = 0;
+	for(int i = 1; i < n; i+=2) {
+		sum += a[i];
+		if (sum <= p) ans = max(ans, i+1);
+	}
+	cout << ans << nl;
 }
 
 int main() {
