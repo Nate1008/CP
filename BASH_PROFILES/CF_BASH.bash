@@ -109,7 +109,7 @@ function sort() {
     update
 }
 
-function start() {
+function race() {
     CP
     cf race $1
     wait
