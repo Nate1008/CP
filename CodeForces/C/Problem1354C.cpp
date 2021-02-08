@@ -4,7 +4,7 @@
 #define pi pair<int, int>
 #define pf pair<float, int>
 #define ps pair<string, int>
-#define pii pair<pi, int>
+#define pii pair<int, pi>
 #define mi map<int, int>
 #define ml map<long long, int>
 #define ms map<string, int>
@@ -39,31 +39,17 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-
+const float PI = acos(-1.0);
 void solve() {
 	int n; cin >> n;
-	vi A(n);
-	FOR(n, i) cin >> A[i];
-	sort(all(A));
-	int k = 0;
-	FOR(n, i) {
-		int j = upper_bound(all(A), A[i]) - A.begin();
-		if (n-j >= 2 && i+1 < n-i-1) k = i+1;
-		else break;
-	}
-	cout << k << nl;
-
-	FOR(n-k, i) {
-		if (A[i+k] == A[i]) swap(A[i+k], A[n-1]);
-		cout << A[i+k] << " ";
-		if (i < k) cout << A[i] << " ";
-	}
+	cout.precision(15);
+	cout << 1 / (tan(PI / (2.0f*n))*1.0f) << nl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    // TC
+    TC
     	solve();
 
     return 0;
