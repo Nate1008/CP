@@ -41,14 +41,25 @@
 using namespace std;
 
 void solve() {
-	int n, k, nd; cin >> n >> k;
-	si uni; 
+	int n, x = 1; cin >> n;
+	mi idx;
+	vi a(n), b(n, 0);
 	FOR(n, i) {
-		int x; cin >> x;
-		uni.insert(x);
+		cin >> a[i];
+		idx[a[i]] = i;
 	}
-	int l = sz(uni);
-	
+	int i = 0;
+	while(x < n) {
+		i = idx[x];
+		b[i] = x;
+		if (i+1 < n && b[i+1] == 0) {
+			x++;
+			if (idx[x] != i+1) goto L;
+		} else x++;
+	}
+	cout << "Yes" << nl;
+	return;
+	L: cout << "No" << nl; 
 }
 
 int main() {
