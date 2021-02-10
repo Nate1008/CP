@@ -26,6 +26,17 @@ void sieve(int maximum) {
 
 // sieve - End
 
+// isPrime - Start
+
+bool isPrime(int p) {
+    for(int i = 2; i*i <= p; i++) {
+        if (p % i == 0) return false;
+    }
+    return true;
+}
+
+// isPrime - End
+
 // C - Start
 
 ll fast_pow(ll a, ll p) {
