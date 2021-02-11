@@ -42,20 +42,23 @@ using namespace std;
 
 void solve() {
 	int n; cin >> n;
-	vi a(n), dp(n, 0);
+	vi a(n);
+	map<int, ll> cnt;
 	FOR(n, i) cin >> a[i];
 	for(int i = 0; i < n; i++) {
-		for(int j = i; j < n; j++) {
-			if (j-i == a[j]-a[i]) dp[j] = max(dp[j], a[j]+dp[i]);
-		}
+		cnt[i-a[i]] += a[i];
 	}
-	FOR(n, i) cout << dp[i] << " ";
+	ll ans = 0;
+	for(auto [k, v] : cnt) {
+		ans = max(ans, v);
+	}
+	cout << ans << nl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC       
+    //TC       
     	solve();
 
     return 0;
