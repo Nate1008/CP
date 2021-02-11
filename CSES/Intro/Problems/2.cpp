@@ -41,13 +41,19 @@
 using namespace std;
 
 void solve() {
-
+	int n; cin >> n;
+	vi A(n-1);
+	FOR(n-1, i) cin >> A[i];
+	sort(all(A));
+	int i = 0;
+	while(i+1 == A[i]) i++;
+	cout << i + 1;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;
