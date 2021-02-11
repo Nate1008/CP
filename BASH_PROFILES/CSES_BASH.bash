@@ -87,7 +87,7 @@ function filesort() {
 
 function create() {
     touch $1.cpp
-    cat ~/Documents/CompetitiveProgramming/CP/Template.txt > $1.cpp
+    cat ~/Documents/CompetitiveProgramming/CP/Template.cpp > $1.cpp
     if [ ! -d Problems ]; then
         mkdir Problems
     fi
