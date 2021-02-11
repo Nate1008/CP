@@ -41,13 +41,20 @@
 using namespace std;
 
 void solve() {
-
+	string s; cin >> s;
+	int n = sz(s), cnt = 1, ans = 0;
+	FORN(n, i, 1) {
+		if (s[i] == s[i-1]) cnt++;
+		else ans = max(ans, cnt), cnt = 1;
+	}  
+	ans = max(ans, cnt);
+	cout << ans;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;
