@@ -41,13 +41,20 @@
 using namespace std;
 
 void solve() {
-
+	int n; ll ans = 0; cin >> n;
+	vi A(n);
+	FOR(n, i) cin >> A[i];
+	FORN(n, i, 1) {
+		ans += max(0, A[i-1]-A[i]);
+		A[i] += max(0, A[i-1]-A[i]);
+	}
+	cout << ans;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;
