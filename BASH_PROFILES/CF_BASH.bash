@@ -4,9 +4,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 PATH="/usr/local/bin/subl:${PATH}"
 export PATH
 
-alias clion='open -na "CLion.app" --args "$@"'
-alias desktop='cd ~/Desktop'
-alias obash='clion ~/.bash_profile'
+alias obash='vim ~/.bash_profile'
 alias bash='nano ~/.bash_profile'
 alias CP='cd ~/Documents/CompetitiveProgramming/CP'
 alias CCC='cd ~/Documents/CompetitiveProgramming/CCC'
