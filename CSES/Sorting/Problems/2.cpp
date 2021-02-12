@@ -41,13 +41,23 @@
 using namespace std;
 
 void solve() {
-
+	int n, m, k, ans = 0; cin >> n >> m >> k;
+	vi a(n), b(m);
+	FOR(n, i) cin >> a[i];
+	FOR(m, i) cin >> b[i];
+	sort(all(a)), sort(all(b));
+	for(int i = 0, j = 0; i < n && j < m; ) {
+		if (a[i]-k > b[j]) j++;
+		else if (a[i]+k < b[j]) i++;
+		else ans++, i++, j++;
+	}
+	cout << ans << nl;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;
