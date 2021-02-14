@@ -41,13 +41,26 @@
 using namespace std;
 
 void solve() {
-
+	int n; cin >> n;
+	vi p(1e9+1, 0);
+	int m = 0, ans = 0;
+	FOR(n, i) {
+		int l, r; cin >> l >> r;
+		p[l-1]++;
+		p[r]--;
+		m = max(m, r);
+	}	
+	FORN(m+1, i, 1) {
+		p[i] += p[i-1];
+		ans = max(ans, p[i]);
+	}
+	cout << ans;
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;

@@ -128,6 +128,28 @@ function give() {
     cd ..
 }
 
+function try() {
+    g++ $1.cpp -std=c++17 -o $1
+    ./$1
+    wait
+    rm $1
+}
+
+function start() {
+    mkdir "$2""$1"
+    cd "$2""$1"
+    setup "$2""1"
+    setup "$2""2"
+    setup "$2""3"
+    setup "$2""4"
+    setup "$2""5"
+}
+
+function setup() {
+    touch $1.cpp
+    cat ~/Documents/CompetitiveProgramming/CCC/CCC.cpp > $1.cpp
+}
+
 TIME=`date +"%I:%M:%S %p"`
 function title() {
     TIME=`date +"%I:%M:%S %p"`
