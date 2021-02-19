@@ -68,3 +68,12 @@ ll C(int n, int k) {
 }
 
 // C - End
+
+// Interative - Start
+int ask(int x) {
+    cout << "? " << x << endl;
+    int z;
+    cin >> z;
+    return z;
+}
+// Interative - End
