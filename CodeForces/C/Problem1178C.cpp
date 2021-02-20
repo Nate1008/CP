@@ -1,33 +1,12 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-
-#include <vector>
-#include <set>
-#include <bitset>
-#include <map>
-#include <deque>
-#include <string>
-
-#include <algorithm>
-#include <numeric>
-#include <iterator>
-#include <functional>
-
-#include <cstdio>
-#include <cassert>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
-#include <cmath>
-#include <climits>
+#include <bits/stdc++.h>
 
 #define ll long long
 #define pi pair<int, int>
 #define pf pair<float, int>
 #define ps pair<string, int>
-#define pii pair<pi, int>
+#define pii pair<int, pi>
 #define mi map<int, int>
+#define ml map<long long, int>
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
@@ -41,39 +20,52 @@
 #define vpi vector<pi>
 #define vpf vector<pf>
 #define vpii vector<pii>
+#define st set
+#define si set<int>
+#define sd set<double>
+#define sf set<float>
+#define sl set<long long>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
-#define RFOR(t, q) for(int q = t; q > 0; q--)
-#define FORE(t, q) for(int q = 0; q <= t; q++)
-#define RFORE(t, q) for(int q = t; q >= 0; q--)
-
 #define FORN(t, q, v) for(int q = v; q < t; q++)
-#define RFORN(t, q, v) for(int q = t; q > v; q--)
-#define FOREN(t, q, v) for(int q = v; q <= t; q++)
-#define RFOREN(t, q, v) for(int q = t; q >= v; q--)
-
-#define ALL(v) v.begin(), v.end()
-#define RALL(v) v.rbegin(), v.rend()
-
-#define B(v) v.begin()
-#define RB(v) v.rbegin()
-#define E(v) v.end()
-#define RE(v) v.rend()
-
+#define sz(v) (int)(v.size())
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
 
-#define TC int t; cin >> t; FOR(t, q)
+#define nl endl
+#define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
-int main() {
-    int n, m, ans = 1;
-    cin >> n >> m;
-    for (int i = 1; i <= n + m; i++)
-        ans = (ans * 2) % 998244353;
-    cout << ans;
-    return 0;
+const int mod = 998244353;
+
+ll fast_pow(ll a, ll p) {
+    ll res = 1;
+    while (p) {
+        if (p % 2 == 0) {
+            a = (a * a) % mod;
+            p /= 2;
+        } else {
+            res = (res * a) % mod;
+            p--;
+        }
+    }
+    return res;
 }
 
+void solve() {
+	int w, h; cin >> w >> h;
+	cout << fast_pow(2, (w+h));
+}
 
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    // TC
+    	solve();
+
+    return 0;
+}
