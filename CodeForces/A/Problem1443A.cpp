@@ -4,7 +4,7 @@
 #define pi pair<int, int>
 #define pf pair<float, int>
 #define ps pair<string, int>
-#define pii pair<pi, int>
+#define pii pair<int, pi>
 #define mi map<int, int>
 #define ml map<long long, int>
 #define ms map<string, int>
@@ -41,10 +41,31 @@
 using namespace std;
 
 void solve() {
-	int n; cin >> n;
-	int k = n*4;
-	FOR(n, i) cout << k - (2*i) << " ";
-	cout << nl;
+	int a, b; cin >> a >> b;
+	// A is cost of setting off and B is cost of placing.
+	string s; cin >> s;
+	int n = sz(s);
+	vi l, r;
+	int x = -1, y = -1, flag = 0;
+	FOR(n, i) {
+		if (s[i] == '1' && !flag) x = i, flag = 1;
+		if (s[i] == '0' && flag) {
+			y = i, flag = 0;
+			l.pb(x); 
+			r.pb(y);
+		}
+	}
+	if (flag) {
+		l.pb(x);
+		r.pb(n-1);
+	}
+	int ans = 0;
+	for(int i = 0; i < sz(l); i++) {
+		if (i == sz(l)-1) {ans += a; continue;}
+		ans += min(b * (l[i+1] - r[i]), a);
+		// cout << b * (l[i+1] - r[i]) << " " << a << nl;
+	}
+	cout << ans << nl;
 }
 
 int main() {
