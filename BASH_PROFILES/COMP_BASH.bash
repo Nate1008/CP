@@ -19,6 +19,7 @@ alias CF_BASH='BASH; cat CF_BASH.bash > ~/.bash_profile; src; CF'
 alias CSES_BASH='BASH; cat CSES_BASH.bash > ~/.bash_profile; src; CSES'
 alias src='source ~/.bash_profile'
 alias rem='rm -r'
+alias cfpy='python ~/Documents/Applications/CF/cf.py'
 
 function remp() {
     rm -r $1.cpp

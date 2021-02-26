@@ -21,6 +21,7 @@ alias sync="git pull origin master"
 alias save="git push origin master"
 alias issue="git commit -m I.R"
 alias update="git add .; git commit -m Updating...; git push origin master; clear"
+alias cfpy="python ~/Documents/Applications/CF/cf.py"
 
 LAST=""
 
