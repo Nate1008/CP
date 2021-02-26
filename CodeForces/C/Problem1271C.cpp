@@ -1,0 +1,79 @@
+#include <bits/stdc++.h>
+
+#define ll long long
+#define pi pair<int, int>
+#define pf pair<float, int>
+#define ps pair<string, int>
+#define pii pair<int, pi>
+#define mi map<int, int>
+#define ml map<long long, int>
+#define ms map<string, int>
+#define mc map<char, int>
+#define mpi map<pi, int>
+#define F first
+#define S second
+#define vt vector
+#define vi vector<int>
+#define vd vector<double>
+#define vf vector<float>
+#define vl vector<long long>
+#define vpi vector<pi>
+#define vpf vector<pf>
+#define vpii vector<pii>
+#define st set
+#define si set<int>
+#define sd set<double>
+#define sf set<float>
+#define sl set<long long>
+
+#define FOR(t, q) for(int q = 0; q < t; q++)
+#define FORN(t, q, v) for(int q = v; q < t; q++)
+#define sz(v) (int)(v.size())
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
+#define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
+#define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
+
+#define nl endl
+#define TC int _t; cin >> _t; FOR(_t, _q)
+
+using namespace std;
+
+void solve() {
+	int n, x, y; cin >> n >> x >> y;
+	vi cx(2, 0),cy(2, 0);
+	FOR(n, i) {
+		int xi, yi; cin >> xi >> yi;
+		int dx = xi - x, dy = yi - y;
+
+		if (dx > 0) cx[0]++;
+		else if (dx < 0) cx[1]++;
+
+		if (dy > 0) cy[0]++;
+		else if(dy < 0) cy[1]++;
+	}
+	int dir = 0;
+	if (max(cx[0], cx[1]) > max(cy[0], cy[1])) {
+		dir = (max(cx[0], cx[1]) == cx[0] ? 1 : -1);
+		x += dir;
+		if (dir == 1) cout << cx[0] << nl;
+		else cout << cx[1] << nl;
+	} else {
+		dir = (max(cy[0], cy[1]) == cy[0] ? 1 : -1);
+		y += dir;
+		if (dir == 1) cout << cy[0] << nl;
+		else cout << cy[1] << nl;
+	}
+
+	cout << x << " " << y;
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    // TC
+    	solve();
+
+    return 0;
+}
