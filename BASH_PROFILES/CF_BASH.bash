@@ -7,7 +7,7 @@ export PATH
 alias obash='vim ~/.bash_profile'
 alias bash='nano ~/.bash_profile'
 alias CP='cd ~/Documents/CompetitiveProgramming/CP'
-alias CCC='cd ~/Documents/CompetitiveProgramming/CCC'
+alias IOI='cd ~/Documents/CompetitiveProgramming/RoadToIOI'
 alias CSES='cd ~/Documents/CompetitiveProgramming/CP/CSES'
 alias CF='cd ~/Documents/CompetitiveProgramming/CP/CodeForces'
 alias COMP='cd ~/Documents/CompetitiveProgramming/CP/Competitions'
@@ -15,6 +15,7 @@ alias BASH='cd ~/Documents/CompetitiveProgramming/CP/BASH_PROFILES'
 alias COMP_BASH='BASH; cat COMP_BASH.bash > ~/.bash_profile; src; COMP'
 alias CF_BASH='BASH; cat CF_BASH.bash > ~/.bash_profile; src; CF'
 alias CSES_BASH='BASH; cat CSES_BASH.bash > ~/.bash_profile; src; CSES'
+alias IOI_BASH='BASH; cat IOI_BASH.bash > ~/.bash_profile; src; IOI'
 alias src='source ~/.bash_profile'
 alias rem='rm -r'
 alias sync="git pull origin master"
@@ -129,27 +130,6 @@ function give() {
     cd ..
 }
 
-function try() {
-    g++ $1.cpp -std=c++17 -o $1
-    ./$1
-    wait
-    rm $1
-}
-
-function start() {
-    mkdir "$2""$1"
-    cd "$2""$1"
-    setup "$2""1"
-    setup "$2""2"
-    setup "$2""3"
-    setup "$2""4"
-    setup "$2""5"
-}
-
-function setup() {
-    touch $1.cpp
-    cat ~/Documents/CompetitiveProgramming/CCC/CCC.cpp > $1.cpp
-}
 
 TIME=`date +"%I:%M:%S %p"`
 function title() {
