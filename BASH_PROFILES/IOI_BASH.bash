@@ -34,11 +34,11 @@ function try() {
 function start() {
     mkdir "$2""$1"
     cd "$2""$1"
-    setup "$2""1"
-    setup "$2""2"
-    setup "$2""3"
-    setup "$2""4"
-    setup "$2""5"
+    setup "1"
+    setup "2"
+    setup "3"
+    setup "4"
+    setup "5"
 }
 
 function setup() {
