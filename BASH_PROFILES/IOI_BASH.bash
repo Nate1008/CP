@@ -31,7 +31,7 @@ function try() {
     rm $1
 }
 
-function start() {
+function ccc() {
     mkdir "$2""$1"
     cd "$2""$1"
     setup "1"
@@ -41,9 +41,19 @@ function start() {
     setup "5"
 }
 
+function usaco() {
+    mkdir "$1""$2""#$3"
+    cd "$1""$2""#$3"
+    setup "1"
+    setup "2"
+    setup "3"
+    setup "4"
+    setup "5"
+}
+
 function setup() {
     touch $1.cpp
-    cat ~/Documents/CompetitiveProgramming/RoadToIOI/CCC/CCC.cpp > $1.cpp
+    cat ~/Documents/CompetitiveProgramming/RoadToIOI/Template.cpp > $1.cpp
 }
 
 TIME=`date +"%I:%M:%S %p"`
