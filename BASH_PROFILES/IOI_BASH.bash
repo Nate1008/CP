@@ -47,8 +47,6 @@ function usaco() {
     setup "1"
     setup "2"
     setup "3"
-    setup "4"
-    setup "5"
 }
 
 function setup() {
