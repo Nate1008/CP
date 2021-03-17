@@ -45,19 +45,26 @@ void solve() {
 	vi a(n);
 	FOR(n, i) cin >> a[i];
 
-	int ans = 0, len = 0;
+	mi cnt;
+
+	int ans = 0, len = 0, last = -1;
 	for(int i = 0; i < n-1; i++) {
 		len = 1;
 		while(i < n-1 && a[i] < a[i+1]) i++, len++;
-		cout << i << " < " << len << nl;
-		ans = max(len, ans);
+		// cout << i << " < " << len << nl;
+		cnt[len]++;
+		if (len > ans) {
+
+		}
 	}
 
 	for(int i = n-1; i > 0; i--) {
 		len = 1;
 		while(i > 0 && a[i] > a[i-1]) i--, len++;
-		cout << i << " > " << len << nl;
-		ans = max(len, ans);
+		// cout << i << " > " << len << nl;
+		if (len > ans) {
+
+		}
 	}
 	cout << (len % 2 ? 1 : 0) << nl;
 }
