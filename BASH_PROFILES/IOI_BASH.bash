@@ -6,6 +6,8 @@ export PATH
 
 alias obash='vim ~/.bash_profile'
 alias bash='nano ~/.bash_profile'
+alias gvir='gvim --remote'
+alias gvin='gvim &'
 alias CP='cd ~/Documents/CompetitiveProgramming/CP'
 alias IOI='cd ~/Documents/CompetitiveProgramming/RoadToIOI'
 alias CSES='cd ~/Documents/CompetitiveProgramming/CP/CSES'
