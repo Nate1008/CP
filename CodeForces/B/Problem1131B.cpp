@@ -47,15 +47,13 @@ void solve() {
 		cin >> mom[i].first >> mom[i].second;
 	}
 
-	// mom.insert(mom.begin(), pi(0, 0));
-	// ++n;
+	mom.insert(mom.begin(), pi(0, 0));
+	++n;
 
 	int ans = 1;
-	for(int i = 1; i <= n; i++) {
+	for(int i = 1; i < n; i++) {
 		int mn = min(mom[i].first, mom[i].second), mx = max(mom[i-1].first, mom[i-1].second);
 		ans += max(0, mn-mx+(mom[i-1].first!=mom[i-1].second));
-
-		cout << ans << nl;
 	}
 	cout << ans << nl;
 }
