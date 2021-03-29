@@ -40,7 +40,19 @@
 
 using namespace std;
 
-bool ok = false, eq = false;
+bool win(int pos, vi a) {
+	int n = a.size();
+	ll pw = a[pos];
+	for(int i = 0; i < n; i++) {
+		if (i == pos) continue;
+		if (pw < a[i]) return false;
+
+		pw += a[i];
+	}
+	return true;
+}
+
+
 void solve() {
 	int n; cin >> n;
 	vi a(n), ans;
@@ -48,6 +60,18 @@ void solve() {
 	vi c = a;
 	sort(all(a));
 	
+	int l = 0, r = n, mid;
+	while(l < r) {
+		mid = (l+r)/2;
+		if (win(mid, a)) r = mid;
+		else l = mid+1;
+	}
+	// cout << l << nl;
+	for(int i = 0; i < n; i++) {
+		if (c[i] >= a[l]) {
+			ans.pb(i+1);
+		}
+	}
 
 	cout << sz(ans) << nl;
 	for(auto i : ans) cout << i << " ";
