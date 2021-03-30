@@ -40,58 +40,42 @@
 
 using namespace std;
 
+const int N = 2e5 + 101;
+int vis[N];
+vector<int> adj[N];
 
-
-ll fast_pow(ll a, ll p) {
-    ll res = 1;
-    while (p) {
-        if (p % 2 == 0) {
-            a = (a * a) /*% mod*/;
-            p /= 2;
-        } else {
-            res = (res * a) /*% mod*/;
-            p--;
-        }
-    }
-    return res;
+void edge(int u, int v) {
+	adj[u].pb(v);
+	adj[v].pb(u);
 }
 
+void dfs(int u) {
+
+	if (vis[u] == 1) return;
+
+	vis[u] = 1;
+
+	for(auto v : adj[u]) 
+		dfs(v);
+}
+
+
 void solve() {
-	int x; cin >> x;
-	vi ans;
-	bool done = false;
-	while(true) {
-		string s = "";
-		int u = x;
-		while(u > 0) {
-			s += '0'+u%2;
-			u /= 2;
+	int n; cin >> n;
+	for(int i = 0; i < n; i++) {
+		string s; cin >> s;
+		for(auto c : s) {
+			edge(i, n+c-'a');
 		}
-		reverse(all(s));
-		done = true;
-		int idx = -1;
-		cout << s << nl;
-		for(int i = 0; i < sz(s); i++) {
-			if (s[i] == '0') {
-				done = false;
-				idx = i;
-				break;
-			}
-		}
-		if (done) break;
-		idx = sz(s)-idx;
-		cout << idx << nl;
-		assert(idx != -1);
-		int v = fast_pow(2, idx)-1;
-		ans.pb(idx);
-		cout << v << nl;
-		x = (x^v);
-		x++;
-		cout << x << nl;
-	// 	break;
-	}	
-	cout << sz(ans)*2 << nl;
-	for(auto c : ans) cout << c << " ";
+	}
+
+	int ans = 0;
+	for(int i = n; i < n+26; i++) {
+		if (vis[i] == 1 || adj[i].empty()) continue;
+		dfs(i);
+		ans++;
+	}
+	cout << ans << nl;
 }
 
 int main() {
