@@ -4,8 +4,9 @@
 #define pi pair<int, int>
 #define pf pair<float, int>
 #define ps pair<string, int>
-#define pii pair<pi, int>
+#define pii pair<int, pi>
 #define mi map<int, int>
+#define ml map<long long, int>
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
@@ -26,47 +27,81 @@
 #define sl set<long long>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
-#define FORV(a, x) for (auto& a : x)
+#define FORN(t, q, v) for(int q = v; q < t; q++)
 #define sz(v) (int)(v.size())
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
-#define B(v) v.begin()
-#define RB(v) v.rbegin()
-#define E(v) v.end()
-#define RE(v) v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
 
-#define TC int t; cin >> t; FOR(t, q)
+#define nl endl
+#define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-set<ll> S;
-void add(int l, int r, ll a[], ll s[]){
-    int m=upper_bound( a+l, a+r+1, (a[l]+a[r])/2 )-a;
-    S.insert(s[r+1]-s[l]);
-    if(m==l||m-1==r) return;
-    add(m,r,a,s);
-    add(l,m-1,a,s);
+
+unordered_set<ll> ans;
+ll sum(vi a) {
+	ll ret = 0;
+	for(auto c : a) {
+		ret += c;
+	}
+	return ret;
 }
-int main(){
-    int t;
-    cin>>t;
-    while(t--){
-        int n,q;
-        cin>>n>>q;
-        ll a[n],s[n];
-        for(int i=0;i<n;i++) cin>>a[i];
-        sort(a,a+n);
-        for(int i=0;i<n;i++) s[i+1]=a[i]+s[i];
-        add(0,n-1,a,s);
-        while(q--)
-        {
-            int x;
-            cin>>x;
-            if(S.count(x)) cout<<"Yes\n";
-            else cout<<"No\n";
-        }
-        S.clear();
-    }
+
+void divide(vi a) {
+
+	if (a.size() == 1 || a.back() == a.front() ) {
+		return;
+	}
+
+
+
+	int mid = a.back()+a.front();
+	mid /= 2;
+	vi lo, hi;
+	for(auto c : a) {
+		if (c > mid) { 
+			hi.pb(c);
+		} else {
+			lo.pb(c);
+		}
+	}
+
+	ans.insert(sum(lo));
+	ans.insert(sum(hi));
+
+	divide(lo);
+	divide(hi);
+	return;
+}
+
+
+void solve() {
+	int n, q; cin >> n >> q;
+	vi a(n);
+	FOR(n, i) cin >> a[i];
+
+	ans = unordered_set<ll>();
+	sort(all(a));
+
+	ans.insert(sum(a));
+
+	// cout << "OK" << nl;
+	divide(a);
+
+	FOR(q, i) {
+		int x; cin >> x;
+		if (ans.find(x) != ans.end()) cout << "Yes" << nl;
+		else cout << "No" << nl;
+	}
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    TC
+    	solve();
+
     return 0;
 }
