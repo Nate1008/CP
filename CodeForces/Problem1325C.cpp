@@ -50,6 +50,7 @@ void solve() {
 		cnt[u]++, cnt[v]++;
 		adj.pb(pi(u, v));
 	}	
+
 		
 
 }

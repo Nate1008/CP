@@ -41,13 +41,27 @@
 using namespace std;
 
 void solve() {
+	int n, m; cin >> n >> m;
+	vl a(n);
+	for(auto& c : a) cin >> c;
 
+	sort(all(a));
+
+	ll g = 0;
+	for(int i = 1; i < n; i++) {
+		g = gcd(g, (a[i]-a[0]));
+	}
+	for(int i = 0; i < m; i++) {
+		ll b; cin >> b;
+		cout << gcd(g, (a[0]+b)) << " ";
+	}
 }
+	
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;
