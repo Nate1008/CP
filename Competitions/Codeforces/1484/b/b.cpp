@@ -43,47 +43,30 @@ using namespace std;
 bool ok = true;
 void solve() {
 	int n; cin >> n;
-	int c = 0, m = 0;
 	vi a(n);
 	FOR(n, i) cin >> a[i];
-	if (n <= 2) {cout << 0 << nl; return;}
-	for(int i = 1; i < n; i++) {
-		if (a[i-1] <= a[i]) {
-			c = a[i]-a[i-1];
-			break;
-		}
+
+	set<int> s;
+	FORN(n, i, 1) s.insert(a[i] - a[i-1]);
+
+	if (s.size() > 2) {
+		cout << -1 << nl;
+		return;
 	}
-
-	for(int i = 1; i < n; i++) {
-		if (a[i-1] > a[i]) {
-			m = (a[i-1]+c)-a[i];
-			break;
-		}
-	}
-
-	for(int i = 1; i < n; i++) {
-		if (a[i-1] <= a[i]) {
-			int d = a[i]-a[i-1];
-			if (c != d) {
-				cout << -1 << nl;
-				return;
-			}
-		} else {
-			int mod = (a[i-1]+c)-a[i];
-			int mn = a[i]+1;
-			if (m != mod || c < mn) {
-				cout << -1 << nl;
-				return;
-			}
-		}
-	}
-
-
-	if (c == 0 || m == 0) {
+	if (s.size() <= 1) {
 		cout << 0 << nl;
-	} else {
-		cout << m << " " << c << nl;
+		return;
 	}
+
+	int x = *s.begin(), y = *s.rbegin();
+	int m = abs(x-y);
+	for(auto c : a) {
+		if (c >= m) {
+			cout << -1 << nl;
+			return;
+		}
+	}
+	cout << m << " " << y << nl;
 
 }	
 
