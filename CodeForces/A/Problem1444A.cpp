@@ -4,13 +4,14 @@
 #define pi pair<int, int>
 #define pf pair<float, int>
 #define ps pair<string, int>
-#define pii pair<pi, int>
+#define pii pair<int, pi>
 #define mi map<int, int>
+#define ml map<long long, int>
 #define ms map<string, int>
 #define mc map<char, int>
 #define mpi map<pi, int>
-#define F first
-#define S second
+#define fi first
+#define se second
 #define vt vector
 #define vi vector<int>
 #define vd vector<double>
@@ -19,40 +20,62 @@
 #define vpi vector<pi>
 #define vpf vector<pf>
 #define vpii vector<pii>
+#define st set
+#define si set<int>
+#define sd set<double>
+#define sf set<float>
+#define sl set<long long>
 
 #define FOR(t, q) for(int q = 0; q < t; q++)
-#define RFOR(t, q) for(int q = t; q > 0; q--)
-#define FORE(t, q) for(int q = 0; q <= t; q++)
-#define RFORE(t, q) for(int q = t; q >= 0; q--)
-
 #define FORN(t, q, v) for(int q = v; q < t; q++)
-#define RFORN(t, q, v) for(int q = t; q > v; q--)
-#define FOREN(t, q, v) for(int q = v; q <= t; q++)
-#define RFOREN(t, q, v) for(int q = t; q >= v; q--)
-
-#define FORV(v, type) for (vt<type>::iterator it = v.begin(); it <= v.end(); it++)
-#define si(v) (int)(v.size())
-
-
-#define ALL(v) v.begin(), v.end()
-#define RALL(v) v.rbegin(), v.rend()
-
-#define B(v) v.begin()
-#define RB(v) v.rbegin()
-#define E(v) v.end()
-#define RE(v) v.rend()
-
+#define sz(v) (int)(v.size())
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
 #define LOWER(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
 #define UPPER(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb(s) push_back(s);
 
-#define TC int t; cin >> t; FOR(t, q)
+#define nl endl
+#define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
 
-ll t,n,m,ali;
-int main(){ cin>>t; while(t--){
-cin>>n>>m; if(n<m){cout<<n<<endl;continue;}
-ali=0; for(ll i=1;i*i<=m;i++){ if(m%i)continue;
-if(i!=1){ ll k=n; while(!(k%m))k/=i; ali=max(ali,k);				
-} ll k=n; while(!(k%m))k/=m/i; ali=max(ali,k);}
-cout<<ali<<'\n'; } return 0; }
+ll p, q, k, x;
+
+void solve() {
+	cin >> p >> q;	
+	
+	x = q;
+	vl a;
+	for(int i = 2; i*i <= q; i++) {
+		if (q % i == 0) {
+			a.pb(i);
+			while(x % i == 0) {
+				x /= i;
+			}
+		}
+	}
+	if (x > 1) {
+		a.pb(x);
+		x = 1;
+	}
+
+	for(auto c : a) {
+		k = p;
+		while(k % q == 0) {
+			k /= c;
+		}
+		x = max(k, x);
+	}
+	cout << x << nl;
+	
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    TC
+    	solve();
+
+    return 0;
+}
