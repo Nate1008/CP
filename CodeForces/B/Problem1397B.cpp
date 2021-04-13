@@ -22,44 +22,35 @@
 
 using namespace std;
 
-void fix(vi& a) {
-	int n = sz(a);
-	int f = 0, e = n-1;
-	while(a[f] == f+1) f++;
-	while(a[e] == e+1) e--;
-	mi idx;
-	for(int i = 0; i < n; i++) {
-		idx[a[i]] = i;
-	}
-
-	for(int i = f; i <= e; i++) {
-		a[i] = i+1;
-	}
-
-	int mn = n-1, mx = 0;
-	for(int i = f; i <= e; i++) {
-		mx = max(i, mx), mn = min(i, mn);
-	}
-
-	if (mn == n-1 && mx == 0) {
-
-}
-
+const ll MAX = 1e12+7;
+const ll INF = 1e18+7;
 void solve() {
-	int n; cin >> n;
+ 	int n; cin >> n;
+ 	vl a(n);
+ 	for(auto& c : a) cin >> c;
 
-}	
+
+ 	sort(all(a));
+
+ 	int c = 1;
+ 	ll ans = INF;
+ 	while(MAX > pow(c, n-1)) {
+ 		ll cost = 0;
+ 		for(int i = 0; i < n; i++) {
+ 			cost += abs(a[i]-(pow(c, i)));
+ 		}
+ 		ans = min(cost, ans);
+ 		c++;
+ 	}
+
+ 	cout << ans << nl;
+}
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;
 }
-
-// 3 2 5 4 1 6 7
-// 1 2 
-
-
