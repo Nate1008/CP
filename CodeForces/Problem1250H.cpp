@@ -22,49 +22,7 @@
 
 using namespace std;
 
-bool bad = false;
 void solve() {
-	ll n; cin >> n;
-	string s;
-	ll c = n;
-	while(c > 0) {
-		s += (c%3)+'0';
-		c /= 3;
-	}
-	s.pb('0');
-	// reverse(all(s));
-	bad = false;
-	int last = 0;
-	for(int i = 0; i < sz(s); i++) {
-
-		bad |= (s[i] == '2');
-
-		if (bad && s[i] == '0') {
-			bad = false;
-			s[i] = '1';
-			last = i;
-		}
-
-		if (bad) s[i] = '0';
-	}
-	// reverse(all(s));
-	// cout << "BEFORE: " << nl; 
-	// cout << s << nl;
-	// reverse(all(s));
-
-
-
-	last--;
-	for(; last >= 0; last--) {
-		s[last] = '0';
-	}
-	reverse(all(s));
-	// cout << "AFTER: " << nl;
-	// cout << s << nl;
- 
-
-	cout << stoll(s, nullptr, 3) << nl;
-	// cout << nl;
 
 }	
 
