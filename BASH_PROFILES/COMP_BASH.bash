@@ -75,7 +75,7 @@ function comp() {
 
 
 function sort() {
-    mv $1.cpp Problems/$1.CompetitiveProgramming
+    mv $1.cpp Problems/$1.cpp
 }
 
 TIME=`date +"%I:%M:%S %p"`
