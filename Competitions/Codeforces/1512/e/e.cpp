@@ -24,52 +24,43 @@ using namespace std;
 
 void solve() {
 	int n, l, r, s; cin >> n >> l >> r >> s;
-	int t = r-l+1;
-	vi ans;
-	for(int i = n; i > 0; i--) {
-		vi used(n, 0), pos;
-		int amt = s, turns = t;
-		while(amt > 0 && turns > 0) {
-			int take = min(amt-(turns != 1), i);
-			while(used[take] == 1) take--;
-
-			if (take <= 0) break;
-
-			amt -= take;
-			pos.pb(take);
-			used[take] = 1;
-			turns--;
-		}
-		if (sz(pos) == t && accumulate(all(pos), 0) == s) {
-			ans = pos;
-			break;
-		}
-	}
-	if (ans.empty()) {
+	int k = r-l+1;
+	int sk = (k*(k+1))/2, skx = (k*(2*n-k+1))/2;
+	if (s < sk || s > skx) {
 		cout << -1 << nl;
 		return;
 	}
+	vi ans(k, 0);
+	iota(rall(ans), 1);
+	int sum = sk, MX = n+1;
+	for(auto& c : ans) {
+		while((c+1) < MX && sum != s) {
+			c++;
+			sum++;
+		}
+		MX = c;
+		if (sum == s) {
+			break;
+		}
+	}
 
-	vi ret(n, -1), used(n, 0);
+	vi p(n, 0), used(n+1, 0);
 	for(int i = l-1; i < r; i++) {
-		ret[i] = ans.back();
-		used[ans.back()] = 1;
+		p[i] = ans.back();
+		used[ans.back()]++;
 		ans.pop_back();
 	}
-
 	int nxt = 1;
 	for(int i = 0; i < n; i++) {
-		if (ret[i] != -1) continue;
+		if (p[i] != 0) continue;
 		while(used[nxt] == 1) nxt++;
-		ret[i] = nxt;
-		used[nxt] = 1;
+		used[nxt]++;
+		p[i] = nxt;
 	}
-
-	for(auto c : ret) {
-		cout << c << " ";
+	for(auto& v : p) {
+		cout << v << " ";
 	}
 	cout << nl;
-
 
 }	
 

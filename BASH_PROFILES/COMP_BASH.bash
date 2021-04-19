@@ -20,6 +20,7 @@ alias CSES_BASH='BASH; cat CSES_BASH.bash > ~/.bash_profile; src; CSES'
 alias IOI_BASH='BASH; cat IOI_BASH.bash > ~/.bash_profile; src; IOI'
 alias src='source ~/.bash_profile'
 alias rem='rm -r'
+alias update="git add .; git commit -m Updating...; git push origin master; clear"
 alias cfpy='python ~/Documents/Applications/CF/cf.py'
 
 function remp() {
