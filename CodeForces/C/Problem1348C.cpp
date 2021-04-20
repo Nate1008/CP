@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+
+#define ll long long
+#define pi pair<int, int>
+#define mi map<int, int>
+#define fi first
+#define se second
+#define vt vector
+#define vi vector<int>
+#define vl vector<long long>
+#define st set
+
+#define FOR(t, q) for(int q = 0; q < t; q++)
+#define FORN(t, q, v) for(int q = v; q < t; q++)
+#define sz(v) (int)(v.size())
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
+#define pb(s) push_back(s);
+
+#define nl endl
+#define TC int _t; cin >> _t; FOR(_t, _q)
+
+using namespace std;
+
+string minOK(string a, string b, bool ok) {
+	if (!ok) return a;
+	return min(a, b); 
+}
+
+void solve() {
+	int n, k; cin >> n >> k;
+	string s; cin >> s;
+	sort(all(s));
+	string t;
+	bool ok = true;
+	for(int i = 0; i < n; i += k) {
+		int j = min(i+k, n)-1;
+		ok &= (s[i] == s[j]);
+		// cout << i << " " << j << nl;
+		t += s[j];
+	}
+
+	// cout << t << " " << s.substr(k-1) << " " << ok <<  nl;
+	if (s[0] == s[k-1]) {
+		cout << minOK(s.substr(k-1), t, ok) << nl;
+		return;
+	}
+	cout << s[k-1] << nl;
+}	
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    TC
+    	solve();
+
+    return 0;
+}
