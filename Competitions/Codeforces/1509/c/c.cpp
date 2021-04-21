@@ -21,34 +21,29 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
+const int MAX = 2e3+100;
+const ll INF = (1LL << 60);
+ll dp[MAX][MAX];
 
-const int INF = 1e9+10;
-mi cnt;
-bool cmp(int a, int b) {
-	if (cnt[a] == cnt[b]) {
-		return a > b;
-	}
-	return cnt[a] > cnt[b];
-}
 
 void solve() {
 	int n; cin >> n;
 	vi a(n);
 	for(auto& c : a) {
 		cin >> c;
-		cnt[c]++;
 	}
-	sort(all(a), cmp);
 
-	ll ans = 0;
- 	int mn = INF, mx = 0;
- 	for(auto c : a) {
- 		cout << c << " ";
- 		mn = min(mn, c), mx = max(mx, c);
- 		ans += (mx-mn);
- 	}
- 	cout << nl;
- 	cout << ans << nl;
+	sort(all(a));
+
+	memset(dp, INF, sizeof dp);
+	for (int i = 0; i < n; i++) dp[i][i] = 0;
+	for(int w = 1; w < n; w++) {
+		for(int l = 0; l+w < n; l++) {
+			int r = l+w;
+			dp[l][r] = min(dp[l+1][r], dp[l][r-1]) + (a[r] - a[l]);
+		}
+	}
+	cout << dp[0][n-1] << nl;
 
 }
 

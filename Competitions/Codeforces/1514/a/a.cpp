@@ -21,20 +21,18 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-const int mod = 1e9+7;
-const int MAX = 2e5+1000;
-int dp[MAX];
-
-
-void compute() {
-	memset(dp, 2, sizeof dp);
-	dp[9] = 3;
-	for(int i = 10; i < MAX; i++) 
 
 void solve() {
-	string s; cin >> s;
-	int n = sz(s), m; cin >> m;
+	int n; cin >> n;
+	vi a(n);
+	for(auto& c : a) cin >> c;
 
+	bool ok = false;
+	for(auto c : a) {
+		int sq = sqrt(c);
+		ok |= ((sq*sq) != c);
+	}
+	cout << (ok ? "YES" : "NO") << nl;
 }	
 
 int main() {

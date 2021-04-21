@@ -21,20 +21,16 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
+
 const int mod = 1e9+7;
-const int MAX = 2e5+1000;
-int dp[MAX];
-
-
-void compute() {
-	memset(dp, 2, sizeof dp);
-	dp[9] = 3;
-	for(int i = 10; i < MAX; i++) 
-
 void solve() {
-	string s; cin >> s;
-	int n = sz(s), m; cin >> m;
-
+	int n, k; cin >> n >> k;
+	ll ans = 1;
+	for(int i = 0; i < k; i++) {
+		ans *= n;
+		ans %= mod;
+	}
+	cout << ans << nl;
 }	
 
 int main() {

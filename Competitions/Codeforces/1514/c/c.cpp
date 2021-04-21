@@ -21,26 +21,30 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-const int mod = 1e9+7;
-const int MAX = 2e5+1000;
-int dp[MAX];
-
-
-void compute() {
-	memset(dp, 2, sizeof dp);
-	dp[9] = 3;
-	for(int i = 10; i < MAX; i++) 
 
 void solve() {
-	string s; cin >> s;
-	int n = sz(s), m; cin >> m;
-
+	int n; cin >> n;
+	vi ans;
+	ll res = 1;
+	for(int i = 1; i < n; i++) {
+		if (gcd(i, n) == 1) {
+			ans.pb(i);
+			res *= i;
+			res %= n;
+		}
+	}
+	if (res % n != 1) ans.pop_back();
+	cout << sz(ans) << nl;
+	for(auto c : ans) {
+		cout << c << " ";
+	}
+	cout << nl;
 }	
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;

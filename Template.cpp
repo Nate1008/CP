@@ -16,6 +16,8 @@
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 #define pb(s) push_back(s);
+#define ppb(s) pop_back(s);
+
 
 #define nl endl
 #define TC int _t; cin >> _t; FOR(_t, _q)
