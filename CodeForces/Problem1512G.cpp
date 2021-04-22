@@ -16,40 +16,21 @@
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 #define pb(s) push_back(s);
+#define ppb(s) pop_back(s);
+
 
 #define nl endl
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
-const int mod = 1e9+7;
-const int MAX = 2e5+10;
-int dp[MAX];
-
-
-void compute() {
-	for(int i = 0; i < 9; i++) dp[i] = 2;
-	dp[9] = 3;
-	for(int i = 10; i < MAX; i++) {
-		dp[i] = (dp[i-9]+dp[i-10])%mod;
-	}
-}
 
 void solve() {
-	string s; cin >> s;
-	int n = sz(s), m; cin >> m;
-	ll ans = 0;
-	for(int i = 0; i < n; i++) {
-		int x = s[i]-'0';
-		ans += (((m + x) < 10) ? 1 : dp[(m-10+x)]);
-		ans %= mod;
-	}
-	cout << ans << nl; 
+
 }	
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    compute();
     TC
     	solve();
 
