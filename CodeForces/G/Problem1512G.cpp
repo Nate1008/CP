@@ -24,13 +24,56 @@
 
 using namespace std;
 
-void solve() {
+const int MAX = 1e7+100;
+int d[MAX], ans[MAX];
+ll s[MAX];
 
+void solve() {
+	int c; cin >> c;
+	cout << ans[c] << nl;
 }	
+
+
+void compute() {
+	fill(d, d+MAX, -1);
+	for(int i = 2; i*i < MAX; i++) {
+		if (d[i] == -1) {
+			d[i] = i;
+			for(int j = i; j < MAX; j += i) {
+				if (d[j] == -1) d[j] = i;
+			}
+		}
+	}
+
+	s[1] = 1;
+	for(int i = 2; i < MAX; i++) {
+		if (d[i] == -1) {
+			d[i] = i;
+			s[i] = d[i]+1;
+		} else {
+			int j = i;
+			s[i] = 1;
+			while(j % d[i] == 0) {
+				j /= d[i];
+				s[i] = s[i] * d[i] + 1;
+			}
+			s[i] *= s[j];
+		}
+	}
+
+
+	fill(ans, ans+MAX, -1);
+	for(int i = MAX-1; i > 0; i--) {
+		if (s[i] < MAX) {
+			ans[s[i]] = i;
+		}
+	}
+}
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
+    compute();
     TC
     	solve();
 
