@@ -23,15 +23,53 @@
 #define TC int _t; cin >> _t; FOR(_t, _q)
 
 using namespace std;
+const int MAX = 2001*100;
+int pos[MAX];
 
 void solve() {
+	int n; cin >> n;
+	vi a(n);
+	for(auto& c : a) {
+		cin >> c;
+	}
+	pos[0] = 1;
+	for(auto& c : a) {
+		for(int i = MAX-c-1; i >= 0; i--) {
+			pos[i+c] |= pos[i];
+		}
+	}
+	int sum = 0;
+	for(auto c : a) sum += c;
+	
+
+	if (sum % 2 || pos[sum/2] == 0) {
+		cout << 0 << nl;
+		return;
+	}
+
+	int idx = 0, mn = 32;
+	FOR(n, i) {
+		for(int b = 0; b < 21; b++) {
+			if (a[i] & (1 << b)) {
+				if (mn > b) {
+					idx = i;
+					mn = b;
+					break;
+				}
+			}
+		}
+	}
+
+	cout << 1 << nl;
+	cout << idx+1 << nl;
 
 }	
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    fill(pos, pos+MAX, 0);
+    // TC
     	solve();
 
     return 0;

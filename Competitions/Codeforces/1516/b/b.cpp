@@ -24,23 +24,28 @@
 
 using namespace std;
 
+int pfx[2005];
 void solve() {
 	int n; cin >> n;
 	vi a(n);
-	for(auto& c : a) {
-		cin >> c;
+	pfx[0] = 0;
+	FOR(n, i) {
+		int x; cin >> x;
+		pfx[i+1] = x^pfx[i];
 	}
-	
-	for(int mid = 0; mid < n; mid++) {
-		int pfx = 0, sfx = 0;
-		for(int l = 0; l < mid; l++) pfx ^= a[l];
-		for(int r = mid+1; r < n; r++) sfx ^= a[r];
-		if (mid == (pfx^sfx)) {
-			cout << "YES" << nl;
-			return;
+	if (pfx[n] == 0) { 
+		cout << "YES" << nl;
+		return;
+	}
+	for(int i = 0; i < n; i++) {
+		for(int j = i+1; j < n; ++j) {
+			if (pfx[i] == (pfx[i]^pfx[j]) && pfx[i] == (pfx[n]^pfx[j])) {
+				cout << "YES" << nl;
+				return;
+			}
 		}
 	}
-	cout << "NO" << nl; 
+	cout << "NO" << nl;
 
 }	
 
