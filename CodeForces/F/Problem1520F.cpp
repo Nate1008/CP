@@ -24,14 +24,37 @@
 
 using namespace std;
 
+int ask(int l, int r) {
+    cout << "? " << l << " " << r << endl;
+    int z;
+    cin >> z;
+    return z;
+}
+
 void solve() {
-	int n; cin >> n;
+	int n, t, k; cin >> n >> t >> k;
+
+	int lo = 1, hi = n; 
+	while(lo < hi) {
+		int mid = (lo+hi)/2;
+		int x = ask(lo, mid);
+		int len = mid-lo+1;
+		x = len-x;
+		if (x >= k) {
+			hi = mid;
+		} else {
+			lo = mid+1;
+			k -= x;
+		}
+	}
+	cout << "! " << lo << endl;
+
 }	
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    TC
+    // TC
     	solve();
 
     return 0;
