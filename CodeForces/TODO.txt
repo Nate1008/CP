@@ -1,1 +1,16 @@
-Understand Solutions to Div.1 A and B - 1329
+TODO:
+Go through tutorials and understand solutions
+
+
+PROBLEMS:
+
+0 | 1700 - 1329B
+1 | 1800 - 1329A
+2 | 1800 - 1328D
+3 | ____ - _____       <-------------  Current Threshold
+4 | ____ - _____        
+5 | ____ - _____
+6 | ____ - _____
+7 | ____ - _____
+8 | ____ - _____
+9 | ____ - _____
