@@ -25,7 +25,20 @@
 using namespace std;
 
 void solve() {
+	int n; cin >> n;
+	long long ans = 0;
+	vi a(n), c(n, 0);
+	for(auto& s : a) cin >> s;
 
+	for(int i = 0; i < n; i++) {
+		ans += max(0, (a[i]-1)-c[i]);
+		c[i] += max(0, (a[i]-1)-c[i]);
+		if (i+2 < n) {
+			for(int x = i+2; x < min(n, i+a[i]+1); x++) c[x]++;
+		}
+		if (i+1 < n) c[i+1] += c[i]-a[i]+1;
+	}
+	cout << ans << endl;
 }	
 
 int main() {
