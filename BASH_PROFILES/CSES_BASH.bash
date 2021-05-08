@@ -35,6 +35,8 @@ alias cfpy="python ~/Documents/Applications/CF/cf.py"
 alias meet="python3.9 ~/Desktop/OCV_GR.7/Programming/Meet.py"
 alias setup="FLASK_APP=server.py FLASK_ENV=development FLASK_DEBUG=1 "
 alias tf="python3.8"
+alias subl="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
+
 LAST=""
 function init() {
 	cd ~/Documents/Applications/AI

@@ -22,6 +22,8 @@ alias src='source ~/.bash_profile'
 alias rem='rm -r'
 alias update="git add .; git commit -m Updating...; git push origin master; clear"
 alias cfpy='python ~/Documents/Applications/CF/cf.py'
+alias subl="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
+
 
 function remp() {
     rm -r $1.cpp
