@@ -80,6 +80,7 @@ function create() {
         mkdir $var
     fi
     LAST=$1
+    subl Problem$1.cpp
 }
 
 function comp() {
