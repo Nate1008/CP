@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+
+#define ll long long
+#define pi pair<int, int>
+#define mi map<int, int>
+#define fi first
+#define se second
+#define vt vector
+#define vi vector<int>
+#define vl vector<long long>
+#define st set
+
+#define FOR(t, q) for(int q = 0; q < t; q++)
+#define FORN(t, q, v) for(int q = v; q < t; q++)
+#define sz(v) (int)(v.size())
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
+#define pb(s) push_back(s);
+#define ppb(s) pop_back(s);
+
+
+#define nl endl
+#define TC int _t; cin >> _t; FOR(_t, _q)
+
+using namespace std;
+
+void solve() {
+	int n, x; cin >> n >> x;
+	multiset<pi> val;
+	vector<int> cnt(x, 0);
+	for(int i = 0; i < x; i++) {
+		val.insert({0, i});
+	}
+	pi p;
+	for(int i = 0; i < n; i++) {
+		int v; cin >> v;
+		auto it = val.find({cnt[v%x], (v%x)});
+		cnt[v%x]++;
+		p = *it;
+		val.erase(it);
+		val.insert({p.first+1, p.second});
+		// ANSWER
+		p = *val.begin();		
+		int c = p.first, j = p.second;
+		cout << x*c+j << endl;
+	}
+}	
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);	
+
+    #ifdef LOCAL
+		freopen("in.in", "r", stdin);
+	#endif
+
+    // TC
+    	solve();
+
+    return 0;
+}
