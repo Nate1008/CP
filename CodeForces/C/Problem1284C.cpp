@@ -24,8 +24,22 @@
 
 using namespace std;
 
+const int N = 250010;
+int M;
+ll fact[N];
 void solve() {
-
+	ll ans = 0;
+	int n; cin >> n >> M;
+	for(int i = 1; i < N; i++) {
+		fact[i] = (i*1LL%M)*(fact[i-1]%M)%M;
+	}
+	for(int siz = 1; siz <= n; siz++) {
+		ll val = ((n-siz+1)*1LL*(n-siz+1)%M)*1LL*((fact[siz]%M)*1LL*(fact[n-siz]%M)%M);
+		val %= M;
+		ans += val;
+		ans %= M;
+	}
+	cout << ans << endl;
 }	
 
 int main() {
@@ -36,8 +50,8 @@ int main() {
 		freopen("in.in", "r", stdin);
 	#endif
 
-    TC
-    	solve();
+	fact[0] = 1;
+    solve();
 
     return 0;
 }

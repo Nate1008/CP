@@ -1,4 +1,4 @@
-//#include <bits/stdh++.h>
+#include <bits/stdc++.h>
 // sieve - Start
 
 vector<int> smallest_factor;

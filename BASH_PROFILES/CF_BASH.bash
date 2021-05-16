@@ -108,7 +108,6 @@ function sort() {
     i=$((${#str}-1))
     dir=${str:$i:1}
     mv Problem$str.cpp $dir/Problem$str.cpp
-    update
 }
 
 function race() {
