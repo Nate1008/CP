@@ -55,7 +55,7 @@ function usaco() {
 
 function setup() {
     touch $1.cpp
-    cat ~/Documents/CompetitiveProgramming/RoadToIOI/Template.cpp > $1.cpp
+    cat ~/Documents/CompetitiveProgramming/RoadToIOI/Practice.cpp > $1.cpp
 }
 
 TIME=`date +"%I:%M:%S %p"`
