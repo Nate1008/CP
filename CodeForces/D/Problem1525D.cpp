@@ -21,18 +21,14 @@ using vpd = vector<pd>;
 
 #define tcT template<class T
 #define tcTU tcT, class U
-// ^ lol this makes everything look weird but I'll try it
 tcT> using V = vector<T>;
 tcT, size_t SZ> using AR = array<T,SZ>;
 tcT> using PR = pair<T,T>;
 
-// pairs
 #define mp make_pair
 #define fi first
 #define se second
 
-// vectors
-// oops size(x), rbegin(x), rend(x) need C++17
 #define sz(x) int((x).size())
 #define all(x) bg(x), end(x)
 #define rall(x) x.rbegin(), x.rend()
@@ -57,12 +53,12 @@ tcT> int lwb(V<T>& a, const T& b) { return int(lb(all(a),b)-bg(a)); }
 
 const int MOD = 1e9+7; // 998244353;
 const int MX = 2e5+5;
-const ll INF = 1e18; // not too close to LLONG_MAX
-const int dx[4] = {1,0,-1,0}, dy[4] = {0,1,0,-1}; // for every grid problem!!
+const ll INF = 1e18; 
+const int dx[4] = {1,0,-1,0}, dy[4] = {0,1,0,-1};
 template<class T> using pqg = priority_queue<T,vector<T>,greater<T>>;
 
 tcT> bool ckmin(T& a, const T& b) {
-	return b < a ? a = b, 1 : 0; } // set a = min(a,b)
+	return b < a ? a = b, 1 : 0; }
 tcT> bool ckmax(T& a, const T& b) {
 	return a < b ? a = b, 1 : 0; }
 
@@ -81,7 +77,7 @@ str ts(bool b) {
 	#endif
 }
 tcTU> str ts(pair<T,U> p);
-tcT> str ts(T v) { // containers with begin(), end()
+tcT> str ts(T v) {
 	#ifdef LOCAL
 		bool fst = 1; str res = "{";
 		for (const auto& x: v) {
@@ -107,11 +103,10 @@ tcTU> str ts(pair<T,U> p) {
 	#endif
 }
 
-// OUTPUT
 tcT> void pr(T x) { cout << ts(x); }
 tcTUU> void pr(const T& t, const U&... u) {
 	pr(t); pr(u...); }
-void ps() { pr("\n"); } // print w/ spaces
+void ps() { pr("\n"); } 
 tcTUU> void ps(const T& t, const U&... u) {
 	pr(t); if (sizeof...(u)) pr(" "); ps(u...); }
 
@@ -120,7 +115,7 @@ void DBG() { cerr << "]" << endl; }
 tcTUU> void DBG(const T& t, const U&... u) {
 	cerr << ts(t); if (sizeof...(u)) cerr << ", ";
 	DBG(u...); }
-#ifdef LOCAL // compile with -DLOCAL, chk -> fake assert
+#ifdef LOCAL
 	#define dbg(...) cerr << "Line(" << __LINE__ << ") -> [" << #__VA_ARGS__ << "]: [", DBG(__VA_ARGS__)
 	#define chk(...) if (!(__VA_ARGS__)) cerr << "Line(" << __LINE__ << ") -> function(" \
 		 << __FUNCTION__  << ") -> CHK FAILED: (" << #__VA_ARGS__ << ")" << "\n", exit(0);
@@ -131,19 +126,48 @@ tcTUU> void DBG(const T& t, const U&... u) {
 
 void setPrec() { cout << fixed << setprecision(15); }
 void unsyncIO() { cin.tie(0)->sync_with_stdio(0); }
-// FILE I/O
 void setIn(str s) { freopen(s.c_str(),"r",stdin); }
 void setOut(str s) { freopen(s.c_str(),"w",stdout); }
 void setIO(str s = "") {
 	unsyncIO(); setPrec();
-	// cin.exceptions(cin.failbit);
-	// throws exception when do smth illegal
-	// ex. try to read letter into int
-	if (sz(s)) setIn(s+".in"), setOut(s+".out"); // for USACO
+	if (sz(s)) setIn(s+".in"), setOut(s+".out");
 }
 
+const int nax = 5010;
+int dp[nax][nax];
 int main() {
-	setIO(); 
-
+	setIO();
 	
+	F0R(i, nax) F0R(j, nax) dp[i][j] = int(1e9+10);
+
+	int n; cin >> n;
+	V<bool> c(n);
+	vi one;
+	char ch;
+	F0R(i, n) {
+		cin >> ch;
+		c[i] = (ch == '1');
+		if (c[i]) one.pb(i);
+	}
+
+	if (one.empty()) {
+		ps(0);
+		exit(0);
+	}
+
+	dp[0][0] = 0;
+	F0R(i, sz(one)+1) {
+		F0R(j, n+1) {
+			ckmin(dp[i][j+1], dp[i][j]);
+			if (!c[j]) {
+				ckmin(dp[i+1][j+1], dp[i][j]+abs(j-one[i]));
+			}
+		}	
+	}
+
+	F0R(i, sz(one)+1) F0R(j, n+1) dbg(i, j, dp[i][j]);
+
+	ps(dp[sz(one)][n]);
+
+
 }
