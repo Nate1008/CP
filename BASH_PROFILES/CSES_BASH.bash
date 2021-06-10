@@ -37,6 +37,11 @@ alias setup="FLASK_APP=server.py FLASK_ENV=development FLASK_DEBUG=1 "
 alias tf="python3.8"
 alias subl="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
 
+
+function open() {
+    subl $1.cpp
+}
+
 LAST=""
 function init() {
 	cd ~/Documents/Applications/AI

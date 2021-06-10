@@ -25,6 +25,11 @@ alias update="git add .; git commit -m Updating...; git push origin master; clea
 alias cfpy="python ~/Documents/Applications/CF/cf.py"
 alias subl="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
 
+
+function open() {
+    subl $1/$1.cpp
+}
+
 LAST=""
 
 function remp() {

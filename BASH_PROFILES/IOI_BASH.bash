@@ -28,6 +28,10 @@ alias cfpy="python ~/Documents/Applications/CF/cf.py"
 alias subl="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
 
 
+function open() {
+    subl $1.cpp
+}
+
 function try() {
     g++ $1.cpp -std=c++17 -o $1
     ./$1
