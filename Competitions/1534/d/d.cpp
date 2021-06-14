@@ -24,26 +24,27 @@
 
 using namespace std;
 
+int n;
+vi ask(int x) {
+    cout << "? " << x << endl;
+    vi z(n);
+    FOR(n, i) cin >> z[i]; 
+    return z;
+}
+
+
+
 void solve() {
-	int n; cin >> n;
-	vi a(n);
-	int mx = 0, mn = 1e9;
-	int M = -1, m = -1;
-	FOR(n, i) {
-		cin >> a[i];
-		if (a[i] > mx) mx = a[i], M = i;
-		if (a[i] < mn) mn = a[i], m = i;
-	}
-
-	cout << min(min(max(M+1, m+1), max(n-M, n-m)), min(n-M+m+1, n-m+M+1)) << endl;
-
+	set<pi> path;
+	cin >> n;
+	vi a
 }	
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);	
 
-    TC
+    // TC
     	solve();
 
     return 0;
