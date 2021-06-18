@@ -91,3 +91,19 @@ struct DSU {
     }
 };
 // DSU - End;
+
+// Max Histogram Area - Start
+int get(vi h) {
+    h.pb(-1);
+    vi st{-1};
+    int ans = 0;
+    F0R(i,sz(h)) {
+        while (st.bk != -1 && h[st.bk] >= h[i]) {
+            ckmax(ans,(i-1-end(st)[-2])*h[st.bk]);
+            st.pop_back();
+        }
+        st.pb(i);
+    }
+    return ans;
+}
+// Max Histogram Area - End
