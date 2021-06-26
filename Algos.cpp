@@ -123,13 +123,12 @@ tcT> struct Seg {
             if (r&1) rb = comb(seg[--r],rb);
         }
         return comb(ra,rb);
-    }
-};
+    }};
 // Segment Tree - End
 
 
 // RMQ - Start
-tcT> struct RMQ { // floor(log_2(x))
+tcT> struct RMQ {
     int level(int x) { return 31-__builtin_clz(x); } 
     vector<T> v; vector<vi> jmp;
     int comb(int a, int b) { // index of min
@@ -145,8 +144,7 @@ tcT> struct RMQ { // floor(log_2(x))
     int index(int l, int r) { // get index of min element
         assert(l <= r); int d = level(r-l+1);
         return comb(jmp[d][l],jmp[d][r-(1<<d)+1]); }
-    T query(int l, int r) { return v[index(l,r)]; }
-};
+    T query(int l, int r) { return v[index(l,r)]; }};
 // RMQ - End
 
 // LCA with RMQ - Start
@@ -166,7 +164,7 @@ struct LCA {
     void gen(int R = 0) { par[R] = R; dfs(R); r.init(tmp); }
     int lca(int u, int v){
         u = pos[u], v = pos[v]; if (u > v) swap(u,v);
-        return r.query(u,v).s; }
+        return r.query(u,v).se; }
     int dist(int u, int v) {
         return depth[u]+depth[v]-2*depth[lca(u,v)]; }
     vpi compress(vi S) {
@@ -176,6 +174,51 @@ struct LCA {
         vpi ret{{0,S[0]}}; F0R(i,sz(S)) rev[S[i]] = i;
         FOR(i,1,sz(S)) ret.eb(rev[lca(S[i-1],S[i])],S[i]);
         return ret;
-    }
-};
+    }};
 // LCA with RMQ - End
+
+//  Euler Tour DFS - Start
+const int nax = 2e5+5;
+vi adj[nax];
+int timer = 0, st[nax], en[nax];
+
+void dfs(int node, int parent) {
+    st[node] = timer++;
+    for (int i : adj[node]) {
+        if (i != parent) {
+            dfs(i, node);
+        }
+    }
+    en[node] = timer-1;
+}
+//  Euler Tour DFS - End
+
+// Hash Range - Start
+using H = AR<int,2>; // bases not too close to ends 
+H makeH(char c) { return {c,c}; }
+uniform_int_distribution<int> BDIST(0.1*MOD,0.9*MOD);
+const H base{BDIST(rng),BDIST(rng)};
+/// const T ibase = {(int)inv(mi(base[0])),(int)inv(mi(base[1]))};
+H operator+(H l, H r) { 
+    F0R(i,2) if ((l[i] += r[i]) >= MOD) l[i] -= MOD;
+    return l; }
+H operator-(H l, H r) { 
+    F0R(i,2) if ((l[i] -= r[i]) < 0) l[i] += MOD;
+    return l; }
+H operator*(H l, H r) { 
+    F0R(i,2) l[i] = (ll)l[i]*r[i]%MOD;
+    return l; }
+/// H& operator+=(H& l, H r) { return l = l+r; }
+/// H& operator-=(H& l, H r) { return l = l-r; }
+/// H& operator*=(H& l, H r) { return l = l*r; }
+
+V<H> pows{{1,1}};
+struct HashRange {
+    str S; vector<H> cum{{}};
+    void add(char c) { S += c; cum.pb(base*cum.bk+makeH(c)); }
+    void add(str s) { each(c,s) add(c); }
+    void extend(int len) { while (sz(pows) <= len) pows.pb(base*pows.bk); }
+    H hash(int l, int r) { int len = r+1-l; extend(len);
+        return cum[r+1]-pows[len]*cum[l]; }
+};
+//Hash Range - End
