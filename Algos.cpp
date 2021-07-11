@@ -44,10 +44,10 @@ ll binpow(ll a, ll p) {
     ll res = 1;
     while (p) {
         if (p % 2 == 0) {
-            a = (a * a) /*% mod*/;
+            a = (a * a) % MOD;
             p /= 2;
         } else {
-            res = (res * a) /*% mod*/;
+            res = (res * a) % MOD;
             p--;
         }
     }
@@ -57,14 +57,14 @@ ll binpow(ll a, ll p) {
 ll fact(int n) {
   ll res = 1;
   for (int i = 1; i <= n; i++) {
-    res = res * 1ll * i /*% mod*/;
+    res = res * 1ll * i % MOD;
   }
   return res;
 }
 
 
 ll C(int n, int k) {
-  return fact(n) * 1ll * binpow(fact(k), mod - 2) /*% mod*/ * 1ll * binpow(fact(n - k), mod - 2) % /*% mod*/;
+  return fact(n) * 1ll * binpow(fact(k), MOD - 2) % MOD * 1ll * binpow(fact(n - k), MOD - 2) % MOD;
 }
 
 // C - End
