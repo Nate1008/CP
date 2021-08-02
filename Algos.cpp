@@ -145,7 +145,7 @@ tcT> struct Seg {
 		if (lx >= l && rx <= r) return seg[x];
 		int m = (lx+rx)/2;
 		int v1 = qry(l, r, 2*x+1, lx, m);
-		int v2 = qry(l, r, 2*x+1, m, rx);
+		int v2 = qry(l, r, 2*x+2, m, rx);
 		return comb(v1, v2); 
 	}
 	
