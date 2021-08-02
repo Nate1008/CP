@@ -110,20 +110,49 @@ int get(vi h) {
 
 // Segment Tree - Start
 tcT> struct Seg {
-    const T ID = /*___*/; T comb(T a, T b) { return /*______*/; }
-    int n; vector<T> seg;
-    void init(int _n) { n = _n; seg.assign(2*n,ID); }
-    void pull(int p) { seg[p] = comb(seg[2*p],seg[2*p+1]); }
-    void upd(int p, T val) { // set val at position p
-        seg[p += n] = val; for (p /= 2; p; p /= 2) pull(p); }
-    T query(int l, int r) { // min on interval [l, r]
-        T ra = ID, rb = ID;
-        for (l += n, r += n+1; l < r; l /= 2, r /= 2) {
-            if (l&1) ra = comb(ra,seg[l++]);
-            if (r&1) rb = comb(seg[--r],rb);
-        }
-        return comb(ra,rb);
-    }};
+	V<T> seg; int N;
+	const T ID = 0;
+	T comb(T a, T b) { return max(a, b); }
+
+	void init(int _N) { N = 1; while(N < _N) N *= 2; seg.assign(2*N, ID); }
+
+	void pull(int p) { seg[p] = comb(seg[2*p+2], seg[2*p+1]); }
+
+	void build(V<T> A, int x, int lx, int rx) {
+		if (rx-lx == 1) {
+			if (lx < sz(A)) seg[x] = A[lx];
+			return;
+		}
+		int m = (lx+rx)/2;
+		build(A, x*2+1, lx, m);
+		build(A, x*2+2, m, rx);
+		pull(x);
+	}
+
+	void upd(int i, T v, int x, int lx, int rx) {
+		if (rx-lx == 1) {
+			seg[x] = v;
+			return;
+		}
+		int m = (lx+rx)/2;
+		if (i < m) upd(i, v, x*2+1, lx, m);
+		else upd(i, v, x*2+2, m, rx);
+		pull(x);
+	}
+
+	T qry(int l, int r, int x, int lx, int rx) {
+		if (lx >= r || l >= rx) return 0;
+		if (lx >= l && rx <= r) return seg[x];
+		int m = (lx+rx)/2;
+		int v1 = qry(l, r, 2*x+1, lx, m);
+		int v2 = qry(l, r, 2*x+1, m, rx);
+		return comb(v1, v2); 
+	}
+	
+	void build(V<T> A) { build(A, 0, 0, N); }
+	void upd(int i, T v) { upd(i, v, 0, 0, N); }
+	T qry(int l, int r) { return qry(l, r, 0, 0, N); }
+};
 // Segment Tree - End
 
 
