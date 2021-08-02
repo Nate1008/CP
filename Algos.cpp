@@ -118,7 +118,7 @@ tcT> struct Seg {
 
 	void pull(int p) { seg[p] = comb(seg[2*p+2], seg[2*p+1]); }
 
-	void build(V<T> A, int x, int lx, int rx) {
+	void build(const V<T>& A, int x, int lx, int rx) {
 		if (rx-lx == 1) {
 			if (lx < sz(A)) seg[x] = A[lx];
 			return;
@@ -149,7 +149,7 @@ tcT> struct Seg {
 		return comb(v1, v2); 
 	}
 	
-	void build(V<T> A) { build(A, 0, 0, N); }
+	void build(const V<T>& A) { build(A, 0, 0, N); }
 	void upd(int i, T v) { upd(i, v, 0, 0, N); }
 	T qry(int l, int r) { return qry(l, r, 0, 0, N); }
 };
