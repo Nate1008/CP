@@ -116,7 +116,7 @@ tcT> struct Seg {
 
 	void init(int _N) { N = 1; while(N < _N) N *= 2; seg.assign(2*N, ID); }
 
-	void pull(int p) { seg[p] = comb(seg[2*p+2], seg[2*p+1]); }
+	void pull(int p) { seg[p] = comb(seg[2*p+1], seg[2*p+2]); }
 
 	void build(const V<T>& A, int x, int lx, int rx) {
 		if (rx-lx == 1) {
