@@ -141,7 +141,7 @@ tcT> struct Seg {
 	}
 
 	T qry(int l, int r, int x, int lx, int rx) {
-		if (lx >= r || l >= rx) return 0;
+		if (lx >= r || l >= rx) return ID;
 		if (lx >= l && rx <= r) return seg[x];
 		int m = (lx+rx)/2;
 		T v1 = qry(l, r, 2*x+1, lx, m);
