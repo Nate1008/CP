@@ -109,49 +109,23 @@ int get(vi h) {
 // Max Histogram Area - End
 
 // Segment Tree - Start
-tcT> struct Seg {
-	V<T> seg; int N;
-	const T ID = 0;
-	T comb(T a, T b) { return max(a, b); }
-
-	void init(int _N) { N = 1; while(N < _N) N *= 2; seg.assign(2*N, ID); }
-
-	void pull(int p) { seg[p] = comb(seg[2*p+1], seg[2*p+2]); }
-
-	void build(const V<T>& A, int x, int lx, int rx) {
-		if (rx-lx == 1) {
-			if (lx < sz(A)) seg[x] = A[lx];
-			return;
+tcT> struct Seg { // comb(ID,b) = b
+	const T ID{}; T comb(T a, T b) { return a+b; } 
+	int n; V<T> seg;
+	void init(int _n) { // upd, query also work if n = _n
+		for (n = 1; n < _n; ) n *= 2; 
+		seg.assign(2*n,ID); }
+	void pull(int p) { seg[p] = comb(seg[2*p],seg[2*p+1]); }
+	void upd(int p, T val) { // set val at position p
+		seg[p += n] = val; for (p /= 2; p; p /= 2) pull(p); }
+	T query(int l, int r) {	// any associative op on interval [l, r]
+		T ra = ID, rb = ID;
+		for (l += n, r += n+1; l < r; l /= 2, r /= 2) {
+			if (l&1) ra = comb(ra,seg[l++]);
+			if (r&1) rb = comb(seg[--r],rb);
 		}
-		int m = (lx+rx)/2;
-		build(A, x*2+1, lx, m);
-		build(A, x*2+2, m, rx);
-		pull(x);
+		return comb(ra,rb);
 	}
-
-	void upd(int i, T v, int x, int lx, int rx) {
-		if (rx-lx == 1) {
-			seg[x] = v;
-			return;
-		}
-		int m = (lx+rx)/2;
-		if (i < m) upd(i, v, x*2+1, lx, m);
-		else upd(i, v, x*2+2, m, rx);
-		pull(x);
-	}
-
-	T qry(int l, int r, int x, int lx, int rx) {
-		if (lx >= r || l >= rx) return ID;
-		if (lx >= l && rx <= r) return seg[x];
-		int m = (lx+rx)/2;
-		T v1 = qry(l, r, 2*x+1, lx, m);
-		T v2 = qry(l, r, 2*x+2, m, rx);
-		return comb(v1, v2); 
-	}
-	
-	void build(const V<T>& A) { build(A, 0, 0, N); }
-	void upd(int i, T v) { upd(i, v, 0, 0, N); }
-	T qry(int l, int r) { return qry(l, r, 0, 0, N); }
 };
 // Segment Tree - End
 
