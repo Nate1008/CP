@@ -114,7 +114,7 @@ tcT> struct Seg { // comb(ID,b) = b
 	int n; V<T> seg;
 	void init(int _n) { // upd, query also work if n = _n
 // 		for (n = 1; n < _n; ) n *= 2; 
-// 		n = _n
+// 		n = _n;
 		seg.assign(2*n,ID); }
 	void pull(int p) { seg[p] = comb(seg[2*p],seg[2*p+1]); }
 	void upd(int p, T val) { // set val at position p
