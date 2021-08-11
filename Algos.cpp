@@ -130,6 +130,42 @@ tcT> struct Seg { // comb(ID,b) = b
 };
 // Segment Tree - End
 
+// BIT - Start
+tcT> struct BIT {
+	int N; V<T> data;
+	void init(int _N) { N = _N; data.rsz(N); }
+	void add(int p, T x) { for (++p;p<=n;p+=p&-p) data[p-1] += x; }
+	T sum(int l, int r) { return sum(r+1)-sum(l); }
+	T sum(int r) { T s = 0; for(;r;r-=r&-r)s+=data[r-1]; return s; }
+	int lower_bound(T sum) {
+		if (sum <= 0) return -1;
+		int pos = 0;
+		for (int pw = 1<<25; pw; pw >>= 1) {
+			int npos = pos+pw;
+			if (npos <= n && data[npos-1] < sum)
+				pos = npos, sum -= data[pos-1];
+		}
+		return pos;
+	}
+};
+// BIT - End
+
+// BITrange - Start
+template<class T, int SZ> struct BITrange {
+	BIT<T,SZ> bit[2]; // piecewise linear functions
+	// let cum[x] = sum_{i=1}^{x}a[i]
+	void upd(int hi, T val) { // add val to a[1..hi]
+		// if x <= hi, cum[x] += val*x
+		bit[1].upd(1,val), bit[1].upd(hi+1,-val); 
+		// if x > hi, cum[x] += val*hi
+		bit[0].upd(hi+1,hi*val); 
+	}
+	void upd(int lo,int hi,T val){upd(lo-1,-val),upd(hi,val);}
+	T sum(int x) { return bit[1].sum(x)*x+bit[0].sum(x); } 
+	T query(int x, int y) { return sum(y)-sum(x-1); }
+}; 
+// BITrange - End
+
 
 // RMQ - Start
 tcT> struct RMQ {
