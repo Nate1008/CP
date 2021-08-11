@@ -150,6 +150,7 @@ tcT> struct LazySeg {
 		int m = (L+R)/2;
 		if (i <= m) set(i, v, x*2, L, m);
 		else set(i, v, x*2+1, m+1, R);
+		pull(x);
 	}
 	void upd(int lo, int hi, int x,int L, int R) {
 		push(x,L,R); if (hi < L || R < lo) return;
