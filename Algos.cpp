@@ -142,12 +142,21 @@ tcT> struct LazySeg {
 	} // recalc values for current node
 	void pull(int x) { seg[x] = comb(seg[2*x],seg[2*x+1]); }
 	void build() { ROF(i,1,n) pull(i); }
-	void upd(int lo, int hi, T v, int x,int L, int R) {
+	void set(int i, T v, int x, int L, int R) {
+		if (L == R) {
+			seg[x] = v;
+			return;
+		}
+		int m = (L+R)/2;
+		if (i <= m) add(i, v, x*2, L, m);
+		else add(i, v, x*2+1, m+1, R);
+	}
+	void upd(int lo, int hi, int x,int L, int R) {
 		push(x,L,R); if (hi < L || R < lo) return;
 		if (lo <= L && R <= hi) { 
-			lazy[x] = v; push(x,L,R); return; }
-		int M = (L+R)/2; upd(lo, hi, v, 2*x, L, M); 
-		upd(lo, hi, v, 2*x+1, M+1, R); pull(x);
+			lazy[x] = lo; push(x,L,R); return; }
+		int M = (L+R)/2; upd(lo, hi, 2*x, L, M); 
+		upd(lo, hi, 2*x+1, M+1, R); pull(x);
 	}
 	T query(int lo, int hi, int x, int L, int R) {
 		push(x,L,R); if (lo > R || L > hi) return ID;
@@ -156,7 +165,8 @@ tcT> struct LazySeg {
 		return comb(query(lo,hi,2*x,L,M),query(lo,hi,2*x+1,M+1,R));
 	}
 
-	void upd(int lo, int hi, T v) { upd(lo, hi, v, 1, 0, n-1); }
+	void upd(int lo, int hi) { upd(lo, hi, 1, 0, n-1); }
+	void set(int i, T v) { set(i, v, 1, 0, n-1); };
 	T query(int lo, int hi) { return query(lo, hi, 1, 0, n-1); }
 };
 // Lazy Segment Tree
