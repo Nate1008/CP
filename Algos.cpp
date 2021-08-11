@@ -130,6 +130,34 @@ tcT> struct Seg { // comb(ID,b) = b
 };
 // Segment Tree - End
 
+// Lazy Segment Tree - Start
+tcT> struct LazySeg { 
+	const T ID = 0; T comb(T a, T b) { return a+b; 
+	V<T> seg, lazy; int n
+	void init(int _n) { n = 1; while(n < _n) n *= 2; seg.assign(2*n, ID), lazy.assign(2*n, ID); }
+	void push(int x, int L, int R) { /// modify values for current node
+		seg[x] += (R-L+1)*lazy[x]; // dependent on operation
+		if (L != R) F0R(i,2) lazy[2*x+i] += lazy[x]; /// prop to children
+		lazy[x] = 0; 
+	} // recalc values for current node
+	void pull(int x) { seg[x] = comb(seg[2*x],seg[2*x+1]); }
+	void build() { ROF(i,1,SZ) pull(i); }
+	void upd(int lo,int hi,T inc,int ind=1,int L=0, int R=SZ-1) {
+		push(ind,L,R); if (hi < L || R < lo) return;
+		if (lo <= L && R <= hi) { 
+			lazy[ind] = inc; push(ind,L,R); return; }
+		int M = (L+R)/2; upd(lo,hi,inc,2*ind,L,M); 
+		upd(lo,hi,inc,2*ind+1,M+1,R); pull(ind);
+	}
+	T query(int lo, int hi, int x=1, int L=0, int R=SZ-1) {
+		push(x,L,R); if (lo > R || L > hi) return ID;
+		if (lo <= L && R <= hi) return seg[x];
+		int M = (L+R)/2; 
+		return comb(query(lo,hi,2*x,L,M),query(lo,hi,2*x+1,M+1,R));
+	}
+};
+// Lazy Segment Tree
+
 // BIT - Start
 tcT> struct BIT {
 	int N; V<T> data;
