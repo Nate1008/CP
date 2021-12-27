@@ -40,6 +40,9 @@ bool isPrime(int p) {
 
 // C - Start
 
+const int MAXI = 2e5+5;
+ll fact[MAXI];
+
 ll binpow(ll a, ll p) {
     ll res = 1;
     while (p) {
@@ -54,17 +57,16 @@ ll binpow(ll a, ll p) {
     return res;
 }
 
-ll fact(int n) {
-  ll res = 1;
-  for (int i = 1; i <= n; i++) {
-    res = res * 1ll * i % MOD;
+void initFact() {
+  fact[0] = 1;
+  for (int i = 1; i < MAXI; i++) {
+    fact[i] = fact[i-1] * 1ll * i % MOD;
   }
-  return res;
 }
 
 
 ll C(int n, int k) {
-  return fact(n) * 1ll * binpow(fact(k), MOD - 2) % MOD * 1ll * binpow(fact(n - k), MOD - 2) % MOD;
+  return fact[n] * 1ll * binpow(fact[k], MOD - 2) % MOD * 1ll * binpow(fact[n - k], MOD - 2) % MOD;
 }
 
 // C - End
