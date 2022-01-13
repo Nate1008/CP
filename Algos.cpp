@@ -250,9 +250,11 @@ template<class T> struct BIToff {
 // BITOFF - End
 
 // BITrange - Start
-template<class T, int SZ> struct BITrange {
-	BIT<T,SZ> bit[2]; // piecewise linear functions
+template<class T> struct BITrange {
+	BIT<T> bit[2]; // piecewise linear functions
 	// let cum[x] = sum_{i=1}^{x}a[i]
+	// BITRANGE IS 1-INDEXED
+	void init(int N) { bit[0].init(N); bit[1].init(N); }
 	void upd(int hi, T val) { // add val to a[1..hi]
 		// if x <= hi, cum[x] += val*x
 		bit[1].upd(1,val), bit[1].upd(hi+1,-val); 
@@ -260,7 +262,7 @@ template<class T, int SZ> struct BITrange {
 		bit[0].upd(hi+1,hi*val); 
 	}
 	void upd(int lo,int hi,T val){upd(lo-1,-val),upd(hi,val);}
-	T sum(int x) { return bit[1].sum(x)*x+bit[0].sum(x); } 
+	T sum(int x) { return bit[1].sum(x+1)*x+bit[0].sum(x+1); } 
 	T query(int x, int y) { return sum(y)-sum(x-1); }
 }; 
 // BITrange - End
