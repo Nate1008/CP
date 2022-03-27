@@ -467,3 +467,26 @@ template<int SZ, int MXBIT> struct Trie {
 };
 
 // Trie - End
+
+// CRT - Start
+
+pl euclid(ll A, ll B) { // For A,B>=0, finds (x,y) s.t.
+	// Ax+By=gcd(A,B), |Ax|,|By|<=AB/gcd(A,B)
+	if (!B) return {1,0};
+	pl p = euclid(B,A%B); return {p.s,p.f-A/B*p.s}; }
+ll invGeneral(ll A, ll B) { // find x in [0,B) such that Ax=1 mod B
+	pl p = euclid(A,B); assert(p.f*A+p.s*B == 1);
+	return p.f+(p.f<0)*B; } // must have gcd(A,B)=1
+
+pl CRT(pl a, pl b) { assert(0 <= a.f && a.f < a.s && 0 <= b.f && b.f < b.s);
+	if (a.s < b.s) swap(a,b); // will overflow if b.s^2 > 2^{62}
+	ll x,y; tie(x,y) = euclid(a.s,b.s); 
+	ll g = a.s*x+b.s*y, l = a.s/g*b.s;
+	if ((b.f-a.f)%g) return {-1,-1}; // no solution
+	// ?*a.s+a.f \equiv b.f \pmod{b.s}
+	// ?=(b.f-a.f)/g*(a.s/g)^{-1} \pmod{b.s/g}
+	x = (b.f-a.f)%b.s*x%b.s/g*a.s+a.f; 
+	return {x+(x<0)*l,l};
+}
+
+// CRT - End
